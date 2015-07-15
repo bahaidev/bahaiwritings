@@ -1,0 +1,10 @@
+{
+    "table": {
+        "browse_fields": ["Number"]
+    },
+    "fields": {
+        "English": {
+            "lang": "en"
+        }
+    }
+}

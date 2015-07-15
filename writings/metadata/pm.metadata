@@ -1,0 +1,15 @@
+{
+    "table": {
+        "browse_fields": ["Number"],
+        "default_view": {"Number": 1}
+    },
+    "fields": {
+        "English": {
+            "primary_text_field": true,
+            "lang": "en"
+        },
+        "Number": {
+            "roman": true
+        }
+    }
+}
