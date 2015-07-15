@@ -1,3 +1,5 @@
+# bahaiwritings
+
 Although the [TextBrowser](https://github.com/brettz9/textbrowser) project for which this repository includes content is open sourced under the MIT license (as is the specific JSON formatting (and schema and meta-data files) of this repository), the contents of this data repository are under their own licenses and their copyright is retained. The usage terms of the Baha'i Writings are described at <http://www.bahai.org/legal>.
 
 # Todos
