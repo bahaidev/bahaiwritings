@@ -4,13 +4,14 @@ Although the [TextBrowser](https://github.com/brettz9/textbrowser) project for w
 
 # Usage
 
-1. Add `index.html` to `textbrowser` based on `index-sample.html` and modify the TextBrowser invocation as follows:
+1. Add to `textbrowser/index.html` based on `textbrowser/index-sample.html`
+1. Add to `textbrowser/resources/user.js` based on `textbrowser/resources/user-sample.js` and modify the TextBrowser invocation portion as follows:
 
 ```js
-var tb = new TextBrowser(
+var tb = new TextBrowser({
     // languages: 'appdata/languages.json', // Default
     files: 'bower_components/bahaiwritings/files.json'
-);
+});
 ```
 
 # Todos
