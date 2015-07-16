@@ -24,6 +24,7 @@ var tb = new TextBrowser({
 
 # Todos
 
+1. Once stabilized, target textbrowser dependency by tagged version.
 1. Bring over locale data from textbrowser into own metadata (or schema?) files
 1. Need to split Collins into own repo? (or describe terms)
 1. The base code of browse0.php, browse.php, browse9.php are all XHTML compliant, but there are a good number of invalid XHTML in the JSON databases Qur'an and Bible (links w/o quotes) that would ideally be replaced as well as the XHTML and link locations in the Iqan copy (just to be nice and clean)

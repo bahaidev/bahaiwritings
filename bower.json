@@ -3,11 +3,14 @@
     "version": "0.1.0",
     "description": "The Bahá'í Writings in JSON format along with supporting JSON Schema and meta-data files. The formatting is under the MIT license, but the Bahá'í Writings content is licensed under the terms described at <http://www.bahai.org/legal>.",
     "ignore": [
-        
+        "bower_components"
     ],
     "keywords": [
         "bahai",
         "textbrowser"
     ],
+    "dependencies": {
+        "textbrowser": "git@github.com:brettz9/textbrowser.git#master"
+    },
     "main": "files.json"
 }
