@@ -2,6 +2,14 @@
 
 Although the [TextBrowser](https://github.com/brettz9/textbrowser) project for which this repository includes content is open sourced under the MIT license (as is the specific JSON formatting (and schema and meta-data files) of this repository), the contents of this data repository are under their own licenses and their copyright is retained. The usage terms of the Baha'i Writings are described at <http://www.bahai.org/legal>.
 
+# Installation
+
+From TextBrowser:
+
+`
+bower install git@bitbucket.org:brettz9/bahaiwritings.git
+`
+
 # Usage
 
 1. Add to `textbrowser/index.html` based on `textbrowser/index-sample.html`
