@@ -48,7 +48,7 @@ bower_components/lodash-compat/lodash.min.js
 bower_components/path-loader/browser/path-loader-min.js
 bower_components/traverse/traverse.js
 
-# User data files
+# Add user data files here:
 
 bower_components/bahaiwritings/other-works/Collins.json
 bower_components/bahaiwritings/other-works/lights.json
