@@ -7,9 +7,9 @@ index.html
 appdata/languages.json
 bower_components/bahaiwritings/files.json
 
-# Uncomment these if using:
-# resources/user.js
-# resources/user.css
+# Uncomment these if using in index.html:
+resources/user.js
+resources/user.css
 
 bower_components/form-serialize/index.js
 bower_components/get-json/index.js
