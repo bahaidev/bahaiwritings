@@ -3,9 +3,9 @@
         {
             "name": "Writings",
             "directions": "choosewritings_bahai_writingsdb",
-            "baseDirectory": "data/writings",
-            "schemaBaseDirectory": "data/writings/schemas",
-            "metadataBaseDir": "data/writings/metadata",
+            "baseDirectory": "bower_components/bahaiwritings/writings",
+            "schemaBaseDirectory": "bower_components/bahaiwritings/writings/schemas",
+            "metadataBaseDir": "bower_components/bahaiwritings/writings/metadata",
             "files": [
                 {"name": "aqdas", "file": {"$ref": "aqdas.json"}, "schemaFile": "aqdas.jsonschema", "metadataFile": "aqdas.metadata"},
                 {"name": "Bible", "file": {"$ref": "Bible.json"}, "schemaFile": "Bible.jsonschema", "metadataFile": "Bible.metadata"},
@@ -22,9 +22,9 @@
         {
             "name": "Other Writings",
             "directions": "choosewritings_bahai_writingsotherdb",
-            "baseDirectory": "data/other-works",
-            "schemaBaseDirectory": "data/other-works/schemas",
-            "metadataBaseDir": "data/other-works/metadata",
+            "baseDirectory": "bower_components/bahaiwritings/other-works",
+            "schemaBaseDirectory": "bower_components/bahaiwritings/other-works/schemas",
+            "metadataBaseDir": "bower_components/bahaiwritings/other-works/metadata",
             "files": [
                 {"name": "collins", "file": {"$ref": "Collins.json"}, "schemaFile": "Collins.jsonschema", "metadataFile": "Collins.metadata"},
                 {"name": "lights", "file": {"$ref": "lights.json"}, "schemaFile": "lights.jsonschema", "metadataFile": "lights.metadata"}
