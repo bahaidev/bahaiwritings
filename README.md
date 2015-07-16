@@ -4,23 +4,20 @@ Although the [TextBrowser](https://github.com/brettz9/textbrowser) project for w
 
 # Installation
 
-From TextBrowser:
+If you wish the TextBrowser dependency, install with:
 
 `
 bower install git@bitbucket.org:brettz9/bahaiwritings.git
 `
 
-# Usage
+If you just wish the Bahá'í Writings JSON and do not wish the TextBrowser dependency, install with:
 
-1. Add to `textbrowser/index.html` based on `textbrowser/index-sample.html`
-1. Add to `textbrowser/resources/user.js` based on `textbrowser/resources/user-sample.js` and modify the TextBrowser invocation portion as follows:
+`
+bower install git@bitbucket.org:brettz9/bahaiwritings.git#notextbrowser
+`
 
-```js
-var tb = new TextBrowser({
-    // languages: 'appdata/languages.json', // Default
-    files: 'bower_components/bahaiwritings/files.json'
-});
-```
+The copies should be the same except that the `dependencies` property in the `bower.json` is not set in the latter.
+
 
 # Todos
 
