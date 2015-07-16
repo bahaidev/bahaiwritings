@@ -21,6 +21,7 @@ The copies should be the same except that the `dependencies` property in the `bo
 
 # Todos
 
+1. ONGOING: Ensure `notextbrowser` branch is kept up to date with `master`.
 1. Once stabilized, target textbrowser dependency by tagged version.
 1. Bring over locale data from textbrowser into own metadata (or schema?) files
 1. Need to split Collins into own repo? (or describe terms)
