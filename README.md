@@ -2,6 +2,17 @@
 
 Although the [TextBrowser](https://github.com/brettz9/textbrowser) project for which this repository includes content is open sourced under the MIT license (as is the specific JSON formatting (and schema and meta-data files) of this repository), the contents of this data repository are under their own licenses and their copyright is retained. The usage terms of the Baha'i Writings are described at <http://www.bahai.org/legal>.
 
+# Usage
+
+1. Add `index.html` to `textbrowser` based on `index-sample.html` and modify the TextBrowser invocation as follows:
+
+```js
+var tb = new TextBrowser(
+    // languages: 'appdata/languages.json', // Default
+    files: 'bower_components/bahaiwritings/files.json'
+);
+```
+
 # Todos
 
 1. Bring over locale data from textbrowser into own metadata (or schema?) files
