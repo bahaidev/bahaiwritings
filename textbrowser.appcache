@@ -4,8 +4,8 @@ CACHE:
 
 index.html
 
-appdata/files.json
 appdata/languages.json
+bower_components/bahaiwritings/files.json
 
 # Uncomment these if using:
 # resources/user.js
@@ -30,43 +30,43 @@ bower_components/lodash-compat/lodash.min.js
 bower_components/path-loader/browser/path-loader-min.js
 bower_components/traverse/traverse.js
 
-data/other-works/Collins.json
-data/other-works/lights.json
-data/other-works/metadata/Collins.metadata
-data/other-works/metadata/lights.metadata
-data/other-works/schemas/Collins.jsonschema
-data/other-works/schemas/lights.jsonschema
+bower_components/bahaiwritings/other-works/Collins.json
+bower_components/bahaiwritings/other-works/lights.json
+bower_components/bahaiwritings/other-works/metabower_components/bahaiwritings/Collins.metadata
+bower_components/bahaiwritings/other-works/metabower_components/bahaiwritings/lights.metadata
+bower_components/bahaiwritings/other-works/schemas/Collins.jsonschema
+bower_components/bahaiwritings/other-works/schemas/lights.jsonschema
 
-data/writings/aqdas.json
-data/writings/Bible.json
-data/writings/Epistle to the Son of the Wolf.json
-data/writings/Gems of Divine Mysteries.json
-data/writings/gleanings.json
-data/writings/Hidden Words.json
-data/writings/peace.json
-data/writings/pm.json
-data/writings/quran.json
-data/writings/wwtf.json
-data/writings/metadata/aqdas.metadata
-data/writings/metadata/Bible.metadata
-data/writings/metadata/Epistle to the Son of the Wolf.metadata
-data/writings/metadata/Gems of Divine Mysteries.metadata
-data/writings/metadata/gleanings.metadata
-data/writings/metadata/Hidden Words.metadata
-data/writings/metadata/peace.metadata
-data/writings/metadata/pm.metadata
-data/writings/metadata/quran.metadata
-data/writings/metadata/wwtf.metadata
-data/writings/schemas/aqdas.jsonschema
-data/writings/schemas/Bible.jsonschema
-data/writings/schemas/Epistle to the Son of the Wolf.jsonschema
-data/writings/schemas/Gems of Divine Mysteries.jsonschema
-data/writings/schemas/gleanings.jsonschema
-data/writings/schemas/Hidden Words.jsonschema
-data/writings/schemas/peace.jsonschema
-data/writings/schemas/pm.jsonschema
-data/writings/schemas/quran.jsonschema
-data/writings/schemas/wwtf.jsonschema
+bower_components/bahaiwritings/writings/aqdas.json
+bower_components/bahaiwritings/writings/Bible.json
+bower_components/bahaiwritings/writings/Epistle to the Son of the Wolf.json
+bower_components/bahaiwritings/writings/Gems of Divine Mysteries.json
+bower_components/bahaiwritings/writings/gleanings.json
+bower_components/bahaiwritings/writings/Hidden Words.json
+bower_components/bahaiwritings/writings/peace.json
+bower_components/bahaiwritings/writings/pm.json
+bower_components/bahaiwritings/writings/quran.json
+bower_components/bahaiwritings/writings/wwtf.json
+bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/aqdas.metadata
+bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/Bible.metadata
+bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/Epistle to the Son of the Wolf.metadata
+bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/Gems of Divine Mysteries.metadata
+bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/gleanings.metadata
+bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/Hidden Words.metadata
+bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/peace.metadata
+bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/pm.metadata
+bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/quran.metadata
+bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/wwtf.metadata
+bower_components/bahaiwritings/writings/schemas/aqdas.jsonschema
+bower_components/bahaiwritings/writings/schemas/Bible.jsonschema
+bower_components/bahaiwritings/writings/schemas/Epistle to the Son of the Wolf.jsonschema
+bower_components/bahaiwritings/writings/schemas/Gems of Divine Mysteries.jsonschema
+bower_components/bahaiwritings/writings/schemas/gleanings.jsonschema
+bower_components/bahaiwritings/writings/schemas/Hidden Words.jsonschema
+bower_components/bahaiwritings/writings/schemas/peace.jsonschema
+bower_components/bahaiwritings/writings/schemas/pm.jsonschema
+bower_components/bahaiwritings/writings/schemas/quran.jsonschema
+bower_components/bahaiwritings/writings/schemas/wwtf.jsonschema
 
 general-schemas/files.jsonschema
 general-schemas/languages.jsonschema
