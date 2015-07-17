@@ -22,15 +22,19 @@
         "browserfile-workdisplay": "Sacred Writings Browser: {work}",
         "browserfile-resultsdisplay": "Sacred Writings Browser: {work} results",
         
-        "auto-fields": {
+        "autofields": {
             "wordbyword": "Word-by-word \"Auto-translation\"",
-            "wordbyword1": "Auto-Romanized Persian",
+            "auto-romanize": "Auto-Romanized {language}",
+            "wordbyword": "{language-base} with {language-tooltip} tooltips",
             "googlify": "Find word in \"Google\"",
             "googledefine": "Definition (Google)",
-            "wordbyword2": "Persian with English tooltips",
             "wikify": "Editable wiki page",
             "wikilinks": "Links to Wiki"
         }
+    },
+    "autofield-mapping": {
+        "aqdas": [{"wordbyword": ["Arabic", "English"]}]
+        
     },
     "groups": [
         {
