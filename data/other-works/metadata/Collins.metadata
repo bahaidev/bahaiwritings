@@ -1,9 +1,13 @@
 {
     "localization-strings": {
         "alias": {
-            "ar": "ببليوغرافية كولنز (Collins Bibliography)"
+            "en-US": "Collins Bibliography",
+            "ar": "ببليوغرافية كولنز (Collins Bibliography)",
+            "fa": "کتابنامه Collins"
         },
         "heading": {
+            "en-US": "The Collins Bibliography",
+            "fa": "کتابنامه Collins",
             "ar": "ببليوغرافية كولنز"
         },
         "fieldnames": {

@@ -1,6 +1,11 @@
 {
     "localization-strings": {
-        
+        "alias": {
+            "en-US": "Gleanings"
+        },
+        "heading": {
+            "en-US": "Gleanings from the Writings of Bahá'u'lláh"
+        }
     },
     "table": {
         "browse_fields": ["Section"],

@@ -1,6 +1,11 @@
 {
     "localization-strings": {
-        
+        "alias": {
+            "en-US": "Prayers and Meditations"
+        },
+        "heading": {
+            "en-US": "Prayers and Meditations"
+        }
     },
     "table": {
         "browse_fields": ["Number"],

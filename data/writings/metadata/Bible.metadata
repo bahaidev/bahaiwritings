@@ -1,10 +1,14 @@
 {
     "localization-strings": {
         "alias": {
-            "ar": "الكتاب المقدس (الأنجيل والعهد القديم معا)"
+            "en-US": "Bible",
+            "ar": "الكتاب المقدس (الأنجيل والعهد القديم معا)",
+            "fa": "انجیل"
         },
         "heading": {
-            "ar": "الانجيل",
+            "en-US": "The Bible",
+            "fa": "انجیل",
+            "ar": "الانجيل"
         },
         "fieldaliases": {
             "book-name": {

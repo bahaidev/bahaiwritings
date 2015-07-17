@@ -1,10 +1,14 @@
 {
     "localization-strings": {
         "alias": {
+            "en-US": "Qur'án",
             "ar": "القرآن الكريم",
+            "fa": "قران",
             "ru": "Коран"
         },
         "heading": {
+            "en-US": "The Holy Qur'án",
+            "fa": "قران",
             "ar": "القرآن المجيد"
         },
         "fieldaliases": {

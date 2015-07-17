@@ -1,6 +1,11 @@
 {
     "localization-strings": {
-        
+        "alias": {
+            "en-US": "Lights of Guidance"
+        },
+        "heading": {
+            "en-US": "Lights of Guidance"
+        }
     },
     "table": {
         "browse_fields": ["Number"]

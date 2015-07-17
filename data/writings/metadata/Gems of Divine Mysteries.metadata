@@ -1,6 +1,11 @@
 {
     "localization-strings": {
-        
+        "alias": {
+            "en-US": "Gems of Divine Mysteries"
+        },
+        "heading": {
+            "en-US": "Gems of Divine Mysteries"
+        }
     },
     "table": {
         "browse_fields": ["Paragraph"],

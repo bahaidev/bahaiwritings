@@ -3,10 +3,12 @@
         "alias": {
             "en-US": "Kitáb-i-Aqdas",
             "ar": "الكتاب الأقدس",
+            "fa": "كتاب اقدس",
             "ru": "Китаб-и-Агдас"
         },
         "heading": {
             "en-US": "The Kitáb-i-Aqdas",
+            "fa": "کتاب اقدس",
             "ar": "الكتاب الأقدس"
         },
         "fieldnames": {

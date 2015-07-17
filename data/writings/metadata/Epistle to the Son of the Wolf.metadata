@@ -1,7 +1,11 @@
 {
     "localization-strings": {
         "alias": {
+            "en-US": "Epistle to the Son of the Wolf",
             "ar": "لوح ابن الذئب"
+        },
+        "heading": {
+            "fa": "Epistle to the Son of the Wolf"
         }
     },
     "table": {

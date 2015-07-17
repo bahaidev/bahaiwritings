@@ -1,9 +1,13 @@
 {
     "localization-strings": {
         "alias": {
-            "ar": "الكلمات المكنونة"
+            "en-US": "Hidden Words",
+            "ar": "الكلمات المكنونة",
+            "fa": "كلمات مكنونه"
         },
         "heading": {
+            "en-US": "The Hidden Words",
+            "fa": "کلمات مکنونه",
             "ar": "الكلمات المكنونة"
         },
         "groupbytoggle": {

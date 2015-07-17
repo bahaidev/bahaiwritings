@@ -1,6 +1,11 @@
 {
     "localization-strings": {
-        
+        "alias": {
+            "en-US": "Who's Writing the Future?"
+        },
+        "heading": {
+            "en-US": "Who's Writing the Future?"
+        }
     },
     "table": {
         "browse_fields": ["Section","Paragraph"],

@@ -1,10 +1,14 @@
 {
     "localization-strings": {
         "alias": {
+            "en-US": "Promise of World Peace",
             "ar": "السلام العالمي وعد حق",
+            "fa": "وعده صلح جهانى",
             "ru": "Обещания мира во всем мире"
         },
         "heading": {
+            "en-US": "The Promise of World Peace",
+            "fa": "وعده صلح جهانی",
             "ar": "وعد السلام العالمي"
         }
     },
