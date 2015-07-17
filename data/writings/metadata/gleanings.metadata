@@ -5,6 +5,14 @@
         },
         "heading": {
             "en-US": "Gleanings from the Writings of Bahá'u'lláh"
+        },
+        "fieldnames": {
+            "Section": {
+                "en-US": "Section"
+            },
+            "English": {
+                "en-US": "English"
+            }
         }
     },
     "table": {
@@ -12,12 +20,18 @@
         "default_view": {"Section": 1}
     },
     "fields": {
+        "Section": {
+            "roman": true,
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Section"
+            }
+        },
         "English": {
             "primary_text_field": true,
-            "lang": "en"
-        },
-        "Section": {
-            "roman": true
+            "lang": "en",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/English"
+            }
         }
     }
 }

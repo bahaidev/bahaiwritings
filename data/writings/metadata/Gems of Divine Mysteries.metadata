@@ -5,6 +5,14 @@
         },
         "heading": {
             "en-US": "Gems of Divine Mysteries"
+        },
+        "fieldnames": {
+            "Paragraph": {
+                "en-US": "Paragraph"
+            },
+            "English": {
+                "en-US": "English"
+            }
         }
     },
     "table": {
@@ -12,10 +20,18 @@
         "default_view": {"Paragraph": 0}
     },
     "fields": {
+        "Paragraph": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Paragraph"
+            }
+        },
         "English": {
             "primary_text_field": true,
             "lang": "en",
-            "orig_langs": ["ar"]
+            "orig_langs": ["ar"],
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/English"
+            }
         }
     }
 }

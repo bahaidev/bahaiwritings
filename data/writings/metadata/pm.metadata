@@ -5,6 +5,14 @@
         },
         "heading": {
             "en-US": "Prayers and Meditations"
+        },
+        "fieldnames": {
+            "Number": {
+                "en-US": "Number"
+            },
+            "English": {
+                "en-US": "English"
+            }
         }
     },
     "table": {
@@ -12,12 +20,18 @@
         "default_view": {"Number": 1}
     },
     "fields": {
+        "Number": {
+            "roman": true,
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Number"
+            }
+        },
         "English": {
             "primary_text_field": true,
-            "lang": "en"
-        },
-        "Number": {
-            "roman": true
+            "lang": "en",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/English"
+            }
         }
     }
 }

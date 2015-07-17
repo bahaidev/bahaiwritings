@@ -5,6 +5,17 @@
         },
         "heading": {
             "en-US": "Who's Writing the Future?"
+        },
+        "fieldnames": {
+            "Section": {
+                "en-US": "Section"
+            },
+            "Paragraph": {
+                "en-US": "Paragraph"
+            },
+            "Chinese": {
+                "en-US": "Chinese"
+            }
         }
     },
     "table": {
@@ -12,9 +23,22 @@
         "default_view": {"Section": 0}
     },
     "fields": {
+        "Section": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Section"
+            }
+        },
+        "Paragraph": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Paragraph"
+            }
+        },
         "Chinese": {
             "lang": "zh-CN",
-            "orig_langs": ["en"]
+            "orig_langs": ["en"],
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Chinese"
+            }
         }
     }
 }

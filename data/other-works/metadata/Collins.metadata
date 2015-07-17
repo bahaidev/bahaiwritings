@@ -12,27 +12,154 @@
         },
         "fieldnames": {
             "Record ID": {
+                "en-US": "Record ID",
                 "fa": "شماره",
                 "ar": "رقم"
             },
             "Date of Publication": {
+                "en-US": "Date of Publication",
                 "fa": "سال چاپ",
                 "ar": "سنة الاصدار"
             },
             "Size": {
+                "en-US": "Size",
                 "ar": "حجم"
             },
             "Series Editor": {
+                "en-US": "Series Editor",
                 "ar": "محرر المسلسل"
             },
             "Series Editor Role": {
+                "en-US": "Series Editor Role",
                 "ar": "مهمة محرر المسلسل"
             },
             "Series Title": {
+                "en-US": "Series Title",
                 "ar": "عنوان المسلسل"
             },
             "Document Type": {
+                "en-US": "Document Type",
                 "ar": "نوع الملف"
+            },
+            "Workform": {
+                "en-US": "Workform"
+            },
+            "Author, Analytic": {
+                "en-US": "Author, Analytic"
+            },
+            "Author Role": {
+                "en-US": "Author Role"
+            },
+            "Author Affiliation": {
+                "en-US": "Author Affiliation"
+            },
+            "Title, Analytic": {
+                "en-US": "Title, Analytic"
+            },
+            "Medium Designator": {
+                "en-US": "Medium Designator"
+            },
+            "Connective Phrase": {
+                "en-US": "Connective Phrase"
+            },
+            "Author, Monographic": {
+                "en-US": "Author, Monographic"
+            },
+            "Author Role (2)": {
+                "en-US": "Author Role (2)"
+            },
+            "Title, Monographic": {
+                "en-US": "Title, Monographic"
+            },
+            "Journal Title": {
+                "en-US": "Journal Title"
+            },
+            "Title": {
+                "en-US": "Title"
+            },
+            "Reprint Status": {
+                "en-US": "Reprint Status"
+            },
+            "Place of Meeting": {
+                "en-US": "Place of Meeting"
+            },
+            "Medium Designator (2)": {
+                "en-US": "Medium Designator (2)"
+            },
+            "Edition": {
+                "en-US": "Edition"
+            },
+            "Author, Subsidiary": {
+                "en-US": "Author, Subsidiary"
+            },
+            "Author Role (3)": {
+                "en-US": "Author Role (3)"
+            },
+            "Place of Publication": {
+                "en-US": "Place of Publication"
+            },
+            "Publisher Name": {
+                "en-US": "Publisher Name"
+            },
+            "Date of Copyright": {
+                "en-US": "Date of Copyright"
+            },
+            "Volume ID": {
+                "en-US": "Volume ID"
+            },
+            "Report ID": {
+                "en-US": "Report ID"
+            },
+            "Issue ID": {
+                "en-US": "Issue ID"
+            },
+            "Location in Work": {
+                "en-US": "Location in Work"
+            },
+            "Extent of Work": {
+                "en-US": "Extent of Work"
+            },
+            "Packaging Method": {
+                "en-US": "Packaging Method"
+            },
+            "Reproduction Ration": {
+                "en-US": "Reproduction Ration"
+            },
+            "Series Volume ID": {
+                "en-US": "Series Volume ID"
+            },
+            "Series Issue ID": {
+                "en-US": "Series Issue ID"
+            },
+            "Connective Phrase (2)": {
+                "en-US": "Connective Phrase (2)"
+            },
+            "Availability": {
+                "en-US": "Availability"
+            },
+            "Location/URL": {
+                "en-US": "Location/URL"
+            },
+            "CODEN": {
+                "en-US": "CODEN"
+            },
+            "ISSN": {
+                "en-US": "ISSN"
+            },
+            "ISBN": {
+                "en-US": "ISBN"
+            },
+            "Notes": {
+                "en-US": "Notes"
+            },
+            "Abstract": {
+                "en-US": "Abstract"
+            },
+            "Call Number": {
+                "en-US": "Call Number"
+            },
+            "Keywords": {
+                "en-US": "Keywords"
             }
         }
     },
@@ -43,7 +170,10 @@
     "fields": {
         "Abstract": {
             "primary_text_field": true,
-            "lang": "en"
+            "lang": "en",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Abstract"
+            }
         },
         "Record ID": {
             "alias": "Number",
@@ -80,6 +210,201 @@
         "Document Type": {
             "name": {
                 "$ref": "#/localization-strings/fieldnames/Document Type"
+            }
+        },
+        "Workform": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Workform"
+            }
+        },
+        "Author, Analytic": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Author, Analytic"
+            }
+        },
+        "Author Role": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Author Role"
+            }
+        },
+        "Author Affiliation": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Author Affiliation"
+            }
+        },
+        "Title, Analytic": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Title, Analytic"
+            }
+        },
+        "Medium Designator": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Medium Designator"
+            }
+        },
+        "Connective Phrase": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Connective Phrase"
+            }
+        },
+        "Author, Monographic": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Author, Monographic"
+            }
+        },
+        "Author Role (2)": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Author Role (2)"
+            }
+        },
+        "Title, Monographic": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Title, Monographic"
+            }
+        },
+        "Journal Title": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Journal Title"
+            }
+        },
+        "Title": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Title"
+            }
+        },
+        "Reprint Status": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Reprint Status"
+            }
+        },
+        "Place of Meeting": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Place of Meeting"
+            }
+        },
+        "Medium Designator (2)": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Medium Designator (2)"
+            }
+        },
+        "Edition": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Edition"
+            }
+        },
+        "Author, Subsidiary": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Author, Subsidiary"
+            }
+        },
+        "Author Role (3)": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Author Role (3)"
+            }
+        },
+        "Place of Publication": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Place of Publication"
+            }
+        },
+        "Publisher Name": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Publisher Name"
+            }
+        },
+        "Date of Copyright": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Date of Copyright"
+            }
+        },
+        "Volume ID": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Volume ID"
+            }
+        },
+        "Report ID": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Report ID"
+            }
+        },
+        "Issue ID": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Issue ID"
+            }
+        },
+        "Location in Work": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Location in Work"
+            }
+        },
+        "Extent of Work": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Extent of Work"
+            }
+        },
+        "Packaging Method": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Packaging Method"
+            }
+        },
+        "Reproduction Ration": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Reproduction Ration"
+            }
+        },
+        "Series Volume ID": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Series Volume ID"
+            }
+        },
+        "Series Issue ID": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Series Issue ID"
+            }
+        },
+        "Connective Phrase (2)": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Connective Phrase (2)"
+            }
+        },
+        "Availability": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Availability"
+            }
+        },
+        "Location/URL": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Location/URL"
+            }
+        },
+        "CODEN": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/CODEN"
+            }
+        },
+        "ISSN": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/ISSN"
+            }
+        },
+        "ISBN": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/ISBN"
+            }
+        },
+        "Notes": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Notes"
+            }
+        },
+        "Call Number": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Call Number"
+            }
+        },
+        "Keywords": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Keywords"
             }
         }
     }
