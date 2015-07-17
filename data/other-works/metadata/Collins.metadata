@@ -12,9 +12,11 @@
         },
         "fieldnames": {
             "Record ID": {
+                "fa": "شماره",
                 "ar": "رقم"
             },
             "Date of Publication": {
+                "fa": "سال چاپ",
                 "ar": "سنة الاصدار"
             },
             "Size": {
