@@ -7,13 +7,13 @@
             "en-US": "Other Writings"
         },
         "choosewritings_bahai_writingsdb": {
-            "en-US": "Choose the Writings you wish to browse"
+            "en-US": "Choose the Writings you wish to browse",
             "fa": "آثار و الواح مورد دلخواه را انتخاب فرمائید",
             "ar": "إختار الكتاب الذي تود قرائته",
             "ru": "Выберете Писания для просмотра"
         },
         "choosewritings_bahai_writingsotherdb": {
-            "en-US": "Or, choose from the following (non-Scriptural) works"
+            "en-US": "Or, choose from the following (non-Scriptural) works",
             "fa": "یا از فهرست نوشتجات دیگر انتخاب فرمائید",
             "ar": "أو .. اختار من هذه الكتب الأخرى (من غير الآثار البهائية)",
             "ru": "Или выберете из следующих (не Богоявленных) работ"
@@ -50,7 +50,7 @@
         {
             "name": {
                 "$ref": "#/localization-strings/writings"
-            },,
+            },
             "directions": {
                 "$ref": "#/localization-strings/choosewritings_bahai_writingsdb"
             },
