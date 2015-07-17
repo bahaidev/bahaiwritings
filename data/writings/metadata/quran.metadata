@@ -1,18 +1,31 @@
 {
+    "localization-strings": {
+        "alias": {
+            "ar": "القرآن الكريم",
+            "ru": "Коран"
+        },
+        "heading": {
+            "ar": "القرآن المجيد"
+        },
+        "fieldaliases": {
+            "surah-name": {
+                "en-US": "Suráh Name"
+            }
+        }
+    },
     "table": {
         "browse_fields": [
             {"name": "Traditional", "set": ["Traditional Suráh #", "Verse #"]},
             {"name": "Rodwell", "set": ["Rodwell Suráh #", "Verse #"]}
         ],
-        "default_view": {"Traditional Suráh #": 1},
-        "alias": {
-            "ru": "Коран"
-        }
+        "default_view": {"Traditional Suráh #": 1}
     },
     "fields": {
         "Traditional Suráh #": {
             "prefer_alias": false,
-            "alias": "surah-name",
+            "alias": {
+                "$ref": "#/localization-strings/fieldaliases/surah-name"
+            },
             "fieldvalue-aliases": {
                 "1": ["The Opening"],
                 "2": ["The Cow"],

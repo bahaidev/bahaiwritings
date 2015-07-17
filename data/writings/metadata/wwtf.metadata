@@ -1,4 +1,7 @@
 {
+    "localization-strings": {
+        
+    },
     "table": {
         "browse_fields": ["Section","Paragraph"],
         "default_view": {"Section": 0}

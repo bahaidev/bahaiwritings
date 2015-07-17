@@ -1,4 +1,35 @@
 {
+    "localization-strings": {
+        "alias": {
+            "ar": "ببليوغرافية كولنز (Collins Bibliography)"
+        },
+        "heading": {
+            "ar": "ببليوغرافية كولنز"
+        },
+        "fieldnames": {
+            "Record ID": {
+                "ar": "رقم"
+            },
+            "Date of Publication": {
+                "ar": "سنة الاصدار"
+            },
+            "Size": {
+                "ar": "حجم"
+            },
+            "Series Editor": {
+                "ar": "محرر المسلسل"
+            },
+            "Series Editor Role": {
+                "ar": "مهمة محرر المسلسل"
+            },
+            "Series Title": {
+                "ar": "عنوان المسلسل"
+            },
+            "Document Type": {
+                "ar": "نوع الملف"
+            }
+        }
+    },
     "table": {
         "browse_fields": ["Record ID", "Date of Publication"],
         "default_view": {"Record ID": 1}
@@ -9,10 +40,41 @@
             "lang": "en"
         },
         "Record ID": {
-            "alias": "Number"
+            "alias": "Number",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Record ID"
+            }
         },
         "Date of Publication": {
-            "alias": "Year Published"
+            "alias": "Year Published",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Date of Publication"
+            }
+        },
+        "Size": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Size"
+            }
+        },
+        "Series Editor": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Series Editor"
+            }
+        },
+        "Series Editor Role": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Series Editor Role"
+            }
+        },
+        "Series Title": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Series Title"
+            }
+        },
+        "Document Type": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Document Type"
+            }
         }
     }
 }

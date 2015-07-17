@@ -1,14 +1,23 @@
 {
-    "table": {
-        "browse_fields": ["Paragraph"],
-        "default_view": {"Paragraph": 0},
+    "localization-strings": {
         "alias": {
             "en-US": "Kitáb-i-Aqdas",
+            "ar": "الكتاب الأقدس",
             "ru": "Китаб-и-Агдас"
         },
         "heading": {
-            "en-US": "The Kitáb-i-Aqdas"
+            "en-US": "The Kitáb-i-Aqdas",
+            "ar": "الكتاب الأقدس"
+        },
+        "fieldnames": {
+            "Arabic": {
+                "ar": "عربي"
+            }
         }
+    },
+    "table": {
+        "browse_fields": ["Paragraph"],
+        "default_view": {"Paragraph": 0}
     },
     "fields": {
         "English": {
@@ -22,7 +31,10 @@
         "Arabic": {
             "primary_text_field": true,
             "orig_lang_field": true,
-            "lang": "ar"
+            "lang": "ar",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Arabic"
+            }
         }
     }
 }

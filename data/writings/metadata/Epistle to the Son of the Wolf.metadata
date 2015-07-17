@@ -1,4 +1,9 @@
 {
+    "localization-strings": {
+        "alias": {
+            "ar": "لوح ابن الذئب"
+        }
+    },
     "table": {
         "browse_fields": ["Paragraph"],
         "default_view": {"Paragraph": 0}

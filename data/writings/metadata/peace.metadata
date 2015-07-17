@@ -1,10 +1,16 @@
 {
+    "localization-strings": {
+        "alias": {
+            "ar": "السلام العالمي وعد حق",
+            "ru": "Обещания мира во всем мире"
+        },
+        "heading": {
+            "ar": "وعد السلام العالمي"
+        }
+    },
     "table": {
         "browse_fields": ["Paragraph", "Section Number"],
-        "default_view": {"Paragraph": 0},
-        "alias": {
-            "peace": "Обещания мира во всем мире"
-        }
+        "default_view": {"Paragraph": 0}
     },
     "fields": {
         "English": {

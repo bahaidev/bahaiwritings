@@ -1,4 +1,7 @@
 {
+    "localization-strings": {
+        
+    },
     "table": {
         "browse_fields": ["Number"]
     },

@@ -1,4 +1,25 @@
 {
+    "localization-strings": {
+        "alias": {
+            "ar": "الكتاب المقدس (الأنجيل والعهد القديم معا)"
+        },
+        "heading": {
+            "ar": "الانجيل",
+        },
+        "fieldaliases": {
+            "book-name": {
+                "en-US": "Book Name"
+            }
+        },
+        "fieldnames": {
+            "Book #": {
+                "ar": "كتاب #"
+            },
+            "Chapter #": {
+                "ar": "فصل #"
+            }
+        }
+    },
     "table": {
         "browse_fields": [{"name": "Book-Chapter-Verse", "set": ["Book #", "Chapter #", "Verse #"]}],
         "default_view": {"Book-Chapter-Verse": [1]}
@@ -6,7 +27,12 @@
     "fields": {
         "Book #": {
             "prefer_alias": true,
-            "alias": "book-name",
+            "alias": {
+                "$ref": "#/localization-strings/fieldaliases/book-name"
+            },
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Book #"
+            },
             "fieldvalue-aliases": {
                 "1": {"long1": "Genesis","abbrev1": "GEN","abbrev2": "genes","abbrev3": "Ge","abbrev4": "Gn"},
                 "2": {"long1": "Exodus","abbrev1": "EXOD","abbrev2": "exo","abbrev3": "Ex"},
@@ -76,6 +102,11 @@
                 "66": {"long1": "Revelation","abbrev1": "REV","abbrev2": "revel","abbrev3": "Re","abbrev4": "revelat","abbrev5": "revelations"}
             }
         },
+        "Chapter #": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Chapter #"
+            }
+        }
         "King James Translation": {
             "primary_text_field": true,
             "lang": "en"
