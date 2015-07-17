@@ -3,10 +3,11 @@
         "browse_fields": ["Paragraph"],
         "default_view": {"Paragraph": 0},
         "alias": {
-            "en-US": "Kit�b-i-Aqdas"
+            "en-US": "Kitáb-i-Aqdas",
+            "ru": "Китаб-и-Агдас"
         },
         "heading": {
-            "en-US": "The Kit�b-i-Aqdas"
+            "en-US": "The Kitáb-i-Aqdas"
         }
     },
     "fields": {

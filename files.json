@@ -29,12 +29,20 @@
             "googlify": "Find word in \"Google\"",
             "googledefine": "Definition (Google)",
             "wikify": "Editable wiki page",
-            "wikilinks": "Links to Wiki"
+            "wikilinks": "Links to Wiki",
+            "synopsis": {
+                "en-US": "Synopsis",
+                "ru": "Краткое содержание"
+            },
+            "roman-numerals": {
+                "en-US": "Roman #",
+                "ru": "Шрифт #"
+            }
         }
     },
     "autofield-mapping": {
-        "aqdas": [{"wordbyword": ["Arabic", "English"]}]
-        
+        "aqdas": [{"wordbyword": ["Arabic", "English"]}],
+        "pm": ["synopsis", "roman-numerals"]
     },
     "groups": [
         {

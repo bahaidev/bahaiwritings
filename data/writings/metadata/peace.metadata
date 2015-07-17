@@ -1,7 +1,10 @@
 {
     "table": {
         "browse_fields": ["Paragraph", "Section Number"],
-        "default_view": {"Paragraph": 0}
+        "default_view": {"Paragraph": 0},
+        "alias": {
+            "peace": "Обещания мира во всем мире"
+        }
     },
     "fields": {
         "English": {

@@ -4,7 +4,10 @@
             {"name": "Traditional", "set": ["Traditional Suráh #", "Verse #"]},
             {"name": "Rodwell", "set": ["Rodwell Suráh #", "Verse #"]}
         ],
-        "default_view": {"Traditional Suráh #": 1}
+        "default_view": {"Traditional Suráh #": 1},
+        "alias": {
+            "ru": "Коран"
+        }
     },
     "fields": {
         "Traditional Suráh #": {
