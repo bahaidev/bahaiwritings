@@ -6,6 +6,16 @@
         },
         "heading": {
             "fa": "Epistle to the Son of the Wolf"
+        },
+        "fieldnames": {
+            "Paragraph": {
+                "en-US": "Paragraph",
+                "fa": "پاراگراف"
+            },
+            "English": {
+                "en-US": "English",
+                "fa": "نوشتجات"
+            }
         }
     },
     "table": {
@@ -13,10 +23,18 @@
         "default_view": {"Paragraph": 0}
     },
     "fields": {
+        "Paragraph": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Paragraph"
+            }
+        },
         "English": {
             "primary_text_field": true,
             "lang": "en",
-            "orig_langs": ["ar"]
+            "orig_langs": ["ar"],
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/English"
+            }
         }
     }
 }

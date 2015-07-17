@@ -15,6 +15,41 @@
             "surah-name": {
                 "en-US": "Suráh Name"
             }
+        },
+        "fieldnames": {
+            "Rodwell Suráh #": {
+                "en-US": "Rodwell Suráh #",
+                "fa": "سوره شماره  در Rodwell"
+            },
+            "Verse #": {
+                "en-US": "Verse #",
+                "fa": "سوره شماره"
+            },
+            "Traditional Suráh #": {
+                "en-US": "Traditional Suráh #"
+            },
+            "Sale Translation": {
+                "en-US": "Sale Translation",
+                "fa": "ترجمه صالح"
+            },
+            "Sale's Notes": {
+                "en-US": "Sale's Notes"
+            },
+            "Bahá'í References (Central Figures)": {
+                "en-US": "Bahá'í References (Central Figures)"
+            },
+            "Bahá'í Translation (Shoghi Effendi unless otherwise noted)": {
+                "en-US": "Bahá'í Translation (Shoghi Effendi unless otherwise noted)"
+            },
+            "Bahá'í References (Special)": {
+                "en-US": "Bahá'í References (Special)"
+            },
+            "Rodwell Translation": {
+                "en-US": "Rodwell Translation"
+            },
+            "Rodwell's Notes": {
+                "en-US": "Rodwell's Notes"
+            }
         }
     },
     "table": {
@@ -25,10 +60,23 @@
         "default_view": {"Traditional Suráh #": 1}
     },
     "fields": {
+        "Rodwell Suráh #" : {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Rodwell Suráh #"
+            }
+        },
+        "Verse #": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Verse #"
+            }
+        },
         "Traditional Suráh #": {
             "prefer_alias": false,
             "alias": {
                 "$ref": "#/localization-strings/fieldaliases/surah-name"
+            },
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Traditional Suráh #"
             },
             "fieldvalue-aliases": {
                 "1": ["The Opening"],
@@ -150,27 +198,48 @@
         "Rodwell Translation": {
             "primary_text_field": true,
             "lang": "en",
-            "orig_langs": ["ar"]
+            "orig_langs": ["ar"],
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Rodwell Translation"
+            }
         },
         "Sale Translation": {
             "primary_text_field": true,
             "lang": "en",
-            "orig_langs": ["ar"]
+            "orig_langs": ["ar"],
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Sale Translation"
+            }
         },
         "Sale's Notes": {
-            "lang": "en"
+            "lang": "en",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Sale's Notes"
+            }
         },
         "Bahá'í References (Central Figures)": {
-            "lang": "en"
+            "lang": "en",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Bahá'í References (Central Figures)"
+            }
         },
         "Bahá'í Translation (Shoghi Effendi unless otherwise noted)": {
-            "lang": "en"
+            "lang": "en",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Bahá'í Translation (Shoghi Effendi unless otherwise noted)"
+            }
         },
         "Bahá'í References (Special)": {
-            "lang": "en"
+            "lang": "en",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Bahá'í References (Special)"
+            }
         },
         "Rodwell's Notes": {
-            "lang": "en"
+            "lang": "en",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Rodwell's Notes"
+            }
         }
     }
 }

@@ -23,15 +23,16 @@
         "browserfile-resultsdisplay": "Sacred Writings Browser: {work} results",
         
         "autofields": {
-            "wordbyword": "Word-by-word \"Auto-translation\"",
+            "wordbyword": "Word-by-word \"Auto-translation\" from {language-from} to {language-to}",
             "auto-romanize": "Auto-Romanized {language}",
-            "wordbyword": "{language-base} with {language-tooltip} tooltips",
+            "wordbyword-tooltips": "{language-base} with {language-tooltip} tooltips",
             "googlify": "Find word in \"Google\"",
             "googledefine": "Definition (Google)",
             "wikify": "Editable wiki page",
             "wikilinks": "Links to Wiki",
             "synopsis": {
                 "en-US": "Synopsis",
+                "fa": "خلاصه",
                 "ru": "Краткое содержание"
             },
             "roman-numerals": {
@@ -42,7 +43,8 @@
     },
     "autofield-mapping": {
         "aqdas": [{"wordbyword": ["Arabic", "English"]}],
-        "pm": ["synopsis", "roman-numerals"]
+        "pm": [{"synopsis": "English"}, {"roman-numerals": "Number"}],
+        "hidden words": [{"synopsis": "English"}, {"wordbyword": ["English", "$locale"]}, {"wordbyword-tooltips": ["Persian", "English"]}, {"auto-romanize": "Persian"}]
     },
     "groups": [
         {

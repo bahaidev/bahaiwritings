@@ -14,8 +14,26 @@
             "en-US": "Group according to the above?"
         },
         "fieldnames": {
+            "Original Language": {
+                "en-US": "Original Language",
+                "fa": "زبان اصلی"
+            },
+            "Number": {
+                "en-US": "Number",
+                "fa": "شماره"
+            },
+            "English": {
+                "en-US": "English",
+                "fa": "نوشتجات"
+            },
             "Arabic": {
+                "en-US": "Arabic",
+                "fa": "عربی",
                 "ar": "عربي"
+            },
+            "Persian": {
+                "en-US": "Persian",
+                "fa": "فارسي"
             }
         },
         "fieldvalue": {
@@ -37,13 +55,24 @@
         "default_view": {"Number": 0, "Original Language": "Arabic"}
     },
     "fields": {
+        "Number": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Number"
+            }
+        }
         "Original Language": {
             "sequentialEnum": true,
-            "hasFieldvalue": true
+            "hasFieldvalue": true,
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Original Language"
+            }
         },
         "English": {
             "primary_text_field": true,
-            "lang": "en"
+            "lang": "en",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/English"
+            }
         },
         "Arabic": {
             "primary_text_field": true,
@@ -54,7 +83,10 @@
         },
         "Persian": {
             "primary_text_field": true,
-            "lang": "fa"
+            "lang": "fa",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Persian"
+            }
         }
     }
 }

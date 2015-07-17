@@ -12,8 +12,22 @@
             "ar": "الكتاب الأقدس"
         },
         "fieldnames": {
+            "Paragraph": {
+                "en-US": "Paragraph",
+                "fa": "پاراگراف"
+            },
+            "English": {
+                "en-US": "English",
+                "fa": "نوشتجات"
+            },
             "Arabic": {
+                "en-US": "Arabic",
+                "fa": "عربی",
                 "ar": "عربي"
+            },
+            "German": {
+                "en-US": "German",
+                "fa": "المانی"
             }
         }
     },
@@ -22,13 +36,24 @@
         "default_view": {"Paragraph": 0}
     },
     "fields": {
+        "Paragraph": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Paragraph"
+            }
+        },
         "English": {
             "primary_text_field": true,
-            "lang": "en"
+            "lang": "en",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/English"
+            }
         },
         "German": {
             "primary_text_field": true,
-            "lang": "de"
+            "lang": "de",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/German"
+            }
         },
         "Arabic": {
             "primary_text_field": true,

@@ -10,6 +10,24 @@
             "en-US": "The Promise of World Peace",
             "fa": "وعده صلح جهانی",
             "ar": "وعد السلام العالمي"
+        },
+        "fieldnames": {
+            "Paragraph": {
+                "en-US": "Paragraph",
+                "fa": "پاراگراف"
+            },
+            "Chinese": {
+                "en-US": "Chinese",
+                "fa": "چینی"
+            },
+            "Section Number": {
+                "en-US": "Section Number",
+                "fa": "قسمت"
+            },
+            "English": {
+                "en-US": "English",
+                "fa": "انگلیسی"
+            },
         }
     },
     "table": {
@@ -17,14 +35,30 @@
         "default_view": {"Paragraph": 0}
     },
     "fields": {
+        "Paragraph": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Paragraph"
+            }
+        },
+        "Section Number": {
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Section Number"
+            }
+        },
         "English": {
             "primary_text_field": true,
             "orig_lang_field": true,
-            "lang": "en"
+            "lang": "en",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/English"
+            }
         },
         "Chinese": {
             "primary_text_field": true,
-            "lang": "zh-CN"
+            "lang": "zh-CN",
+            "name": {
+                "$ref": "#/localization-strings/fieldnames/Chinese"
+            }
         }
     }
 }
