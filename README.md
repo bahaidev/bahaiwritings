@@ -21,7 +21,7 @@ The copies should be the same except that the `dependencies` property in the `bo
 
 # Todos
 
-1. When textbrowser handles the recent localization changes to files.json (and languages.json, site.json), and table/field-specific to metadata (or schema?) files, delete `pre-locale-changes` branch (and merge `master` into `notextbrowser` branch).
+1. When textbrowser handles the recent localization changes to files.json (and languages.json, site.json), and table/field-specific to metadata (or schema?) files, delete `pre-locale-changes` branch (and merge `master` into `notextbrowser` branch) as well as deleting `locale-division` branch from textbrowser once merged into its `master` branch.
 1. ONGOING: Ensure `notextbrowser` branch is kept up to date with `master` besides the `bower.json` difference.
 1. Once stabilized, target textbrowser dependency by tagged version.
 1. Need to split Collins into own repo? (or describe terms)
