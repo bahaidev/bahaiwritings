@@ -21,8 +21,8 @@ The copies should be the same except that the `dependencies` property in the `bo
 
 # Todos
 
-1. Bring over locale data from textbrowser into own files.json, and table/field-specific to metadata (or schema?) files
-1. ONGOING: Ensure `notextbrowser` branch is kept up to date with `master`.
+1. When textbrowser handles the recent localization changes to files.json (and languages.json, site.json), and table/field-specific to metadata (or schema?) files, delete `pre-locale-changes` branch (and merge `master` into `notextbrowser` branch).
+1. ONGOING: Ensure `notextbrowser` branch is kept up to date with `master` besides the `bower.json` difference.
 1. Once stabilized, target textbrowser dependency by tagged version.
 1. Need to split Collins into own repo? (or describe terms)
 1. The base code of browse0.php, browse.php, browse9.php are all XHTML compliant, but there are a good number of invalid XHTML in the JSON databases Qur'an and Bible (links w/o quotes) that would ideally be replaced as well as the XHTML and link locations in the Iqan copy (just to be nice and clean)
