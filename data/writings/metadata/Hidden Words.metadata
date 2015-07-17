@@ -1,7 +1,10 @@
 {
     "table": {
         "browse_fields": [{"set": ["Number", "Original Language"]}],
-        "default_view": {"Number": 0, "Original Language": "Arabic"}
+        "default_view": {"Number": 0, "Original Language": "Arabic"},
+        "groupbytoggle": {
+            "en-US": "Group according to the above?"
+        }
     },
     "fields": {
         "Original Language": {

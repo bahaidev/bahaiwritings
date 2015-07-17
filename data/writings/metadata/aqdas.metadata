@@ -1,7 +1,13 @@
 {
     "table": {
         "browse_fields": ["Paragraph"],
-        "default_view": {"Paragraph": 0}
+        "default_view": {"Paragraph": 0},
+        "alias": {
+            "en-US": "Kitáb-i-Aqdas"
+        },
+        "heading": {
+            "en-US": "The Kitáb-i-Aqdas"
+        }
     },
     "fields": {
         "English": {
