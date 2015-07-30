@@ -21,6 +21,7 @@ The copies should be the same except that the `dependencies` property in the `bo
 
 # Todos
 
+1. Change schema references (in both `bahaiwritings` branches) to point to absolute URLs so as to be independent of repository/branch (rather than their current assumption of being utilized within textbrowser).
 1. When textbrowser handles the recent localization changes to files.json (and languages.json, site.json), and table/field-specific to metadata (or schema?) files, delete `pre-locale-changes` branch (and merge `master` into `notextbrowser` branch) as well as deleting `locale-division` branch from textbrowser once merged into its `master` branch.
 1. ONGOING: Ensure `notextbrowser` branch is kept up to date with `master` besides the `bower.json` difference.
 1. Once stabilized, target textbrowser dependency by tagged version.
