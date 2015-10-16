@@ -38,3 +38,4 @@ The copies should be the same except that the `dependencies` property in the `bo
     1. Add "By page" for the Aqdas (once parsed by page)
     1. If implementing combining of fields, add Collins for this.
     1. Further localization including column aliases, etc.
+1. Address how this project may still be consistent with http://bahai-library.com/uhj_interlinear_writings_cta
