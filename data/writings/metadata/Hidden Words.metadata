@@ -59,7 +59,7 @@
             "name": {
                 "$ref": "#/localization-strings/fieldnames/Number"
             }
-        }
+        },
         "Original Language": {
             "sequentialEnum": true,
             "hasFieldvalue": true,
