@@ -41,7 +41,7 @@ in the `bower.json` is not set in the latter.
   into `notextbrowser` branch) as well as deleting `locale-division` branch
   from textbrowser once merged into its `master` branch.
 
-1.  Once stabilized, target textbrowser dependency by tagged version.
+1.  Once stabilized, target `textbrowser` dependency by tagged version.
 
 1.  Once implemented, apply `prefer_alias` to Qur'an and Bible
 
