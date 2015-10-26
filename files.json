@@ -48,10 +48,10 @@
     "groups": [
         {
             "name": {
-                "$ref": "#/localization-strings/writings"
+                "$ref": "#/localization-strings/~lang/writings"
             },
             "directions": {
-                "$ref": "#/localization-strings/choosewritings_bahai_writingsdb"
+                "$ref": "#/localization-strings/~lang/choosewritings_bahai_writingsdb"
             },
             "baseDirectory": "data/writings",
             "schemaBaseDirectory": "data/writings/schemas",
@@ -71,10 +71,10 @@
         },
         {
             "name": {
-                "$ref": "#/localization-strings/other-writings"
+                "$ref": "#/localization-strings/~lang/other-writings"
             },
             "directions": {
-                "$ref": "#/localization-strings/choosewritings_bahai_writingsotherdb"
+                "$ref": "#/localization-strings/~lang/choosewritings_bahai_writingsotherdb"
             },
             "baseDirectory": "data/other-works",
             "schemaBaseDirectory": "data/other-works/schemas",
