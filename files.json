@@ -1,28 +1,13 @@
 {
     "localization-strings": {
-        "writings": {
-            "en-US": "Writings"
-        },
-        "other-writings": {
-            "en-US": "Other Writings"
-        },
-        "choosewritings_bahai_writingsdb": {
-            "en-US": "Choose the Writings you wish to browse",
-            "fa": "آثار و الواح مورد دلخواه را انتخاب فرمائید",
-            "ar": "إختار الكتاب الذي تود قرائته",
-            "ru": "Выберете Писания для просмотра"
-        },
-        "choosewritings_bahai_writingsotherdb": {
-            "en-US": "Or, choose from the following (non-Scriptural) works",
-            "fa": "یا از فهرست نوشتجات دیگر انتخاب فرمائید",
-            "ar": "أو .. اختار من هذه الكتب الأخرى (من غير الآثار البهائية)",
-            "ru": "Или выберете из следующих (не Богоявленных) работ"
-        },
-        "browserfile-workselect": "Sacred Writings Browser: Work Selection",
-        "browserfile-workdisplay": "Sacred Writings Browser: {work}",
-        "browserfile-resultsdisplay": "Sacred Writings Browser: {work} results",
-        
-        "autofields": {
+        "en-US": {
+            "writings": "Writings",
+            "other-writings": "Other Writings",
+            "choosewritings_bahai_writingsdb": "Choose the Writings you wish to browse",
+            "choosewritings_bahai_writingsotherdb": "Or, choose from the following (non-Scriptural) works",
+            "browserfile-workselect": "Sacred Writings Browser: Work Selection",
+            "browserfile-workdisplay": "Sacred Writings Browser: {work}",
+            "browserfile-resultsdisplay": "Sacred Writings Browser: {work} results",
             "wordbyword": "Word-by-word \"Auto-translation\" from {language-from} to {language-to}",
             "auto-romanize": "Auto-Romanized {language}",
             "wordbyword-tooltips": "{language-base} with {language-tooltip} tooltips",
@@ -30,14 +15,28 @@
             "googledefine": "Definition (Google)",
             "wikify": "Editable wiki page",
             "wikilinks": "Links to Wiki",
-            "synopsis": {
-                "en-US": "Synopsis",
-                "fa": "خلاصه",
-                "ru": "Краткое содержание"
-            },
-            "roman-numerals": {
-                "en-US": "Roman #",
-                "ru": "Шрифт #"
+            "autofields": {
+                "synopsis": "Synopsis",
+                "roman-numerals": "Roman #"
+            }
+        },
+        "fa": {
+            "choosewritings_bahai_writingsdb": "آثار و الواح مورد دلخواه را انتخاب فرمائید",
+            "choosewritings_bahai_writingsotherdb": "یا از فهرست نوشتجات دیگر انتخاب فرمائید",
+            "autofields": {
+                "synopsis": "خلاصه"
+            }
+        },
+        "ar": {
+            "choosewritings_bahai_writingsdb": "إختار الكتاب الذي تود قرائته",
+            "choosewritings_bahai_writingsotherdb":  "أو .. اختار من هذه الكتب الأخرى (من غير الآثار البهائية)"
+        },
+        "ru": {
+            "choosewritings_bahai_writingsdb": "Выберете Писания для просмотра",
+            "choosewritings_bahai_writingsotherdb": "Или выберете из следующих (не Богоявленных) работ",
+            "autofields": {
+                "roman-numerals": "Шрифт #",
+                "synopsis": "Краткое содержание"
             }
         }
     },
