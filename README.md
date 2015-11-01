@@ -10,14 +10,14 @@ at <http://www.bahai.org/legal>.
 
 # Installation
 
-If you wish the TextBrowser dependency, install with:
+If you wish the `TextBrowser` dependency, install with:
 
 `
 bower install git@bitbucket.org:brettz9/bahaiwritings.git
 `
 
 If you just wish the Bahá'í Writings JSON and do not wish
-the TextBrowser dependency, install with:
+the `TextBrowser` dependency, install with:
 
 `
 bower install git@bitbucket.org:brettz9/bahaiwritings.git#notextbrowser
@@ -26,22 +26,22 @@ bower install git@bitbucket.org:brettz9/bahaiwritings.git#notextbrowser
 The copies should be the same except that the `dependencies` property
 in the `bower.json` is not set in the latter.
 
-# Todos
+# To-dos
 
 1.  ONGOING: Ensure `notextbrowser` branch is kept up to date with `master`
   besides the `bower.json` difference.
 
 1.  Change schema references (in both `bahaiwritings` branches) to point
     to absolute URLs so as to be independent of repository/branch (rather
-    than their current assumption of being utilized within textbrowser).
+    than their current assumption of being utilized within `TextBrowser`).
 
-1.  When textbrowser handles the recent localization changes to files.json
+1.  When `TextBrowser` handles the recent localization changes to files.json
   (and languages.json, site.json), and table/field-specific to metadata (or
   schema?) files, delete `pre-locale-changes` branch (and merge `master`
   into `notextbrowser` branch) as well as deleting `locale-division` branch
-  from textbrowser once merged into its `master` branch.
+  from `TextBrowser` once merged into its `master` branch.
 
-1.  Once stabilized, target `textbrowser` dependency by tagged version.
+1.  Once stabilized, target `TextBrowser` dependency by tagged version.
 
 1.  Once implemented, apply `prefer_alias` to Qur'an and Bible
 
