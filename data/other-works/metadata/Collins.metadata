@@ -84,239 +84,239 @@
             "primary_text_field": true,
             "lang": "en",
             "name": {
-                "localeID": "fieldnames/Abstract"
+                "localeKey": "fieldnames/Abstract"
             }
         },
         "Record ID": {
             "alias": "Number",
             "name": {
-                "localeID": "fieldnames/Record ID"
+                "localeKey": "fieldnames/Record ID"
             }
         },
         "Date of Publication": {
             "alias": "Year Published",
             "name": {
-                "localeID": "fieldnames/Date of Publication"
+                "localeKey": "fieldnames/Date of Publication"
             }
         },
         "Size": {
             "name": {
-                "localeID": "fieldnames/Size"
+                "localeKey": "fieldnames/Size"
             }
         },
         "Series Editor": {
             "name": {
-                "localeID": "fieldnames/Series Editor"
+                "localeKey": "fieldnames/Series Editor"
             }
         },
         "Series Editor Role": {
             "name": {
-                "localeID": "fieldnames/Series Editor Role"
+                "localeKey": "fieldnames/Series Editor Role"
             }
         },
         "Series Title": {
             "name": {
-                "localeID": "fieldnames/Series Title"
+                "localeKey": "fieldnames/Series Title"
             }
         },
         "Document Type": {
             "name": {
-                "localeID": "fieldnames/Document Type"
+                "localeKey": "fieldnames/Document Type"
             }
         },
         "Workform": {
             "name": {
-                "localeID": "fieldnames/Workform"
+                "localeKey": "fieldnames/Workform"
             }
         },
         "Author, Analytic": {
             "name": {
-                "localeID": "fieldnames/Author, Analytic"
+                "localeKey": "fieldnames/Author, Analytic"
             }
         },
         "Author Role": {
             "name": {
-                "localeID": "fieldnames/Author Role"
+                "localeKey": "fieldnames/Author Role"
             }
         },
         "Author Affiliation": {
             "name": {
-                "localeID": "fieldnames/Author Affiliation"
+                "localeKey": "fieldnames/Author Affiliation"
             }
         },
         "Title, Analytic": {
             "name": {
-                "localeID": "fieldnames/Title, Analytic"
+                "localeKey": "fieldnames/Title, Analytic"
             }
         },
         "Medium Designator": {
             "name": {
-                "localeID": "fieldnames/Medium Designator"
+                "localeKey": "fieldnames/Medium Designator"
             }
         },
         "Connective Phrase": {
             "name": {
-                "localeID": "fieldnames/Connective Phrase"
+                "localeKey": "fieldnames/Connective Phrase"
             }
         },
         "Author, Monographic": {
             "name": {
-                "localeID": "fieldnames/Author, Monographic"
+                "localeKey": "fieldnames/Author, Monographic"
             }
         },
         "Author Role (2)": {
             "name": {
-                "localeID": "fieldnames/Author Role (2)"
+                "localeKey": "fieldnames/Author Role (2)"
             }
         },
         "Title, Monographic": {
             "name": {
-                "localeID": "fieldnames/Title, Monographic"
+                "localeKey": "fieldnames/Title, Monographic"
             }
         },
         "Journal Title": {
             "name": {
-                "localeID": "fieldnames/Journal Title"
+                "localeKey": "fieldnames/Journal Title"
             }
         },
         "Title": {
             "name": {
-                "localeID": "fieldnames/Title"
+                "localeKey": "fieldnames/Title"
             }
         },
         "Reprint Status": {
             "name": {
-                "localeID": "fieldnames/Reprint Status"
+                "localeKey": "fieldnames/Reprint Status"
             }
         },
         "Place of Meeting": {
             "name": {
-                "localeID": "fieldnames/Place of Meeting"
+                "localeKey": "fieldnames/Place of Meeting"
             }
         },
         "Medium Designator (2)": {
             "name": {
-                "localeID": "fieldnames/Medium Designator (2)"
+                "localeKey": "fieldnames/Medium Designator (2)"
             }
         },
         "Edition": {
             "name": {
-                "localeID": "fieldnames/Edition"
+                "localeKey": "fieldnames/Edition"
             }
         },
         "Author, Subsidiary": {
             "name": {
-                "localeID": "fieldnames/Author, Subsidiary"
+                "localeKey": "fieldnames/Author, Subsidiary"
             }
         },
         "Author Role (3)": {
             "name": {
-                "localeID": "fieldnames/Author Role (3)"
+                "localeKey": "fieldnames/Author Role (3)"
             }
         },
         "Place of Publication": {
             "name": {
-                "localeID": "fieldnames/Place of Publication"
+                "localeKey": "fieldnames/Place of Publication"
             }
         },
         "Publisher Name": {
             "name": {
-                "localeID": "fieldnames/Publisher Name"
+                "localeKey": "fieldnames/Publisher Name"
             }
         },
         "Date of Copyright": {
             "name": {
-                "localeID": "fieldnames/Date of Copyright"
+                "localeKey": "fieldnames/Date of Copyright"
             }
         },
         "Volume ID": {
             "name": {
-                "localeID": "fieldnames/Volume ID"
+                "localeKey": "fieldnames/Volume ID"
             }
         },
         "Report ID": {
             "name": {
-                "localeID": "fieldnames/Report ID"
+                "localeKey": "fieldnames/Report ID"
             }
         },
         "Issue ID": {
             "name": {
-                "localeID": "fieldnames/Issue ID"
+                "localeKey": "fieldnames/Issue ID"
             }
         },
         "Location in Work": {
             "name": {
-                "localeID": "fieldnames/Location in Work"
+                "localeKey": "fieldnames/Location in Work"
             }
         },
         "Extent of Work": {
             "name": {
-                "localeID": "fieldnames/Extent of Work"
+                "localeKey": "fieldnames/Extent of Work"
             }
         },
         "Packaging Method": {
             "name": {
-                "localeID": "fieldnames/Packaging Method"
+                "localeKey": "fieldnames/Packaging Method"
             }
         },
         "Reproduction Ration": {
             "name": {
-                "localeID": "fieldnames/Reproduction Ration"
+                "localeKey": "fieldnames/Reproduction Ration"
             }
         },
         "Series Volume ID": {
             "name": {
-                "localeID": "fieldnames/Series Volume ID"
+                "localeKey": "fieldnames/Series Volume ID"
             }
         },
         "Series Issue ID": {
             "name": {
-                "localeID": "fieldnames/Series Issue ID"
+                "localeKey": "fieldnames/Series Issue ID"
             }
         },
         "Connective Phrase (2)": {
             "name": {
-                "localeID": "fieldnames/Connective Phrase (2)"
+                "localeKey": "fieldnames/Connective Phrase (2)"
             }
         },
         "Availability": {
             "name": {
-                "localeID": "fieldnames/Availability"
+                "localeKey": "fieldnames/Availability"
             }
         },
         "Location/URL": {
             "name": {
-                "localeID": "fieldnames/Location/URL"
+                "localeKey": "fieldnames/Location/URL"
             }
         },
         "CODEN": {
             "name": {
-                "localeID": "fieldnames/CODEN"
+                "localeKey": "fieldnames/CODEN"
             }
         },
         "ISSN": {
             "name": {
-                "localeID": "fieldnames/ISSN"
+                "localeKey": "fieldnames/ISSN"
             }
         },
         "ISBN": {
             "name": {
-                "localeID": "fieldnames/ISBN"
+                "localeKey": "fieldnames/ISBN"
             }
         },
         "Notes": {
             "name": {
-                "localeID": "fieldnames/Notes"
+                "localeKey": "fieldnames/Notes"
             }
         },
         "Call Number": {
             "name": {
-                "localeID": "fieldnames/Call Number"
+                "localeKey": "fieldnames/Call Number"
             }
         },
         "Keywords": {
             "name": {
-                "localeID": "fieldnames/Keywords"
+                "localeKey": "fieldnames/Keywords"
             }
         }
     }

@@ -15,13 +15,13 @@
     "fields": {
         "Number": {
             "name": {
-                "localeID": "fieldnames/Number"
+                "localeKey": "fieldnames/Number"
             }
         },
         "English": {
             "lang": "en",
             "name": {
-                "localeID": "fieldnames/English"
+                "localeKey": "fieldnames/English"
             }
         }
     }

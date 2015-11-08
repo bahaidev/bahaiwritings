@@ -16,7 +16,7 @@
     "fields": {
         "Paragraph": {
             "name": {
-                "localeID": "fieldnames/Paragraph"
+                "localeKey": "fieldnames/Paragraph"
             }
         },
         "English": {
@@ -24,7 +24,7 @@
             "lang": "en",
             "orig_langs": ["ar"],
             "name": {
-                "localeID": "fieldnames/English"
+                "localeKey": "fieldnames/English"
             }
         }
     }

@@ -17,19 +17,19 @@
     "fields": {
         "Section": {
             "name": {
-                "localeID": "fieldnames/Section"
+                "localeKey": "fieldnames/Section"
             }
         },
         "Paragraph": {
             "name": {
-                "localeID": "fieldnames/Paragraph"
+                "localeKey": "fieldnames/Paragraph"
             }
         },
         "Chinese": {
             "lang": "zh-CN",
             "orig_langs": ["en"],
             "name": {
-                "localeID": "fieldnames/Chinese"
+                "localeKey": "fieldnames/Chinese"
             }
         }
     }

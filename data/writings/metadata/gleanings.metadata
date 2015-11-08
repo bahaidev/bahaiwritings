@@ -17,14 +17,14 @@
         "Section": {
             "roman": true,
             "name": {
-                "localeID": "fieldnames/Section"
+                "localeKey": "fieldnames/Section"
             }
         },
         "English": {
             "primary_text_field": true,
             "lang": "en",
             "name": {
-                "localeID": "fieldnames/English"
+                "localeKey": "fieldnames/English"
             }
         }
     }

@@ -37,21 +37,21 @@
     "fields": {
         "Paragraph": {
             "name": {
-                "localeID": "fieldnames/Paragraph"
+                "localeKey": "fieldnames/Paragraph"
             }
         },
         "English": {
             "primary_text_field": true,
             "lang": "en",
             "name": {
-                "localeID": "fieldnames/English"
+                "localeKey": "fieldnames/English"
             }
         },
         "German": {
             "primary_text_field": true,
             "lang": "de",
             "name": {
-                "localeID": "fieldnames/German"
+                "localeKey": "fieldnames/German"
             }
         },
         "Arabic": {
@@ -59,7 +59,7 @@
             "orig_lang_field": true,
             "lang": "ar",
             "name": {
-                "localeID": "fieldnames/Arabic"
+                "localeKey": "fieldnames/Arabic"
             }
         }
     }

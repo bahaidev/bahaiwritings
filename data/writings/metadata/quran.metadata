@@ -46,21 +46,21 @@
     "fields": {
         "Rodwell Suráh #" : {
             "name": {
-                "localeID": "fieldnames/Rodwell Suráh #"
+                "localeKey": "fieldnames/Rodwell Suráh #"
             }
         },
         "Verse #": {
             "name": {
-                "localeID": "fieldnames/Verse #"
+                "localeKey": "fieldnames/Verse #"
             }
         },
         "Traditional Suráh #": {
             "prefer_alias": false,
             "alias": {
-                "localeID": "fieldaliases/surah-name"
+                "localeKey": "fieldaliases/surah-name"
             },
             "name": {
-                "localeID": "fieldnames/Traditional Suráh #"
+                "localeKey": "fieldnames/Traditional Suráh #"
             },
             "fieldvalue-aliases": {
                 "1": ["The Opening"],
@@ -184,7 +184,7 @@
             "lang": "en",
             "orig_langs": ["ar"],
             "name": {
-                "localeID": "fieldnames/Rodwell Translation"
+                "localeKey": "fieldnames/Rodwell Translation"
             }
         },
         "Sale Translation": {
@@ -192,37 +192,37 @@
             "lang": "en",
             "orig_langs": ["ar"],
             "name": {
-                "localeID": "fieldnames/Sale Translation"
+                "localeKey": "fieldnames/Sale Translation"
             }
         },
         "Sale's Notes": {
             "lang": "en",
             "name": {
-                "localeID": "fieldnames/Sale's Notes"
+                "localeKey": "fieldnames/Sale's Notes"
             }
         },
         "Bahá'í References (Central Figures)": {
             "lang": "en",
             "name": {
-                "localeID": "fieldnames/Bahá'í References (Central Figures)"
+                "localeKey": "fieldnames/Bahá'í References (Central Figures)"
             }
         },
         "Bahá'í Translation (Shoghi Effendi unless otherwise noted)": {
             "lang": "en",
             "name": {
-                "localeID": "fieldnames/Bahá'í Translation (Shoghi Effendi unless otherwise noted)"
+                "localeKey": "fieldnames/Bahá'í Translation (Shoghi Effendi unless otherwise noted)"
             }
         },
         "Bahá'í References (Special)": {
             "lang": "en",
             "name": {
-                "localeID": "fieldnames/Bahá'í References (Special)"
+                "localeKey": "fieldnames/Bahá'í References (Special)"
             }
         },
         "Rodwell's Notes": {
             "lang": "en",
             "name": {
-                "localeID": "fieldnames/Rodwell's Notes"
+                "localeKey": "fieldnames/Rodwell's Notes"
             }
         }
     }

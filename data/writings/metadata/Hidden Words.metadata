@@ -55,35 +55,35 @@
     "fields": {
         "Number": {
             "name": {
-                "localeID": "fieldnames/Number"
+                "localeKey": "fieldnames/Number"
             }
         },
         "Original Language": {
             "sequentialEnum": true,
             "hasFieldvalue": true,
             "name": {
-                "localeID": "fieldnames/Original Language"
+                "localeKey": "fieldnames/Original Language"
             }
         },
         "English": {
             "primary_text_field": true,
             "lang": "en",
             "name": {
-                "localeID": "fieldnames/English"
+                "localeKey": "fieldnames/English"
             }
         },
         "Arabic": {
             "primary_text_field": true,
             "lang": "ar",
             "name": {
-                "localeID": "fieldnames/Arabic"
+                "localeKey": "fieldnames/Arabic"
             }
         },
         "Persian": {
             "primary_text_field": true,
             "lang": "fa",
             "name": {
-                "localeID": "fieldnames/Persian"
+                "localeKey": "fieldnames/Persian"
             }
         }
     }

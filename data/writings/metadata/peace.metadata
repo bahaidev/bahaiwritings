@@ -35,12 +35,12 @@
     "fields": {
         "Paragraph": {
             "name": {
-                "localeID": "fieldnames/Paragraph"
+                "localeKey": "fieldnames/Paragraph"
             }
         },
         "Section Number": {
             "name": {
-                "localeID": "fieldnames/Section Number"
+                "localeKey": "fieldnames/Section Number"
             }
         },
         "English": {
@@ -48,14 +48,14 @@
             "orig_lang_field": true,
             "lang": "en",
             "name": {
-                "localeID": "fieldnames/English"
+                "localeKey": "fieldnames/English"
             }
         },
         "Chinese": {
             "primary_text_field": true,
             "lang": "zh-CN",
             "name": {
-                "localeID": "fieldnames/Chinese"
+                "localeKey": "fieldnames/Chinese"
             }
         }
     }
