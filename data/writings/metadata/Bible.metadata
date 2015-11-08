@@ -1,66 +1,48 @@
 {
     "localization-strings": {
-        "alias": {
-            "en-US": "Bible",
-            "ar": "الكتاب المقدس (الأنجيل والعهد القديم معا)",
-            "fa": "انجیل"
-        },
-        "heading": {
-            "en-US": "The Bible",
-            "fa": "انجیل",
-            "ar": "الانجيل"
-        },
-        "fieldaliases": {
-            "book-name": {
-                "en-US": "Book Name"
+        "en-US": {
+            "alias": "Bible",
+            "heading": "The Bible",
+            "fieldaliases": {
+                "book-name": "Book Name"
+            },
+            "fieldnames": {
+                "Book #": "Book #",
+                "Chapter #": "Chapter #",
+                "Verse #": "Verse #",
+                "King James Translation": "King James Translation",
+                "King James Translation": "ترجم King James",
+                "Bahá'í Translation": "Bahá'í Translation",
+                "Bahá'í Central Figures References": "Bahá'í Central Figures References",
+                "Bahá'í Special References": "Bahá'í Special References",
+                "Pilgrim's Notes References": "Pilgrim's Notes References",
+                "Cross-Bible References": "Cross-Bible References",
+                "Individual Bahá'í Scholars": "Individual Bahá'í Scholars",
+                "Qur'ánic References": "Qur'ánic References"
             }
         },
-        "fieldnames": {
-            "Book #": {
-                "en-US": "Book #",
-                "fa": "کتاب شماره",
-                "ar": "كتاب #"
-            },
-            "Chapter #": {
-                "en-US": "Chapter #",
-                "fa": "قسمت  شماره",
-                "ar": "فصل #"
-            },
-            "Verse #": {
-                "en-US": "Verse #",
-                "fa": "جمله شماره"
-            },
-            "King James Translation": {
-                "en-US": "King James Translation",
-                "fa": "ترجم King James"
-            },
-            "Bahá'í Translation": {
-                "en-US": "Bahá'í Translation",
-                "fa": "ترجمه بهایی"
-            },
-            "Bahá'í Central Figures References": {
-                "en-US": "Bahá'í Central Figures References",
-                "fa": "توضیحات مندرجد در اثار بهایی"
-            },
-            "Bahá'í Special References": {
-                "en-US": "Bahá'í Special References",
-                "fa": "مراجع ویژه بهایی"
-            },
-            "Pilgrim's Notes References": {
-                "en-US": "Pilgrim's Notes References",
-                "fa": "مراجع مسافرین ارض اقدس"
-            },
-            "Cross-Bible References": {
-                "en-US": "Cross-Bible References",
-                "fa": "مراجع ربط داده شده به انجیل و تورات"
-            },
-            "Individual Bahá'í Scholars": {
-                "en-US": "Individual Bahá'í Scholars",
-                "fa": "دانشپژوهان بهایی"
-            },
-            "Qur'ánic References": {
-                "en-US": "Qur'ánic References",
-                "fa": "مراجع قرانی"
+        "ar": {
+            "alias": "الكتاب المقدس (الأنجيل والعهد القديم معا)",
+            "heading": "الانجيل",
+            "fieldnames": {
+                "Book #": "كتاب #",
+                "Chapter #": "فصل #"
+            }
+        },
+        "fa": {
+            "alias": "انجیل",
+            "heading": "انجیل",
+            "fieldnames": {
+                "Book #": "کتاب شماره",
+                "Chapter #": "قسمت  شماره",
+                "Verse #": "جمله شماره",
+                "Bahá'í Translation": "ترجمه بهایی",
+                "Bahá'í Central Figures References": "توضیحات مندرجد در اثار بهایی",
+                "Bahá'í Special References": "مراجع ویژه بهایی",
+                "Pilgrim's Notes References": "مراجع مسافرین ارض اقدس",
+                "Cross-Bible References": "مراجع ربط داده شده به انجیل و تورات",
+                "Individual Bahá'í Scholars": "دانشپژوهان بهایی",
+                "Qur'ánic References": "مراجع قرانی"
             }
         }
     },
@@ -72,10 +54,10 @@
         "Book #": {
             "prefer_alias": true,
             "alias": {
-                "$ref": "#/localization-strings/fieldaliases/book-name"
+                "localeID": "fieldaliases/book-name"
             },
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Book #"
+                "localeID": "fieldnames/Book #"
             },
             "fieldvalue-aliases": {
                 "1": {"long1": "Genesis","abbrev1": "GEN","abbrev2": "genes","abbrev3": "Ge","abbrev4": "Gn"},
@@ -148,62 +130,62 @@
         },
         "Chapter #": {
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Chapter #"
+                "localeID": "fieldnames/Chapter #"
             }
         },
         "Verse #": {
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Verse #"
+                "localeID": "fieldnames/Verse #"
             }
         },
         "King James Translation": {
             "primary_text_field": true,
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/King James Translation"
+                "localeID": "fieldnames/King James Translation"
             }
         },
         "Bahá'í Translation": {
             "primary_text_field": true,
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Bahá'í Translation"
+                "localeID": "fieldnames/Bahá'í Translation"
             }
         },
         "Bahá'í Central Figures References": {
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Bahá'í Central Figures References"
+                "localeID": "fieldnames/Bahá'í Central Figures References"
             }
         },
         "Bahá'í Special References": {
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Bahá'í Special References"
+                "localeID": "fieldnames/Bahá'í Special References"
             }
         },
         "Pilgrim's Notes References": {
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Pilgrim's Notes References"
+                "localeID": "fieldnames/Pilgrim's Notes References"
             }
         },
         "Cross-Bible References": {
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Cross-Bible References"
+                "localeID": "fieldnames/Cross-Bible References"
             }
         },
         "Individual Bahá'í Scholars": {
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Individual Bahá'í Scholars"
+                "localeID": "fieldnames/Individual Bahá'í Scholars"
             }
         },
         "Qur'ánic References": {
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Qur'ánic References"
+                "localeID": "fieldnames/Qur'ánic References"
             }
         }
     }

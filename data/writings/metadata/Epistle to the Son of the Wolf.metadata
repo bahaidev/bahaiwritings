@@ -1,20 +1,20 @@
 {
     "localization-strings": {
-        "alias": {
-            "en-US": "Epistle to the Son of the Wolf",
-            "ar": "لوح ابن الذئب"
+        "en-US": {
+            "alias": "Epistle to the Son of the Wolf",
+            "heading": "Epistle to the Son of the Wolf",
+            "fieldnames": {
+                "Paragraph": "Paragraph",
+                "English": "English"
+            }
         },
-        "heading": {
-            "fa": "Epistle to the Son of the Wolf"
+        "ar": {
+            "alias": "لوح ابن الذئب"
         },
-        "fieldnames": {
-            "Paragraph": {
-                "en-US": "Paragraph",
-                "fa": "پاراگراف"
-            },
-            "English": {
-                "en-US": "English",
-                "fa": "نوشتجات"
+        "fa": {
+            "fieldnames": {
+                "Paragraph": "پاراگراف",
+                "English": "نوشتجات"
             }
         }
     },
@@ -25,7 +25,7 @@
     "fields": {
         "Paragraph": {
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Paragraph"
+                "localeID": "fieldnames/Paragraph"
             }
         },
         "English": {
@@ -33,7 +33,7 @@
             "lang": "en",
             "orig_langs": ["ar"],
             "name": {
-                "$ref": "#/localization-strings/fieldnames/English"
+                "localeID": "fieldnames/English"
             }
         }
     }

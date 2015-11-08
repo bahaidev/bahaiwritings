@@ -1,17 +1,11 @@
 {
     "localization-strings": {
-        "alias": {
-            "en-US": "Gleanings"
-        },
-        "heading": {
-            "en-US": "Gleanings from the Writings of Bah·'u'll·h"
-        },
-        "fieldnames": {
-            "Section": {
-                "en-US": "Section"
-            },
-            "English": {
-                "en-US": "English"
+        "en-US": {
+            "alias": "Gleanings",
+            "heading": "Gleanings from the Writings of Bah√°'u'll√°h",
+            "fieldnames": {
+                "Section": "Section",
+                "English": "English"
             }
         }
     },
@@ -23,14 +17,14 @@
         "Section": {
             "roman": true,
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Section"
+                "localeID": "fieldnames/Section"
             }
         },
         "English": {
             "primary_text_field": true,
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/English"
+                "localeID": "fieldnames/English"
             }
         }
     }

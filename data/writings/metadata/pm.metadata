@@ -1,17 +1,11 @@
 {
     "localization-strings": {
-        "alias": {
-            "en-US": "Prayers and Meditations"
-        },
-        "heading": {
-            "en-US": "Prayers and Meditations"
-        },
-        "fieldnames": {
-            "Number": {
-                "en-US": "Number"
-            },
-            "English": {
-                "en-US": "English"
+        "en-US": {
+            "alias": "Prayers and Meditations",
+            "heading": "Prayers and Meditations",
+            "fieldnames": {
+                "Number": "Number",
+                "English": "English"
             }
         }
     },
@@ -23,14 +17,14 @@
         "Number": {
             "roman": true,
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Number"
+                "localeID": "fieldnames/Number"
             }
         },
         "English": {
             "primary_text_field": true,
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/English"
+                "localeID": "fieldnames/English"
             }
         }
     }

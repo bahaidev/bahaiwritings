@@ -1,34 +1,33 @@
 {
     "localization-strings": {
-        "alias": {
-            "en-US": "Kitáb-i-Aqdas",
-            "ar": "الكتاب الأقدس",
-            "fa": "كتاب اقدس",
-            "ru": "Китаб-и-Агдас"
-        },
-        "heading": {
-            "en-US": "The Kitáb-i-Aqdas",
-            "fa": "کتاب اقدس",
-            "ar": "الكتاب الأقدس"
-        },
-        "fieldnames": {
-            "Paragraph": {
-                "en-US": "Paragraph",
-                "fa": "پاراگراف"
-            },
-            "English": {
-                "en-US": "English",
-                "fa": "نوشتجات"
-            },
-            "Arabic": {
-                "en-US": "Arabic",
-                "fa": "عربی",
-                "ar": "عربي"
-            },
-            "German": {
-                "en-US": "German",
-                "fa": "المانی"
+        "en-US": {
+            "alias": "Kitáb-i-Aqdas",
+            "heading": "The Kitáb-i-Aqdas",
+            "fieldnames": {
+                "Paragraph": "Paragraph",
+                "English": "English",
+                "Arabic": "Arabic"
             }
+        },
+        "fa": {
+            "alias": "كتاب اقدس",
+            "heading": "کتاب اقدس",
+            "fieldnames": {
+                "Paragraph": "پاراگراف",
+                "English": "نوشتجات",
+                "Arabic": "عربی",
+                "German": "المانی"
+            }
+        },
+        "ar": {
+            "alias": "الكتاب الأقدس",
+            "heading": "الكتاب الأقدس",
+            "fieldnames": {
+                "Arabic": "عربي"
+            }
+        },
+        "ru": {
+            "alias": "Китаб-и-Агдас"
         }
     },
     "table": {
@@ -38,21 +37,21 @@
     "fields": {
         "Paragraph": {
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Paragraph"
+                "localeID": "fieldnames/Paragraph"
             }
         },
         "English": {
             "primary_text_field": true,
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/English"
+                "localeID": "fieldnames/English"
             }
         },
         "German": {
             "primary_text_field": true,
             "lang": "de",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/German"
+                "localeID": "fieldnames/German"
             }
         },
         "Arabic": {
@@ -60,7 +59,7 @@
             "orig_lang_field": true,
             "lang": "ar",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Arabic"
+                "localeID": "fieldnames/Arabic"
             }
         }
     }
