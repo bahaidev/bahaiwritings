@@ -1,51 +1,49 @@
 {
     "localization-strings": {
-        "alias": {
-            "en-US": "Hidden Words",
-            "ar": "الكلمات المكنونة",
-            "fa": "كلمات مكنونه"
-        },
-        "heading": {
-            "en-US": "The Hidden Words",
-            "fa": "کلمات مکنونه",
-            "ar": "الكلمات المكنونة"
-        },
-        "groupbytoggle": {
-            "en-US": "Group according to the above?"
-        },
-        "fieldnames": {
-            "Original Language": {
-                "en-US": "Original Language",
-                "fa": "زبان اصلی"
+        "en-US": {
+            "alias": "Hidden Words",
+            "heading": "The Hidden Words",
+            "groupbytoggle": "Group according to the above?",
+            "fieldnames": {
+                "Original Language": "Original Language",
+                "Number": "Number",
+                "English": "English",
+                "Arabic": "Arabic",
+                "Persian": "Persian"
             },
-            "Number": {
-                "en-US": "Number",
-                "fa": "شماره"
-            },
-            "English": {
-                "en-US": "English",
-                "fa": "نوشتجات"
-            },
-            "Arabic": {
-                "en-US": "Arabic",
-                "fa": "عربی",
-                "ar": "عربي"
-            },
-            "Persian": {
-                "en-US": "Persian",
-                "fa": "فارسي"
+            "fieldvalue": {
+                "Original Language": {
+                    "Arabic": "Arabic",
+                    "Persian": "Persian"
+                }
             }
         },
-        "fieldvalue": {
-            "Original Language": {
-                "Arabic": {
-                    "en-US": "Arabic",
-                    "ar": "عربي",
-                    "fa": "عربی"
-                },
-                "Persian": {
-                    "en-US": "Persian",
-                    "fa": "فارسي"
+        "ar": {
+            "alias": "الكلمات المكنونة",
+            "heading": "الكلمات المكنونة",
+            "fieldnames": {
+                "Arabic": "عربي"
+            },
+            "fieldvalue": {
+                "Original Language": {
+                    "Arabic": "عربي"
+                }
+            }
+        },
+        "fa": {
+            "alias": "كلمات مكنونه",
+            "heading": "کلمات مکنونه",
+            "fieldnames": {
+                "Original Language": "زبان اصلی",
+                "Number": "شماره",
+                "English": "نوشتجات",
+                "Arabic": "عربی",
+                "Persian": "فارسي"
+            },
+            "fieldvalue": {
+                "Original Language": {
+                    "Arabic": "عربی",
+                    "Persian": "فارسي"
                 }
             }
         }
@@ -57,35 +55,35 @@
     "fields": {
         "Number": {
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Number"
+                "localeID": "fieldnames/Number"
             }
         },
         "Original Language": {
             "sequentialEnum": true,
             "hasFieldvalue": true,
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Original Language"
+                "localeID": "fieldnames/Original Language"
             }
         },
         "English": {
             "primary_text_field": true,
             "lang": "en",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/English"
+                "localeID": "fieldnames/English"
             }
         },
         "Arabic": {
             "primary_text_field": true,
             "lang": "ar",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Arabic"
+                "localeID": "fieldnames/Arabic"
             }
         },
         "Persian": {
             "primary_text_field": true,
             "lang": "fa",
             "name": {
-                "$ref": "#/localization-strings/fieldnames/Persian"
+                "localeID": "fieldnames/Persian"
             }
         }
     }
