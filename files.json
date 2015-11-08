@@ -48,10 +48,10 @@
     "groups": [
         {
             "name": {
-                "localeID": "writings"
+                "localeKey": "writings"
             },
             "directions": {
-                "localeID": "choosewritings_bahai_writingsdb"
+                "localeKey": "choosewritings_bahai_writingsdb"
             },
             "schemaBaseDirectory": "data/writings/schemas",
             "metadataBaseDirectory": "data/writings/metadata",
@@ -70,10 +70,10 @@
         },
         {
             "name": {
-                "localeID": "other-writings"
+                "localeKey": "other-writings"
             },
             "directions": {
-                "localeID": "choosewritings_bahai_writingsotherdb"
+                "localeKey": "choosewritings_bahai_writingsotherdb"
             },
             "schemaBaseDirectory": "data/other-works/schemas",
             "metadataBaseDirectory": "data/other-works/metadata",
