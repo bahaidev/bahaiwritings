@@ -21,37 +21,37 @@
             },
             {
                 "type": "string",
-				"format": "html",
+                "format": "html",
                 "title": "Sale Translation"
             },
             {
                 "type": "string",
-				"format": "html",
+                "format": "html",
                 "title": "Sale's Notes"
             },
             {
                 "type": "string",
-				"format": "html",
+                "format": "html",
                 "title": "Bahá'í References (Central Figures)"
             },
             {
                 "type": "string",
-				"format": "html",
+                "format": "html",
                 "title": "Bahá'í Translation (Shoghi Effendi unless otherwise noted)"
             },
             {
                 "type": "string",
-				"format": "html",
+                "format": "html",
                 "title": "Bahá'í References (Special)"
             },
             {
                 "type": "string",
-				"format": "html",
+                "format": "html",
                 "title": "Rodwell Translation"
             },
             {
                 "type": "string",
-				"format": "html",
+                "format": "html",
                 "title": "Rodwell's Notes"
             }
         ]
