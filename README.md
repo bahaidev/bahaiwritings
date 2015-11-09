@@ -35,12 +35,6 @@ in the `bower.json` is not set in the latter.
     to absolute URLs so as to be independent of repository/branch (rather
     than their current assumption of being utilized within `TextBrowser`).
 
-1.  When `TextBrowser` handles the recent localization changes to files.json
-  (and languages.json, site.json), and table/field-specific to metadata (or
-  schema?) files, delete `pre-locale-changes` branch (and merge `master`
-  into `notextbrowser` branch) as well as deleting `locale-division` branch
-  from `TextBrowser` once merged into its `master` branch.
-
 1.  Once stabilized, target `TextBrowser` dependency by tagged version.
 
 1.  Once implemented, apply `prefer_alias` to Qur'an and Bible
