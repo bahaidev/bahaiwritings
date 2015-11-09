@@ -8,16 +8,16 @@
             "browserfile-workselect": "Sacred Writings Browser: Work Selection",
             "browserfile-workdisplay": "Sacred Writings Browser: {work}",
             "browserfile-resultsdisplay": "Sacred Writings Browser: {work} results",
-            "wordbyword": "Word-by-word \"Auto-translation\" from {language-from} to {language-to}",
-            "auto-romanize": "Auto-Romanized {language}",
-            "wordbyword-tooltips": "{language-base} with {language-tooltip} tooltips",
-            "googlify": "Find word in \"Google\"",
-            "googledefine": "Definition (Google)",
-            "wikify": "Editable wiki page",
-            "wikilinks": "Links to Wiki",
             "autofields": {
                 "synopsis": "Synopsis",
-                "roman-numerals": "Roman #"
+                "roman-numerals": "Roman #",
+                "auto-romanize": "Auto-Romanized {language}",
+                "wordbyword-tooltips": "{language-base} with {language-tooltip} tooltips",
+                "googlify": "Find word in \"Google\"",
+                "googledefine": "Definition (Google)",
+                "wikify": "Editable wiki page",
+                "wikilinks": "Links to Wiki",
+                "wordbyword": "Word-by-word \"Auto-translation\" from {language-from} to {language-to}"
             }
         },
         "fa": {
