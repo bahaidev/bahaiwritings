@@ -6,7 +6,8 @@
             "fieldnames": {
                 "Paragraph": "Paragraph",
                 "English": "English",
-                "Arabic": "Arabic"
+                "Arabic": "Arabic",
+                "German": "German"
             }
         },
         "fa": {
