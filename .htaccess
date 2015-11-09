@@ -1,1 +1,2 @@
 AddType text/cache-manifest .appcache
+AddType application/json .json .jsonschema .metadata
