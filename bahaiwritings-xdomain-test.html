@@ -3,11 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script src="bower_components/get-json/index.js"></script>
 </head>
 <body>
 
 <script>
 
+getJSON('http://bahai-library.com/browser2/data/writings/aqdas.json', function (json) {
+    alert('worked: ' + JSON.stringify(json));
+});
+
+// The following only works from a subdomain
 var ifr = document.createElement('iframe');
 ifr.src = 'http://bahai-library.com/browser2/#lang=en-US&work=Bible&domain=' +
             encodeURIComponent(document.domain); // Pass our current domain
