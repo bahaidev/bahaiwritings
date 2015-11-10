@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+<script>
+
+var ifr = document.createElement('iframe');
+ifr.src = 'http://bahai-library.com/browser2/#lang=en-US&work=Bible&domain=' +
+            encodeURIComponent(document.domain); // Pass our current domain
+ifr.onload = function () {
+    alert(ifr.contentDocument.querySelector('input').length);
+};
+document.body.appendChild(ifr);
+
+</script>
+
+</body>
+</html>
