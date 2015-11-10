@@ -9,7 +9,8 @@
         "textbrowser"
     ],
     "dependencies": {
-        "textbrowser": "git@github.com:brettz9/textbrowser.git#master"
+        "textbrowser": "git@github.com:brettz9/textbrowser.git#master",
+        "urlsearchparams": "0.x"
     },
     "main": "files.json"
 }
