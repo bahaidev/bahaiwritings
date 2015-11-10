@@ -1,8 +1,8 @@
 /*globals TextBrowser, URLSearchParams*/
 window.addEventListener('DOMContentLoaded', function () {'use strict';
 
-    /*
     // This will only work from subdomains; would need postMessage() routine to allow introspection
+    /*
     var params = new URLSearchParams(location.hash.slice(1));
     document.domain = params.get('domain') || document.domain; // Let this be iframe-embeddable
     */

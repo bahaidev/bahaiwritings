@@ -8,6 +8,8 @@
 <body>
 
 <script>
+// document.domain = document.domain; // It is actually necessary to add this line
+//     if supplying the domain even when already the correct value like this!
 
 getJSON('http://bahai-library.com/browser2/data/writings/aqdas.json', function (json) {
     alert('worked: ' + JSON.stringify(json));
@@ -15,10 +17,12 @@ getJSON('http://bahai-library.com/browser2/data/writings/aqdas.json', function (
 
 // The following only works from a subdomain
 var ifr = document.createElement('iframe');
-ifr.src = 'http://bahai-library.com/browser2/#lang=en-US&work=Bible&domain=' +
-            encodeURIComponent(document.domain); // Pass our current domain
+// ifr.src = 'http://bahai-library.com/browser2/#lang=en-US&work=Bible&domain=' +
+//             encodeURIComponent(document.domain); // Pass our current domain
+ifr.src = 'http://bahai-library.com/browser2/#lang=en-US&work=Bible';
 ifr.onload = function () {
-    alert(ifr.contentDocument.querySelector('input').length);
+        var doc = ifr.contentDocument || ifr.contentWindow.document
+        alert(doc.body.innerHTML);
 };
 document.body.appendChild(ifr);
 
