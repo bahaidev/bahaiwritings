@@ -8,6 +8,24 @@
             "browserfile-workselect": "Sacred Writings Browser: Work Selection",
             "browserfile-workdisplay": "Sacred Writings Browser: {work}",
             "browserfile-resultsdisplay": "Sacred Writings Browser: {work} results",
+            "workNames": {
+                "writings": {
+                    "aqdas": "aqdas",
+                    "bible": "bible",
+                    "epistle_to_the_son_of_the_wolf": "epistle_to_the_son_of_the_wolf",
+                    "gems_of_divine_mysteries": "gems of divine mysteries",
+                    "gleanings": "gleanings",
+                    "hidden_words": "hidden words",
+                    "peace": "peace",
+                    "pm": "pm",
+                    "quran": "quran",
+                    "wwtf": "wwtf"
+                },
+                "other-writings": {
+                    "lights": "lights",
+                    "collins": "collins"
+                }
+            },
             "autofields": {
                 "synopsis": "Synopsis",
                 "roman-numerals": "Roman #",
@@ -47,6 +65,7 @@
     },
     "groups": [
         {
+            "id": "writings",
             "name": {
                 "localeKey": "writings"
             },
@@ -57,11 +76,11 @@
             "metadataBaseDirectory": "data/writings/metadata",
             "files": [
                 {"name": "aqdas", "file": {"$ref": "data/writings/aqdas.json"}, "schemaFile": "aqdas.jsonschema", "metadataFile": "aqdas.metadata"},
-                {"name": "Bible", "file": {"$ref": "data/writings/Bible.json"}, "schemaFile": "Bible.jsonschema", "metadataFile": "Bible.metadata"},
+                {"name": "bible", "file": {"$ref": "data/writings/Bible.json"}, "schemaFile": "Bible.jsonschema", "metadataFile": "Bible.metadata"},
                 {"name": "epistle_to_the_son_of_the_wolf", "file": {"$ref": "data/writings/Epistle to the Son of the Wolf.json"}, "schemaFile": "Epistle to the Son of the Wolf.jsonschema", "metadataFile": "Epistle to the Son of the Wolf.metadata"},
-                {"name": "gems of divine mysteries", "file": {"$ref": "data/writings/Gems of Divine Mysteries.json"}, "schemaFile": "Gems of Divine Mysteries.jsonschema", "metadataFile": "Gems of Divine Mysteries.metadata"},
+                {"name": "gems_of_divine_mysteries", "file": {"$ref": "data/writings/Gems of Divine Mysteries.json"}, "schemaFile": "Gems of Divine Mysteries.jsonschema", "metadataFile": "Gems of Divine Mysteries.metadata"},
                 {"name": "gleanings", "file": {"$ref": "data/writings/gleanings.json"}, "schemaFile": "gleanings.jsonschema", "metadataFile": "gleanings.metadata"},
-                {"name": "hidden words", "file": {"$ref": "data/writings/Hidden Words.json"}, "schemaFile": "Hidden Words.jsonschema", "metadataFile": "Hidden Words.metadata"},
+                {"name": "hidden_words", "file": {"$ref": "data/writings/Hidden Words.json"}, "schemaFile": "Hidden Words.jsonschema", "metadataFile": "Hidden Words.metadata"},
                 {"name": "peace", "file": {"$ref": "data/writings/peace.json"}, "schemaFile": "peace.jsonschema", "metadataFile": "peace.metadata"},
                 {"name": "pm", "file": {"$ref": "data/writings/pm.json"}, "schemaFile": "pm.jsonschema", "metadataFile": "pm.metadata"},
                 {"name": "quran", "file": {"$ref": "data/writings/quran.json"}, "schemaFile": "quran.jsonschema", "metadataFile": "quran.metadata"},
@@ -69,6 +88,7 @@
             ]
         },
         {
+            "id": "other-writings",
             "name": {
                 "localeKey": "other-writings"
             },
