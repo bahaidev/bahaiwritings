@@ -61,7 +61,7 @@
     "autofield-mapping": {
         "aqdas": [{"wordbyword": ["Arabic", "English"]}],
         "pm": [{"synopsis": "English"}, {"roman-numerals": "Number"}],
-        "hidden words": [{"synopsis": "English"}, {"wordbyword": ["English", "$locale"]}, {"wordbyword-tooltips": ["Persian", "English"]}, {"auto-romanize": "Persian"}]
+        "hidden_words": [{"synopsis": "English"}, {"wordbyword": ["English", "$locale"]}, {"wordbyword-tooltips": ["Persian", "English"]}, {"auto-romanize": "Persian"}]
     },
     "groups": [
         {

@@ -61,7 +61,6 @@
         },
         "Original Language": {
             "sequentialEnum": true,
-            "hasFieldvalue": true,
             "name": {
                 "localeKey": "fieldnames/Original Language"
             }
