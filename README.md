@@ -60,11 +60,11 @@ in the `bower.json` is not set in the latter.
     text-to-(Google search, Google define, Wikipedia, bahai9.com
     edit pages); add Word-by-word/phrase mapping
 
-1.  The base code of `browse0.php`, `browse.php`, `browse9.php` are all XHTML
-      compliant, but there are a good number of invalid XHTML in the JSON
-      databases Qur'an and Bible (links w/o quotes) that would ideally be
-      replaced as well as the XHTML and link locations in the Iqan copy
-      (just to be nice and clean)
+1.  There is a good amount of invalid XHTML in the JSON
+      databases for the Qur'an and Bible (links w/o quotes) that would
+      ideally be replaced (Tidy script?) as well as the XHTML and link
+      locations in the Iqan copy (would just be nice to be clean
+      and polyglot-friendly for any XHTML5 uses)
 
 1.  Waiting: It is hoped that the addition of these tables (which are
     Scriptures) can also be automatically generated from any possible
