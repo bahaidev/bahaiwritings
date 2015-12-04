@@ -23,13 +23,17 @@ the `TextBrowser` dependency, install with:
 bower install git@bitbucket.org:brettz9/bahaiwritings.git#notextbrowser
 `
 
-The copies should be the same except that the `dependencies` property
-in the `bower.json` is not set in the latter.
+The JSON data files should be the same. Note that in addition to certain
+HTML, JavaScript, and CSS-related files being removed in the latter,
+the `dependencies` property in its `bower.json` is also not set.
+
+Note that the schema files to which the included schema files belong are
+at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 # To-dos
 
 1.  ONGOING: Ensure `notextbrowser` branch is kept up to date with `master`
-  besides the `bower.json` difference.
+  besides the `bower.json` and absent HTML/JavaScript/CSS differences.
 
 1.  Change schema references (in both `bahaiwritings` branches) to point
     to absolute URLs so as to be independent of repository/branch (rather
