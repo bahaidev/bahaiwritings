@@ -25,7 +25,8 @@ bower install git@bitbucket.org:brettz9/bahaiwritings.git#notextbrowser
 
 The JSON data files should be the same. Note that in addition to certain
 HTML, JavaScript, and CSS-related files being removed in the latter,
-the `dependencies` property in its `bower.json` is also not set.
+the `dependencies` property in its `bower.json` is also not set. The
+file `site.json` is also not present as that is oriented for TextBrowser.
 
 Note that the schema files to which the included schema files belong are
 at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
