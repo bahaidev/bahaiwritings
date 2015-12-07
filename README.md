@@ -6,7 +6,10 @@ the MIT license (as is the specific JSON formatting (and schema and
 meta-data files) of this repository), the contents of this data
 repository are under their own licenses and their copyright is
 retained. The usage terms of the Baha'i Writings are described
-at <http://www.bahai.org/legal>.
+at <http://www.bahai.org/legal>. The Qur'an and Bible translations
+(Rodwell/Sale and the King James) as well as the notes of Sale
+and Rodwell are in the public domain. The Baha'i translation
+cross-references are under the MIT license.
 
 # Installation
 
