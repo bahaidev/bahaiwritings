@@ -40,6 +40,8 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
     to absolute URLs so as to be independent of repository/branch (rather
     than their current assumption of being utilized within `TextBrowser`).
 
+1.  Validate!
+
 1.  Once stabilized, target `TextBrowser` dependency by tagged version.
 
 1.  Once implemented, apply `prefer_alias` to Qur'an and Bible
