@@ -1,5 +1,5 @@
 
-var schemaBase = '../bower_components/textbrowser/general-schemas/';
+var schemaBase = '/bahaiwritings/bower_components/textbrowser/general-schemas/';
 
 var bahaiwritingsTests = {
     'basic test': function (test) {
@@ -7,14 +7,15 @@ var bahaiwritingsTests = {
 
         Promise.all([
             JsonRefs.resolveRefsAt(schemaBase + 'files.jsonschema'),
-            JsonRefs.resolveRefsAt('../files.json')
+            JsonRefs.resolveRefsAt('/bahaiwritings/files.json')
         ]).then(function ([schema, data]) {
+console.dir(data);
             var ajv = Ajv();
             var valid;
             try {
                 valid = ajv.validate(schema, data);
             }
-            catch(e) {
+            finally {
                 if (!valid) {console.log(JSON.stringify(ajv.errors));}
             }
 
