@@ -9,7 +9,6 @@ var bahaiwritingsTests = {
             JsonRefs.resolveRefsAt(schemaBase + 'files.jsonschema'),
             JsonRefs.resolveRefsAt('/bahaiwritings/files.json')
         ]).then(function ([{value: schema}, {value: data}]) {
-console.dir(data);
             var ajv = Ajv();
             var valid;
             try {
