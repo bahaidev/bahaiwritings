@@ -5,7 +5,10 @@ var bahaiwritingsTests = {
     'basic test': function (test) {
         test.expect(1);
 
-        getJSON([schemaBase + 'files.jsonschema', '../files.json'], function (schema, data) {
+        Promise.all([
+            JsonRefs.resolveRefsAt(schemaBase + 'files.jsonschema'),
+            JsonRefs.resolveRefsAt('../files.json')
+        ]).then(function ([schema, data]) {
             var ajv = Ajv();
             var valid;
             try {

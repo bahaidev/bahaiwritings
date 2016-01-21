@@ -8,7 +8,7 @@
     "prepublish": "bower install"
   },
   "dependencies": {
-    "simple-get-json": "1.x"
+    "json-refs": "2.x"
   },
   "devDependencies": {
     "nodeunit": "0.9.x"
