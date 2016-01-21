@@ -8,7 +8,7 @@ var bahaiwritingsTests = {
         Promise.all([
             JsonRefs.resolveRefsAt(schemaBase + 'files.jsonschema'),
             JsonRefs.resolveRefsAt('/bahaiwritings/files.json')
-        ]).then(function ([schema, data]) {
+        ]).then(function ([{value: schema}, {value: data}]) {
 console.dir(data);
             var ajv = Ajv();
             var valid;
