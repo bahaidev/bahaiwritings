@@ -1,0 +1,27 @@
+{
+  "name": "bahaiwritings",
+  "version": "0.0.1",
+  "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
+  "main": "resources/user.js",
+  "scripts": {
+    "test": "node test/bahaiwritingsTests",
+    "prepublish": "bower install"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "nodeunit": "0.9.x"
+  },
+  "engines": {},
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:brettz9/bahaiwritings.git"
+  },
+  "author": "Brett Zamir",
+  "contributors": [],
+  "keywords": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://bitbucket.org/brettz9/bahaiwritings/issues?status=new&status=open"
+  },
+  "homepage": "https://bitbucket.org/brettz9/bahaiwritings"
+}
