@@ -6,9 +6,9 @@ var bahaiwritingsTests = {
         test.expect(1);
 
         Promise.all([
-            JsonRefs.resolveRefsAt(schemaBase + 'files.jsonschema'),
-            JsonRefs.resolveRefsAt('/bahaiwritings/files.json')
-        ]).then(function ([{value: schema}, {value: data}]) {
+            JsonRefs.resolveRefsAt('files.jsonschema', {relativeBase: schemaBase}),
+            JsonRefs.resolveRefsAt('bahaiwritings/files.json', {relativeBase: '../'})
+        ]).then(function ([{resolved: schema}, {resolved: data}]) {
             var ajv = Ajv();
             var valid;
             try {
