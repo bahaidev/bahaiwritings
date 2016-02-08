@@ -15,7 +15,7 @@ var bahaiwritingsTests = {
                 valid = ajv.validate(schema, data);
             }
             catch (e) {
-              console.log(e);
+                console.log(e);
             }
             finally {
                 if (!valid) {console.log(JSON.stringify(ajv.errors));}
