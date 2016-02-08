@@ -12,7 +12,7 @@ and Rodwell are in the public domain. The Baha'i translation
 cross-references are under the MIT license. *Lights of Guidance*
 is under its own copyright as is the *Collins* bibliography.
 
-# Installation
+## Installation
 
 If you wish the `TextBrowser` dependency, install with:
 
@@ -35,7 +35,7 @@ file `site.json` is also not present as that is oriented for TextBrowser.
 Note that the schema files to which the included schema files belong are
 at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
-# To-dos
+## To-dos
 
 1.  ONGOING: Ensure `notextbrowser` branch is kept up to date with `master`
   besides the `bower.json` and absent HTML/JavaScript/CSS differences.
@@ -93,3 +93,7 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
     1.  Add any other reasonable `browse_options`
     1.  Add "By page" for the Aqdas (once parsed by page)
     1.  Further localization including column aliases, etc.
+
+## Testing
+
+The syntax used in the tests currently only works in a modern browser.
