@@ -11,11 +11,11 @@
     "localization-strings": {
         "en-US": {
             "browser-title": "Sacred Writings Browser",
-            "about": [
-                "The manager for this specific project to which you may direct any questions or comments is {manager}. You can browse the code in an <a href=\"{repo}\">unstable form</a> or download the <a href=\"{stable}\">latest stable release</a> of the code and modify/redistribute it, if you wish, under the terms of the open source MIT license.",
-                "You can view an RSS (Really Simple Syndication) feed with update announcements for newly released versions of the software used here (the newest stable version should always be implemented here at this page) or other updates related to this project.",
-                "To donate to this specific project, click on the following <a href=\"{buttonLink}\"><button>{button}</button></a>. You can also donate to the Bahá'í Library Online site where this project is being generously hosted."
-            ],
+            "about": {
+                "1": "The manager for this specific project to which you may direct any questions or comments is {manager}. You can browse the code in an <a href=\"{repo}\">unstable form</a> or download the <a href=\"{stable}\">latest stable release</a> of the code and modify/redistribute it, if you wish, under the terms of the open source MIT license.",
+                "2": "You can view an RSS (Really Simple Syndication) feed with update announcements for newly released versions of the software used here (the newest stable version should always be implemented here at this page) or other updates related to this project.",
+                "3": "To donate to this specific project, click on the following <a href=\"{buttonLink}\"><button>{button}</button></a>. You can also donate to the Bahá'í Library Online site where this project is being generously hosted."
+            },
             "removecookies": "Choose a different interface language",
             "sitemap": {
                 "alphabetical": "alphabetical",

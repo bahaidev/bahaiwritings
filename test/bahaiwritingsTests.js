@@ -1,26 +1,40 @@
 
-var schemaBase = '/bahaiwritings/bower_components/textbrowser/general-schemas/';
+var appBase = '/bahaiwritings/';
+var schemaBase = appBase + 'bower_components/textbrowser/general-schemas/';
+
+function validate (schema, data) {
+    var ajv = Ajv();
+    var valid;
+    try {
+        valid = ajv.validate(schema, data);
+    }
+    catch (e) {
+        console.log(e);
+    }
+    finally {
+        if (!valid) {console.log(JSON.stringify(ajv.errors));}
+    }
+    return valid;
+}
 
 var bahaiwritingsTests = {
-    'basic test': function (test) {
-        test.expect(1);
-
+    'files.json test': function (test) {
+        // test.expect(1);
         Promise.all([
             JsonRefs.resolveRefsAt('files.jsonschema', {relativeBase: schemaBase}),
-            JsonRefs.resolveRefsAt('bahaiwritings/files.json', {relativeBase: '../'})
+            JsonRefs.resolveRefsAt('files.json', {relativeBase: appBase})
         ]).then(function ([{resolved: schema}, {resolved: data}]) {
-            var ajv = Ajv();
-            var valid;
-            try {
-                valid = ajv.validate(schema, data);
-            }
-            catch (e) {
-                console.log(e);
-            }
-            finally {
-                if (!valid) {console.log(JSON.stringify(ajv.errors));}
-            }
-
+            valid = validate(schema, data);
+            test.strictEqual(valid, true);
+            test.done();
+        });
+    },
+    'site.json test': function (test) {
+        Promise.all([
+            JsonRefs.resolveRefsAt('site.jsonschema', {relativeBase: schemaBase}),
+            JsonRefs.resolveRefsAt('site.json', {relativeBase: appBase})
+        ]).then(function ([{resolved: schema}, {resolved: data}]) {
+            valid = validate(schema, data);
             test.strictEqual(valid, true);
             test.done();
         });
