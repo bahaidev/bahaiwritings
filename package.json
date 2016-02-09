@@ -7,10 +7,9 @@
     "test": "node test/bahaiwritingsTests",
     "prepublish": "bower install"
   },
-  "dependencies": {
-    "json-refs": "2.x"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "json-refs": "2.x",
     "nodeunit": "0.9.x"
   },
   "engines": {},
