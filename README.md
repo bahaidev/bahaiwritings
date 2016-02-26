@@ -50,6 +50,11 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 1.  Once implemented, apply `prefer_alias` to Qur'an and Bible
 
+1.  Qur'an
+
+    1.  Re-build based on formatted copies so as not to lose visual
+        distinguishability, e.g., Sale's many superscripts, etc.
+
 1.  Collins
 
     1.  Need to split Collins into own repo? (or describe terms)
