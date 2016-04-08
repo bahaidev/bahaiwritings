@@ -37,6 +37,10 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 ## To-dos
 
+1.  Make a version for the [Browser API](https://developer.mozilla.org/en-US/docs/Web/API/Using_the_Browser_API)
+  to enable side-by-side views of (Bahai9.com) iframes dedicated to a
+  given verse/paragraph!
+
 1.  ONGOING: Ensure `notextbrowser` branch is kept up to date with `master`
   besides the `bower.json` and absent HTML/JavaScript/CSS differences.
 
