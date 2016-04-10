@@ -5,7 +5,7 @@
   "main": "resources/user.js",
   "scripts": {
     "node": "node test/bahaiwritingsTests",
-    "test": "node server http://127.0.0.1/test/",
+    "test": "node server http://127.0.0.1/test/ 8082",
     "start-no-open": "node server 0",
     "prepublish": "bower install"
   },
