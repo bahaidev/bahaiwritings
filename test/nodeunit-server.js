@@ -3,7 +3,9 @@
 const open = require('open');
 const ns = require('node-static');
 
-const port = 8082;
+// const port = 8082;
+const port = 80;
+
 const file = new ns.Server();
 
 require('http').createServer(function (req, res) {
@@ -12,6 +14,9 @@ require('http').createServer(function (req, res) {
     }).resume();
 }).listen(port);
 
-console.log('Started server; opening http://localhost:8082/test/ in the browser. May take a while to load!'); // eslint-disable-line no-console
+/*eslint-disable no-warning-comments*/
 
-open('http://localhost:8082/test/');
+// Todo: Fix main app so it can load with port
+console.log('Started server; opening http://127.0.0.1/test/ in the browser. May take a while to load!'); // eslint-disable-line no-console
+
+open('http://127.0.0.1/test/');
