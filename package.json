@@ -5,13 +5,14 @@
   "main": "resources/user.js",
   "scripts": {
     "node": "node test/bahaiwritingsTests",
-    "test": "node test/nodeunit-server.js",
+    "test": "node server http://127.0.0.1/test/",
+    "start-no-open": "node server 0",
     "prepublish": "bower install"
   },
   "dependencies": {
   },
   "devDependencies": {
-    "open": "0.0.5",
+    "opn": "^4.0.1",
     "node-static": "^0.7.7",
     "json-refs": "2.x",
     "nodeunit": "0.9.x"

@@ -16,16 +16,16 @@ is under its own copyright as is the *Collins* bibliography.
 
 If you wish the `TextBrowser` dependency, install with:
 
-`
+```shell
 bower install git@bitbucket.org:brettz9/bahaiwritings.git
-`
+```
 
 If you just wish the Bahá'í Writings JSON and do not wish
 the `TextBrowser` dependency, install with:
 
-`
+```shell
 bower install git@bitbucket.org:brettz9/bahaiwritings.git#notextbrowser
-`
+```
 
 The JSON data files should be the same. Note that in addition to certain
 HTML, JavaScript, and CSS-related files being removed in the latter,
@@ -56,6 +56,8 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
         besides the `bower.json` and absent HTML/JavaScript/CSS differences.
 
     1.  Ensure still passing tests/validating
+
+1.  Fix TextBrowser so it can load with a port in `npm start`
 
 1.  Address how this project may still be consistent with
     <http://bahai-library.com/uhj_interlinear_writings_cta>
@@ -112,8 +114,25 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 ## Testing
 
+You will first need to run `npm install`.
+
 The syntax used in the tests currently only works in a modern browser.
+Note that this may lock up your browser as the validator loads all of
+the files:
 
 ```shell
 npm test
+```
+
+If you merely wish to see the app running in a server, you can run:
+
+```shell
+npm start
+```
+
+If you do not wish to automatically open a tab each time the command is run,
+use:
+
+```shell
+npm run start-no-open
 ```
