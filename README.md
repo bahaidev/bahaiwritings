@@ -37,55 +37,6 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 ## To-dos
 
-1.  Make a version for the [Browser API](https://developer.mozilla.org/en-US/docs/Web/API/Using_the_Browser_API)
-  to enable side-by-side views of (Bahai9.com) iframes dedicated to a
-  given verse/paragraph!
-
-1.  ONGOING: Ensure `notextbrowser` branch is kept up to date with `master`
-  besides the `bower.json` and absent HTML/JavaScript/CSS differences.
-
-1.  Change schema references (in both `bahaiwritings` branches) to point
-    to absolute URLs so as to be independent of repository/branch (rather
-    than their current assumption of being utilized within `TextBrowser`).
-
-1.  Validate!
-
-1.  Once stabilized, target `TextBrowser` dependency by tagged version.
-
-1.  Once implemented, apply `prefer_alias` to Qur'an and Bible
-
-1.  Qur'an
-
-    1.  Re-build based on formatted copies so as not to lose visual
-        distinguishability, e.g., Sale's many superscripts, etc.
-
-1.  Collins
-
-    1.  Need to split Collins into own repo? (or describe terms)
-
-    1.  Upload newer Collins and fix any bugs in formatting.
-
-    1.  Add Collins language metadata for each field
-
-    1.  Lower priority: If implementing combining of fields, add
-        Collins for this.
-
-    1.  Add any other reasonable `browse_options`
-
-1.  Add/Add back references for automated: Synopsis, Roman numerals
-    (pm, gwb), Chinese numbers, word-by-word translation
-    (Persian/Arabic/German/English), auto-romanized Persian
-    (Baha'i-style with help link to <http://bahai9.com/wiki/Pronunciation>),
-    Persian with English tooltips, English with Persian tooltips,
-    text-to-(Google search, Google define, Wikipedia, bahai9.com
-    edit pages); add Word-by-word/phrase mapping
-
-1.  There is a good amount of invalid XHTML in the JSON
-      databases for the Qur'an and Bible (links w/o quotes) that would
-      ideally be replaced (Tidy script?) as well as the XHTML and link
-      locations in the Iqan copy (would just be nice to be clean
-      and polyglot-friendly for any XHTML5 uses)
-
 1.  Waiting: It is hoped that the addition of these tables (which are
     Scriptures) can also be automatically generated from any possible
     future authoritative API
@@ -94,8 +45,64 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
         periodically) parse their texts into JSON here to ensure we
         have the most up-to-date and corrected translations
 
+1.  Waiting: Once stabilized, target `TextBrowser` dependency by tagged
+    version.
+
+1.  Waiting: Once implemented, apply `prefer_alias` to Qur'an and Bible
+
+1.  ONGOING:
+
+    1.  Ensure `notextbrowser` branch is kept up to date with `master`
+        besides the `bower.json` and absent HTML/JavaScript/CSS differences.
+
+    1.  Ensure still passing tests/validating
+
 1.  Address how this project may still be consistent with
     <http://bahai-library.com/uhj_interlinear_writings_cta>
+
+1.  Change schema references (in both `bahaiwritings` branches) to point
+    to absolute URLs so as to be independent of repository/branch (rather
+    than their current assumption of being utilized within `TextBrowser`).
+
+1.  Add/Add back references for automated:
+
+    1.  Synopsis, Roman numerals (pm, gwb), Chinese numbers, word-by-word
+        translation (Persian/Arabic/German/English), auto-romanized Persian
+        (Baha'i-style with help link to
+        <http://bahai9.com/wiki/Pronunciation>), Persian with English
+        tooltips, English with Persian tooltips,
+        text-to-(Google search, Google define, Wikipedia, bahai9.com
+        edit pages); add Word-by-word/phrase mapping
+
+    1.  Make a version for the [Browser API](https://developer.mozilla.org/en-US/docs/Web/API/Using_the_Browser_API)
+        to enable side-by-side views of (Bahai9.com) iframes dedicated to a
+        given verse/paragraph!
+
+1.  Specific works
+
+    1.  Qur'an and Bible
+
+        1.  Re-build based on formatted copies so as not to lose visual
+            distinguishability, e.g., Sale's many superscripts, etc.
+
+        1.  There is a good amount of invalid XHTML in the JSON databases
+              for the Qur'an and Bible (links w/o quotes) that would ideally
+              be replaced (Tidy script?) as well as the XHTML and link
+              locations in the Iqan copy (would just be nice to be clean
+              and polyglot-friendly for any XHTML5 uses)
+
+    1.  Collins
+
+        1.  Need to split Collins into own repo? (or describe terms)
+
+        1.  Upload newer Collins and fix any bugs in formatting.
+
+        1.  Add Collins language metadata for each field
+
+        1.  Lower priority: If implementing combining of fields, add
+            Collins for this.
+
+        1.  Add any other reasonable `browse_options`
 
 1.  Lower priority
 
@@ -106,3 +113,7 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 ## Testing
 
 The syntax used in the tests currently only works in a modern browser.
+
+```shell
+npm test
+```
