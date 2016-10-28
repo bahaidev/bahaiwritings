@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "description": "The Bahá'í Writings in JSON format along with supporting JSON Schema and meta-data files. The formatting is under the MIT license, but the Bahá'í Writings content is licensed under the terms described at <http://www.bahai.org/legal>.",
+  "description": "The Bahá'í Writings in JSON format with supporting JSON Schema and meta-data. The Bahá'í Writings licensed per <http://www.bahai.org/legal>.",
   "ignore": [
     "bower_components"
   ],
@@ -13,9 +13,5 @@
     "urlsearchparams": "0.x",
     "json-refs": "2.x"
   },
-  "main": "files.json",
-  "resolutions": {
-    "json-refs": "2.x",
-    "path-loader": "~1.0.1"
-  }
+  "main": "files.json"
 }
