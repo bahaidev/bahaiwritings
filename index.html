@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<!--Todo: Remove "1" at end of manifest attribute when
-  finished with testing (and move to Service Workers) -->
+<!--Todo: Add back manifest attribute to html when
+    manifest="textbrowser.appcache"
+  finished with testing (though need to move to Service Workers) -->
 <html
     xmlns="http://www.w3.org/1999/xhtml"
-    manifest1="textbrowser.appcache"
 ><head>
     <meta charset="utf-8" />
+    <title></title>
     <link rel="stylesheet" href="bower_components/textbrowser/resources/index.css" />
     <link rel="stylesheet" href="resources/user.css" />
     <script src="bower_components/urlsearchparams/urlsearchparams.js"></script>
@@ -22,7 +23,6 @@
 
 <!--json-refs-->
 <script src="bower_components/path-loader/browser/path-loader-min.js"></script>
-<script src="bower_components/traverse/traverse.js"></script>
 <script src="bower_components/json-refs/browser/json-refs.js"></script>
 
 <!--form-serialize-->
