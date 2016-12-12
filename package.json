@@ -12,11 +12,11 @@
   "dependencies": {
   },
   "devDependencies": {
-    "opn": "^4.0.1",
-    "node-static": "^0.7.7",
+    "opn": "^4.0.2",
+    "node-static": "^0.7.9",
     "json-refs": "^2.x",
     "nodeunit": "^0.10.x",
-    "remark-lint": "^5.1.0"
+    "remark-lint": "^5.2.0"
   },
   "engines": {},
   "repository": {
