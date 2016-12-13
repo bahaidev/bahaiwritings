@@ -59,6 +59,8 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 1.  See TextBrowser to-dos
 
+1.  Change schemas to use `$schema`?
+
 1.  Fix TextBrowser so it can load with a port in `npm start`
 
 1.  Address how this project may still be consistent with
