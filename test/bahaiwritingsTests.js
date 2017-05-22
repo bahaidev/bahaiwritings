@@ -1,48 +1,80 @@
-/*global Ajv, Promise, JsonRefs, module*/
-var appBase = '/';
-var textbrowserBase = appBase + 'bower_components/textbrowser/';
-var schemaBase = textbrowserBase + 'general-schemas/';
-// var localesBase = textbrowserBase + 'locales/';
-// var appdataBase = textbrowserBase + 'appdata/';
+/* globals Ajv:true, Promise, module, exports, require */
+'use strict';
+var JsonRefs, Ajv, getJSON, __dirname, path; // eslint-disable-line no-var
+
+let appBase = '../';
+if (typeof exports !== 'undefined') {
+    Ajv = require('ajv');
+    JsonRefs = require('json-refs');
+    getJSON = require('simple-get-json');
+    path = require('path');
+} else {
+    path = {
+        join: (...args) => args.join('')
+    };
+    appBase = location.protocol + '//' + location.host + '/';
+    __dirname = ''; // eslint-disable-line no-global-assign
+}
+
+const textbrowserBase = appBase + 'bower_components/textbrowser/';
+const schemaBase = textbrowserBase + 'general-schemas/';
+// const localesBase = textbrowserBase + 'locales/';
+// const appdataBase = textbrowserBase + 'appdata/';
 
 /**
 * @param {object} schema The schema object
 * @param {any} data The instance document to validate
 * @returns {boolean} Whether valid or not
 */
-function validate (schema, data) {'use strict';
-    var ajv = Ajv(); // eslint-disable-line new-cap
-    var valid;
+function validate (schema, data, extraSchemas = []) {
+    const ajv = Ajv(); // eslint-disable-line new-cap
+    let valid;
     try {
+        extraSchemas.forEach(([key, val]) => {
+            ajv.addSchema(val, key);
+        });
         valid = ajv.validate(schema, data);
-    }
-    catch (e) {
+    } catch (e) {
         console.log(e); // eslint-disable-line no-console
-    }
-    finally {
-        if (!valid) {console.log(JSON.stringify(ajv.errors));} // eslint-disable-line no-console
+    } finally {
+        if (!valid) { console.log(JSON.stringify(ajv.errors, null, 2)); } // eslint-disable-line no-console
     }
     return valid;
 }
 
-var bahaiwritingsTests = {
-    'files.json test': function (test) {'use strict';
-        // test.expect(1);
+const bahaiwritingsTests = {
+    'files.json test': function (test) {
+        test.expect(1);
         Promise.all([
-            JsonRefs.resolveRefsAt('files.jsonschema', {relativeBase: schemaBase}),
-            JsonRefs.resolveRefsAt('files.json', {relativeBase: appBase})
-        ]).then(function ([{resolved: schema}, {resolved: data}]) {
-            const valid = validate(schema, data);
+            getJSON(path.join(__dirname, appBase, 'files.json')),
+            ...[
+                'files.jsonschema',
+                'array-of-arrays.jsonschema',
+                'locale.jsonschema',
+                'metadata.jsonschema',
+                'table.jsonschema',
+                'table-container.jsonschema'
+            ].map((f) => getJSON(path.join(__dirname, schemaBase, f)))
+        ]).then(function ([data, schema, arrayOfArrays, locale, metadata, table, tableContainer]) {
+            const valid = validate(schema, data, [
+                ['array-of-arrays.jsonschema', arrayOfArrays],
+                ['locale.jsonschema', locale],
+                ['metadata.jsonschema', metadata],
+                ['table.jsonschema', table],
+                ['table-container.jsonschema', tableContainer]
+            ]);
             test.strictEqual(valid, true);
             test.done();
         });
     },
-    'site.json test': function (test) {'use strict';
+    'site.json test': function (test) {
+        test.expect(1);
         Promise.all([
-            JsonRefs.resolveRefsAt('site.jsonschema', {relativeBase: schemaBase}),
-            JsonRefs.resolveRefsAt('site.json', {relativeBase: appBase})
-        ]).then(function ([{resolved: schema}, {resolved: data}]) {
-            const valid = validate(schema, data);
+            JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'site.json')),
+            getJSON(path.join(__dirname, schemaBase, 'site.jsonschema')),
+            getJSON(path.join(__dirname, schemaBase, 'locale.jsonschema'))
+        ]).then(function ([data, schema, extraSchema]) {
+            const valid = validate(schema, data, [['locale.jsonschema', extraSchema]]);
             test.strictEqual(valid, true);
             test.done();
         });
