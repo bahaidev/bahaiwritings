@@ -2,14 +2,15 @@
   "name": "bahaiwritings",
   "version": "0.0.1",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
-  "main": "resources/user.js",
   "scripts": {
     "node": "nodeunit test/bahaiwritingsTests.js",
     "test": "node server http://127.0.0.1/test/ 8082",
-    "start-no-open": "node server 0",
-    "prepublish": "bower install"
+    "start-no-open": "node server 0"
   },
   "dependencies": {
+      "form-serialize": "https://github.com/brettz9/form-serialize#browser",
+      "jamilih": "0.14.0",
+      "textbrowser": "https://github.com/brettz9/textbrowser"
   },
   "devDependencies": {
     "ajv": "5.1.3",
@@ -20,12 +21,10 @@
     "eslint-plugin-node": "4.2.2",
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "3.0.1",
-    "json-refs": "3.0.0",
     "node-static": "0.7.9",
     "nodeunit": "0.11.0",
     "opn": "5.0.0",
-    "remark-lint": "6.0.0",
-    "simple-get-json": "1.1.0"
+    "remark-lint": "6.0.0"
   },
   "engines": {},
   "repository": {
@@ -34,7 +33,10 @@
   },
   "author": "Brett Zamir",
   "contributors": [],
-  "keywords": [],
+  "keywords": [
+      "bahai",
+      "textbrowser"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://bitbucket.org/brettz9/bahaiwritings/issues?status=new&status=open"

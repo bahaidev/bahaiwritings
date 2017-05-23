@@ -11,81 +11,81 @@ resources/user.js
 resources/user.css
 
 # Textbrowser files
-bower_components/textbrowser/appdata/languages.json
+node_modules/textbrowser/appdata/languages.json
 
-bower_components/textbrowser/general-schemas/files.jsonschema
-bower_components/textbrowser/general-schemas/languages.jsonschema
-bower_components/textbrowser/general-schemas/locale.jsonschema
-bower_components/textbrowser/general-schemas/metadata.jsonschema
-# bower_components/textbrowser/general-schemas/table.jsonschema # Not currently using for validation or meta-data
+node_modules/textbrowser/general-schemas/files.jsonschema
+node_modules/textbrowser/general-schemas/languages.jsonschema
+node_modules/textbrowser/general-schemas/locale.jsonschema
+node_modules/textbrowser/general-schemas/metadata.jsonschema
+# node_modules/textbrowser/general-schemas/table.jsonschema # Not currently using for validation or meta-data
 
-bower_components/textbrowser/locales/ar.json
-bower_components/textbrowser/locales/en-US.json
-bower_components/textbrowser/locales/fa.json
-bower_components/textbrowser/locales/ru.json
+node_modules/textbrowser/locales/ar.json
+node_modules/textbrowser/locales/en-US.json
+node_modules/textbrowser/locales/fa.json
+node_modules/textbrowser/locales/ru.json
 
-bower_components/textbrowser/resources/index.css
-bower_components/textbrowser/resources/index.js
+node_modules/textbrowser/resources/index.css
+node_modules/textbrowser/resources/index.js
 
 # Textbrowser dependency files
 
-bower_components/form-serialize/index.js
-bower_components/get-json/index.js
-bower_components/imf/index.js
+node_modules/form-serialize/index.js
+node_modules/simple-get-json/index.js
+node_modules/imf/index.js
 
 # Might want to change to uncomment these instead of the following line:
-# 1. bower_components/intl-messageformat/dist/intl-messageformat.min.js
-# 2. individual locale files: bower_components/intl-messageformat/dist/locale-data/en.js, etc.
-bower_components/intl-messageformat/dist/intl-messageformat-with-locales.min.js
+# 1. node_modules/intl-messageformat/dist/intl-messageformat.min.js
+# 2. individual locale files: node_modules/intl-messageformat/dist/locale-data/en.js, etc.
+node_modules/intl-messageformat/dist/intl-messageformat-with-locales.min.js
 
-bower_components/jamilih/jml.js
+node_modules/jamilih/jml.js
 
 # Uncomment the next line and comment out the following in production
-# bower_components/json-refs/browser/json-refs-min.js
-bower_components/json-refs/browser/json-refs.js
+# node_modules/json-refs/browser/json-refs-min.js
+node_modules/json-refs/browser/json-refs.js
 
-bower_components/path-loader/browser/path-loader-min.js
-bower_components/traverse/traverse.js
+node_modules/path-loader/browser/path-loader-min.js
+node_modules/traverse/traverse.js
 
 # Add user data files here:
 
-bower_components/bahaiwritings/other-works/Collins.json
-bower_components/bahaiwritings/other-works/lights.json
-bower_components/bahaiwritings/other-works/metabower_components/bahaiwritings/Collins.metadata
-bower_components/bahaiwritings/other-works/metabower_components/bahaiwritings/lights.metadata
-bower_components/bahaiwritings/other-works/schemas/Collins.jsonschema
-bower_components/bahaiwritings/other-works/schemas/lights.jsonschema
+node_modules/bahaiwritings/other-works/Collins.json
+node_modules/bahaiwritings/other-works/lights.json
+node_modules/bahaiwritings/other-works/metanode_modules/bahaiwritings/Collins.metadata
+node_modules/bahaiwritings/other-works/metanode_modules/bahaiwritings/lights.metadata
+node_modules/bahaiwritings/other-works/schemas/Collins.jsonschema
+node_modules/bahaiwritings/other-works/schemas/lights.jsonschema
 
-bower_components/bahaiwritings/writings/aqdas.json
-bower_components/bahaiwritings/writings/Bible.json
-bower_components/bahaiwritings/writings/Epistle to the Son of the Wolf.json
-bower_components/bahaiwritings/writings/Gems of Divine Mysteries.json
-bower_components/bahaiwritings/writings/gleanings.json
-bower_components/bahaiwritings/writings/Hidden Words.json
-bower_components/bahaiwritings/writings/peace.json
-bower_components/bahaiwritings/writings/pm.json
-bower_components/bahaiwritings/writings/quran.json
-bower_components/bahaiwritings/writings/wwtf.json
-bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/aqdas.metadata
-bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/Bible.metadata
-bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/Epistle to the Son of the Wolf.metadata
-bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/Gems of Divine Mysteries.metadata
-bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/gleanings.metadata
-bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/Hidden Words.metadata
-bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/peace.metadata
-bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/pm.metadata
-bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/quran.metadata
-bower_components/bahaiwritings/writings/metabower_components/bahaiwritings/wwtf.metadata
-bower_components/bahaiwritings/writings/schemas/aqdas.jsonschema
-bower_components/bahaiwritings/writings/schemas/Bible.jsonschema
-bower_components/bahaiwritings/writings/schemas/Epistle to the Son of the Wolf.jsonschema
-bower_components/bahaiwritings/writings/schemas/Gems of Divine Mysteries.jsonschema
-bower_components/bahaiwritings/writings/schemas/gleanings.jsonschema
-bower_components/bahaiwritings/writings/schemas/Hidden Words.jsonschema
-bower_components/bahaiwritings/writings/schemas/peace.jsonschema
-bower_components/bahaiwritings/writings/schemas/pm.jsonschema
-bower_components/bahaiwritings/writings/schemas/quran.jsonschema
-bower_components/bahaiwritings/writings/schemas/wwtf.jsonschema
+node_modules/bahaiwritings/writings/aqdas.json
+node_modules/bahaiwritings/writings/Bible.json
+node_modules/bahaiwritings/writings/Epistle to the Son of the Wolf.json
+node_modules/bahaiwritings/writings/Gems of Divine Mysteries.json
+node_modules/bahaiwritings/writings/gleanings.json
+node_modules/bahaiwritings/writings/Hidden Words.json
+node_modules/bahaiwritings/writings/peace.json
+node_modules/bahaiwritings/writings/pm.json
+node_modules/bahaiwritings/writings/quran.json
+node_modules/bahaiwritings/writings/wwtf.json
+node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/aqdas.metadata
+node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/Bible.metadata
+node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/Epistle to the Son of the Wolf.metadata
+node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/Gems of Divine Mysteries.metadata
+node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/gleanings.metadata
+node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/Hidden Words.metadata
+node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/peace.metadata
+node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/pm.metadata
+node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/quran.metadata
+node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/wwtf.metadata
+node_modules/bahaiwritings/writings/schemas/aqdas.jsonschema
+node_modules/bahaiwritings/writings/schemas/Bible.jsonschema
+node_modules/bahaiwritings/writings/schemas/Epistle to the Son of the Wolf.jsonschema
+node_modules/bahaiwritings/writings/schemas/Gems of Divine Mysteries.jsonschema
+node_modules/bahaiwritings/writings/schemas/gleanings.jsonschema
+node_modules/bahaiwritings/writings/schemas/Hidden Words.jsonschema
+node_modules/bahaiwritings/writings/schemas/peace.jsonschema
+node_modules/bahaiwritings/writings/schemas/pm.jsonschema
+node_modules/bahaiwritings/writings/schemas/quran.jsonschema
+node_modules/bahaiwritings/writings/schemas/wwtf.jsonschema
 
 NETWORK:
 

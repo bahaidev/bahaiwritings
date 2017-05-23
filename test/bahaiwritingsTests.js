@@ -16,7 +16,7 @@ if (typeof exports !== 'undefined') {
     __dirname = ''; // eslint-disable-line no-global-assign
 }
 
-const textbrowserBase = appBase + 'bower_components/textbrowser/';
+const textbrowserBase = appBase + 'node_modules/textbrowser/';
 const schemaBase = textbrowserBase + 'general-schemas/';
 // const localesBase = textbrowserBase + 'locales/';
 // const appdataBase = textbrowserBase + 'appdata/';

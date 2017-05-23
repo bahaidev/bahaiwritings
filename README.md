@@ -1,5 +1,8 @@
 # bahaiwritings
 
+*The Bahá'í Writings in JSON format with supporting JSON Schema
+and meta-data.*
+
 Although the [TextBrowser](https://github.com/brettz9/textbrowser)
 project for which this repository includes content is open sourced under
 the MIT license (as is the specific JSON formatting (and schema and
