@@ -60,7 +60,11 @@
             }
         },
         "Original Language": {
-            "sequentialEnum": true,
+            "prefer_alias": false,
+            "fieldvalue-aliases": {
+                "Arabic": [1],
+                "Persian": [2]
+            },
             "name": {
                 "localeKey": "fieldnames/Original Language"
             }

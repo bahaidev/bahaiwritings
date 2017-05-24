@@ -55,7 +55,7 @@
             }
         },
         "Traditional Suráh #": {
-            "prefer_alias": false,
+            "prefer_alias": true,
             "alias": {
                 "localeKey": "fieldaliases/surah-name"
             },

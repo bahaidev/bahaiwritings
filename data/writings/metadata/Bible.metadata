@@ -52,7 +52,7 @@
     },
     "fields": {
         "Book #": {
-            "prefer_alias": true,
+            "prefer_alias": "long1",
             "alias": {
                 "localeKey": "fieldaliases/book-name"
             },

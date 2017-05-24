@@ -46,7 +46,7 @@ const bahaiwritingsTests = {
     'files.json test': function (test) {
         test.expect(1);
         Promise.all([
-            getJSON(path.join(__dirname, appBase, 'files.json')),
+            JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'files.json')),
             ...[
                 'files.jsonschema',
                 'array-of-arrays.jsonschema',
@@ -55,7 +55,7 @@ const bahaiwritingsTests = {
                 'table.jsonschema',
                 'table-container.jsonschema'
             ].map((f) => getJSON(path.join(__dirname, schemaBase, f)))
-        ]).then(function ([data, schema, arrayOfArrays, locale, metadata, table, tableContainer]) {
+        ]).then(function ([{resolved: data}, schema, arrayOfArrays, locale, metadata, table, tableContainer]) {
             const valid = validate(schema, data, [
                 ['array-of-arrays.jsonschema', arrayOfArrays],
                 ['locale.jsonschema', locale],
@@ -73,7 +73,7 @@ const bahaiwritingsTests = {
             JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'site.json')),
             getJSON(path.join(__dirname, schemaBase, 'site.jsonschema')),
             getJSON(path.join(__dirname, schemaBase, 'locale.jsonschema'))
-        ]).then(function ([data, schema, extraSchema]) {
+        ]).then(function ([{resolved: data}, schema, extraSchema]) {
             const valid = validate(schema, data, [['locale.jsonschema', extraSchema]]);
             test.strictEqual(valid, true);
             test.done();
