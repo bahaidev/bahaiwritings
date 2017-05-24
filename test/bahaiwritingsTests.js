@@ -27,7 +27,7 @@ const schemaBase = textbrowserBase + 'general-schemas/';
 * @returns {boolean} Whether valid or not
 */
 function validate (schema, data, extraSchemas = []) {
-    const ajv = Ajv(); // eslint-disable-line new-cap
+    const ajv = new Ajv({extendRefs: 'fail'});
     let valid;
     try {
         extraSchemas.forEach(([key, val]) => {
