@@ -31,8 +31,8 @@ const schemaBase = textbrowserBase + 'general-schemas/';
 * @param {any} data The instance document to validate
 * @returns {boolean} Whether valid or not
 */
-function validate (schema, data, extraSchemas = [], removeAdditional = false) {
-    const ajv = new Ajv({extendRefs: 'fail', removeAdditional});
+function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
+    const ajv = new Ajv(Object.assign({}, {extendRefs: 'fail'}, additionalOptions));
     let valid;
     try {
         extraSchemas.forEach(([key, val]) => {
@@ -76,26 +76,26 @@ const bahaiwritingsTests = {
             test.strictEqual(valid, true);
 
             const data2 = cloneJSON(data);
-            const valid2 = validate(schema, data2, extraSchemas, 'all');
+            const valid2 = validate(schema, data2, extraSchemas, {
+                removeAdditional: 'all',
+                validateSchema: false
+            });
             test.strictEqual(valid2, true);
             const diff = jsonpatch.compare(data, data2);
             test.strictEqual(diff.length, 0);
 
             const schemas = arguments[0].slice(2);
             schemas.forEach((schema, i) => {
-                const valid = validate(jsonSchema, schema);
-                test.strictEqual(valid, true);
+                validate(jsonSchema, schema, undefined, {
+                    validateSchema: false
+                });
 
                 const schema2 = cloneJSON(schema);
-                console.log('schema2:0', schema2);
-                const valid2 = validate(jsonSchema, schema2, extraSchemas, 'all');
-                test.strictEqual(valid2, true);
+                validate(jsonSchema, schema2, extraSchemas, {
+                    removeAdditional: 'all',
+                    validateSchema: false
+                });
                 const diff = jsonpatch.compare(schema, schema2);
-                if (diff.length) {
-                    console.log('diff2', i, diff);
-                    console.log('schema1', schema);
-                    console.log('schema2', schema2);
-                }
                 test.strictEqual(diff.length, 0);
             });
 
@@ -103,7 +103,7 @@ const bahaiwritingsTests = {
         });
     },
     'site.json test': function (test) {
-        test.expect(3);
+        test.expect(9);
         Promise.all([
             JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'site.json')),
             getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-06-schema.json')),
@@ -115,7 +115,10 @@ const bahaiwritingsTests = {
             test.strictEqual(valid, true);
 
             const data2 = cloneJSON(data);
-            const valid2 = validate(schema, data2, extraSchemas, 'all');
+            const valid2 = validate(schema, data2, extraSchemas, {
+                removeAdditional: 'all',
+                validateSchema: false
+            });
             test.strictEqual(valid2, true);
             const diff = jsonpatch.compare(data, data2);
             test.strictEqual(diff.length, 0);
@@ -126,15 +129,12 @@ const bahaiwritingsTests = {
                 test.strictEqual(valid, true);
 
                 const schema2 = cloneJSON(schema);
-                console.log('schema2:0', schema2);
-                const valid2 = validate(jsonSchema, schema2, extraSchemas, 'all');
+                const valid2 = validate(jsonSchema, schema2, extraSchemas, {
+                    removeAdditional: 'all',
+                    validateSchema: false
+                });
                 test.strictEqual(valid2, true);
                 const diff = jsonpatch.compare(schema, schema2);
-                if (diff.length) {
-                    console.log('diff2', i, diff);
-                    console.log('schema1', schema);
-                    console.log('schema2', schema2);
-                }
                 test.strictEqual(diff.length, 0);
             });
 
