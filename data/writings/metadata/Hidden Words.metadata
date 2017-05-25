@@ -50,7 +50,7 @@
         }
     },
     "table": {
-        "browse_fields": [{"set": ["Number", "Original Language"]}],
+        "browse_fields": [{"set": ["Original Language", "Number"]}],
         "default_view": {"Number": 0, "Original Language": "Arabic"}
     },
     "fields": {
@@ -60,6 +60,7 @@
             }
         },
         "Original Language": {
+            "sequentialEnum": true,
             "prefer_alias": false,
             "fieldvalue-aliases": {
                 "Arabic": [1],

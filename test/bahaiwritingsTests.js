@@ -52,7 +52,7 @@ const bahaiwritingsTests = {
         test.expect(9);
         Promise.all([
             JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'files.json')),
-            getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-04-schema.json')),
+            getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-06-schema.json')),
             ...[
                 'files.jsonschema',
                 'array-of-arrays.jsonschema',
@@ -106,7 +106,7 @@ const bahaiwritingsTests = {
         test.expect(3);
         Promise.all([
             JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'site.json')),
-            getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-04-schema.json')),
+            getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-06-schema.json')),
             getJSON(path.join(__dirname, schemaBase, 'site.jsonschema')),
             getJSON(path.join(__dirname, schemaBase, 'locale.jsonschema'))
         ]).then(function ([{resolved: data}, jsonSchema, schema, localeSchema]) {
