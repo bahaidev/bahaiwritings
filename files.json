@@ -61,17 +61,18 @@
     "autofield-mapping": {
         "aqdas": [{"wordbyword": ["Arabic", "English"]}],
         "pm": [{"synopsis": "English"}, {"roman-numerals": "Number"}],
-        "hidden_words": [{"synopsis": "English"}, {"wordbyword": ["English", "$locale"]}, {"wordbyword-tooltips": ["Persian", "English"]}, {"auto-romanize": "Persian"}]
+        "hidden_words": [
+            {"synopsis": "English"},
+            {"wordbyword": ["English", "$locale"]},
+            {"wordbyword-tooltips": ["Persian", "English"]},
+            {"auto-romanize": "Persian"}
+        ]
     },
     "groups": [
         {
             "id": "writings",
-            "name": {
-                "localeKey": "writings"
-            },
-            "directions": {
-                "localeKey": "choosewritings_bahai_writingsdb"
-            },
+            "name": {"localeKey": "writings"},
+            "directions": {"localeKey": "choosewritings_bahai_writingsdb"},
             "schemaBaseDirectory": "data/writings/schemas",
             "metadataBaseDirectory": "data/writings/metadata",
             "files": [
@@ -89,12 +90,8 @@
         },
         {
             "id": "other-writings",
-            "name": {
-                "localeKey": "other-writings"
-            },
-            "directions": {
-                "localeKey": "choosewritings_bahai_writingsotherdb"
-            },
+            "name": {"localeKey": "other-writings"},
+            "directions": {"localeKey": "choosewritings_bahai_writingsotherdb"},
             "schemaBaseDirectory": "data/other-works/schemas",
             "metadataBaseDirectory": "data/other-works/metadata",
             "files": [
