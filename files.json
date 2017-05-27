@@ -58,6 +58,9 @@
             }
         }
     },
+    "plugins": {
+        "synopsis": "plugins/synopsis.js"
+    },
     "autofield-mapping": {
         "aqdas": [{"wordbyword": ["Arabic", "English"]}],
         "pm": [{"synopsis": "English"}, {"roman-numerals": "Number"}],

@@ -1,5 +1,5 @@
 /* globals TextBrowser */
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     // This will only work from subdomains; would need postMessage() routine to allow introspection
@@ -11,7 +11,8 @@ window.addEventListener('DOMContentLoaded', function () {
         // languages: 'node_modules/bahaiwritings/appdata/languages.json', // Default
         // site: 'site.json' // Default
         files: 'files.json',
-        namespace: 'bahaiwritings'
+        namespace: 'bahaiwritings',
+        allowPlugins: true
     });
     tb.init();
 });
