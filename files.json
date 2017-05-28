@@ -64,7 +64,7 @@
             "onByDefault": false
         }
     },
-    "field-mapping": {
+    "plugin-field-mapping": {
         "aqdas": {
             "wordbyword": {
                 "applicable-fields": ["Arabic", "English"]
