@@ -35,6 +35,7 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
     const ajv = new Ajv(Object.assign({}, {extendRefs: 'fail'}, additionalOptions));
     let valid;
     try {
+        ajv.addFormat('language-code', () => true);
         extraSchemas.forEach(([key, val]) => {
             ajv.addSchema(val, key);
         });

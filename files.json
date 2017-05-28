@@ -29,7 +29,7 @@
             "autofields": {
                 "synopsis": "Synopsis",
                 "roman-numerals": "Roman #",
-                "auto-romanize": "Auto-Romanized {language}",
+                "romanize": "Romanized {language}",
                 "wordbyword-tooltips": "{language-base} with {language-tooltip} tooltips",
                 "googlify": "Find word in \"Google\"",
                 "googledefine": "Definition (Google)",
@@ -62,34 +62,71 @@
         "synopsis": {
             "path": "plugins/synopsis.js",
             "onByDefault": false
+        },
+        "wordbyword": {
+            "path": "plugins/wordbyword.js",
+            "onByDefault": false
+        },
+        "wordbyword-tooltips": {
+            "path": "plugins/wordbyword-tooltips.js",
+            "onByDefault": true
+        },
+        "chinese-numbers": {
+            "path": "plugins/chinese-numbers.js",
+            "lang": "zh-CN"
         }
     },
     "plugin-field-mapping": {
         "aqdas": {
             "wordbyword": {
-                "applicable-fields": ["Arabic", "English"]
+                "applicable-fields": {
+                    "Arabic": {},
+                    "English": {}
+                }
+            }
+        },
+        "peace": {
+            "chinese-numbers": {
+                "applicable-fields": {
+                    "Section Number": {}
+                }
             }
         },
         "pm": {
             "synopsis": {
-                "applicable-fields": "English"
+                "applicable-fields": {
+                    "English": {
+                    }
+                }
             },
             "roman-numerals": {
-                "applicable-fields": "Number"
+                "applicable-fields": {
+                    "Number": {}
+                }
             }
         },
         "hidden_words": {
             "synopsis": {
-                "applicable-fields": "English"
+                "applicable-fields": {
+                    "English": {}
+                }
             },
             "wordbyword": {
-                "applicable-fields": ["English", "$locale"]
+                "applicable-fields": {
+                    "English": {},
+                    "$locale": {}
+                }
             },
             "wordbyword-tooltips": {
-                "applicable-fields": ["Persian", "English"]
+                "applicable-fields": {
+                    "Persian": {},
+                    "English": {}
+                }
             },
-            "auto-romanize": {
-                "applicable-fields": "Persian"
+            "romanize": {
+                "applicable-fields": {
+                    "Persian": {}
+                }
             }
         }
     },
