@@ -173,12 +173,12 @@
             }
         },
         "Traditional Suráh #": {
+            "name": {
+                "localeKey": "fieldnames/Traditional Suráh #"
+            },
             "prefer_alias": true,
             "alias": {
                 "localeKey": "fieldaliases/surah-name"
-            },
-            "name": {
-                "localeKey": "fieldnames/Traditional Suráh #"
             },
             "fieldvalue-aliases": {
                 "localeKey": "fieldvalue-aliases/Traditional Suráh #"

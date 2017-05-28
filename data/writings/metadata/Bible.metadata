@@ -122,12 +122,12 @@
     },
     "fields": {
         "Book #": {
+            "name": {
+                "localeKey": "fieldnames/Book #"
+            },
             "prefer_alias": "long1",
             "alias": {
                 "localeKey": "fieldaliases/book-name"
-            },
-            "name": {
-                "localeKey": "fieldnames/Book #"
             },
             "fieldvalue-aliases": {
                 "localeKey": "fieldvalue-aliases/Book #"
