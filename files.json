@@ -59,17 +59,39 @@
         }
     },
     "plugins": {
-        "synopsis": "plugins/synopsis.js"
+        "synopsis": {
+            "path": "plugins/synopsis.js",
+            "onByDefault": false
+        }
     },
-    "autofield-mapping": {
-        "aqdas": [{"wordbyword": ["Arabic", "English"]}],
-        "pm": [{"synopsis": "English"}, {"roman-numerals": "Number"}],
-        "hidden_words": [
-            {"synopsis": "English"},
-            {"wordbyword": ["English", "$locale"]},
-            {"wordbyword-tooltips": ["Persian", "English"]},
-            {"auto-romanize": "Persian"}
-        ]
+    "field-mapping": {
+        "aqdas": {
+            "wordbyword": {
+                "applicable-fields": ["Arabic", "English"]
+            }
+        },
+        "pm": {
+            "synopsis": {
+                "applicable-fields": "English"
+            },
+            "roman-numerals": {
+                "applicable-fields": "Number"
+            }
+        },
+        "hidden_words": {
+            "synopsis": {
+                "applicable-fields": "English"
+            },
+            "wordbyword": {
+                "applicable-fields": ["English", "$locale"]
+            },
+            "wordbyword-tooltips": {
+                "applicable-fields": ["Persian", "English"]
+            },
+            "auto-romanize": {
+                "applicable-fields": "Persian"
+            }
+        }
     },
     "groups": [
         {
