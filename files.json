@@ -26,16 +26,40 @@
                     "collins": "collins"
                 }
             },
-            "autofields": {
-                "synopsis": "Synopsis",
-                "roman-numerals": "Roman #",
-                "romanize": "Romanized {language}",
-                "wordbyword-tooltips": "{language-base} with {language-tooltip} tooltips",
-                "googlify": "Find word in \"Google\"",
-                "googledefine": "Definition (Google)",
-                "wikify": "Editable wiki page",
-                "wikilinks": "Links to Wiki",
-                "wordbyword": "Word-by-word \"Auto-translation\" from {language-from} to {language-to}"
+            "plugins": {
+                "synopsis": {
+                    "fieldname": "Synopsis"
+                },
+                "roman-numerals": {
+                    "fieldname": "Roman #"
+                },
+                "romanize": {
+                    "fieldname": "Romanized {language}"
+                },
+                "wordbyword-tooltips": {
+                    "fieldname": "{language-base} with {language-tooltip} tooltips"
+                },
+                "websearch": {
+                    "fieldname": "Find word in {search-engine}"
+                },
+                "define": {
+                    "fieldname": "Definition ({search-engine})"
+                },
+                "wikify": {
+                    "fieldname": "Editable wiki page"
+                },
+                "wikilinks": {
+                    "fieldname": "Links to Wiki"
+                },
+                "wordbyword": {
+                    "fieldname": "Word-by-word \"Auto-translation\" from {language-from} to {language-to}"
+                },
+                "field-alias": {
+                    "fieldname": "{alias}"
+                },
+                "chinese-numbers": {
+                    "fieldname": "Chinese numbers"
+                }
             }
         },
         "fa": {
@@ -73,16 +97,64 @@
         },
         "chinese-numbers": {
             "path": "plugins/chinese-numbers.js",
-            "lang": "zh-CN"
+            "lang": "zh-CN",
+            "onByDefault": false
+        },
+        "field-alias": {
+            "path": "plugins/field-alias.js",
+            "onByDefault": true
+        },
+        "roman-numerals": {
+            "path": "plugins/roman-numerals.js",
+            "onByDefault": false
+        },
+        "romanize": {
+            "path": "plugins/romanize.js",
+            "onByDefault": false
+        },
+        "websearch": {
+            "path": "plugins/websearch.js",
+            "onByDefault": false
+        },
+        "define": {
+            "path": "plugins/define.js",
+            "onByDefault": false
+        },
+        "wikify": {
+            "path": "plugins/wikify.js",
+            "onByDefault": false
+        },
+        "wikilinks": {
+            "path": "plugins/wikilinks.js",
+            "onByDefault": true
         }
     },
     "plugin-field-mapping": {
+        "bible": {
+            "field-alias": {
+                "applicable-fields": {
+                    "Book #": {
+                    }
+                }
+            }
+        },
+        "quran": {
+            "field-alias": {
+                "applicable-fields": {
+                    "Traditional Suráh #": {
+                    }
+                }
+            }
+        },
         "aqdas": {
             "wordbyword": {
                 "applicable-fields": {
                     "Arabic": {},
                     "English": {}
                 }
+            },
+            "wikilinks": {
+                "placement": "end"
             }
         },
         "peace": {
@@ -106,6 +178,13 @@
             }
         },
         "hidden_words": {
+            "field-alias": {
+                "applicable-fields": {
+                    "Original Language": {
+                        "onByDefault": false
+                    }
+                }
+            },
             "synopsis": {
                 "applicable-fields": {
                     "English": {}
@@ -113,14 +192,20 @@
             },
             "wordbyword": {
                 "applicable-fields": {
-                    "English": {},
+                    "English": {
+                        "targetLanguage": "fa"
+                    },
                     "$locale": {}
                 }
             },
             "wordbyword-tooltips": {
                 "applicable-fields": {
-                    "Persian": {},
-                    "English": {}
+                    "Persian": {
+                        "targetLanguage": "{locale}"
+                    },
+                    "English": {
+                        "targetLanguage": "fa"
+                    }
                 }
             },
             "romanize": {
