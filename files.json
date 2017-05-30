@@ -127,90 +127,105 @@
         "wikilinks": {
             "path": "plugins/wikilinks.js",
             "onByDefault": true
+        },
+        "isbn": {
+            "path": "plugins/isbn.js",
+            "onByDefault": true
         }
     },
     "plugin-field-mapping": {
-        "bible": {
-            "field-alias": {
-                "applicable-fields": {
-                    "Book #": {
+        "other-writings": {
+            "collins": {
+                "isbn": {
+                    "applicable-fields": {
+                        "ISBN": {}
                     }
                 }
             }
         },
-        "quran": {
-            "field-alias": {
-                "applicable-fields": {
-                    "Traditional Suráh #": {
-                    }
-                }
-            }
-        },
-        "aqdas": {
-            "wordbyword": {
-                "applicable-fields": {
-                    "Arabic": {},
-                    "English": {}
-                }
-            },
-            "wikilinks": {
-                "placement": "end"
-            }
-        },
-        "peace": {
-            "chinese-numbers": {
-                "applicable-fields": {
-                    "Section Number": {}
-                }
-            }
-        },
-        "pm": {
-            "synopsis": {
-                "applicable-fields": {
-                    "English": {
+        "writings": {
+            "bible": {
+                "field-alias": {
+                    "applicable-fields": {
+                        "Book #": {
+                        }
                     }
                 }
             },
-            "roman-numerals": {
-                "applicable-fields": {
-                    "Number": {}
-                }
-            }
-        },
-        "hidden_words": {
-            "field-alias": {
-                "applicable-fields": {
-                    "Original Language": {
-                        "onByDefault": false
+            "quran": {
+                "field-alias": {
+                    "applicable-fields": {
+                        "Traditional Suráh #": {
+                        }
                     }
                 }
             },
-            "synopsis": {
-                "applicable-fields": {
-                    "English": {}
+            "aqdas": {
+                "wordbyword": {
+                    "applicable-fields": {
+                        "Arabic": {},
+                        "English": {}
+                    }
+                },
+                "wikilinks": {
+                    "placement": "end"
                 }
             },
-            "wordbyword": {
-                "applicable-fields": {
-                    "English": {
-                        "targetLanguage": "fa"
-                    },
-                    "$locale": {}
-                }
-            },
-            "wordbyword-tooltips": {
-                "applicable-fields": {
-                    "Persian": {
-                        "targetLanguage": "{locale}"
-                    },
-                    "English": {
-                        "targetLanguage": "fa"
+            "peace": {
+                "chinese-numbers": {
+                    "applicable-fields": {
+                        "Section Number": {}
                     }
                 }
             },
-            "romanize": {
-                "applicable-fields": {
-                    "Persian": {}
+            "pm": {
+                "synopsis": {
+                    "applicable-fields": {
+                        "English": {
+                        }
+                    }
+                },
+                "roman-numerals": {
+                    "applicable-fields": {
+                        "Number": {}
+                    }
+                }
+            },
+            "hidden_words": {
+                "field-alias": {
+                    "applicable-fields": {
+                        "Original Language": {
+                            "onByDefault": false
+                        }
+                    }
+                },
+                "synopsis": {
+                    "applicable-fields": {
+                        "English": {}
+                    }
+                },
+                "wordbyword": {
+                    "applicable-fields": {
+                        "English": {
+                            "targetLanguage": "fa"
+                        },
+                        "$locale": {}
+                    }
+                },
+                "wordbyword-tooltips": {
+                    "applicable-fields": {
+                        "Persian": {
+                            "targetLanguage": "{locale}"
+                        },
+                        "English": {
+                            "targetLanguage": "fa"
+                        }
+                    }
+                },
+                "romanize": {
+                    "applicable-fields": {
+                        "Persian": {}
+                    }
                 }
             }
         }
