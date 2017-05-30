@@ -89,6 +89,11 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 1.  Specific works
 
+    1.  Hidden Words
+
+        1.  Investigate why schema not reported as failing as has extra
+            fields not yet in schema
+
     1.  Qur'an and Bible
 
         1.  Re-build based on formatted copies so as not to lose visual
