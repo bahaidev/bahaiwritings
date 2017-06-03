@@ -5,14 +5,19 @@
         "type": "array",
         "items": [
             {
+                "type": "string",
+                "enum": ["Persian", "Arabic"],
+                "title": "Original Language"
+            },
+            {
                 "type": "integer",
                 "minimum": 0,
                 "title": "Number"
             },
             {
                 "type": "string",
-                "enum": ["Persian", "Arabic"],
-                "title": "Original Language"
+                "format": "html",
+                "title": "Synopsis"
             },
             {
                 "type": "string",

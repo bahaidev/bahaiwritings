@@ -12,7 +12,8 @@ window.addEventListener('DOMContentLoaded', () => {
         // site: 'site.json' // Default
         files: 'files.json',
         namespace: 'bahaiwritings',
-        allowPlugins: true
+        allowPlugins: true,
+        interlinearSeparator: '<hr />'
     });
     tb.init();
 });
