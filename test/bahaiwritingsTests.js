@@ -35,6 +35,7 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
     const ajv = new Ajv(Object.assign({}, {extendRefs: 'fail'}, additionalOptions));
     let valid;
     try {
+        ajv.addFormat('html', () => true);
         ajv.addFormat('language-code', () => true);
         extraSchemas.forEach(([key, val]) => {
             ajv.addSchema(val, key);
@@ -49,30 +50,27 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
 }
 
 const bahaiwritingsTests = {
+    /*
     'files.json test': function (test) {
         test.expect(9);
+        const extraSchemaFiles = [
+            'array-of-arrays.jsonschema',
+            'locale.jsonschema',
+            'metadata.jsonschema',
+            'table.jsonschema',
+            'table-container.jsonschema'
+        ];
         Promise.all([
             JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'files.json')),
             getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-06-schema.json')),
             ...[
                 'files.jsonschema',
-                'array-of-arrays.jsonschema',
-                'locale.jsonschema',
-                'metadata.jsonschema',
-                'table.jsonschema',
-                'table-container.jsonschema'
+                ...extraSchemaFiles
             ].map((f) => getJSON(path.join(__dirname, schemaBase, f)))
         ]).then(function ([
-            {resolved: data}, jsonSchema, schema, arrayOfArrays,
-            locale, metadata, table, tableContainer
+            {resolved: data}, jsonSchema, schema, ...extraSchemaObjects
         ]) {
-            const extraSchemas = [
-                ['array-of-arrays.jsonschema', arrayOfArrays],
-                ['locale.jsonschema', locale],
-                ['metadata.jsonschema', metadata],
-                ['table.jsonschema', table],
-                ['table-container.jsonschema', tableContainer]
-            ];
+            const extraSchemas = extraSchemaObjects.map((eso, i) => [extraSchemaFiles[i], eso]);
             const valid = validate(schema, data, extraSchemas);
             test.strictEqual(valid, true);
 
@@ -82,7 +80,10 @@ const bahaiwritingsTests = {
                 validateSchema: false
             });
             test.strictEqual(valid2, true);
-            const diff = jsonpatch.compare(data, data2);
+            const diff = jsonpatch.compare(data, data2).filter((diff) =>
+                // Apparently need to filter due to limitations per https://github.com/epoberezkin/ajv#filtering-data
+                !diff.path || (diff.op === 'remove' && !(/\/additionalItems$/).test(diff.path))
+            );
             test.strictEqual(diff.length, 0);
 
             const schemas = arguments[0].slice(2);
@@ -103,6 +104,70 @@ const bahaiwritingsTests = {
             test.done();
         });
     },
+    */
+    'Specific data files': function (test) {
+        const specificFiles = [
+            'aqdas.json',
+            'Bible.json',
+            'Epistle to the Son of the Wolf.json',
+            'Gems of Divine Mysteries.json',
+            'gleanings.json',
+            'Hidden Words.json',
+            'peace.json',
+            'pm.json',
+            'quran.json',
+            'wwtf.json'
+        ];
+        const otherSpecificFiles = [
+            'lights.json'
+//            'Collins.json'
+        ];
+        test.expect((specificFiles.length + otherSpecificFiles.length) * 3);
+
+        Promise.all([
+            Promise.all(specificFiles.map((f) =>
+                JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'data/writings/' + f))
+            )),
+            Promise.all(specificFiles.map((f) =>
+                getJSON(path.join(__dirname, appBase, 'data/writings/schemas/' + f + 'schema'))
+            )),
+            Promise.all(otherSpecificFiles.map((f) =>
+                JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'data/other-works/' + f))
+            )),
+            Promise.all(otherSpecificFiles.map((f) =>
+                getJSON(path.join(__dirname, appBase, 'data/other-works/schemas/' + f + 'schema'))
+            )),
+            ...[
+                'table.jsonschema'
+            ].map((f) => getJSON(path.join(__dirname, schemaBase, f)))
+        ]).then(function ([
+            dataFiles, schemaFiles, otherDataFiles, otherSchemaFiles, table
+        ]) {
+            const extraSchemas = [
+                ['../../../node_modules/textbrowser/general-schemas/table.jsonschema', table]
+            ];
+            const testSchemaFiles = (dataFiles, schemaFiles) => {
+                dataFiles.forEach(({resolved: {data}}, i) => {
+                    const schema = schemaFiles[i];
+                    const valid = validate(schema, data, extraSchemas);
+                    test.strictEqual(valid, true);
+
+                    const data2 = cloneJSON(data);
+                    const valid2 = validate(schema, data2, extraSchemas, {
+                        removeAdditional: 'all',
+                        validateSchema: false
+                    });
+                    test.strictEqual(valid2, true);
+                    const diff = jsonpatch.compare(data, data2);
+                    test.strictEqual(diff.length, 0);
+                });
+            };
+            testSchemaFiles(dataFiles, schemaFiles);
+            testSchemaFiles(otherDataFiles, otherSchemaFiles);
+            test.done();
+        });
+    }
+    /* ,
     'site.json test': function (test) {
         test.expect(9);
         Promise.all([
@@ -142,6 +207,7 @@ const bahaiwritingsTests = {
             test.done();
         });
     }
+    */
 };
 
 if (typeof exports !== 'undefined') {
