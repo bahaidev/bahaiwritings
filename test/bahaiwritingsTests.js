@@ -50,7 +50,6 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
 }
 
 const bahaiwritingsTests = {
-    /*
     'files.json test': function (test) {
         test.expect(9);
         const extraSchemaFiles = [
@@ -104,7 +103,6 @@ const bahaiwritingsTests = {
             test.done();
         });
     },
-    */
     'Specific data files': function (test) {
         const specificFiles = [
             'aqdas.json',
@@ -166,8 +164,7 @@ const bahaiwritingsTests = {
             testSchemaFiles(otherDataFiles, otherSchemaFiles);
             test.done();
         });
-    }
-    /* ,
+    },
     'site.json test': function (test) {
         test.expect(9);
         Promise.all([
@@ -207,7 +204,6 @@ const bahaiwritingsTests = {
             test.done();
         });
     }
-    */
 };
 
 if (typeof exports !== 'undefined') {
