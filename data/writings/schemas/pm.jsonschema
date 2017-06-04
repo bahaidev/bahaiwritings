@@ -12,6 +12,14 @@
             },
             {
                 "type": "string",
+                "title": "Roman Numeral"
+            },
+            {
+                "type": "string",
+                "title": "Synopsis"
+            },
+            {
+                "type": "string",
                 "format": "html",
                 "title": "English"
             }

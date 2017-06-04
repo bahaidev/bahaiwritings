@@ -44,12 +44,11 @@
                 "localeKey": "fieldnames/Chinese Section Number"
             }
         },
-        "English": {
+        "Chinese": {
             "primary_text_field": true,
-            "orig_lang_field": true,
-            "lang": "en",
+            "lang": "zh-CN",
             "name": {
-                "localeKey": "fieldnames/English"
+                "localeKey": "fieldnames/Chinese"
             }
         },
         "Section Number": {
@@ -57,11 +56,12 @@
                 "localeKey": "fieldnames/Section Number"
             }
         },
-        "Chinese": {
+        "English": {
             "primary_text_field": true,
-            "lang": "zh-CN",
+            "orig_lang_field": true,
+            "lang": "en",
             "name": {
-                "localeKey": "fieldnames/Chinese"
+                "localeKey": "fieldnames/English"
             }
         }
     }

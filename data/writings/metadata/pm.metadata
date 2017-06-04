@@ -5,6 +5,8 @@
             "heading": "Prayers and Meditations",
             "fieldnames": {
                 "Number": "Number",
+                "Roman Numeral": "Roman Numeral",
+                "Synopsis": "Synopsis",
                 "English": "English"
             }
         }
@@ -18,6 +20,17 @@
             "roman": true,
             "name": {
                 "localeKey": "fieldnames/Number"
+            }
+        },
+        "Roman Numeral": {
+            "name": {
+                "localeKey": "fieldnames/Roman Numeral"
+            }
+        },
+        "Synopsis": {
+            "lang": "en",
+            "name": {
+                "localeKey": "fieldnames/Synopsis"
             }
         },
         "English": {
