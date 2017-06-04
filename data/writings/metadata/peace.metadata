@@ -22,6 +22,7 @@
             "heading": "The Promise of World Peace",
             "fieldnames": {
                 "Paragraph": "Paragraph",
+                "Chinese Section Number": "Chinese Section Number",
                 "Chinese": "Chinese",
                 "Section Number": "Section Number",
                 "English": "English"
@@ -38,9 +39,9 @@
                 "localeKey": "fieldnames/Paragraph"
             }
         },
-        "Section Number": {
+        "Chinese Section Number": {
             "name": {
-                "localeKey": "fieldnames/Section Number"
+                "localeKey": "fieldnames/Chinese Section Number"
             }
         },
         "English": {
@@ -49,6 +50,11 @@
             "lang": "en",
             "name": {
                 "localeKey": "fieldnames/English"
+            }
+        },
+        "Section Number": {
+            "name": {
+                "localeKey": "fieldnames/Section Number"
             }
         },
         "Chinese": {
