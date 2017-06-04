@@ -20,25 +20,27 @@ is under its own copyright as is the *Collins* bibliography.
 If you wish the `TextBrowser` dependency, install with:
 
 ```shell
-bower install git@bitbucket.org:brettz9/bahaiwritings.git
+npm install git@bitbucket.org:brettz9/bahaiwritings.git
 ```
 
 If you just wish the Bahá'í Writings JSON and do not wish
 the `TextBrowser` dependency, install with:
 
 ```shell
-bower install git@bitbucket.org:brettz9/bahaiwritings.git#notextbrowser
+npm install git@bitbucket.org:brettz9/bahaiwritings.git#notextbrowser
 ```
 
 The JSON data files should be the same. Note that in addition to certain
 HTML, JavaScript, and CSS-related files being removed in the latter,
-the `dependencies` property in its `bower.json` is also not set. The
+the `dependencies` property in its `package.json` is also not set. The
 file `site.json` is also not present as that is oriented for TextBrowser.
 
 Note that the schema files to which the included schema files belong are
 at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 ## To-dos
+
+1.  Actually update `notextbrowser` branch
 
 1.  Waiting: It is hoped that the addition of these tables (which are
     Scriptures) can also be automatically generated from any possible
@@ -54,7 +56,7 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 1.  ONGOING:
 
     1.  Ensure `notextbrowser` branch is kept up to date with `master`
-        besides the `bower.json` and absent HTML/JavaScript/CSS differences.
+        besides the `package.json` and absent HTML/JavaScript/CSS differences.
 
     1.  Ensure still passing tests/validating
 
