@@ -51,8 +51,6 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 1.  Waiting: Once stabilized, target `TextBrowser` dependency by tagged
     version.
 
-1.  Waiting: Once implemented, apply `prefer_alias` to Qur'an and Bible
-
 1.  ONGOING:
 
     1.  Ensure `notextbrowser` branch is kept up to date with `master`
@@ -62,7 +60,7 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 1.  See TextBrowser to-dos
 
-1.  Change schemas to use `$schema`?
+1.  Add/change data files and meta-data files to use `$schema`?
 
 1.  Fix TextBrowser so it can load with a port in `npm start`
 
@@ -89,11 +87,6 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 1.  Specific works
 
-    1.  Hidden Words
-
-        1.  Investigate why schema not reported as failing as has extra
-            fields not yet in schema
-
     1.  Qur'an and Bible
 
         1.  Re-build based on formatted copies so as not to lose visual
@@ -106,6 +99,8 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
               and polyglot-friendly for any XHTML5 uses)
 
     1.  Collins
+
+        1.  Fix validation
 
         1.  Need to split Collins into own repo? (or describe terms)
 
