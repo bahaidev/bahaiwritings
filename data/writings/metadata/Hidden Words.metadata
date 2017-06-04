@@ -10,7 +10,8 @@
                 "Synopsis": "Synopsis",
                 "English": "English",
                 "Arabic": "Arabic",
-                "Persian": "Persian"
+                "Persian": "Persian",
+                "Word by word Persian to English": "Word by word Persian to English"
             },
             "fieldvalue": {
                 "Original Language": {
@@ -95,6 +96,12 @@
             "lang": "fa",
             "name": {
                 "localeKey": "fieldnames/Persian"
+            }
+        },
+        "Word by word Persian to English": {
+            "lang": "en",
+            "name": {
+                "localeKey": "fieldnames/Word by word Persian to English"
             }
         }
     }

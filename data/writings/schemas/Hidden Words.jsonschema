@@ -32,6 +32,10 @@
             {
                 "type": "string",
                 "title": "Persian"
+            },
+            {
+                "type": "string",
+                "title": "Word by word Persian to English"
             }
         ]
     }

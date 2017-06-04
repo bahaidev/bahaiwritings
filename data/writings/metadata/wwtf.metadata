@@ -11,7 +11,7 @@
         }
     },
     "table": {
-        "browse_fields": ["Section","Paragraph"],
+        "browse_fields": [{"set": ["Section","Paragraph"]}],
         "default_view": {"Section": 0}
     },
     "fields": {
