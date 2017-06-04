@@ -117,8 +117,8 @@ const bahaiwritingsTests = {
             'wwtf.json'
         ];
         const otherSpecificFiles = [
-            'lights.json'
-//            'Collins.json'
+            'lights.json',
+            'Collins.json'
         ];
         test.expect((specificFiles.length + otherSpecificFiles.length) * 3);
 

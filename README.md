@@ -100,8 +100,6 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
     1.  Collins
 
-        1.  Fix validation
-
         1.  Need to split Collins into own repo? (or describe terms)
 
         1.  Upload newer Collins and fix any bugs in formatting.

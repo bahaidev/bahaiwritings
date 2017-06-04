@@ -6,13 +6,13 @@
         "additionalItems": false,
         "items": [
             {
+                "type": "string",
+                "title": "Workform"
+            },
+            {
                 "type": "integer",
                 "minimum": 1,
                 "title": "Record ID"
-            },
-            {
-                "type": "string",
-                "title": "Workform"
             },
             {
                 "type": "string",
