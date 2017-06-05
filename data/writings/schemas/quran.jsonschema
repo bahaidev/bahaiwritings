@@ -8,6 +8,7 @@
             {
                 "type": "integer",
                 "minimum": 1,
+                "maximum": 114,
                 "title": "Rodwell Suráh #"
             },
             {
@@ -18,6 +19,7 @@
             {
                 "type": "integer",
                 "minimum": 1,
+                "maximum": 114,
                 "title": "Traditional Suráh #"
             },
             {
