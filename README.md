@@ -40,6 +40,9 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 ## To-dos
 
+1.  Ongoing: Once `TextBrowser` stabilized, target "textbrowser"
+    dependency by tagged version instead of `master`.
+
 1.  Actually update `notextbrowser` branch
 
 1.  Waiting: It is hoped that the addition of these tables (which are
