@@ -157,7 +157,7 @@
     "table": {
         "browse_fields": [
             {"name": "Traditional", "set": ["Traditional Suráh #", "Verse #"]},
-            {"name": "Rodwell", "set": ["Rodwell Suráh #", "Verse #"]}
+            {"name": "Rodwell", "set": ["Rodwell Suráh #", "Verse #"], "presort": true}
         ],
         "default_view": {"Traditional Suráh #": 1}
     },

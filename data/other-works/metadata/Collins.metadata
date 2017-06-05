@@ -76,7 +76,10 @@
         }
     },
     "table": {
-        "browse_fields": ["Record ID", "Date of Publication"],
+        "browse_fields": [
+            {"set": ["Record ID"], "presort": true},
+            {"set": ["Date of Publication"], "presort": true}
+        ],
         "default_view": {"Record ID": 1}
     },
     "fields": {
