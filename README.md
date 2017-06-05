@@ -40,11 +40,6 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 ## To-dos
 
-1.  Ongoing: Once `TextBrowser` stabilized, target "textbrowser"
-    dependency by tagged version instead of `master`.
-
-1.  Actually update `notextbrowser` branch
-
 1.  Waiting: It is hoped that the addition of these tables (which are
     Scriptures) can also be automatically generated from any possible
     future authoritative API
@@ -63,7 +58,12 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
     1.  Ensure still passing tests/validating
 
+    1.  Once `TextBrowser` version stabilizes, target "textbrowser"
+        dependency by tagged version instead of `master`.
+
 1.  See TextBrowser to-dos
+
+1.  Actually update `notextbrowser` branch and tag this version when stable
 
 1.  Add/change data files and meta-data files to use `$schema`?
 
