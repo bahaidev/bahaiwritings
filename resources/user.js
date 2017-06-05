@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
         files: 'files.json',
         namespace: 'bahaiwritings',
         allowPlugins: true,
+        trustFormatHTML: true,
         interlinearSeparator: '<hr />'
     });
     tb.init();
