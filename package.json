@@ -8,8 +8,6 @@
     "start-no-open": "node server 0"
   },
   "dependencies": {
-      "form-serialize": "https://github.com/brettz9/form-serialize#browser",
-      "jamilih": "0.15.0",
       "textbrowser": "https://github.com/brettz9/textbrowser"
   },
   "devDependencies": {
