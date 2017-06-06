@@ -136,6 +136,9 @@ the files:
 npm test
 ```
 
+Note that the tests currently only perform schema validation. We do not
+yet have UI tests.
+
 If you merely wish to see the app running in a server, you can run:
 
 ```shell
