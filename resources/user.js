@@ -10,11 +10,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const tb = new TextBrowser({
         // languages: 'node_modules/bahaiwritings/appdata/languages.json', // Default
         // site: 'site.json' // Default
+        // localizeParamNames: true, // Not well-tested
+        // hideFormattingSection: true,
         files: 'files.json',
         namespace: 'bahaiwritings',
         allowPlugins: true,
         trustFormatHTML: true,
-        interlinearSeparator: '<hr />'
+        interlinearSeparator: '<hr />' // Defaults to `<br /><br />`
     });
     tb.init();
 });
