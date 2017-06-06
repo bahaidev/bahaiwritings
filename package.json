@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "node": "nodeunit test/bahaiwritingsTests.js",
@@ -8,7 +8,7 @@
     "start-no-open": "node server 0"
   },
   "dependencies": {
-      "textbrowser": "https://github.com/brettz9/textbrowser"
+      "textbrowser": "0.3.1"
   },
   "devDependencies": {
     "ajv": "5.1.5",
