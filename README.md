@@ -71,9 +71,6 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 1.  Fix TextBrowser so it can load with a port in `npm start`
 
-1.  Address how this project may still be consistent with
-    <http://bahai-library.com/uhj_interlinear_writings_cta>
-
 1.  Change schema references (in both `bahaiwritings` branches) to point
     to absolute URLs so as to be independent of repository/branch (rather
     than their current assumption of being utilized within `TextBrowser`).
@@ -118,6 +115,10 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
         1.  Add any other reasonable `browse_options`
 
+    1.  Other works
+
+        1.  Encode more Writings into *TextBrowser* JSON
+
 1.  Lower priority
 
     1.  Add any other reasonable `browse_options`
@@ -129,8 +130,8 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 You will first need to run `npm install`.
 
 The syntax used in the tests currently only works in a modern browser.
-Note that this may lock up your browser as the validator loads all of
-the files:
+Note that this may lock up your terminal as the validator must load and
+process all of the files (including child files):
 
 ```shell
 npm test
@@ -151,3 +152,49 @@ use:
 ```shell
 npm run start-no-open
 ```
+
+You can also use this latter option to run the browser tests
+(from <http://127.0.0.1:8083/test/>). Note, however, that
+this may lock up the browser as there are many files to load.
+
+## Background
+
+For background of this project, see *TextBrowser*'s History section.
+
+## Justification
+
+While there was a letter from the international governing body of the
+Bahá'í Faith (online at
+<http://bahai-library.com/uhj_interlinear_writings_cta>), suggesting
+that interlinear publications are not necessary for the Bahá'í Writings,
+I do not think that this guidance pertains to our project for the following
+reasons:
+
+- The context appears to be more about official print publications which
+would need to justify resources being spent on such specialized text versions.
+The original question refers to Publishing Trusts and the response speaks of
+"all other readers" (besides those comparing with the Persian/Arabic originals)
+being distracted, whereas online, there are minimal (and non-official)
+resources being spent to provide the works, so there is no concern for
+distraction of other readers (and those using our *TextBrowser*-based tool
+can indeed selectively disable any column they wish).
+
+- Besides allowing those already familiar with English (or other translations)
+and Arabic/Persian, to confirm the original meaning, the availability of such
+interlinear tools allows for comparison by language learners who, although
+as per the letter, learning the original language is not required in the
+Bahá'í Faith, the learning of the original is very much praised as evident in
+the quotations at <https://bahai9.com/wiki/Persian> and <https://bahai9.com/wiki/Arabic>.
+
+- Our software tool is not confined to displaying translations multilinearly.
+For example, the version of the Qur'án herein included also provide notes
+which can be viewed interlinearly (from translators whose works were, at least
+for the time when translations into English were not as abundant, [recommended
+for use or study by Bahá'ís](http://bahai-library.com/quran_rodwell_sale_zamir#B.%20Quotations%20in)),
+and study of such notes was even [recommended by Shoghi Effendi](https://bahai9.com/wiki/Qur'%C3%A1n#How_to_Study_the_Qur.27.C3.A1n).
+More such non-translation fields, including automated ones, are planned. And
+the tool can even be used for viewing merely the paragraph number and a single
+language of text. (While the notes of Rodwell were not recommended, and are
+indeed often antagonistic or skeptical of His Holiness Muhammad, they are
+provided largely for the sake of Biblical cross-references, and can be selectively
+omitted from view.)
