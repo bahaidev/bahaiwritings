@@ -5,6 +5,7 @@ CACHE:
 index.html
 
 files.json
+# site.json
 
 # Uncomment these if using in index.html:
 resources/user.js
@@ -13,11 +14,12 @@ resources/user.css
 # Textbrowser files
 node_modules/textbrowser/appdata/languages.json
 
+# Only needed atm for browser validation
 node_modules/textbrowser/general-schemas/files.jsonschema
 node_modules/textbrowser/general-schemas/languages.jsonschema
 node_modules/textbrowser/general-schemas/locale.jsonschema
 node_modules/textbrowser/general-schemas/metadata.jsonschema
-# node_modules/textbrowser/general-schemas/table.jsonschema # Not currently using for validation or meta-data
+node_modules/textbrowser/general-schemas/table.jsonschema # Not currently using for validation or meta-data
 
 node_modules/textbrowser/locales/ar.json
 node_modules/textbrowser/locales/en-US.json
@@ -27,65 +29,77 @@ node_modules/textbrowser/locales/ru.json
 node_modules/textbrowser/resources/index.css
 node_modules/textbrowser/resources/index.js
 
+node_modules/textbrowser/resources/templates/index.js
+node_modules/textbrowser/resources/templates/languageSelect.js
+node_modules/textbrowser/resources/templates/workSelect.js
+node_modules/textbrowser/resources/templates/workDisplay.js
+node_modules/textbrowser/resources/templates/resultsDisplay.js
+node_modules/textbrowser/resources/IntlURLSearchParams.js
+
+node_modules/textbrowser/resources/index.js
+node_modules/textbrowser/resources/workSelect.js
+node_modules/textbrowser/resources/workDisplay.js
+node_modules/textbrowser/resources/resultsDisplay.js
+
 # Textbrowser dependency files
 
-node_modules/form-serialize/index.js
-node_modules/simple-get-json/index.js
-node_modules/imf/index.js
+node_modules/urlsearchparams/urlsearchparams.js
+node_modules/jamilih/jml.js
 
+node_modules/imf/index.js
+node_modules/simple-get-json/index.js
 # Might want to change to uncomment these instead of the following line:
 # 1. node_modules/intl-messageformat/dist/intl-messageformat.min.js
 # 2. individual locale files: node_modules/intl-messageformat/dist/locale-data/en.js, etc.
 node_modules/intl-messageformat/dist/intl-messageformat-with-locales.min.js
 
-node_modules/jamilih/jml.js
-
 # Uncomment the next line and comment out the following in production
-# node_modules/json-refs/browser/json-refs-min.js
-node_modules/json-refs/browser/json-refs.js
+# node_modules/json-refs/browser/json-refs-standalone-min.js
+node_modules/json-refs/browser/json-refs-standalone.js
 
-node_modules/path-loader/browser/path-loader-min.js
-node_modules/traverse/traverse.js
+node_modules/form-serialize/index.js
+
+node_modules/jsonpadding/index.js
 
 # Add user data files here:
 
-node_modules/bahaiwritings/other-works/Collins.json
-node_modules/bahaiwritings/other-works/lights.json
-node_modules/bahaiwritings/other-works/metanode_modules/bahaiwritings/Collins.metadata
-node_modules/bahaiwritings/other-works/metanode_modules/bahaiwritings/lights.metadata
-node_modules/bahaiwritings/other-works/schemas/Collins.jsonschema
-node_modules/bahaiwritings/other-works/schemas/lights.jsonschema
+data/other-works/Collins.json
+data/other-works/lights.json
+data/other-works/metadata/Collins.metadata
+data/other-works/metadata/lights.metadata
+data/other-works/schemas/Collins.jsonschema
+data/other-works/schemas/lights.jsonschema
 
-node_modules/bahaiwritings/writings/aqdas.json
-node_modules/bahaiwritings/writings/Bible.json
-node_modules/bahaiwritings/writings/Epistle to the Son of the Wolf.json
-node_modules/bahaiwritings/writings/Gems of Divine Mysteries.json
-node_modules/bahaiwritings/writings/gleanings.json
-node_modules/bahaiwritings/writings/Hidden Words.json
-node_modules/bahaiwritings/writings/peace.json
-node_modules/bahaiwritings/writings/pm.json
-node_modules/bahaiwritings/writings/quran.json
-node_modules/bahaiwritings/writings/wwtf.json
-node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/aqdas.metadata
-node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/Bible.metadata
-node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/Epistle to the Son of the Wolf.metadata
-node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/Gems of Divine Mysteries.metadata
-node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/gleanings.metadata
-node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/Hidden Words.metadata
-node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/peace.metadata
-node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/pm.metadata
-node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/quran.metadata
-node_modules/bahaiwritings/writings/metanode_modules/bahaiwritings/wwtf.metadata
-node_modules/bahaiwritings/writings/schemas/aqdas.jsonschema
-node_modules/bahaiwritings/writings/schemas/Bible.jsonschema
-node_modules/bahaiwritings/writings/schemas/Epistle to the Son of the Wolf.jsonschema
-node_modules/bahaiwritings/writings/schemas/Gems of Divine Mysteries.jsonschema
-node_modules/bahaiwritings/writings/schemas/gleanings.jsonschema
-node_modules/bahaiwritings/writings/schemas/Hidden Words.jsonschema
-node_modules/bahaiwritings/writings/schemas/peace.jsonschema
-node_modules/bahaiwritings/writings/schemas/pm.jsonschema
-node_modules/bahaiwritings/writings/schemas/quran.jsonschema
-node_modules/bahaiwritings/writings/schemas/wwtf.jsonschema
+data/writings/aqdas.json
+data/writings/Bible.json
+data/writings/Epistle to the Son of the Wolf.json
+data/writings/Gems of Divine Mysteries.json
+data/writings/gleanings.json
+data/writings/Hidden Words.json
+data/writings/peace.json
+data/writings/pm.json
+data/writings/quran.json
+data/writings/wwtf.json
+data/writings/metadata/aqdas.metadata
+data/writings/metadata/Bible.metadata
+data/writings/metadata/Epistle to the Son of the Wolf.metadata
+data/writings/metadata/Gems of Divine Mysteries.metadata
+data/writings/metadata/gleanings.metadata
+data/writings/metadata/Hidden Words.metadata
+data/writings/metadata/peace.metadata
+data/writings/metadata/pm.metadata
+data/writings/metadata/quran.metadata
+data/writings/metadata/wwtf.metadata
+data/writings/schemas/aqdas.jsonschema
+data/writings/schemas/Bible.jsonschema
+data/writings/schemas/Epistle to the Son of the Wolf.jsonschema
+data/writings/schemas/Gems of Divine Mysteries.jsonschema
+data/writings/schemas/gleanings.jsonschema
+data/writings/schemas/Hidden Words.jsonschema
+data/writings/schemas/peace.jsonschema
+data/writings/schemas/pm.jsonschema
+data/writings/schemas/quran.jsonschema
+data/writings/schemas/wwtf.jsonschema
 
 NETWORK:
 

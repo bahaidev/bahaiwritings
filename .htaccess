@@ -1,6 +1,0 @@
-AddType text/cache-manifest .appcache
-AddType application/json .json .jsonschema .metadata
-
-<IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
-</IfModule>
