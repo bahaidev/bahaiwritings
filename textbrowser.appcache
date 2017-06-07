@@ -7,7 +7,7 @@ index.html
 files.json
 # site.json
 
-# Uncomment these if using in index.html:
+# Comment out if not using in index.html:
 resources/user.js
 resources/user.css
 
@@ -46,12 +46,13 @@ node_modules/textbrowser/resources/resultsDisplay.js
 node_modules/urlsearchparams/urlsearchparams.js
 node_modules/jamilih/jml.js
 
-node_modules/imf/index.js
-node_modules/simple-get-json/index.js
 # Might want to change to uncomment these instead of the following line:
 # 1. node_modules/intl-messageformat/dist/intl-messageformat.min.js
 # 2. individual locale files: node_modules/intl-messageformat/dist/locale-data/en.js, etc.
 node_modules/intl-messageformat/dist/intl-messageformat-with-locales.min.js
+
+node_modules/simple-get-json/index.js
+node_modules/imf/index.js
 
 # Uncomment the next line and comment out the following in production
 # node_modules/json-refs/browser/json-refs-standalone-min.js
