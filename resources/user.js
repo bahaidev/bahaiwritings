@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // site: 'site.json' // Default
         // localizeParamNames: true, // Not well-tested
         // hideFormattingSection: true,
+        // requestPersistentStorage: false,
         files: 'files.json',
         namespace: 'bahaiwritings',
         allowPlugins: true,
