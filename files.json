@@ -257,7 +257,6 @@
             "schemaBaseDirectory": "data/other-works/schemas",
             "metadataBaseDirectory": "data/other-works/metadata",
             "files": [
-                {"name": "collins", "file": {"$ref": "data/other-works/Collins.json"}, "schemaFile": "Collins.jsonschema", "metadataFile": "Collins.metadata"},
                 {"name": "lights", "file": {"$ref": "data/other-works/lights.json"}, "schemaFile": "lights.jsonschema", "metadataFile": "lights.metadata"}
             ]
         }

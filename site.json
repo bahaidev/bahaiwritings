@@ -13,6 +13,10 @@
             "will-request-storage-permissions": "In order to drastically and reliably improve performance of this application, please accept the request for notifications from this site which will appear after this dialog is closed. Browsers currently treat the allowance of notifications as permission for persistent storage. If you don't wish to grant notification permissions but do wish to persistently store the data of this application, the browser is to allow this by the alternative approach of your adding our site to your bookmarks, treating this as a form of trust.",
             "refuse-request-storage-permissions": "Don't give the permission for notifications that would allow for persistent storage. I understand this will degrade the app's performance.",
             "browser-not-granting-persistence": "Despite your permissions, the browser is not granting persistent storage. We will however attempt to use your regular browser cache to enhance performance (which will work so long as the cache is not cleared).",
+            "errorRegistering": "Sorry, there was an error registering; please try again later.",
+            "dbError": "There was a database error while preparing files for offline use (a service worker installation). Please try again later.",
+            "versionChange": "The database is undergoing an upgrade. Please close this tab (and any other old tabs at this site), so that the upgrade may continue.",
+            "wait-installing": "Please wait as we load the necessary files for the application...",
             "browser-title": "Sacred Writings Browser",
             "OK": "OK",
             "about": {

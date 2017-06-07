@@ -7,9 +7,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(location.hash.slice(1));
     document.domain = params.get('domain') || document.domain; // Let this be iframe-embeddable
     */
+    // Todo: Reenable the following in `files.json`?
+    // {"name": "collins", "file": {"$ref": "data/other-works/Collins.json"}, "schemaFile": "Collins.jsonschema", "metadataFile": "Collins.metadata"},
+
     const tb = new TextBrowser({
         // languages: 'node_modules/bahaiwritings/appdata/languages.json', // Default
-        // site: 'site.json' // Default
+        // serviceWorkerPath: 'sw.js', // Default
+        // site: 'site.json', // Default
         // localizeParamNames: true, // Not well-tested
         // hideFormattingSection: true,
         // requestPersistentStorage: false,
@@ -17,7 +21,15 @@ window.addEventListener('DOMContentLoaded', () => {
         namespace: 'bahaiwritings',
         allowPlugins: true,
         trustFormatHTML: true,
-        interlinearSeparator: '<hr />' // Defaults to `<br /><br />`
+        interlinearSeparator: '<hr />', // Defaults to `<br /><br />`
+        staticFilesToCache: [
+            // Effective defaults
+            'index.html',
+            'files.json',
+            'site.json',
+            'resources/user.js',
+            'resources/user.css'
+        ]
     });
     tb.init();
 });
