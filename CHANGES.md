@@ -1,3 +1,15 @@
+# 0.4.0
+
+-   Enhancement: Service worker and dialogs as per *TextBrowser* update
+-   npm: ESLint script
+-   Linting: `outerIIFEBody` indent rule
+-   Update options
+-   Remove Collins from `files.json` for now (working but large and of
+    questionable interest to regular users)
+-   Refactoring (Breaking): Remove array `includes` polyfill (relying on
+    other modern features)
+-   Refactoring: Remove `.htaccess` as no longer using AppCache
+
 # 0.3.0
 
 -   Various schema fixes/changes, especially oriented for new
