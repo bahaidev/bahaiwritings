@@ -27,7 +27,8 @@
             },
             {
                 "type": "string",
-                "title": "English"
+                "title": "English",
+                "format": "html"
             }
         ]
     }

@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "eslint": "eslint ./*.js resources/*.js test/*.js plugins/*.js",

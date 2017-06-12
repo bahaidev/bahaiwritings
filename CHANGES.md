@@ -1,3 +1,7 @@
+# 0.4.1
+
+-   Ensure English column of Peace statement formatted as HTML (has nbsp's)
+
 # 0.4.0
 
 -   Enhancement: Service worker and dialogs as per *TextBrowser* update
