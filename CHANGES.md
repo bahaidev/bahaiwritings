@@ -1,3 +1,7 @@
+# 0.4.2
+
+-   Apply fix for *TextBrowser* issue with aliases
+
 # 0.4.1
 
 -   Ensure English column of Peace statement formatted as HTML (has nbsp's)
