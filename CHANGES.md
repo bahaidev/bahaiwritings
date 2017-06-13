@@ -1,3 +1,11 @@
+# 0.6.0
+
+-   Apply TB interlinear improvements
+
+# 0.5.0
+
+-   Apply TB interlinear fixes
+
 # 0.4.3
 
 -   Apply fix for *TextBrowser* issue with `anchor` and aliases

@@ -17,6 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
         // localizeParamNames: true, // Not well-tested
         // hideFormattingSection: true,
         // requestPersistentStorage: false,
+        // showEmptyInterlinear: false,
+        // showTitleOnSingleInterlinear: false,
         files: 'files.json',
         namespace: 'bahaiwritings',
         allowPlugins: true,
