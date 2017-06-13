@@ -1,3 +1,7 @@
+# 0.4.3
+
+-   Apply fix for *TextBrowser* issue with `anchor` and aliases
+
 # 0.4.2
 
 -   Apply fix for *TextBrowser* issue with aliases
