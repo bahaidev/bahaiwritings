@@ -1,3 +1,7 @@
+# 0.6.1
+
+-   Apply TB fix for interlinear and checked interaction
+
 # 0.6.0
 
 -   Apply TB interlinear improvements
