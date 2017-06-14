@@ -9,7 +9,7 @@
     "start-no-open": "node server 0"
   },
   "dependencies": {
-      "textbrowser": "0.6.1"
+    "textbrowser": "0.6.1"
   },
   "devDependencies": {
     "ajv": "5.1.5",
@@ -35,8 +35,8 @@
   "author": "Brett Zamir",
   "contributors": [],
   "keywords": [
-      "bahai",
-      "textbrowser"
+    "bahai",
+    "textbrowser"
   ],
   "license": "MIT",
   "bugs": {
