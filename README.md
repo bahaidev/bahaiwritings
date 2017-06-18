@@ -53,6 +53,9 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 1.  Waiting: Once stabilized, target `TextBrowser` dependency by tagged
     version.
 
+1.  Apply <https://www.gnu.org/software/librejs/free-your-javascript.html>
+    labels to provide machine-automated detection of (open source) licenses.
+
 1.  ONGOING:
 
     1.  Ensure `notextbrowser` branch is kept up to date with `master`
