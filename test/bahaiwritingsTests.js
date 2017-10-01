@@ -1,4 +1,4 @@
-/* globals Ajv:true, Promise, module, exports, require */
+/* globals Promise, module, exports, require */
 'use strict';
 var JsonRefs, jsonpatch, Ajv, getJSON, __dirname, path; // eslint-disable-line no-var
 

@@ -1,31 +1,31 @@
 {
   "name": "bahaiwritings",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
-    "eslint": "eslint ./*.js resources/*.js test/*.js plugins/*.js",
+    "eslint": "eslint './*.js' 'plugins/*.js' 'resources/*.js' 'test/*.js'",
     "node": "nodeunit test/bahaiwritingsTests.js",
     "test": "node server http://127.0.0.1/test/ 8082",
     "start-no-open": "node server 0"
   },
   "dependencies": {
-    "textbrowser": "0.6.1"
+    "textbrowser": "0.7.0"
   },
   "devDependencies": {
-    "ajv": "5.1.5",
-    "eslint": "3.19.0",
+    "ajv": "5.2.3",
+    "eslint": "4.8.0",
     "eslint-config-standard": "10.2.1",
-    "eslint-plugin-compat": "1.0.3",
-    "eslint-plugin-import": "2.3.0",
-    "eslint-plugin-node": "4.2.2",
+    "eslint-plugin-compat": "1.0.4",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-node": "5.2.0",
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "3.0.1",
-    "fast-json-patch": "1.2.0",
+    "fast-json-patch": "2.0.5",
     "json-metaschema": "1.1.0",
-    "node-static": "0.7.9",
-    "nodeunit": "0.11.0",
-    "opn": "5.0.0",
-    "remark-lint": "6.0.0"
+    "node-static": "0.7.10",
+    "nodeunit": "0.11.1",
+    "opn": "5.1.0",
+    "remark-lint": "6.0.1"
   },
   "engines": {},
   "repository": {
