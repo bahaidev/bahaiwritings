@@ -20,6 +20,7 @@ const tb = new TextBrowser({
     namespace: 'bahaiwritings',
     allowPlugins: true,
     trustFormatHTML: true,
+    skipIndexedDB: true,
     interlinearSeparator: '<hr />', // Defaults to `<br /><br />`
     staticFilesToCache: [
         // Effective defaults
