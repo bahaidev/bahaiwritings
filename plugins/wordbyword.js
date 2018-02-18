@@ -1,6 +1,4 @@
-/* globals JSONP */
-JSONP.executeCallback({
-    insertField: function () {
-        // alert('a');
-    }
-});
+
+export const insertField = function () {
+    // alert('a');
+};

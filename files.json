@@ -84,52 +84,52 @@
     },
     "plugins": {
         "synopsis": {
-            "path": "plugins/synopsis.js",
+            "path": "../../../plugins/synopsis.js",
             "onByDefault": false
         },
         "wordbyword": {
-            "path": "plugins/wordbyword.js",
+            "path": "../../../plugins/wordbyword.js",
             "onByDefault": false
         },
         "wordbyword-tooltips": {
-            "path": "plugins/wordbyword-tooltips.js",
+            "path": "../../../plugins/wordbyword-tooltips.js",
             "onByDefault": true
         },
         "chinese-numbers": {
-            "path": "plugins/chinese-numbers.js",
+            "path": "../../../plugins/chinese-numbers.js",
             "lang": "zh-CN",
             "onByDefault": false
         },
         "field-alias": {
-            "path": "plugins/field-alias.js",
+            "path": "../../../plugins/field-alias.js",
             "onByDefault": true
         },
         "roman-numerals": {
-            "path": "plugins/roman-numerals.js",
+            "path": "../../../plugins/roman-numerals.js",
             "onByDefault": false
         },
         "romanize": {
-            "path": "plugins/romanize.js",
+            "path": "../../../plugins/romanize.js",
             "onByDefault": false
         },
         "websearch": {
-            "path": "plugins/websearch.js",
+            "path": "../../../plugins/websearch.js",
             "onByDefault": false
         },
         "define": {
-            "path": "plugins/define.js",
+            "path": "../../../plugins/define.js",
             "onByDefault": false
         },
         "wikify": {
-            "path": "plugins/wikify.js",
+            "path": "../../../plugins/wikify.js",
             "onByDefault": false
         },
         "wikilinks": {
-            "path": "plugins/wikilinks.js",
+            "path": "../../../plugins/wikilinks.js",
             "onByDefault": true
         },
         "isbn": {
-            "path": "plugins/isbn.js",
+            "path": "../../../plugins/isbn.js",
             "onByDefault": true
         }
     },

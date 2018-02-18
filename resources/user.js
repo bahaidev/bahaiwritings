@@ -1,4 +1,4 @@
-import TextBrowser from '../node_modules/textbrowser/resources/index.js';
+import TextBrowser from '../node_modules/textbrowser/dist/index-es.js';
 // This will only work from subdomains; would need postMessage() routine to allow introspection
 /*
 const params = new URLSearchParams(location.hash.slice(1));
@@ -8,7 +8,7 @@ document.domain = params.get('domain') || document.domain; // Let this be iframe
 // {"name": "collins", "file": {"$ref": "data/other-works/Collins.json"}, "schemaFile": "Collins.jsonschema", "metadataFile": "Collins.metadata"},
 
 const tb = new TextBrowser({
-    // languages: 'node_modules/bahaiwritings/appdata/languages.json', // Default
+    // languages: 'node_modules/textbrowser/appdata/languages.json', // Default
     // serviceWorkerPath: 'sw.js', // Default
     // site: 'site.json', // Default
     // localizeParamNames: true, // Not well-tested
@@ -20,7 +20,7 @@ const tb = new TextBrowser({
     namespace: 'bahaiwritings',
     allowPlugins: true,
     trustFormatHTML: true,
-    skipIndexedDB: true,
+    // skipIndexedDB: true,
     interlinearSeparator: '<hr />', // Defaults to `<br /><br />`
     staticFilesToCache: [
         // Effective defaults

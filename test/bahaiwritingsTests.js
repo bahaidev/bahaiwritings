@@ -5,9 +5,9 @@ var JsonRefs, jsonpatch, Ajv, getJSON, __dirname, path; // eslint-disable-line n
 function cloneJSON (obj) {
     return JSON.parse(JSON.stringify(obj));
 }
-
 let appBase = '../';
 if (typeof exports !== 'undefined') {
+    require('babel-polyfill');
     Ajv = require('ajv');
     JsonRefs = require('json-refs');
     jsonpatch = require('fast-json-patch');
@@ -50,7 +50,7 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
 }
 
 const bahaiwritingsTests = {
-    'files.json test': function (test) {
+    'files.json test' (test) {
         test.expect(9);
         const extraSchemaFiles = [
             'array-of-arrays.jsonschema',
@@ -61,7 +61,7 @@ const bahaiwritingsTests = {
         ];
         Promise.all([
             JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'files.json')),
-            getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-06-schema.json')),
+            getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-07-schema.json')),
             ...[
                 'files.jsonschema',
                 ...extraSchemaFiles
@@ -103,7 +103,7 @@ const bahaiwritingsTests = {
             test.done();
         });
     },
-    'Specific data files': function (test) {
+    'Specific data files' (test) {
         const specificFiles = [
             'aqdas.json',
             'Bible.json',
@@ -165,11 +165,11 @@ const bahaiwritingsTests = {
             test.done();
         });
     },
-    'site.json test': function (test) {
+    'site.json test' (test) {
         test.expect(9);
         Promise.all([
             JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'site.json')),
-            getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-06-schema.json')),
+            getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-07-schema.json')),
             getJSON(path.join(__dirname, schemaBase, 'site.jsonschema')),
             getJSON(path.join(__dirname, schemaBase, 'locale.jsonschema'))
         ]).then(function ([{resolved: data}, jsonSchema, schema, localeSchema]) {

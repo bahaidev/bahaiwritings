@@ -1,3 +1,7 @@
+# 0.8.0
+
+- Update textbrowser (and new use of imports)
+
 # 0.7.0
 
 - Refactoring (Breaking): Switch to ES6 Modules (except for some dependencies)
