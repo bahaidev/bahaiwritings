@@ -1,14 +1,16 @@
-# 0.8.0
-
-- Update textbrowser (and new use of imports)
-
 # 0.7.0
 
-- Refactoring (Breaking): Switch to ES6 Modules (except for some dependencies)
+- Refactoring (Breaking): Switch to ES6 Modules
 - Refactoring: Remove (mostly) no longer needed `URLSearchParams` polyfill
+- Update: Remove caching of textbrowser individual files (now that bundled with Rollup)
+- Update: Update plug-in format (reflecting textbrowser changes)
 - Linting: ESLint
 - npm: Fix ESLint script per https://github.com/eslint/eslint/issues/1663#issuecomment-240066799
 - npm: Upgrade dev deps
+- npm: Update textbrowser, remove babel-polyfill (included indirectly),
+    update form-serialize references
+- Testing: Use babel-polyfill
+- Testing: Upgrade JSON Schema draft version (now passing our tests)
 
 # 0.6.1
 
