@@ -1138,9 +1138,9 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
-"form-serialize@git+https://github.com/brettz9/form-serialize.git#browser-deserialize-rollup":
+"form-serialize@https://github.com/brettz9/form-serialize#browser-deserialize-rollup":
   version "0.7.2"
-  resolved "git+https://github.com/brettz9/form-serialize.git#e224a53281c9281a3d63f58643488074db0deee5"
+  resolved "https://github.com/brettz9/form-serialize#e224a53281c9281a3d63f58643488074db0deee5"
 
 formidable@^1.1.1:
   version "1.2.0"
@@ -1783,9 +1783,9 @@ json-metaschema@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/json-metaschema/-/json-metaschema-1.2.0.tgz#f82d0a751e978f424129fe747eb8bd9a0f58acda"
 
-"json-refs@git+https://github.com/brettz9/json-refs.git#browser":
+"json-refs@https://github.com/brettz9/json-refs#browser":
   version "3.0.0"
-  resolved "git+https://github.com/brettz9/json-refs.git#367ee98a3b037bb8b7c4f3127f21eb91691ba8bb"
+  resolved "https://github.com/brettz9/json-refs#367ee98a3b037bb8b7c4f3127f21eb91691ba8bb"
   dependencies:
     commander "^2.9.0"
     graphlib "^2.1.1"
