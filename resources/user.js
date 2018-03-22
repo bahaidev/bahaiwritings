@@ -17,6 +17,7 @@ const tb = new TextBrowser({
     // showEmptyInterlinear: false,
     // showTitleOnSingleInterlinear: false,
     files: 'files.json',
+    stylesheets: ['@builtin', 'resources/user.css'],
     namespace: 'bahaiwritings',
     allowPlugins: true,
     trustFormatHTML: true,

@@ -1,3 +1,7 @@
+# 0.7.1
+
+- npm: Update textbrowser (allowing dynamic loading of stylesheets)
+
 # 0.7.0
 
 - Refactoring (Breaking): Switch to ES6 Modules
