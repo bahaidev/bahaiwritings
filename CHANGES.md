@@ -1,17 +1,22 @@
+# ?
+
+- Enhancement: Add `load-stylesheets` in preparation for favicon loading
+    (also used by TextBrowser)
+
 # 0.7.1
 
-- npm: Update textbrowser (allowing dynamic loading of stylesheets)
+- npm: Update TextBrowser (allowing dynamic loading of stylesheets)
 
 # 0.7.0
 
 - Refactoring (Breaking): Switch to ES6 Modules
 - Refactoring: Remove (mostly) no longer needed `URLSearchParams` polyfill
-- Update: Remove caching of textbrowser individual files (now that bundled with Rollup)
-- Update: Update plug-in format (reflecting textbrowser changes)
+- Update: Remove caching of TextBrowser individual files (now that bundled with Rollup)
+- Update: Update plug-in format (reflecting TextBrowser changes)
 - Linting: ESLint
 - npm: Fix ESLint script per https://github.com/eslint/eslint/issues/1663#issuecomment-240066799
 - npm: Upgrade dev deps
-- npm: Update textbrowser, remove babel-polyfill (included indirectly),
+- npm: Update TextBrowser, remove babel-polyfill (included indirectly),
     update form-serialize references
 - Testing: Use babel-polyfill
 - Testing: Upgrade JSON Schema draft version (now passing our tests)

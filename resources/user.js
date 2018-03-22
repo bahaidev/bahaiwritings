@@ -9,6 +9,11 @@ document.domain = params.get('domain') || document.domain; // Let this be iframe
 
 // Todo: Reenable the following in `files.json`?
 // {"name": "collins", "file": {"$ref": "data/other-works/Collins.json"}, "schemaFile": "Collins.jsonschema", "metadataFile": "Collins.metadata"},
+
+// Todo: Add a favicon file
+// import loadStylesheets from '../node_modules/load-stylesheets/dist/index-es.js';
+// loadStylesheets('favicon.ico'); // No need for `await`
+
 (async () => {
 const tb = new TextBrowser({
     // languages: 'node_modules/textbrowser/appdata/languages.json', // Default

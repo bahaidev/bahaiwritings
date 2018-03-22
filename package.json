@@ -9,6 +9,7 @@
     "start-no-open": "node server 0"
   },
   "dependencies": {
+    "load-stylesheets": "^0.3.0",
     "textbrowser": "0.12.5"
   },
   "devDependencies": {
