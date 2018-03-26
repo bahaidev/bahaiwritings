@@ -2,6 +2,7 @@
 
 - Enhancement: Add `load-stylesheets` in preparation for favicon loading
     (also used by TextBrowser)
+- npm: Update TextBrowser (allowing more robust format for loading stylesheets)
 
 # 0.7.1
 
