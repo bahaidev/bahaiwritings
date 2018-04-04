@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "eslint": "eslint .",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "load-stylesheets": "^0.4.0",
-    "textbrowser": "0.13.2"
+    "textbrowser": "0.13.3"
   },
   "devDependencies": {
     "ajv": "6.4.0",

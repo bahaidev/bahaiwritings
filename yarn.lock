@@ -1141,7 +1141,7 @@ form-data@~2.1.1:
 
 "form-serialize@git+https://github.com/brettz9/form-serialize.git#browser-deserialize-rollup":
   version "0.7.2"
-  resolved "git+https://github.com/brettz9/form-serialize.git#e224a53281c9281a3d63f58643488074db0deee5"
+  resolved "git+https://github.com/brettz9/form-serialize.git#9b5fbe0330d427bbee2563e34d3d87e45c99ade2"
 
 formidable@^1.1.1:
   version "1.2.0"
@@ -3084,9 +3084,9 @@ text-table@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
 
-textbrowser@0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/textbrowser/-/textbrowser-0.13.2.tgz#48fb5d1dd2fcadbc93534710fd922b2ad6da352b"
+textbrowser@0.13.3:
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/textbrowser/-/textbrowser-0.13.3.tgz#bfa34f8d003c7aa78ae761ee75f4b1785292656f"
   dependencies:
     form-serialize "https://github.com/brettz9/form-serialize#browser-deserialize-rollup"
     imf "3.0.1"

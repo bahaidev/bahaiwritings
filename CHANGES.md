@@ -1,3 +1,8 @@
+# 0.8.1
+
+- npm: Bump textbrowser version for fix re: loading message being left
+    too early
+
 # 0.8.0
 
 - Refactoring: Add `load-stylesheets` in preparation for favicon loading
