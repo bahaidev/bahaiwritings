@@ -50,7 +50,7 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
 }
 
 const bahaiwritingsTests = {
-    'files.json test' (test) {
+    async 'files.json test' (test) {
         test.expect(9);
         const extraSchemaFiles = [
             'array-of-arrays.jsonschema',
@@ -59,51 +59,51 @@ const bahaiwritingsTests = {
             'table.jsonschema',
             'table-container.jsonschema'
         ];
-        Promise.all([
+        const results = await Promise.all([
             JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'files.json')),
             getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-07-schema.json')),
             ...[
                 'files.jsonschema',
                 ...extraSchemaFiles
             ].map((f) => getJSON(path.join(__dirname, schemaBase, f)))
-        ]).then(function ([
+        ]);
+        const [
             {resolved: data}, jsonSchema, schema, ...extraSchemaObjects
-        ]) {
-            const extraSchemas = extraSchemaObjects.map((eso, i) => [extraSchemaFiles[i], eso]);
-            const valid = validate(schema, data, extraSchemas);
-            test.strictEqual(valid, true);
+        ] = results;
+        const extraSchemas = extraSchemaObjects.map((eso, i) => [extraSchemaFiles[i], eso]);
+        const valid = validate(schema, data, extraSchemas);
+        test.strictEqual(valid, true);
 
-            const data2 = cloneJSON(data);
-            const valid2 = validate(schema, data2, extraSchemas, {
+        const data2 = cloneJSON(data);
+        const valid2 = validate(schema, data2, extraSchemas, {
+            removeAdditional: 'all',
+            validateSchema: false
+        });
+        test.strictEqual(valid2, true);
+        const diff = jsonpatch.compare(data, data2).filter((diff) =>
+            // Apparently need to filter due to limitations per https://github.com/epoberezkin/ajv#filtering-data
+            !diff.path || (diff.op === 'remove' && !(/\/additionalItems$/).test(diff.path))
+        );
+        test.strictEqual(diff.length, 0);
+
+        const schemas = results.slice(2);
+        schemas.forEach((schema, i) => {
+            validate(jsonSchema, schema, undefined, {
+                validateSchema: false
+            });
+
+            const schema2 = cloneJSON(schema);
+            validate(jsonSchema, schema2, extraSchemas, {
                 removeAdditional: 'all',
                 validateSchema: false
             });
-            test.strictEqual(valid2, true);
-            const diff = jsonpatch.compare(data, data2).filter((diff) =>
-                // Apparently need to filter due to limitations per https://github.com/epoberezkin/ajv#filtering-data
-                !diff.path || (diff.op === 'remove' && !(/\/additionalItems$/).test(diff.path))
-            );
+            const diff = jsonpatch.compare(schema, schema2);
             test.strictEqual(diff.length, 0);
-
-            const schemas = arguments[0].slice(2);
-            schemas.forEach((schema, i) => {
-                validate(jsonSchema, schema, undefined, {
-                    validateSchema: false
-                });
-
-                const schema2 = cloneJSON(schema);
-                validate(jsonSchema, schema2, extraSchemas, {
-                    removeAdditional: 'all',
-                    validateSchema: false
-                });
-                const diff = jsonpatch.compare(schema, schema2);
-                test.strictEqual(diff.length, 0);
-            });
-
-            test.done();
         });
+
+        test.done();
     },
-    'Specific data files' (test) {
+    async 'Specific data files' (test) {
         const specificFiles = [
             'aqdas.json',
             'Bible.json',
@@ -120,89 +120,95 @@ const bahaiwritingsTests = {
             'lights.json',
             'Collins.json'
         ];
+        const tableFiles = [
+            'table.jsonschema'
+        ];
         test.expect((specificFiles.length + otherSpecificFiles.length) * 3);
 
-        Promise.all([
-            Promise.all(specificFiles.map((f) =>
+        const results = await Promise.all([
+            ...specificFiles.map((f) =>
                 JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'data/writings/' + f))
-            )),
-            Promise.all(specificFiles.map((f) =>
+            ),
+            ...specificFiles.map((f) =>
                 getJSON(path.join(__dirname, appBase, 'data/writings/schemas/' + f + 'schema'))
-            )),
-            Promise.all(otherSpecificFiles.map((f) =>
+            ),
+            ...otherSpecificFiles.map((f) =>
                 JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'data/other-works/' + f))
-            )),
-            Promise.all(otherSpecificFiles.map((f) =>
+            ),
+            ...otherSpecificFiles.map((f) =>
                 getJSON(path.join(__dirname, appBase, 'data/other-works/schemas/' + f + 'schema'))
-            )),
-            ...[
-                'table.jsonschema'
-            ].map((f) => getJSON(path.join(__dirname, schemaBase, f)))
-        ]).then(function ([
-            dataFiles, schemaFiles, otherDataFiles, otherSchemaFiles, table
-        ]) {
-            const extraSchemas = [
-                ['../../../node_modules/textbrowser/general-schemas/table.jsonschema', table]
-            ];
-            const testSchemaFiles = (dataFiles, schemaFiles) => {
-                dataFiles.forEach(({resolved: {data}}, i) => {
-                    const schema = schemaFiles[i];
-                    const valid = validate(schema, data, extraSchemas);
-                    test.strictEqual(valid, true);
+            ),
+            ...tableFiles.map((f) => getJSON(path.join(__dirname, schemaBase, f)))
+        ]);
 
-                    const data2 = cloneJSON(data);
-                    const valid2 = validate(schema, data2, extraSchemas, {
-                        removeAdditional: 'all',
-                        validateSchema: false
-                    });
-                    test.strictEqual(valid2, true);
-                    const diff = jsonpatch.compare(data, data2);
-                    test.strictEqual(diff.length, 0);
-                });
-            };
-            testSchemaFiles(dataFiles, schemaFiles);
-            testSchemaFiles(otherDataFiles, otherSchemaFiles);
-            test.done();
+        let cursor = 0;
+        const [dataFiles, schemaFiles, otherDataFiles, otherSchemaFiles, [table]] = [
+            specificFiles, specificFiles, otherSpecificFiles, otherSpecificFiles, tableFiles
+        ].map((files) => {
+            return results.slice(cursor, cursor += files.length); // eslint-disable-line no-return-assign
         });
-    },
-    'site.json test' (test) {
-        test.expect(9);
-        Promise.all([
-            JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'site.json')),
-            getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-07-schema.json')),
-            getJSON(path.join(__dirname, schemaBase, 'site.jsonschema')),
-            getJSON(path.join(__dirname, schemaBase, 'locale.jsonschema'))
-        ]).then(function ([{resolved: data}, jsonSchema, schema, localeSchema]) {
-            const extraSchemas = [['locale.jsonschema', localeSchema]];
-            const valid = validate(schema, data, extraSchemas);
-            test.strictEqual(valid, true);
 
-            const data2 = cloneJSON(data);
-            const valid2 = validate(schema, data2, extraSchemas, {
-                removeAdditional: 'all',
-                validateSchema: false
-            });
-            test.strictEqual(valid2, true);
-            const diff = jsonpatch.compare(data, data2);
-            test.strictEqual(diff.length, 0);
-
-            const schemas = arguments[0].slice(2);
-            schemas.forEach((schema, i) => {
-                const valid = validate(jsonSchema, schema);
+        const extraSchemas = [
+            ['../../../node_modules/textbrowser/general-schemas/table.jsonschema', table]
+        ];
+        const testSchemaFiles = (dataFiles, schemaFiles) => {
+            dataFiles.forEach(({resolved: {data}}, i) => {
+                const schema = schemaFiles[i];
+                const valid = validate(schema, data, extraSchemas);
                 test.strictEqual(valid, true);
 
-                const schema2 = cloneJSON(schema);
-                const valid2 = validate(jsonSchema, schema2, extraSchemas, {
+                const data2 = cloneJSON(data);
+                const valid2 = validate(schema, data2, extraSchemas, {
                     removeAdditional: 'all',
                     validateSchema: false
                 });
                 test.strictEqual(valid2, true);
-                const diff = jsonpatch.compare(schema, schema2);
+                const diff = jsonpatch.compare(data, data2);
                 test.strictEqual(diff.length, 0);
             });
+        };
+        testSchemaFiles(dataFiles, schemaFiles);
+        testSchemaFiles(otherDataFiles, otherSchemaFiles);
+        test.done();
+    },
+    async 'site.json test' (test) {
+        test.expect(9);
+        const results = await Promise.all([
+            JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'site.json')),
+            getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-07-schema.json')),
+            getJSON(path.join(__dirname, schemaBase, 'site.jsonschema')),
+            getJSON(path.join(__dirname, schemaBase, 'locale.jsonschema'))
+        ]);
+        const [{resolved: data}, jsonSchema, schema, localeSchema] = results;
+        const extraSchemas = [['locale.jsonschema', localeSchema]];
+        const valid = validate(schema, data, extraSchemas);
+        test.strictEqual(valid, true);
 
-            test.done();
+        const data2 = cloneJSON(data);
+        const valid2 = validate(schema, data2, extraSchemas, {
+            removeAdditional: 'all',
+            validateSchema: false
         });
+        test.strictEqual(valid2, true);
+        const diff = jsonpatch.compare(data, data2);
+        test.strictEqual(diff.length, 0);
+
+        const schemas = results.slice(2);
+        schemas.forEach((schema, i) => {
+            const valid = validate(jsonSchema, schema);
+            test.strictEqual(valid, true);
+
+            const schema2 = cloneJSON(schema);
+            const valid2 = validate(jsonSchema, schema2, extraSchemas, {
+                removeAdditional: 'all',
+                validateSchema: false
+            });
+            test.strictEqual(valid2, true);
+            const diff = jsonpatch.compare(schema, schema2);
+            test.strictEqual(diff.length, 0);
+        });
+
+        test.done();
     }
 };
 

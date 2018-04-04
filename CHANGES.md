@@ -1,8 +1,14 @@
-# ?
+# 0.8.0
 
-- Enhancement: Add `load-stylesheets` in preparation for favicon loading
+- Refactoring: Add `load-stylesheets` in preparation for favicon loading
     (also used by TextBrowser)
-- npm: Update TextBrowser (allowing more robust format for loading stylesheets)
+- Refactoring: Use `await`/`async` in service worker
+- Linting: `.eslintignore`
+- Testing: Optimize promise retrieval
+- npm: Update TextBrowser (allowing more robust format for loading stylesheets;
+    also may fix possible service worker registration issue)
+- npm: Update deps, devDeps
+- npm: Add ESLint to testing and server-starting scripts
 
 # 0.7.1
 
