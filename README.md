@@ -53,6 +53,9 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 1.  Waiting: Once stabilized, target `TextBrowser` dependency by tagged
     version.
 
+1.  Break out plugins into separate repository(ies) for reusability
+    with textbrowser (and publicize their presence on its wiki).
+
 1.  Apply <https://www.gnu.org/software/librejs/free-your-javascript.html>
     labels to provide machine-automated detection of (open source) licenses.
 
