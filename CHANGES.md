@@ -1,3 +1,7 @@
+# 0.9.0
+
+- npm: Bump textbrowser dep and adjust service-worker file accordingly
+
 # 0.8.1
 
 - npm: Bump textbrowser version for fix re: loading message being left
