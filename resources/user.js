@@ -28,8 +28,9 @@ const tb = new TextBrowser({
     stylesheets: ['@builtin', 'resources/user.css'],
     namespace: 'bahaiwritings',
     allowPlugins: true,
+    // dynamicBasePath: '',
     trustFormatHTML: true,
-    // skipIndexedDB: true,
+    skipIndexedDB: false,
     interlinearSeparator: '<hr />', // Defaults to `<br /><br />`
     staticFilesToCache: [
         // Effective defaults
