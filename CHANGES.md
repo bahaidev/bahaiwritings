@@ -1,4 +1,4 @@
-# ?
+# 0.10.0
 
 - npm: Let `opn`/`node-static` be normal deps for running server
 - npm: Provide sample server scripts
