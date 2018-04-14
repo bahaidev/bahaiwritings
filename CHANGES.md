@@ -3,6 +3,7 @@
 - npm: Let `opn`/`node-static` be normal deps for running server
 - npm: Provide sample server scripts
 - npm: Bump `textbrowser` version
+- Fix offline when `index.html` omitted
 - Fix: Avoid Chrome DevTools error message
 - Fix: Ensure babel-polyfill is cached by service worker
 

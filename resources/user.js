@@ -34,6 +34,7 @@ const tb = new TextBrowser({
     interlinearSeparator: '<hr />', // Defaults to `<br /><br />`
     staticFilesToCache: [
         // Effective defaults
+        '/',
         'index.html',
         'files.json',
         'site.json',
