@@ -28,22 +28,22 @@
             },
             "plugins": {
                 "synopsis": {
-                    "fieldname": "Synopsis"
+                    "fieldname": "Synopsis ({applicableField})"
                 },
                 "roman-numerals": {
                     "fieldname": "Roman #"
                 },
                 "romanize": {
-                    "fieldname": "Romanized {language}"
+                    "fieldname": "Romanized {applicableField}"
                 },
                 "wordbyword-tooltips": {
-                    "fieldname": "{language-base} with {language-tooltip} tooltips"
+                    "fieldname": "{applicableField} with {targetLanguage} tooltips"
                 },
                 "websearch": {
-                    "fieldname": "Find word in {search-engine}"
+                    "fieldname": "Find word in {search-engine-name}"
                 },
                 "define": {
-                    "fieldname": "Definition ({search-engine})"
+                    "fieldname": "Definition ({search-engine-name})"
                 },
                 "wikify": {
                     "fieldname": "Editable wiki page"
@@ -52,10 +52,10 @@
                     "fieldname": "Links to Wiki"
                 },
                 "wordbyword": {
-                    "fieldname": "Word-by-word \"Auto-translation\" from {language-from} to {language-to}"
+                    "fieldname": "Word-by-word \"Auto-translation\" from {applicableField} to {targetLanguage}"
                 },
                 "field-alias": {
-                    "fieldname": "{alias}"
+                    "fieldname": "Alias ({applicableField})"
                 },
                 "chinese-numbers": {
                     "fieldname": "Chinese numbers"
@@ -114,11 +114,17 @@
         },
         "websearch": {
             "path": "../../../plugins/websearch.js",
-            "onByDefault": false
+            "onByDefault": false,
+            "meta": {
+                "search-engine-name": "Google"
+            }
         },
         "define": {
             "path": "../../../plugins/define.js",
-            "onByDefault": false
+            "onByDefault": false,
+            "meta": {
+                "search-engine-name": "Google"
+            }
         },
         "wikify": {
             "path": "../../../plugins/wikify.js",
@@ -195,7 +201,7 @@
                 "field-alias": {
                     "applicable-fields": {
                         "Original Language": {
-                            "onByDefault": false
+                            "onByDefault": true
                         }
                     }
                 },
@@ -206,19 +212,15 @@
                 },
                 "wordbyword": {
                     "applicable-fields": {
-                        "English": {
-                            "targetLanguage": "fa"
-                        },
-                        "$locale": {}
+                        "Persian": {
+                            "targetLanguage": "en-US"
+                        }
                     }
                 },
                 "wordbyword-tooltips": {
                     "applicable-fields": {
                         "Persian": {
-                            "targetLanguage": "{locale}"
-                        },
-                        "English": {
-                            "targetLanguage": "fa"
+                            "targetLanguage": "en-US"
                         }
                     }
                 },
