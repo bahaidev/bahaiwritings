@@ -1,16 +1,15 @@
 /*
-Todo:
+Todo: If using, could add, e.g.:
 
-If needing to add to add, can supply as with pm (which doesn't need as it already has):
-
-"roman-numerals": {
+"reverse-roman": {
     "applicable-fields": {
-        "Number": {}
+        "Section": {}
     }
 }
-
 */
-function convertToRoman (num) {
+function convertFromRoman (str) {
+    let result = 0;
+    // the result is now a number, not a string
     const roman = {
         M: 1000,
         CM: 900,
@@ -26,20 +25,19 @@ function convertToRoman (num) {
         IV: 4,
         I: 1
     };
-
-    let str = '';
     for (const [rom, dec] of Object.entries(roman)) {
-        const q = Math.floor(num / dec);
-        num -= q * dec;
-        str += rom.repeat(q);
+        while (str.indexOf(rom) === 0) {
+            result += dec;
+            str = str.replace(rom, '');
+        }
     }
-    return str;
+    return result;
 }
 
 export const getCellData = function ({
     applicableFieldText, tr,
     fieldLang, meta
 }) {
-    return convertToRoman(applicableFieldText);
+    return convertFromRoman(String(applicableFieldText));
     // console.log('plugin');
 };

@@ -33,6 +33,9 @@
                 "roman-numerals": {
                     "fieldname": "Roman #"
                 },
+                "reverse-roman": {
+                    "fieldname": "Decimal #"
+                },
                 "romanize": {
                     "fieldname": "Romanized {applicableField}"
                 },
@@ -58,7 +61,7 @@
                     "fieldname": "Alias ({applicableField})"
                 },
                 "chinese-numbers": {
-                    "fieldname": "Chinese numbers"
+                    "fieldname": "Chinese translated {applicableField}"
                 }
             }
         },
@@ -102,6 +105,10 @@
         },
         "field-alias": {
             "path": "../../../plugins/field-alias.js",
+            "onByDefault": true
+        },
+        "reverse-roman": {
+            "path": "../../../plugins/reverse-roman.js",
             "onByDefault": true
         },
         "roman-numerals": {
@@ -151,29 +158,12 @@
         },
         "writings": {
             "bible": {
-                "field-alias": {
-                    "applicable-fields": {
-                        "Book #": {
-                        }
-                    }
-                }
             },
             "quran": {
-                "field-alias": {
-                    "applicable-fields": {
-                        "Traditional Suráh #": {
-                        }
-                    }
-                }
             },
             "aqdas": {
-                "wordbyword": {
-                    "applicable-fields": {
-                        "Arabic": {},
-                        "English": {}
-                    }
-                },
                 "wikilinks": {
+                    "baseURL": "https://bahai9.com/wiki/Kitáb-i-Aqdas/par",
                     "placement": "end"
                 }
             },
@@ -185,48 +175,13 @@
                 }
             },
             "pm": {
-                "synopsis": {
-                    "applicable-fields": {
-                        "English": {
-                        }
-                    }
-                },
-                "roman-numerals": {
-                    "applicable-fields": {
-                        "Number": {}
-                    }
-                }
             },
             "hidden_words": {
-                "field-alias": {
+            },
+            "gleanings": {
+                "roman-numerals": {
                     "applicable-fields": {
-                        "Original Language": {
-                            "onByDefault": true
-                        }
-                    }
-                },
-                "synopsis": {
-                    "applicable-fields": {
-                        "English": {}
-                    }
-                },
-                "wordbyword": {
-                    "applicable-fields": {
-                        "Persian": {
-                            "targetLanguage": "en-US"
-                        }
-                    }
-                },
-                "wordbyword-tooltips": {
-                    "applicable-fields": {
-                        "Persian": {
-                            "targetLanguage": "en-US"
-                        }
-                    }
-                },
-                "romanize": {
-                    "applicable-fields": {
-                        "Persian": {}
+                        "Section": {}
                     }
                 }
             }

@@ -1,3 +1,26 @@
+/*
+Todo:
+
+Could add the following (though the database has these records already for the items below)
+
+Hidden Words:
+
+"synopsis": {
+    "applicable-fields": {
+        "English": {}
+    }
+}
+
+pm:
+
+"synopsis": {
+    "applicable-fields": {
+        "English": {
+        }
+    }
+}
+
+*/
 const ellipsis = '\u2026';
 export const getCellData = function ({
     applicableFieldText, tr,

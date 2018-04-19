@@ -65,7 +65,7 @@
             "name": {
                 "localeKey": "fieldnames/Original Language"
             },
-            "prefer_alias": false,
+            "prefer_alias": true,
             "fieldvalue-aliases": {
                 "Arabic": [1],
                 "Persian": [2]

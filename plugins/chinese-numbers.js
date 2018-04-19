@@ -3,5 +3,5 @@ export const getCellData = function ({
     applicableFieldText, tr,
     fieldLang, meta
 }) {
-    // console.log('plugin');
+    return applicableFieldText.toLocaleString('zh-u-nu-hanidec');
 };

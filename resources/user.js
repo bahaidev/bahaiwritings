@@ -39,7 +39,21 @@ const tb = new TextBrowser({
         'files.json',
         'site.json',
         'resources/user.js',
-        'resources/user.css'
+        'resources/user.css',
+        // Plugins
+        'plugins/chinese-numbers.js',
+        'plugins/define.js',
+        'plugins/field-alias.js',
+        'plugins/isbn.js',
+        'plugins/reverse-roman.js',
+        'plugins/roman-numerals.js',
+        'plugins/romanize.js',
+        'plugins/synopsis.js',
+        'plugins/websearch.js',
+        'plugins/wikify.js',
+        'plugins/wikilinks.js',
+        'plugins/wordbyword-tooltips.js',
+        'plugins/wordbyword.js'
     ]
 });
 await tb.init();
