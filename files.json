@@ -48,6 +48,9 @@
                 "define": {
                     "fieldname": "Definition ({search-engine-name})"
                 },
+                "local-notes": {
+                    "fieldname": "Locally-stored notes"
+                },
                 "wikify": {
                     "fieldname": "Editable wiki page"
                 },
@@ -107,6 +110,10 @@
             "path": "../../../plugins/field-alias.js",
             "onByDefault": true
         },
+        "local-notes": {
+            "path": "../../../plugins/local-notes.js",
+            "onByDefault": true
+        },
         "reverse-roman": {
             "path": "../../../plugins/reverse-roman.js",
             "onByDefault": true
@@ -162,6 +169,15 @@
             "quran": {
             },
             "aqdas": {
+                "local-notes": {
+                    "applicable-fields": {
+                        "English": {
+                            "meta": {
+                            }
+                        }
+                    },
+                    "placement": 2
+                },
                 "wikify": {
                     "applicable-fields": {
                         "Paragraph": {

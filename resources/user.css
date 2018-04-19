@@ -1,6 +1,6 @@
 dialog::backdrop {
     background-color: green;
 }
-td {
-    height: fit-content;
+td, iframe {
+    height: -webkit-fill-available;
 }
