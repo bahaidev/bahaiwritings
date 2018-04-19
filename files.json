@@ -163,7 +163,13 @@
             },
             "aqdas": {
                 "wikilinks": {
-                    "baseURL": "https://bahai9.com/wiki/Kitáb-i-Aqdas/par",
+                    "applicable-fields": {
+                        "Paragraph": {
+                            "meta": {
+                                "baseURL": "https://bahai9.com/wiki/Kitáb-i-Aqdas/par"
+                            }
+                        }
+                    },
                     "placement": "end"
                 }
             },

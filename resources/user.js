@@ -45,6 +45,7 @@ const tb = new TextBrowser({
         'plugins/define.js',
         'plugins/field-alias.js',
         'plugins/isbn.js',
+        'plugins/local-notes.js',
         'plugins/reverse-roman.js',
         'plugins/roman-numerals.js',
         'plugins/romanize.js',
