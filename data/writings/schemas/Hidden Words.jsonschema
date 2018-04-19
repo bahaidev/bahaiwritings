@@ -28,7 +28,8 @@
             },
             {
                 "type": "string",
-                "title": "Arabic"
+                "title": "Arabic",
+                "format": "html"
             },
             {
                 "type": "string",
