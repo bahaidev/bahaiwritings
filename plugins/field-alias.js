@@ -1,7 +1,7 @@
 
 export const getCellData = function ({
-    tableData, i, j, applicableField,
-    applicableFieldIdx, fieldLang, meta
+    applicableFieldText, tr,
+    fieldLang, meta
 }) {
     // console.log('plugin');
 };
