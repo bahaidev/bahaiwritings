@@ -1,3 +1,6 @@
 dialog::backdrop {
-  background-color: green;
+    background-color: green;
+}
+td {
+    height: fit-content;
 }

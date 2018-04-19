@@ -162,6 +162,18 @@
             "quran": {
             },
             "aqdas": {
+                "wikify": {
+                    "applicable-fields": {
+                        "Paragraph": {
+                            "meta": {
+                                "baseURL": "https://bahai9.com/wiki/Kitáb-i-Aqdas/par",
+                                "width": "300px",
+                                "height": "100%"
+                            }
+                        }
+                    },
+                    "placement": "end"
+                },
                 "wikilinks": {
                     "applicable-fields": {
                         "Paragraph": {
