@@ -17,7 +17,8 @@ export const getCellData = function ({
     // Todo: Ideally support read-only mouseover of specific sentences with coordinates?
     // Todo: Ability for highlight to even span multiple cells vertically
     // Todo: Ability to add multiple notes within a cell
-    // Todo: Ability to obtain or display notes from a specific website
+    // Todo: Ability to obtain or display notes from a specific website (or via
+    //          `postMessage` in case it too is local)
 
     // height: -webkit-fill-available; // Works but we want to allow multiple
     return `
