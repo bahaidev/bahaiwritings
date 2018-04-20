@@ -1,5 +1,6 @@
 const locales = {
     'en-US': {
+        'loading': 'Loading...',
         'please_reload': 'Please reload this page for the latest version.',
         'error_opening': 'There was an error opening the database. Please report the issue.',
         'blocked_opening': 'The database is blocked due to another request being present on the database. Please try again later.',
@@ -100,8 +101,13 @@ export const done = async ({$p}) => {
 };
 
 export const getCellData = ({
-    fieldLang, meta
+    fieldLang, meta, $p
 }) => {
+    const lang = $p.get('lang', true);
+    const l = (key) => {
+        return locales[lang] || locales['en-US'];
+    };
+
     // Todo: Ability to add/remove multiple notes within a cell and display existing
 
     // Todo: Ability to highlight to even span multiple cells vertically
@@ -117,5 +123,5 @@ export const getCellData = ({
         data-local-notes=""
         disabled="disabled"
         style="width: 300px !important; height: 200px;"
-    >Loading...</textarea>`;
+    >${l('loading')}</textarea>`;
 };
