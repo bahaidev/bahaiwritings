@@ -73,8 +73,6 @@ export const getCellData = ({
         return locale[key];
     };
 
-    // Todo: We need a stable `data-local-notes-id`
-
     // height: -webkit-fill-available; // Works but we want to allow multiple
     return `
     <textarea
