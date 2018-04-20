@@ -76,6 +76,9 @@ export const done = async ({$p}) => {
 
     // Todo: Depending on config, allow this to be optional (i.e., readonly)
     window.addEventListener('change', ({target}) => {
+        if (!target.matches('textarea[data-local-notes]')) {
+            return;
+        }
         const openReq = indexedDB.open(localNotesDatabase);
         openReq.addEventListener('success', ({target: {result: db}}) => {
             const tx = db.transaction(workStore, 'readwrite');
