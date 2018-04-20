@@ -4,7 +4,7 @@ const locales = {
         'please_reload': 'Please reload this page for the latest version.',
         'error_opening': 'There was an error opening the database. Please report the issue.',
         'blocked_opening': 'The database is blocked due to another request being present on the database. Please try again later.',
-        'error_retrieval_transation': 'There was an error during the transaction to retrieve items. Please try again later.'
+        'error_retrieval_transaction': 'There was an error during the transaction to retrieve items. Please try again later.'
     }
 };
 
@@ -61,7 +61,7 @@ export const done = async ({$p}) => {
         const tx = db.transaction(workStore, 'readonly');
         // tx.addEventListener('complete', () => {});
         tx.addEventListener('error', () => {
-            alert(l('error_retrieval_transation'));
+            alert(l('error_retrieval_transaction'));
         });
         const store = tx.objectStore(workStore);
         const idx = store.index(workIndex);
