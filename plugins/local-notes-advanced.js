@@ -67,7 +67,7 @@ export const done = async ({$p}) => {
         const idx = store.index(workIndex);
         const req = idx.getAll(IDBKeyRange.bound(starts, ends));
         req.addEventListener('success', ({target: {result}}) => {
-            $$('textarea[data-local-notes]').forEach((textarea, i) => {
+            $$('textarea[data-local-notes-id]').forEach((textarea, i) => {
                 textarea.value = result[i] || '';
                 textarea.disabled = false;
             });
@@ -76,7 +76,7 @@ export const done = async ({$p}) => {
 
     // Todo: Depending on config, allow this to be optional (i.e., readonly)
     window.addEventListener('change', ({target}) => {
-        if (!target.matches('textarea[data-local-notes]')) {
+        if (!target.matches('textarea[data-local-notes-id]')) {
             return;
         }
         const openReq = indexedDB.open(localNotesDatabase);
@@ -124,7 +124,7 @@ export const getCellData = ({
     // height: -webkit-fill-available; // Works but we want to allow multiple
     return `
     <textarea
-        data-local-notes=""
+        data-local-notes-id=""
         disabled="disabled"
         style="width: 300px !important; height: 200px;"
     >${l('loading')}</textarea>`;
