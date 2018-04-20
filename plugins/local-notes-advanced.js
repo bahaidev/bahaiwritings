@@ -90,6 +90,7 @@ export const done = async ({$p}) => {
             const obj = {};
             browseFields.forEach((browseField) => {
                 // Todo: Get data from textarea re: relevant browse fields
+                // Todo: Ensure multiple entries per verse are supported
                 obj[browseField];
             });
             store.put(obj);
