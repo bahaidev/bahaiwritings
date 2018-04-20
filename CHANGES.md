@@ -1,3 +1,19 @@
+# 0.11.0
+
+- Enhancement: Update plugins per new textbrowser expected
+    format (now usable!)
+- Enhancement: Add reverse-roman plugin for possible future use
+- Tweak: Change i18n of Chinese numbers field to reflect applicable
+    field name (but not conflict with one existing in db already)
+- Remove currently unused or unneeded plug-in applications
+- Add wikilinks argument for the Aqdas, roman for gleanings
+- Implement chinese-numbers, roman-numerals, wikilinks.js, local-notes,
+    ISBN (latter not currently in use)
+- Schema fix: Ensure Arabic denotes it has HTML
+- npm: Update textbrowser to 0.18.1; plug-ins! Also add new
+    babel dependencies required for `import` resolution
+    and server usage
+
 # 0.10.0
 
 - npm: Let `opn`/`node-static` be normal deps for running server

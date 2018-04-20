@@ -20,6 +20,7 @@ const localNotesDatabase = 'textbrowser-local-notes';
 
 export const escapeColumn = false;
 
+// `done` is always only run on the client
 export const done = async ({$p}) => { // , canonicalBrowseFieldNames
     // Todo: Fetch locales
     // const results = await fetch('locales.json');
@@ -104,10 +105,10 @@ export const done = async ({$p}) => { // , canonicalBrowseFieldNames
                 alert(l('error_retrieval_transaction'));
             });
             const store = tx.objectStore(workStore);
+            // Todo: Ensure multiple entries per verse are supported
             const obj = {id, value: textarea.value};
             /*
             canonicalBrowseFieldVals.forEach((browseFieldVal, i) => {
-                // Todo: Ensure multiple entries per verse are supported
                 obj[canonicalBrowseFieldNames[i]] = browseFieldVal;
             });
             */
@@ -115,7 +116,8 @@ export const done = async ({$p}) => { // , canonicalBrowseFieldNames
         });
     });
 
-    // Not yet supported in Chrome (Firefox only)
+    // Todo: Not yet supported in Chrome (Firefox only); otherwise need
+    //          `mousedown`, etc.
     // Also a `selectstart` event
     window.addEventListener('selectionchange', () => {
         const sel = window.getSelection();
@@ -136,7 +138,7 @@ export const getCellData = ({
     // Todo: Ability to add/remove multiple notes within a cell and display existing
 
     // Todo: Ability to highlight to even span multiple cells vertically
-    // Todo: Indicate specific sentences with coordinates
+    // Todo: Indicate specific sentences/words with coordinates (and ellipses)
 
     // Todo: Ability to obtain or display notes from a specific website (or via
     //          `postMessage` in case it too is local), optionally PUT back
