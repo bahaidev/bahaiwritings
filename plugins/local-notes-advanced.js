@@ -22,7 +22,8 @@ export const done = async ({$p}) => { // , canonicalBrowseFieldNames
     // Todo: Should probably utilize same i18n mechanism as TextBrowser (passed from it?)
     const lang = $p.get('lang', true);
     const l = (key) => {
-        return locales[lang] || locales['en-US'];
+        const locale = locales[lang] || locales['en-US'];
+        return locale[key];
     };
 
     const localNotesDatabase = 'textbrowser-local-notes';
@@ -113,6 +114,7 @@ export const done = async ({$p}) => { // , canonicalBrowseFieldNames
     window.addEventListener('selectionchange', () => {
         const sel = window.getSelection();
         // Todo: Use this to set (last focused?) path adjoining textarea
+        console.log('sel', sel);
     });
 };
 
@@ -121,7 +123,8 @@ export const getCellData = ({
 }) => {
     const lang = $p.get('lang', true);
     const l = (key) => {
-        return locales[lang] || locales['en-US'];
+        const locale = locales[lang] || locales['en-US'];
+        return locale[key];
     };
 
     // Todo: Ability to add/remove multiple notes within a cell and display existing
