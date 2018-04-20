@@ -14,7 +14,7 @@ const $$ = (sel) => {
 
 export const escapeColumn = false;
 
-export const done = async ({$p}) => {
+export const done = async ({$p}) => { // , canonicalBrowseFieldNames
     // Todo: Fetch locales
     // const results = await fetch('locales.json');
     // const locales = await results.json();
@@ -39,9 +39,8 @@ export const done = async ({$p}) => {
                 alert(l('please_reload'));
             }
         });
-        // Todo: Create and use separate index for each browseFields set in
-        //         case user queries differently
-        const keyPath = browseFields; // E.g., book-chapter-verse
+        // const keyPath = canonicalBrowseFieldNames; // E.g., book-chapter-verse
+        const keyPath = 'id';
         const store = db.createObjectStore(workStore, {
             keyPath,
             autoIncrement: false
@@ -65,20 +64,32 @@ export const done = async ({$p}) => {
         });
         const store = tx.objectStore(workStore);
         const idx = store.index(workIndex);
-        const req = idx.getAll(IDBKeyRange.bound(starts, ends));
+        // Todo: Ideally we'd get starts/ends, but these can vary for browse field set
+        // const req = idx.getAll(IDBKeyRange.bound(starts, ends));
+        const req = idx.getAll();
         req.addEventListener('success', ({target: {result}}) => {
-            $$('textarea[data-local-notes-id]').forEach((textarea, i) => {
-                textarea.value = result[i] || '';
+            $$('textarea[data-local-notes]').forEach((textarea, i) => {
+                // textarea.value = result[i] || '';
+                const id = textarea.parentNode.parentNode.dataset.canonicalId;
+                // const canonicalBrowseFieldVals = id.split('-');
+                const matchingObj = result.find((obj) => {
+                    return obj.id === id;
+                });
+                textarea.value = (matchingObj && matchingObj.value) || '';
+                // textarea.value = result[i] || '';
                 textarea.disabled = false;
             });
         });
     });
 
     // Todo: Depending on config, allow this to be optional (i.e., readonly)
-    window.addEventListener('change', ({target}) => {
-        if (!target.matches('textarea[data-local-notes-id]')) {
+    window.addEventListener('change', ({target: textarea}) => {
+        if (!textarea.matches('textarea[data-local-notes]')) {
             return;
         }
+        const id = textarea.parentNode.parentNode.dataset.canonicalId;
+        // const canonicalBrowseFieldVals = id.split('-');
+
         const openReq = indexedDB.open(localNotesDatabase);
         openReq.addEventListener('success', ({target: {result: db}}) => {
             const tx = db.transaction(workStore, 'readwrite');
@@ -87,12 +98,13 @@ export const done = async ({$p}) => {
                 alert(l('error_retrieval_transation'));
             });
             const store = tx.objectStore(workStore);
-            const obj = {};
-            browseFields.forEach((browseField) => {
-                // Todo: Get data from textarea re: relevant browse fields
+            const obj = {id, value: textarea.value};
+            /*
+            canonicalBrowseFieldVals.forEach((browseFieldVal, i) => {
                 // Todo: Ensure multiple entries per verse are supported
-                obj[browseField];
+                obj[canonicalBrowseFieldNames[i]] = browseFieldVal;
             });
+            */
             store.put(obj);
         });
     });
@@ -124,7 +136,7 @@ export const getCellData = ({
     // height: -webkit-fill-available; // Works but we want to allow multiple
     return `
     <textarea
-        data-local-notes-id=""
+        data-local-notes=""
         disabled="disabled"
         style="width: 300px !important; height: 200px;"
     >${l('loading')}</textarea>`;
