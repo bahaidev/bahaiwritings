@@ -44,11 +44,11 @@ export const done = async ({$p}) => {
         }
     }
 
-    $p.get('work');
+    const work = $p.get('work');
     const obj = getNotes();
     $$('textarea[data-local-notes]').forEach((textarea) => {
         const id = getCanonicalID(textarea);
-        textarea.value = obj[id] || '';
+        textarea.value = obj[`${work}-${id}`] || '';
         textarea.disabled = false;
     });
 
@@ -57,9 +57,8 @@ export const done = async ({$p}) => {
             return;
         }
         const id = getCanonicalID(target);
-        console.log('id', id);
         const obj = getNotes();
-        obj[id] = target.value;
+        obj[`${work}-${id}`] = target.value;
         saveNotes(obj);
     });
 };
