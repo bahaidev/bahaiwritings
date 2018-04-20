@@ -12,6 +12,12 @@ const $$ = (sel) => {
     return [...document.querySelectorAll(sel)];
 };
 
+function getCanonicalID (textarea) {
+    return textarea.parentNode.parentNode.dataset.canonicalId;
+}
+
+const localNotesDatabase = 'textbrowser-local-notes';
+
 export const escapeColumn = false;
 
 export const done = async ({$p}) => { // , canonicalBrowseFieldNames
@@ -26,7 +32,6 @@ export const done = async ({$p}) => { // , canonicalBrowseFieldNames
         return locale[key];
     };
 
-    const localNotesDatabase = 'textbrowser-local-notes';
     const workStore = 'work-' + $p.get('work');
     const workIndex = 'work-retrieval-' + $p.get('work');
 
@@ -71,7 +76,7 @@ export const done = async ({$p}) => { // , canonicalBrowseFieldNames
         req.addEventListener('success', ({target: {result}}) => {
             $$('textarea[data-local-notes]').forEach((textarea, i) => {
                 // textarea.value = result[i] || '';
-                const id = textarea.parentNode.parentNode.dataset.canonicalId;
+                const id = getCanonicalID(textarea);
                 // const canonicalBrowseFieldVals = id.split('-');
                 const matchingObj = result.find((obj) => {
                     return obj.id === id;
@@ -88,7 +93,7 @@ export const done = async ({$p}) => { // , canonicalBrowseFieldNames
         if (!textarea.matches('textarea[data-local-notes]')) {
             return;
         }
-        const id = textarea.parentNode.parentNode.dataset.canonicalId;
+        const id = getCanonicalID(textarea);
         // const canonicalBrowseFieldVals = id.split('-');
 
         const openReq = indexedDB.open(localNotesDatabase);
