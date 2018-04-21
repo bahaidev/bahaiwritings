@@ -1,3 +1,7 @@
+# 0.11.3
+
+- Attempt to force service worker (and updated files) cache invalidation
+
 # 0.11.2
 
 - Fix: Surface TextBrowser missing plugin fix

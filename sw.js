@@ -1,5 +1,6 @@
 /* eslint-env browser, serviceworker */
 /* globals activateCallback */
+// Version: 1
 // Todo: Replace with ES6 modules once browsers support
 importScripts('node_modules/textbrowser/resources/activateCallback.js');
 
@@ -18,7 +19,7 @@ const defaultUserStaticFiles = [
     'index.html',
     'files.json',
     'site.json',
-    'resources/user.js',
+    'resources/user.js?v1',
     'resources/user.css'
 ];
 // Todo: We could supply `new URL(fileName, moduleURL).href` to
@@ -46,7 +47,7 @@ const textbrowserStaticResourceFiles = [
     'node_modules/textbrowser/locales/ru.json',
 
     'node_modules/textbrowser/resources/index.css',
-    'node_modules/textbrowser/dist/index-es.js'
+    'node_modules/textbrowser/dist/index-es.js?v1'
 ];
 
 self.addEventListener('message', async ({data: {
