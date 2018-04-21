@@ -1,3 +1,7 @@
+# 0.11.2
+
+- Fix: Surface TextBrowser missing plugin fix
+
 # 0.11.1
 
 - Fix: Surface TextBrowser base path fixes
