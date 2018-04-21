@@ -1,3 +1,7 @@
+# 0.11.1
+
+- Fix: Surface TextBrowser base path fixes
+
 # 0.11.0
 
 - Enhancement: Update plugins per new textbrowser expected
