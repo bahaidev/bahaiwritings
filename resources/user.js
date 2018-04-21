@@ -35,7 +35,7 @@ const tb = new TextBrowser({
     staticFilesToCache: [
         // Effective defaults
         '/',
-        'index.html',
+        'index.html?v1',
         'files.json',
         'site.json',
         'resources/user.js?v1',

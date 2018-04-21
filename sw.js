@@ -1,6 +1,6 @@
 /* eslint-env browser, serviceworker */
 /* globals activateCallback */
-// Version: 1
+// v1
 // Todo: Replace with ES6 modules once browsers support
 importScripts('node_modules/textbrowser/resources/activateCallback.js');
 
@@ -16,7 +16,7 @@ clients.forEach((client) => {
 
 const defaultUserStaticFiles = [
     '/', // Needs a separate entry from `index.html` (at least in Chrome)
-    'index.html',
+    'index.html?v1',
     'files.json',
     'site.json',
     'resources/user.js?v1',
