@@ -16,7 +16,7 @@ clients.forEach((client) => {
 
 const defaultUserStaticFiles = [
     '/', // Needs a separate entry from `index.html` (at least in Chrome)
-    'index.html?v1',
+    'index.html',
     'files.json',
     'site.json',
     'resources/user.js?v1',
