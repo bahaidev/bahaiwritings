@@ -3,7 +3,7 @@
 *The Bahá'í Writings in JSON format with supporting JSON Schema
 and meta-data.*
 
-Browse a [demo](https://brettz9.bitbucket.io/) online.
+See the [web app in action](https://bahai-browser.org/).
 
 Although the [TextBrowser](https://github.com/brettz9/textbrowser)
 project for which this repository includes content is open sourced under
