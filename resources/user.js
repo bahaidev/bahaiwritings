@@ -1,4 +1,4 @@
-import TextBrowser from '../node_modules/textbrowser/dist/index-es.js?v1';
+import TextBrowser from '../node_modules/textbrowser/dist/index-es.js';
 
 // Todo: Add a favicon file (and remove empty one in HTML?)
 // import loadStylesheets from '../node_modules/load-stylesheets/dist/index-es.js';
@@ -38,7 +38,7 @@ const tb = new TextBrowser({
         'index.html',
         'files.json',
         'site.json',
-        'resources/user.js?v1',
+        'resources/user.js',
         'resources/user.css',
         // Plugins
         'plugins/chinese-numbers.js',
