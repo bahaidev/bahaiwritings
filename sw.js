@@ -4,7 +4,7 @@
 // Todo: Replace with ES6 modules once browsers support
 importScripts('node_modules/textbrowser/resources/activateCallback.js');
 
-const CACHE_VERSION = 1;
+const CACHE_VERSION = 14;
 const CURRENT_CACHES = {
     prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };
@@ -21,6 +21,11 @@ async function getOnlyUncontrolled () {
             type: 'window'
         })
     ]);
+    console.log('cwu', clientsWithUncontrolled && clientsWithUncontrolled.filter(({id}) => {
+        return !clientsControlled || !clientsControlled.some((c) => {
+            return c.id === id;
+        });
+    }));
     return clientsWithUncontrolled && clientsWithUncontrolled.filter(({id}) => {
         return !clientsControlled || !clientsControlled.some((c) => {
             return c.id === id;
@@ -110,7 +115,7 @@ self.addEventListener('message', ({data: {
         activateCallbackDynamic({namespace, filesJSONPath});
         return;
     default:
-        console.warning('Unexpected message type', type);
+        console.log('Unexpected message type', type);
     }
 });
 
@@ -119,7 +124,7 @@ self.addEventListener('install', e => {
     const now = Date.now();
     console.log('--install beginning');
     e.waitUntil(
-        new Promise((resolve, reject) => {
+        new Promise(async (resolve, reject) => {
             // We start promise here so we can define `installCallback` early
             //     as the `installing` reference may otherwise have `postMessage`
             //     called on it in the main script before we can define the function.
@@ -127,7 +132,7 @@ self.addEventListener('install', e => {
             let installInfoReceived = false;
 
             // Should expire much earlier than this, but we'll be safe
-            const noCallbackTimeout = 1000 * 12;
+            const noCallbackTimeout = 10 * 1000;
             setTimeout(() => {
                 // If callback invoked, we'll handle any problems there
                 if (!installInfoReceived) {
@@ -142,6 +147,7 @@ self.addEventListener('install', e => {
             installCallback = async ({
                 namespace, localeFiles, userDataFiles, userStaticFiles
             }) => {
+                console.log('called installCallback');
                 if (installCompleted) { // In case another client triggers message
                     return;
                 }
@@ -186,6 +192,7 @@ self.addEventListener('install', e => {
                         );
                     }
                     installCompleted = true;
+                    console.log('RESOLVED: INSTALL');
                     resolve();
                 } catch (error) {
                     console.error('Pre-fetching failed:', error);
@@ -193,6 +200,22 @@ self.addEventListener('install', e => {
                     reject(error);
                 }
             };
+            console.log('getting unctr');
+            // An install update event does not appear to be reported
+            //   (in Chrome at least), so we need to inform the client
+            const clients = await getOnlyUncontrolled();
+            if (!clients || !clients.length) {
+                // Should we wait instead for the next client?
+                throw new Error(
+                    'No client found to inform of readiness for installation completion'
+                );
+            }
+            clients.forEach((client) => {
+                console.log('posting finish install');
+                // Although we only need one client to which to send
+                //   arguments, we want to signal phase complete to all
+                client.postMessage('finishInstall');
+            });
         })
     );
 });
@@ -208,7 +231,7 @@ self.addEventListener('activate', e => {
             let activateInfoReceived = false;
 
             // Should expire much earlier than this, but we'll be safe
-            const noCallbackTimeout = 1000 * 12;
+            const noCallbackTimeout = 20 * 1000;
             setTimeout(() => {
                 // If callback invoked, we'll handle any problems there
                 if (!activateInfoReceived) {
@@ -254,6 +277,7 @@ self.addEventListener('activate', e => {
                         console.log('No client found to inform of activation');
                     }
                     activateCompleted = true;
+                    console.log('RESOLVED: ACTIVATE');
                     resolve();
                 } catch (err) {
                     console.error('Activation callback error:', err);
@@ -262,12 +286,12 @@ self.addEventListener('activate', e => {
             };
             const clients = await getOnlyUncontrolled();
             if (!clients || !clients.length) {
-                // Should we wait instead for the next client?
                 throw new Error(
                     'No client found to inform of readiness for activation completion'
                 );
             }
             clients.forEach((client) => {
+                console.log('finish activate sent');
                 // Although we only need one client to which to send
                 //   arguments, we want to signal phase complete to all
                 client.postMessage('finishActivate');
@@ -287,7 +311,7 @@ self.addEventListener('activate', e => {
                     });
                 });
             }
-            throw err;
+            reject(err);
         }
     }));
 });
