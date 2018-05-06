@@ -53,6 +53,9 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 1.  Waiting: Once stabilized, target `TextBrowser` dependency by tagged
     version.
 
+1.  Add a "Powered by TextBrowser" message on non-results pages with
+    link to that repo.
+
 1.  Break out plugins into separate repository(ies) for reusability
     with textbrowser (and publicize their presence on its wiki).
 
