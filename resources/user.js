@@ -31,31 +31,7 @@ const tb = new TextBrowser({
     // dynamicBasePath: '',
     trustFormatHTML: true,
     skipIndexedDB: false,
-    interlinearSeparator: '<hr />', // Defaults to `<br /><br />`
-    staticFilesToCache: [
-        // Effective defaults
-        '/',
-        'index.html',
-        'files.json',
-        'site.json',
-        'resources/user.js',
-        'resources/user.css',
-        // Plugins
-        'plugins/chinese-numbers.js',
-        'plugins/define.js',
-        'plugins/field-alias.js',
-        'plugins/isbn.js',
-        'plugins/local-notes.js',
-        'plugins/reverse-roman.js',
-        'plugins/roman-numerals.js',
-        'plugins/romanize.js',
-        'plugins/synopsis.js',
-        'plugins/websearch.js',
-        'plugins/wikify.js',
-        'plugins/wikilinks.js',
-        'plugins/wordbyword-tooltips.js',
-        'plugins/wordbyword.js'
-    ]
+    interlinearSeparator: '<hr />' // Defaults to `<br /><br />`
 });
 await tb.init();
 // Stylesheets have loaded and init process begun/completing

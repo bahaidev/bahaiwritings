@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.11.3",
+  "version": "0.12.0",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "eslint": "eslint .",
@@ -12,22 +12,22 @@
     "start-no-open": "npm run eslint && node server 0"
   },
   "dependencies": {
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "load-stylesheets": "^0.4.0",
     "node-static": "0.7.10",
     "opn-cli": "^3.1.0",
-    "textbrowser": "^0.18.4"
+    "textbrowser": "0.19.0"
   },
   "devDependencies": {
-    "ajv": "6.4.0",
+    "ajv": "6.5.0",
     "eslint": "4.19.1",
     "eslint-config-standard": "11.0.0",
     "eslint-plugin-compat": "2.2.0",
     "eslint-plugin-import": "2.11.0",
     "eslint-plugin-node": "6.0.1",
     "eslint-plugin-promise": "3.7.0",
-    "eslint-plugin-standard": "3.0.1",
+    "eslint-plugin-standard": "3.1.0",
     "fast-json-patch": "2.0.6",
     "json-metaschema": "1.2.0",
     "nodeunit": "0.11.2",

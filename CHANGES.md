@@ -1,3 +1,10 @@
+# 0.12.0
+
+- npm: Update deps, devDeps
+- Update service worker per TextBrowser updates (as well as move to
+    `user.json` file per new requirements)
+- Some added logging
+
 # 0.11.3
 
 - Attempt to force service worker (and updated files) cache invalidation
