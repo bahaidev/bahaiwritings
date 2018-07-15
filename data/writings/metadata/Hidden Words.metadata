@@ -23,8 +23,15 @@
         "ar": {
             "alias": "الكلمات المكنونة",
             "heading": "الكلمات المكنونة",
+            "groupbytoggle": "Group according to the above?",
             "fieldnames": {
-                "Arabic": "عربي"
+                "Original Language": "Original Language",
+                "Number": "Number",
+                "Synopsis": "Synopsis",
+                "English": "English",
+                "Arabic": "عربي",
+                "Persian": "Persian",
+                "Word by word Persian to English": "Word by word Persian to English"
             },
             "fieldvalue": {
                 "Original Language": {
@@ -36,12 +43,15 @@
         "fa": {
             "alias": "كلمات مكنونه",
             "heading": "کلمات مکنونه",
+            "groupbytoggle": "Group according to the above?",
             "fieldnames": {
                 "Original Language": "زبان اصلی",
                 "Number": "شماره",
+                "Synopsis": "Synopsis",
                 "English": "نوشتجات",
                 "Arabic": "عربی",
-                "Persian": "فارسي"
+                "Persian": "فارسي",
+                "Word by word Persian to English": "Word by word Persian to English"
             },
             "fieldvalue": {
                 "Original Language": {

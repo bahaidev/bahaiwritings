@@ -7,6 +7,30 @@
                 "Paragraph": "Paragraph",
                 "English": "English"
             }
+        },
+        "ar": {
+            "alias": "Gems of Divine Mysteries",
+            "heading": "Gems of Divine Mysteries",
+            "fieldnames": {
+                "Paragraph": "Paragraph",
+                "English": "English"
+            }
+        },
+        "fa": {
+            "alias": "Gems of Divine Mysteries",
+            "heading": "Gems of Divine Mysteries",
+            "fieldnames": {
+                "Paragraph": "Paragraph",
+                "English": "English"
+            }
+        },
+        "ru": {
+            "alias": "Gems of Divine Mysteries",
+            "heading": "Gems of Divine Mysteries",
+            "fieldnames": {
+                "Paragraph": "Paragraph",
+                "English": "English"
+            }
         }
     },
     "table": {

@@ -2,19 +2,60 @@
     "localization-strings": {
         "ar": {
             "alias": "القرآن الكريم",
-            "heading": "القرآن المجيد"
+            "heading": "القرآن المجيد",
+            "fieldaliases": {
+                "surah-name": "Suráh Name"
+            },
+            "fieldnames": {
+                "Rodwell Suráh #": "Rodwell Suráh #",
+                "Verse #": "Verse #",
+                "Traditional Suráh #": "Traditional Suráh #",
+                "Sale Translation": "Sale Translation",
+                "Sale's Notes": "Sale's Notes",
+                "Bahá'í References (Central Figures)": "Bahá'í References (Central Figures)",
+                "Bahá'í Translation (Shoghi Effendi unless otherwise noted)": "Bahá'í Translation (Shoghi Effendi unless otherwise noted)",
+                "Bahá'í References (Special)": "Bahá'í References (Special)",
+                "Rodwell Translation": "Rodwell Translation",
+                "Rodwell's Notes": "Rodwell's Notes"
+            }
         },
         "fa": {
             "alias": "قران",
             "heading": "قران",
+            "fieldaliases": {
+                "surah-name": "Suráh Name"
+            },
             "fieldnames": {
-                "Sale Translation": "ترجمه صالح",
                 "Rodwell Suráh #": "سوره شماره  در Rodwell",
-                "Verse #": "سوره شماره"
+                "Verse #": "سوره شماره",
+                "Traditional Suráh #": "Traditional Suráh #",
+                "Sale Translation": "ترجمه صالح",
+                "Sale's Notes": "Sale's Notes",
+                "Bahá'í References (Central Figures)": "Bahá'í References (Central Figures)",
+                "Bahá'í Translation (Shoghi Effendi unless otherwise noted)": "Bahá'í Translation (Shoghi Effendi unless otherwise noted)",
+                "Bahá'í References (Special)": "Bahá'í References (Special)",
+                "Rodwell Translation": "Rodwell Translation",
+                "Rodwell's Notes": "Rodwell's Notes"
             }
         },
         "ru": {
-            "alias": "Коран"
+            "alias": "Коран",
+            "heading": "The Holy Qur'án",
+            "fieldaliases": {
+                "surah-name": "Suráh Name"
+            },
+            "fieldnames": {
+                "Rodwell Suráh #": "Rodwell Suráh #",
+                "Verse #": "Verse #",
+                "Traditional Suráh #": "Traditional Suráh #",
+                "Sale Translation": "Sale Translation",
+                "Sale's Notes": "Sale's Notes",
+                "Bahá'í References (Central Figures)": "Bahá'í References (Central Figures)",
+                "Bahá'í Translation (Shoghi Effendi unless otherwise noted)": "Bahá'í Translation (Shoghi Effendi unless otherwise noted)",
+                "Bahá'í References (Special)": "Bahá'í References (Special)",
+                "Rodwell Translation": "Rodwell Translation",
+                "Rodwell's Notes": "Rodwell's Notes"
+            }
         },
         "en-US": {
             "alias": "Qur'án",

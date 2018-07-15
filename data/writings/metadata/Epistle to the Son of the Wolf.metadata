@@ -9,9 +9,16 @@
             }
         },
         "ar": {
-            "alias": "لوح ابن الذئب"
+            "alias": "لوح ابن الذئب",
+            "heading": "Epistle to the Son of the Wolf",
+            "fieldnames": {
+                "Paragraph": "Paragraph",
+                "English": "English"
+            }
         },
         "fa": {
+            "alias": "Epistle to the Son of the Wolf",
+            "heading": "Epistle to the Son of the Wolf",
             "fieldnames": {
                 "Paragraph": "پاراگراف",
                 "English": "نوشتجات"

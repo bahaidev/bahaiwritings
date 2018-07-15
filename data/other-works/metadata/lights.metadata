@@ -7,6 +7,30 @@
                 "Number": "Number",
                 "English": "English"
             }
+        },
+        "fa": {
+            "alias": "Lights of Guidance",
+            "heading": "Lights of Guidance",
+            "fieldnames": {
+                "Number": "Number",
+                "English": "English"
+            }
+        },
+        "ar": {
+            "alias": "Lights of Guidance",
+            "heading": "Lights of Guidance",
+            "fieldnames": {
+                "Number": "Number",
+                "English": "English"
+            }
+        },
+        "ru": {
+            "alias": "Lights of Guidance",
+            "heading": "Lights of Guidance",
+            "fieldnames": {
+                "Number": "Number",
+                "English": "English"
+            }
         }
     },
     "table": {

@@ -8,6 +8,33 @@
                 "Paragraph": "Paragraph",
                 "Chinese": "Chinese"
             }
+        },
+        "ar": {
+            "alias": "Who's Writing the Future?",
+            "heading": "Who's Writing the Future?",
+            "fieldnames": {
+                "Section": "Section",
+                "Paragraph": "Paragraph",
+                "Chinese": "Chinese"
+            }
+        },
+        "fa": {
+            "alias": "Who's Writing the Future?",
+            "heading": "Who's Writing the Future?",
+            "fieldnames": {
+                "Section": "Section",
+                "Paragraph": "Paragraph",
+                "Chinese": "Chinese"
+            }
+        },
+        "ru": {
+            "alias": "Who's Writing the Future?",
+            "heading": "Who's Writing the Future?",
+            "fieldnames": {
+                "Section": "Section",
+                "Paragraph": "Paragraph",
+                "Chinese": "Chinese"
+            }
         }
     },
     "table": {

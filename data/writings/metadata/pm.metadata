@@ -9,6 +9,42 @@
                 "Synopsis": "Synopsis",
                 "English": "English"
             }
+        },
+        "fa": {
+            "en-US": {
+                "alias": "Prayers and Meditations",
+                "heading": "Prayers and Meditations",
+                "fieldnames": {
+                    "Number": "Number",
+                    "Roman Numeral": "Roman Numeral",
+                    "Synopsis": "Synopsis",
+                    "English": "English"
+                }
+            }
+        },
+        "ar": {
+            "en-US": {
+                "alias": "Prayers and Meditations",
+                "heading": "Prayers and Meditations",
+                "fieldnames": {
+                    "Number": "Number",
+                    "Roman Numeral": "Roman Numeral",
+                    "Synopsis": "Synopsis",
+                    "English": "English"
+                }
+            }
+        },
+        "ru": {
+            "en-US": {
+                "alias": "Prayers and Meditations",
+                "heading": "Prayers and Meditations",
+                "fieldnames": {
+                    "Number": "Number",
+                    "Roman Numeral": "Roman Numeral",
+                    "Synopsis": "Synopsis",
+                    "English": "English"
+                }
+            }
         }
     },
     "table": {

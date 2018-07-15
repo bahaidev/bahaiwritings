@@ -2,20 +2,36 @@
     "localization-strings": {
         "ar": {
             "alias": "السلام العالمي وعد حق",
-            "heading": "وعد السلام العالمي"
+            "heading": "وعد السلام العالمي",
+            "fieldnames": {
+                "Paragraph": "Paragraph",
+                "Chinese Section Number": "Chinese Section Number",
+                "Chinese": "Chinese",
+                "Section Number": "Section Number",
+                "English": "English"
+            }
         },
         "fa": {
             "alias": "وعده صلح جهانى",
             "heading": "وعده صلح جهانی",
             "fieldnames": {
                 "Paragraph": "پاراگراف",
+                "Chinese Section Number": "Chinese Section Number",
                 "Chinese": "چینی",
                 "Section Number": "قسمت",
                 "English": "انگلیسی"
             }
         },
         "ru": {
-            "alias": "Обещания мира во всем мире"
+            "alias": "Обещания мира во всем мире",
+            "heading": "The Promise of World Peace",
+            "fieldnames": {
+                "Paragraph": "Paragraph",
+                "Chinese Section Number": "Chinese Section Number",
+                "Chinese": "Chinese",
+                "Section Number": "Section Number",
+                "English": "English"
+            }
         },
         "en-US": {
             "alias": "Promise of World Peace",

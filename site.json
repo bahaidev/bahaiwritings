@@ -50,11 +50,25 @@
             }
         },
         "ar": {
+            "will-request-storage-permissions": "In order to drastically and reliably improve performance of this application, please accept the request for notifications from this site which will appear after this dialog is closed. Browsers currently treat the allowance of notifications as permission for persistent storage. If you don't wish to grant notification permissions but do wish to persistently store the data of this application, the browser is to allow this by the alternative approach of your adding our site to your bookmarks, treating this as a form of trust.",
+            "refuse-request-storage-permissions": "Don't give the permission for notifications that would allow for persistent storage. I understand this will degrade the app's performance.",
+            "browser-not-granting-persistence": "Despite your permissions, the browser is not granting persistent storage. We will however attempt to use your regular browser cache to enhance performance (which will work so long as the cache is not cleared).",
+            "errorRegistering": "Sorry, there was an error registering; please try again later.",
+            "dbError": "There was a database error while preparing files for offline use (a service worker installation). Please try again later.",
+            "versionChange": "The database is undergoing an upgrade. Please close this tab (and any other old tabs at this site), so that the upgrade may continue.",
+            "wait-installing": "Please wait as we load the necessary files for the application...",
             "browser-title": "باحث الآثار المقدسة",
+            "OK": "OK",
+            "about": {
+                "1": "The manager for this specific project to which you may direct any questions or comments is {manager}. You can browse the code in an <a href=\"{repo}\">unstable form</a> or download the <a href=\"{stable}\">latest stable release</a> of the code and modify/redistribute it, if you wish, under the terms of the open source MIT license.",
+                "2": "You can view an RSS (Really Simple Syndication) feed with update announcements for newly released versions of the software used here (the newest stable version should always be implemented here at this page) or other updates related to this project.",
+                "3": "To donate to this specific project, click on the following <a href=\"{buttonLink}\"><button>{button}</button></a>. You can also donate to the Bahá'í Library Online site where this project is being generously hosted."
+            },
             "removecookies": "أختر لغة اخرى",
             "sitemap": {
                 "alphabetical": "ابجدي",
-                "hierarchical": "تصاعدي"
+                "hierarchical": "تصاعدي",
+                "chooseapage": "Choose a page"
             },
             "pages": {
                 "Langs": "لغات",
@@ -62,18 +76,58 @@
                 "Book": "كتاب",
                 "Results": "نتائج",
                 "Download": "تنزيل",
+                "Accessibility": "Accessibility",
+                "Vision": "Vision",
                 "News": "اخبار",
                 "Help": "مساعدة",
                 "About": "عن",
                 "Goals": "الاهداف",
+                "RSS": "RSS",
                 "Main pages": "الصفحات الرئيسية",
                 "Readme": "اقرأ",
-                "Sitemap": "خارطة الموقع"
+                "Sitemap": "خارطة الموقع",
+                "Administrator Documentation": "Administrator Documentation"
             }
         },
         "fa": {
+            "will-request-storage-permissions": "In order to drastically and reliably improve performance of this application, please accept the request for notifications from this site which will appear after this dialog is closed. Browsers currently treat the allowance of notifications as permission for persistent storage. If you don't wish to grant notification permissions but do wish to persistently store the data of this application, the browser is to allow this by the alternative approach of your adding our site to your bookmarks, treating this as a form of trust.",
+            "refuse-request-storage-permissions": "Don't give the permission for notifications that would allow for persistent storage. I understand this will degrade the app's performance.",
+            "browser-not-granting-persistence": "Despite your permissions, the browser is not granting persistent storage. We will however attempt to use your regular browser cache to enhance performance (which will work so long as the cache is not cleared).",
+            "errorRegistering": "Sorry, there was an error registering; please try again later.",
+            "dbError": "There was a database error while preparing files for offline use (a service worker installation). Please try again later.",
+            "versionChange": "The database is undergoing an upgrade. Please close this tab (and any other old tabs at this site), so that the upgrade may continue.",
+            "wait-installing": "Please wait as we load the necessary files for the application...",
             "browser-title": "برازر اثار و الواح",
-            "removecookies": "زبان دیگری را انتخاب فرمایید"
+            "OK": "OK",
+            "about": {
+                "1": "The manager for this specific project to which you may direct any questions or comments is {manager}. You can browse the code in an <a href=\"{repo}\">unstable form</a> or download the <a href=\"{stable}\">latest stable release</a> of the code and modify/redistribute it, if you wish, under the terms of the open source MIT license.",
+                "2": "You can view an RSS (Really Simple Syndication) feed with update announcements for newly released versions of the software used here (the newest stable version should always be implemented here at this page) or other updates related to this project.",
+                "3": "To donate to this specific project, click on the following <a href=\"{buttonLink}\"><button>{button}</button></a>. You can also donate to the Bahá'í Library Online site where this project is being generously hosted."
+            },
+            "removecookies": "زبان دیگری را انتخاب فرمایید",
+            "sitemap": {
+                "alphabetical": "alphabetical",
+                "hierarchical": "hierarchical",
+                "chooseapage": "Choose a page"
+            },
+            "pages": {
+                "Langs": "Langs",
+                "Books": "Books",
+                "Book": "Book",
+                "Results": "Results",
+                "Download": "Download",
+                "Accessibility": "Accessibility",
+                "Vision": "Vision",
+                "News": "News",
+                "Help": "Help",
+                "About": "About",
+                "Goals": "Goals",
+                "RSS": "RSS",
+                "Main pages": "Main pages",
+                "Readme": "Readme",
+                "Sitemap": "Site Map",
+                "Administrator Documentation": "Administrator Documentation"
+            }
         }
     }
 }

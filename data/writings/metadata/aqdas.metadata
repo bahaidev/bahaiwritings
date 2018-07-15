@@ -24,11 +24,21 @@
             "alias": "الكتاب الأقدس",
             "heading": "الكتاب الأقدس",
             "fieldnames": {
-                "Arabic": "عربي"
+                "Paragraph": "Paragraph",
+                "English": "English",
+                "Arabic": "عربي",
+                "German": "German"
             }
         },
         "ru": {
-            "alias": "Китаб-и-Агдас"
+            "alias": "Китаб-и-Агдас",
+            "heading": "The Kitáb-i-Aqdas",
+            "fieldnames": {
+                "Paragraph": "Paragraph",
+                "English": "English",
+                "Arabic": "Arabic",
+                "German": "German"
+            }
         }
     },
     "table": {

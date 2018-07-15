@@ -93,14 +93,29 @@
         "ar": {
             "alias": "الكتاب المقدس (الأنجيل والعهد القديم معا)",
             "heading": "الانجيل",
+            "fieldaliases": {
+                "book-name": "Book Name"
+            },
             "fieldnames": {
                 "Book #": "كتاب #",
-                "Chapter #": "فصل #"
+                "Chapter #": "فصل #",
+                "Verse #": "Verse #",
+                "King James Translation": "King James Translation",
+                "Bahá'í Translation": "Bahá'í Translation",
+                "Bahá'í Central Figures References": "Bahá'í Central Figures References",
+                "Bahá'í Special References": "Bahá'í Special References",
+                "Pilgrim's Notes References": "Pilgrim's Notes References",
+                "Cross-Bible References": "Cross-Bible References",
+                "Individual Bahá'í Scholars": "Individual Bahá'í Scholars",
+                "Qur'ánic References": "Qur'ánic References"
             }
         },
         "fa": {
             "alias": "انجیل",
             "heading": "انجیل",
+            "fieldaliases": {
+                "book-name": "Book Name"
+            },
             "fieldnames": {
                 "Book #": "کتاب شماره",
                 "Chapter #": "قسمت  شماره",
