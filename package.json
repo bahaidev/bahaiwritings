@@ -4,7 +4,7 @@
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "eslint": "eslint .",
-    "open-test": "opn \"http://localhost:8000/textbrowser?lang=en-US&work=aqdas&start1-1=3&end1-1=5&anchorfield1=Paragraph&field1=Paragraph&field2=English&field3=German&field4=Arabic&colorName=Black&color=%23&bgcolorName=White&bgcolor=%23&fontSeq=Times+New+Roman%2C+serif&fontstyle=normal&fontvariant=Normal&fontweight=normal&fontstretch=normal&letterspacing=normal&lineheight=normal&header=n&footer=0&caption=0&border=1&interlintitle=1&rand=No&=No&checked1=Yes&checked2=Yes&checked3=Yes&checked4=Yes&headerfooterfixed=No&result=Yes&outputmode=table&serverOutput=json\" && npm run server",
+    "open-test": "opn \"http://localhost:8000/textbrowser?lang=en-US&work=aqdas&aqdas-start1-1=3&aqdas-end1-1=5&anchorfield1=Paragraph&field1=Paragraph&field2=English&field3=German&field4=Arabic&colorName=Black&color=%23&bgcolorName=White&bgcolor=%23&fontSeq=Times+New+Roman%2C+serif&fontstyle=normal&fontvariant=Normal&fontweight=normal&fontstretch=normal&letterspacing=normal&lineheight=normal&header=n&footer=0&caption=0&border=1&interlintitle=1&rand=No&=No&checked1=Yes&checked2=Yes&checked3=Yes&checked4=Yes&headerfooterfixed=No&result=Yes&outputmode=table&serverOutput=json\" && npm run server",
     "server": "textbrowser --allowPlugins",
     "dev-server": "node ../textbrowser/server/main-cjs.js --allowPlugins",
     "node": "npm run eslint && nodeunit test/bahaiwritingsTests.js",
