@@ -50,9 +50,6 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
         periodically) parse their texts into JSON here to ensure we
         have the most up-to-date and corrected translations
 
-1.  Waiting: Once stabilized, target `TextBrowser` dependency by tagged
-    version.
-
 1.  Add a "Powered by TextBrowser" message on non-results pages with
     link to that repo.
 
@@ -63,6 +60,9 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
     labels to provide machine-automated detection of (open source) licenses.
 
 1.  ONGOING:
+
+    1. Once stabilized, target `TextBrowser` dependency by tagged
+        version.
 
     1.  Ensure `notextbrowser` branch is kept up to date with `master`
         besides the `package.json` and absent HTML/JavaScript/CSS differences.
