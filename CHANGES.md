@@ -1,3 +1,7 @@
+# 0.13.1
+
+- npm: Bump textbrowser
+
 # 0.13.0
 
 - npm: Bump textbrowser and other deps/devDeps
