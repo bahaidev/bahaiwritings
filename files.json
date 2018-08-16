@@ -30,6 +30,9 @@
                 "synopsis": {
                     "fieldname": "Synopsis ({applicableField})"
                 },
+                "tooltips": {
+                    "fieldname": "Tooltips ({applicableField})"
+                },
                 "roman-numerals": {
                     "fieldname": "Roman #"
                 },
@@ -97,6 +100,9 @@
             "plugins": {
                 "synopsis": {
                     "fieldname": "Synopsis ({applicableField})"
+                },
+                "tooltips": {
+                    "fieldname": "Tooltips ({applicableField})"
                 },
                 "roman-numerals": {
                     "fieldname": "Roman #"
@@ -166,6 +172,9 @@
                 "synopsis": {
                     "fieldname": "Synopsis ({applicableField})"
                 },
+                "tooltips": {
+                    "fieldname": "Tooltips ({applicableField})"
+                },
                 "roman-numerals": {
                     "fieldname": "Roman #"
                 },
@@ -234,6 +243,9 @@
                 "synopsis": {
                     "fieldname": "Synopsis ({applicableField})"
                 },
+                "tooltips": {
+                    "fieldname": "Tooltips ({applicableField})"
+                },
                 "roman-numerals": {
                     "fieldname": "Шрифт #"
                 },
@@ -277,6 +289,10 @@
         "synopsis": {
             "path": "../../../plugins/synopsis.js",
             "onByDefault": false
+        },
+        "tooltips": {
+            "path": "../../../plugins/tooltips.js",
+            "onByDefault": true
         },
         "wordbyword": {
             "path": "../../../plugins/wordbyword.js",
@@ -354,6 +370,15 @@
             "quran": {
             },
             "aqdas": {
+                "tooltips": {
+                    "applicable-fields": {
+                        "English": {
+                            "meta": {
+                                "targetField": "Arabic"
+                            }
+                        }
+                    }
+                },
                 "local-notes": {
                     "applicable-fields": {
                         "English": {

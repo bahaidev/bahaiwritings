@@ -1,3 +1,9 @@
+# 0.14.0
+
+- npm: Update devDeps
+- Enhancement: Add tooltips plugin (using tippy.js) and apply to
+    English->Arabic
+
 # 0.13.1
 
 - npm: Bump textbrowser
