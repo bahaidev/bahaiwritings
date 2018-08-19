@@ -1,3 +1,8 @@
+# ?
+
+- yarn: Remove yarn support
+- npm: Add `.npmignore`
+
 # 0.14.1
 
 - Fix: Offline for tooltip CSS
