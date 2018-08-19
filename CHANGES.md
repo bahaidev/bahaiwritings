@@ -1,3 +1,7 @@
+# 0.15.1
+
+- Fix: Update to textbrowser 0.21.1
+
 # 0.15.0
 
 - Fix: Update to textbrowser 0.21.0
