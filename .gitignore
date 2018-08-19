@@ -1,2 +1,7 @@
 node_modules
 *.sqlite
+
+# On server
+core
+npm-debug.log
+pm2.json
