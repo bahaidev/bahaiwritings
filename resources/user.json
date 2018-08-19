@@ -21,6 +21,7 @@
         "plugins/synopsis.js",
         "plugins/tooltips.js",
         "node_modules/tippy.js/dist/esm/tippy.js",
+        "node_modules/tippy.js/dist/tippy.css",
         "plugins/websearch.js",
         "plugins/wikify.js",
         "plugins/wikilinks.js",

@@ -1,3 +1,7 @@
+# 0.14.1
+
+- Fix: Offline for tooltip CSS
+
 # 0.14.0
 
 - npm: Update devDeps
