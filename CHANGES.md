@@ -1,7 +1,9 @@
-# ?
+# 0.15.0
 
+- Fix: Update to textbrowser 0.21.0
 - yarn: Remove yarn support
 - npm: Add `.npmignore`
+- Git: Add to `.gitignore` for server
 
 # 0.14.1
 
