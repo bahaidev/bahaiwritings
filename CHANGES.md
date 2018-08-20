@@ -1,3 +1,8 @@
+# ?
+
+- Enhancement: Ensure local-notes is more portable by adding positioning
+    via JavaScript instead of CSS
+
 # 0.16.1
 
 - Service worker: Bump cache

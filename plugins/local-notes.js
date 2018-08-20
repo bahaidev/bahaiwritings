@@ -38,6 +38,11 @@ export const done = async ({$p, thisObj}) => { // , canonicalBrowseFieldNames
         return locale[key];
     };
 
+    [...document.querySelectorAll('td[data-col]')].forEach((td) => {
+        // Needed for allowing textarea in local-notes to expand
+        td.style.position = 'relative';
+    });
+
     const localNotesDatabase = thisObj.namespace + '-local-notes';
     const workStore = 'work-' + $p.get('work');
     const workIndex = 'work-retrieval-' + $p.get('work');

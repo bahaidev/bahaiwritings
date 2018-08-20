@@ -4,5 +4,4 @@ dialog::backdrop {
 td[data-col], td[data-col] > iframe {
     height: -webkit-fill-available;
     max-height: 500px;
-    position: relative; /* Needed for allowing textarea in local-notes to expand */
 }
