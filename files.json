@@ -377,7 +377,8 @@
                                 "targetField": "Arabic"
                             }
                         }
-                    }
+                    },
+                    "placement": 1
                 },
                 "local-notes": {
                     "applicable-fields": {

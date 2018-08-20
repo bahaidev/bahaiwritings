@@ -1,7 +1,10 @@
-# ?
+# 0.16.0
 
 - Fix: Add load-stylesheets to offline cache
+- Fix: Update textbrowser to 0.22.1
 - Enhancement: Have local-notes textareas fill entire cell
+- Enhancement (Aqdas): Put tooltips-English in more convenient
+    position (after paragraph number)
 
 # 0.15.5
 
