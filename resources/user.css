@@ -3,4 +3,5 @@ dialog::backdrop {
 }
 td[data-col], td[data-col] > iframe {
     height: -webkit-fill-available;
+    max-height: 500px;
 }
