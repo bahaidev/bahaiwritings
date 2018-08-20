@@ -1,6 +1,7 @@
 # ?
 
 - Fix: Add load-stylesheets to offline cache
+- Enhancement: Have local-notes textareas fill entire cell
 
 # 0.15.5
 
