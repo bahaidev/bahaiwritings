@@ -2,6 +2,8 @@
 
 - npm: Actually update textbrowser to 0.21.4 (had missed 0.21.3); includes
     security fix
+- Change: Add `max-height` to iframes with `fill-available` (for larger screens)
+- Change: Increase width of iframes with `fill-available`
 
 # 0.15.3
 
