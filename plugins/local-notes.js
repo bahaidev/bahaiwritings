@@ -23,12 +23,10 @@ function getCanonicalID (textarea) {
     return textarea.parentNode.parentNode.dataset.canonicalId;
 }
 
-const localNotesDatabase = 'textbrowser-local-notes';
-
 export const escapeColumn = false;
 
 // `done` is always only run on the client
-export const done = async ({$p}) => { // , canonicalBrowseFieldNames
+export const done = async ({$p, thisObj}) => { // , canonicalBrowseFieldNames
     // Todo: Fetch locales
     // const results = await fetch('locales.json');
     // const locales = await results.json();
@@ -40,6 +38,7 @@ export const done = async ({$p}) => { // , canonicalBrowseFieldNames
         return locale[key];
     };
 
+    const localNotesDatabase = thisObj.namespace + '-local-notes';
     const workStore = 'work-' + $p.get('work');
     const workIndex = 'work-retrieval-' + $p.get('work');
 

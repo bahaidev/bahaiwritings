@@ -1,10 +1,15 @@
+# 0.15.2
+
+- Fix IDB namespace to reflect this repo
+- npm: Update textbrowser to 0.21.2
+
 # 0.15.1
 
-- Fix: Update to textbrowser 0.21.1
+- Fix: Update to textbrowser to 0.21.1
 
 # 0.15.0
 
-- Fix: Update to textbrowser 0.21.0
+- Fix: Update to textbrowser to 0.21.0
 - yarn: Remove yarn support
 - npm: Add `.npmignore`
 - Git: Add to `.gitignore` for server
