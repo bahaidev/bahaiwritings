@@ -1,3 +1,8 @@
+# 0.15.5
+
+- npm: Actually apply `package-lock.json` changes
+- npm: Update textbrowser to 0.22.0
+
 # 0.15.4
 
 - npm: Actually update textbrowser to 0.21.4 (had missed 0.21.3); includes
