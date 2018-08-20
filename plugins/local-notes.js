@@ -155,6 +155,7 @@ export const getCellData = ({
     <textarea
         data-local-notes=""
         disabled="disabled"
-        style="width: 300px !important; height: 200px;"
+        style="width: -webkit-fill-available !important; top: 0; left: 0; right: 0; bottom: 0;
+                position: absolute; resize: none;"
     >${l('loading')}</textarea>`;
 };
