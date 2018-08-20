@@ -1,3 +1,7 @@
+# 0.16.1
+
+- Service worker: Bump cache
+
 # 0.16.0
 
 - Fix: Add load-stylesheets to offline cache
