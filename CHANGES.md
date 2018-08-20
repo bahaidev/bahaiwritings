@@ -1,3 +1,7 @@
+# ?
+
+- Fix: Add load-stylesheets to offline cache
+
 # 0.15.5
 
 - npm: Actually apply `package-lock.json` changes
