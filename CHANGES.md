@@ -1,3 +1,8 @@
+# 0.15.4
+
+- npm: Actually update textbrowser to 0.21.4 (had missed 0.21.3); includes
+    security fix
+
 # 0.15.3
 
 - npm: Update textbrowser to 0.21.3
