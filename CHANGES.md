@@ -1,3 +1,7 @@
+# 0.15.3
+
+- npm: Update textbrowser to 0.21.3
+
 # 0.15.2
 
 - Fix IDB namespace to reflect this repo
