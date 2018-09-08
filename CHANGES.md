@@ -1,3 +1,7 @@
+# 0.17.1
+
+- npm: Update textbrowser
+
 # 0.17.0
 
 - Enhancement: Ensure local-notes is more portable by adding positioning
