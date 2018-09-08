@@ -1,7 +1,9 @@
-# ?
+# 0.17.0
 
 - Enhancement: Ensure local-notes is more portable by adding positioning
     via JavaScript instead of CSS
+- npm: Update textbrowser and devDeps
+- Linting (ESLint): Overwrite new "standard" config
 
 # 0.16.1
 
