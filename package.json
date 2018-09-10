@@ -9,7 +9,8 @@
     "dev-server": "node ../textbrowser/server/main-cjs.js --allowPlugins",
     "node": "npm run eslint && nodeunit test/bahaiwritingsTests.js",
     "test": "npm run eslint && node server http://127.0.0.1/test/ 8082",
-    "start-no-open": "npm run eslint && node server 0"
+    "start-no-open": "npm run eslint && node server 0",
+    "copy-textbrowser": "cp -a ../textbrowser/dist/. node_modules/textbrowser/dist/ && cp -a ../textbrowser/locales/. node_modules/textbrowser/locales/"
   },
   "dependencies": {
     "babel-preset-env": "^1.7.0",
