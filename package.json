@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.19.2",
+  "version": "0.19.3",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "eslint": "eslint .",
@@ -18,7 +18,7 @@
     "load-stylesheets": "^0.7.0",
     "node-static": "0.7.10",
     "opn-cli": "^3.1.0",
-    "textbrowser": "0.25.2",
+    "textbrowser": "0.25.3",
     "tippy.js": "https://github.com/atomiks/tippyjs#v3.0.0-alpha.3"
   },
   "devDependencies": {
