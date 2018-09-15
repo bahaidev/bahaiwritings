@@ -1,3 +1,7 @@
+# 0.19.4
+
+- npm: Update textbrowser
+
 # 0.19.3
 
 - npm: Update textbrowser
