@@ -8,7 +8,7 @@ export const getCellData = function ({
     applicableFieldText, tr,
     fieldLang, metaApplicableField, fieldInfo
 }) {
-    const targetField = metaApplicableField.targetField;
+    const {targetField} = metaApplicableField;
     const targetFieldIdx = fieldInfo.findIndex(({field}) => {
         return field === targetField;
     });

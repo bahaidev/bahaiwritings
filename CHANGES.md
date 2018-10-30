@@ -1,3 +1,13 @@
+# 0.20.0
+
+- Update: Use new TextBrowser Babel 7 and `simple-get-json` updates
+- Refactoring: Avoid `server.js` file in favor of node-static CLI
+- Build: Rename script from `copy-textbrowser` -> `copy`; ensure copy
+    is copying server files
+- npm: Add `server-activate` script
+- npm: Update to Babel 7; update `tippy.js`; update devDeps;
+    avoid unneeded dependencies
+
 # 0.19.4
 
 - npm: Update textbrowser
