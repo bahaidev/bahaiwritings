@@ -1,8 +1,8 @@
 # bahaiwritings CHANGES
 
-## ?
+## 0.21.0
 
-- Enhancement: Speech plugin
+- Enhancement: Speech plugin (applied to Kitáb-i-Aqdas Arabic)
 
 ## 0.20.0
 
