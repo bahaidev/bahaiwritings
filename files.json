@@ -68,6 +68,9 @@
                 },
                 "chinese-numbers": {
                     "fieldname": "Chinese translated {applicableField}"
+                },
+                "speech": {
+                    "fieldname": "Speech {applicableField}"
                 }
             }
         },
@@ -139,6 +142,9 @@
                 },
                 "chinese-numbers": {
                     "fieldname": "Chinese translated {applicableField}"
+                },
+                "speech": {
+                    "fieldname": "Speech {applicableField}"
                 }
             }
         },
@@ -210,6 +216,9 @@
                 },
                 "chinese-numbers": {
                     "fieldname": "Chinese translated {applicableField}"
+                },
+                "speech": {
+                    "fieldname": "Speech {applicableField}"
                 }
             }
         },
@@ -281,6 +290,9 @@
                 },
                 "chinese-numbers": {
                     "fieldname": "Chinese translated {applicableField}"
+                },
+                "speech": {
+                    "fieldname": "Speech {applicableField}"
                 }
             }
         }
@@ -352,6 +364,9 @@
         "isbn": {
             "path": "../../../plugins/isbn.js",
             "onByDefault": true
+        },
+        "speech": {
+            "path": "../../../plugins/speech.js"
         }
     },
     "plugin-field-mapping": {
@@ -410,6 +425,13 @@
                         }
                     },
                     "placement": "end"
+                },
+                "speech": {
+                    "applicable-fields": {
+                        "Arabic": {
+                        }
+                    },
+                    "placement": 3
                 }
             },
             "peace": {
