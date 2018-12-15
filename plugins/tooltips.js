@@ -12,11 +12,13 @@ export const getCellData = function ({
     const targetFieldIdx = fieldInfo.findIndex(({field}) => {
         return field === targetField;
     });
-    return `<span data-tippy-content="${tr[targetFieldIdx]}">${applicableFieldText}</span>`;
+    // Namespace this tippy plugin from other tippy plugins
+    return `<span data-tooltip=""
+        data-tippy-content="${tr[targetFieldIdx]}">${applicableFieldText}</span>`;
 };
 
 export const done = function () {
-    tippy('[data-tippy-content]', {
+    tippy('[data-tooltip][data-tippy-content]', {
         followCursor: true,
         distance: 50,
         placement: 'right'

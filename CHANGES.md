@@ -1,5 +1,12 @@
 # bahaiwritings CHANGES
 
+## 0.21.1
+
+- Fix: Add proper directionality to speech column
+- Fix: Avoid duplicate runs of `done`
+- Fix: Add speech plugin file to files to cache offline
+- npm: Update textbrowser to be able to get language directionality
+
 ## 0.21.0
 
 - Enhancement: Speech plugin (applied to Kitáb-i-Aqdas Arabic)

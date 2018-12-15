@@ -7,9 +7,10 @@ const locales = {
         listenToAll: '(Listen to all)'
     }
 };
+
 export const getCellData = function ({
-    applicableFieldText, tr, $p,
-    fieldLang, metaApplicableField, fieldInfo
+    applicableFieldText, $p,
+    applicableFieldIdx, fieldInfo, getLangDir
 }) {
     const lang = $p.get('lang', true);
     const l = (key) => {
@@ -17,15 +18,21 @@ export const getCellData = function ({
         return locale[key];
     };
     return applicableFieldText.split(/\s+/).reduce((s, text) => {
-        return s + `<a data-speech="_" href="javascript:void(0);">${text}</a> `;
-    }, '') +
+        return s +
+            `<a data-speech="_" href="javascript:void(0);">${text}</a> `;
+    }, `<div dir="${getLangDir(fieldInfo[applicableFieldIdx].fieldLang)}">`) +
         '<br /><br />' +
         ` <a data-speech="${applicableFieldText}" href="javascript:void(0);">
             ${l('listenToAll')}
-        </a>`;
+        </a></div>`;
 };
 
+let run = false;
 export const done = function () {
+    if (run) {
+        return;
+    }
+    run = true;
     let voice, notify = false;
     speechSynthesis.addEventListener('voiceschanged', () => {
         console.log('voices changed');
