@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.22.1
+
+- Fix: Update Service Worker cache
+
 ## 0.22.0
 
 - Fix: Update TextBrowser for fixes and updates
