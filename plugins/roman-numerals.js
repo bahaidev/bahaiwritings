@@ -10,6 +10,12 @@ If needing to add to add, can supply as with pm (which doesn't need as it alread
 }
 
 */
+
+/**
+ *
+ * @param {Integer} num
+ * @returns {string}
+ */
 function convertToRoman (num) {
     const roman = {
         M: 1000,

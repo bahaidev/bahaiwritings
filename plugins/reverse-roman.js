@@ -7,6 +7,12 @@ Todo: If using, could add, e.g.:
     }
 }
 */
+
+/**
+ *
+ * @param {string} str
+ * @returns {Integer}
+ */
 function convertFromRoman (str) {
     let result = 0;
     // the result is now a number, not a string

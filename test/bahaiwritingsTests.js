@@ -2,17 +2,24 @@
 'use strict';
 var JsonRefs, jsonpatch, Ajv, getJSON, __dirname, path; // eslint-disable-line no-var
 
+/**
+ *
+ * @param {external:JSON} obj
+ * @returns {external:JSON}
+ */
 function cloneJSON (obj) {
     return JSON.parse(JSON.stringify(obj));
 }
 let appBase = '../';
 if (typeof exports !== 'undefined') {
+    /* eslint-disable global-require */
     require('@babel/polyfill');
     Ajv = require('ajv');
     JsonRefs = require('json-refs');
     jsonpatch = require('fast-json-patch');
     getJSON = require('simple-get-json');
     path = require('path');
+    /* eslint-enable global-require */
 } else {
     path = {
         join: (...args) => args.join('')
@@ -27,12 +34,14 @@ const schemaBase = textbrowserBase + 'general-schemas/';
 // const appdataBase = textbrowserBase + 'appdata/';
 
 /**
-* @param {object} schema The schema object
+* @param {Object} schema The schema object
 * @param {any} data The instance document to validate
+* @param {Array.<string[]>} extraSchemas
+* @param {Object} additionalOptions
 * @returns {boolean} Whether valid or not
 */
 function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
-    const ajv = new Ajv(Object.assign({}, {extendRefs: 'fail'}, additionalOptions));
+    const ajv = new Ajv({extendRefs: 'fail', ...additionalOptions});
     let valid;
     try {
         ajv.addFormat('html', () => true);
@@ -80,10 +89,10 @@ const bahaiwritingsTests = {
             validateSchema: false
         });
         test.strictEqual(valid2, true);
-        const diff = jsonpatch.compare(data, data2).filter((diff) =>
+        const diff = jsonpatch.compare(data, data2).filter((diff) => {
             // Apparently need to filter due to limitations per https://github.com/epoberezkin/ajv#filtering-data
-            !diff.path || (diff.op === 'remove' && !(/\/additionalItems$/).test(diff.path))
-        );
+            return !diff.path || (diff.op === 'remove' && !(/\/additionalItems$/u).test(diff.path));
+        });
         test.strictEqual(diff.length, 0);
 
         const schemas = results.slice(2);
@@ -126,18 +135,18 @@ const bahaiwritingsTests = {
         test.expect((specificFiles.length + otherSpecificFiles.length) * 3);
 
         const results = await Promise.all([
-            ...specificFiles.map((f) =>
-                JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'data/writings/' + f))
-            ),
-            ...specificFiles.map((f) =>
-                getJSON(path.join(__dirname, appBase, 'data/writings/schemas/' + f + 'schema'))
-            ),
-            ...otherSpecificFiles.map((f) =>
-                JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'data/other-works/' + f))
-            ),
-            ...otherSpecificFiles.map((f) =>
-                getJSON(path.join(__dirname, appBase, 'data/other-works/schemas/' + f + 'schema'))
-            ),
+            ...specificFiles.map((f) => {
+                return JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'data/writings/' + f));
+            }),
+            ...specificFiles.map((f) => {
+                return getJSON(path.join(__dirname, appBase, 'data/writings/schemas/' + f + 'schema'));
+            }),
+            ...otherSpecificFiles.map((f) => {
+                return JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'data/other-works/' + f));
+            }),
+            ...otherSpecificFiles.map((f) => {
+                return getJSON(path.join(__dirname, appBase, 'data/other-works/schemas/' + f + 'schema'));
+            }),
             ...tableFiles.map((f) => getJSON(path.join(__dirname, schemaBase, f)))
         ]);
 

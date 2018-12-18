@@ -1,17 +1,18 @@
+/* eslint-disable no-alert */
 const locales = {
     'en-US': {
-        'loading': 'Loading...',
-        'please_reload': 'Please reload this page for the latest version.',
-        'error_opening': 'There was an error opening the database. Please report the issue.',
-        'blocked_opening': 'The database is blocked due to another request being present on the database. Please try again later.',
-        'error_retrieval_transaction': 'There was an error during the transaction to retrieve items. Please try again later.'
+        loading: 'Loading...',
+        please_reload: 'Please reload this page for the latest version.',
+        error_opening: 'There was an error opening the database. Please report the issue.',
+        blocked_opening: 'The database is blocked due to another request being present on the database. Please try again later.',
+        error_retrieval_transaction: 'There was an error during the transaction to retrieve items. Please try again later.'
     },
-    'ar': {
-        'loading': 'Loading...',
-        'please_reload': 'Please reload this page for the latest version.',
-        'error_opening': 'There was an error opening the database. Please report the issue.',
-        'blocked_opening': 'The database is blocked due to another request being present on the database. Please try again later.',
-        'error_retrieval_transaction': 'There was an error during the transaction to retrieve items. Please try again later.'
+    ar: {
+        loading: 'Loading...',
+        please_reload: 'Please reload this page for the latest version.',
+        error_opening: 'There was an error opening the database. Please report the issue.',
+        blocked_opening: 'The database is blocked due to another request being present on the database. Please try again later.',
+        error_retrieval_transaction: 'There was an error during the transaction to retrieve items. Please try again later.'
     }
 };
 
@@ -19,6 +20,11 @@ const $$ = (sel) => {
     return [...document.querySelectorAll(sel)];
 };
 
+/**
+ *
+ * @param {Element} textarea
+ * @returns {string} The ID
+ */
 function getCanonicalID (textarea) {
     return textarea.parentNode.parentNode.dataset.canonicalId;
 }
@@ -26,7 +32,7 @@ function getCanonicalID (textarea) {
 export const escapeColumn = false;
 
 // `done` is always only run on the client
-export const done = async ({$p, thisObj}) => { // , canonicalBrowseFieldNames
+export const done = ({$p, thisObj}) => { // , canonicalBrowseFieldNames
     // Todo: Fetch locales
     // const results = await fetch('locales.json');
     // const locales = await results.json();

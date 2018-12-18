@@ -1,4 +1,4 @@
 /* globals nodeunit, bahaiwritingsTests */
-nodeunit.run({
+nodeunit.run({ // eslint-disable-line import/unambiguous
     'Suite One': bahaiwritingsTests
 });

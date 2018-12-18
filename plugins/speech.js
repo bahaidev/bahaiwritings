@@ -1,9 +1,10 @@
+/* eslint-disable no-alert */
 export const escapeColumn = false;
 const locales = {
     'en-US': {
         listenToAll: '(Listen to all)'
     },
-    'ar': {
+    ar: {
         listenToAll: '(Listen to all)'
     }
 };
@@ -17,7 +18,7 @@ export const getCellData = function ({
         const locale = locales[lang] || locales['en-US'];
         return locale[key];
     };
-    return applicableFieldText.split(/\s+/).reduce((s, text) => {
+    return applicableFieldText.split(/\s+/u).reduce((s, text) => {
         return s +
             `<a data-speech="_" href="javascript:void(0);">${text}</a> `;
     }, `<div dir="${getLangDir(fieldInfo[applicableFieldIdx].fieldLang)}">`) +
