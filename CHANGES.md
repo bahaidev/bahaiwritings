@@ -1,5 +1,12 @@
 # bahaiwritings CHANGES
 
+## 0.22.0
+
+- Fix: Update TextBrowser for fixes and updates
+- Testing: Fix paths
+- npm: Fix test script
+- npm: Update devDep ajv
+
 ## 0.21.1
 
 - Fix: Add proper directionality to speech column

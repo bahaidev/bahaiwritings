@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.21.1",
+  "version": "0.22.0",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "eslint": "eslint .",
@@ -10,7 +10,7 @@
     "dev-server": "node ../textbrowser/server/main-cjs.js --allowPlugins",
     "node": "npm run eslint && nodeunit test/bahaiwritingsTests.js",
     "test": "npm run eslint && npm start",
-    "start": "opn http://127.0.0.1:8082/ && npm run start-no-open",
+    "start": "opn http://127.0.0.1:8082/test/ && npm run start-no-open",
     "start-no-open": "static -p 8082",
     "copy": "cp -a ../textbrowser/dist/. node_modules/textbrowser/dist/ && cp -a ../textbrowser/locales/. node_modules/textbrowser/locales/ && cp -a ../textbrowser/server/. node_modules/textbrowser/server/ && chmod -R 755 node_modules/textbrowser/server/"
   },
@@ -18,11 +18,11 @@
     "load-stylesheets": "^0.7.0",
     "node-static": "0.7.11",
     "opn-cli": "^4.0.0",
-    "textbrowser": "0.27.0",
+    "textbrowser": "0.28.0",
     "tippy.js": "^3.3.0"
   },
   "devDependencies": {
-    "ajv": "6.6.1",
+    "ajv": "6.6.2",
     "eslint": "5.10.0",
     "eslint-config-standard": "12.0.0",
     "eslint-plugin-compat": "2.6.3",
