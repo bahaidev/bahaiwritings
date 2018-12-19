@@ -1,5 +1,11 @@
 # bahaiwritings CHANGES
 
+## ?
+
+- Fix: Make speech plugin independent of language
+- Linting: Add recommended extension to `.eslintrc` (.js); apply
+    ash-nazg rules
+
 ## 0.22.1
 
 - Fix: Update Service Worker cache
