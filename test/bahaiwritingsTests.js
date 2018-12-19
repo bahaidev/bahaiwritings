@@ -134,6 +134,8 @@ const bahaiwritingsTests = {
         ];
         test.expect((specificFiles.length + otherSpecificFiles.length) * 3);
 
+        // Todo: We could also check that the `table` and `fields`-pointed
+        //   metadata exists and is valid
         const results = await Promise.all([
             ...specificFiles.map((f) => {
                 return JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'data/writings/' + f));
