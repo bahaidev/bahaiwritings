@@ -366,7 +366,10 @@
             "onByDefault": true
         },
         "speech": {
-            "path": "../../../plugins/speech.js"
+            "path": "../../../plugins/speech.js",
+            "meta": {
+                "language": "ar"
+            }
         }
     },
     "plugin-field-mapping": {

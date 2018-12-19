@@ -29,7 +29,7 @@ export const getCellData = function ({
 };
 
 let run = false;
-export const done = function () {
+export const done = function ({meta: {language}}) {
     if (run) {
         return;
     }
@@ -38,7 +38,7 @@ export const done = function () {
     speechSynthesis.addEventListener('voiceschanged', () => {
         console.log('voices changed');
         const voices = speechSynthesis.getVoices().filter(({lang, name}) => {
-            return lang === 'ar' || lang.startsWith('ar-');
+            return lang === language || lang.startsWith(language + '-');
         });
         console.log('voices', voices);
         // Todo: Make `voice` as preference instead
