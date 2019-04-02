@@ -25,7 +25,7 @@ if (typeof exports !== 'undefined') {
         join: (...args) => args.join('')
     };
     appBase = location.protocol + '//' + location.host + '/';
-    __dirname = ''; // eslint-disable-line no-global-assign
+    __dirname = '';
 }
 
 const textbrowserBase = appBase + 'node_modules/textbrowser/';
@@ -51,9 +51,11 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
         });
         valid = ajv.validate(schema, data);
     } catch (e) {
-        console.log(e); // eslint-disable-line no-console
+        console.log(e);
     } finally {
-        if (!valid) { console.log(JSON.stringify(ajv.errors, null, 2)); } // eslint-disable-line no-console
+        if (!valid) {
+            console.log(JSON.stringify(ajv.errors, null, 2));
+        }
     }
     return valid;
 }

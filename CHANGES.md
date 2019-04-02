@@ -5,6 +5,7 @@
 - Fix: Make speech plugin independent of language
 - Linting: Add recommended extension to `.eslintrc` (.js); apply
     ash-nazg rules
+- npm: Update devDeps, `json-refs`, `@babel/polyfill`
 
 ## 0.22.1
 

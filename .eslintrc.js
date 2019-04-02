@@ -7,7 +7,23 @@ module.exports = {
   "plugins": ["compat"],
   "settings": {
     "polyfills": [
-        "url", "promises", "fetch"
+        "console",
+        "Date.now",
+        "document.hasFocus",
+        "document.querySelectorAll",
+        "Error",
+        "fetch",
+        "JSON",
+        "location.href",
+        "location.host",
+        "location.protocol",
+        "Object.entries",
+        "Object.values",
+        "Promise",
+        "Request",
+        "SpeechSynthesisUtterance",
+        "URL",
+        "window.getSelection"
     ]
   },
   "overrides": [
