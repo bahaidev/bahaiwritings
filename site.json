@@ -18,6 +18,7 @@
             "versionChange": "The database is undergoing an upgrade. Please close this tab (and any other old tabs at this site), so that the upgrade may continue.",
             "wait-installing": "Please wait as we load the necessary files for the application...",
             "browser-title": "Sacred Writings Browser",
+            "languages-title": "Languages",
             "OK": "OK",
             "about": {
                 "1": "The manager for this specific project to which you may direct any questions or comments is {manager}. You can browse the code in an <a href=\"{repo}\">unstable form</a> or download the <a href=\"{stable}\">latest stable release</a> of the code and modify/redistribute it, if you wish, under the terms of the open source MIT license.",

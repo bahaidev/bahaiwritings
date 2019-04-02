@@ -1,5 +1,5 @@
 module.exports = {
-  "extends": "ash-nazg/sauron",
+  "extends": ["ash-nazg/sauron", "plugin:testcafe/recommended"],
   "parser": "babel-eslint",
   "parserOptions": {
       "sourceType": "module"

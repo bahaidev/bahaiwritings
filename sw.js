@@ -15,7 +15,7 @@ importScripts('node_modules/simple-get-json/dist/index.js');
 importScripts('node_modules/textbrowser/dist/WorkInfo-umd.js');
 importScripts('node_modules/textbrowser/dist/activateCallback-umd.js');
 
-const CACHE_VERSION = '0.22.1';
+const CACHE_VERSION = '0.23.0';
 const CURRENT_CACHES = {
     prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };
@@ -131,8 +131,8 @@ const defaultUserStaticFiles = [
 //   actually be in `node_modules/textbrowser`; see `resources/index.js`
 const textbrowserStaticResourceFiles = [
     'node_modules/@babel/polyfill/dist/polyfill.js',
-    'node_modules/dialog-polyfill/dialog-polyfill.css',
-    'node_modules/dialog-polyfill/dialog-polyfill.js',
+    'node_modules/dialog-polyfill/dist/dialog-polyfill.css',
+    'node_modules/dialog-polyfill/dist/dialog-polyfill.esm.js',
 
     'node_modules/textbrowser/appdata/languages.json',
 

@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.22.1",
+  "version": "0.23.0",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "eslint": "eslint .",
@@ -9,7 +9,8 @@
     "server-activate": "textbrowser --allowPlugins --nodeActivate",
     "dev-server": "node ../textbrowser/server/main-cjs.js --allowPlugins",
     "node": "npm run eslint && nodeunit test/bahaiwritingsTests.js",
-    "test": "npm run eslint && npm start",
+    "test": "npm run eslint && testcafe --skip-js-errors chrome test/ui-tests/**/*.js",
+    "browser-test": "npm run eslint && npm start",
     "start": "opn http://127.0.0.1:8082/test/ && npm run start-no-open",
     "start-no-open": "static -p 8082",
     "copy": "cp -a ../textbrowser/dist/. node_modules/textbrowser/dist/ && cp -a ../textbrowser/locales/. node_modules/textbrowser/locales/ && cp -a ../textbrowser/server/. node_modules/textbrowser/server/ && chmod -R 755 node_modules/textbrowser/server/"
@@ -18,35 +19,39 @@
     "cover 100%"
   ],
   "dependencies": {
-    "@babel/polyfill": "^7.4.0",
+    "@babel/polyfill": "^7.4.3",
     "json-refs": "^3.0.13",
     "load-stylesheets": "^0.7.0",
     "node-static": "0.7.11",
     "opn-cli": "^4.0.0",
     "simple-get-json": "^4.1.0",
-    "textbrowser": "0.28.0",
+    "textbrowser": "0.29.2",
     "tippy.js": "^3.3.0"
   },
   "devDependencies": {
     "@mysticatea/eslint-plugin": "^9.0.1",
     "ajv": "6.10.0",
+    "axe-testcafe": "^1.1.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "5.16.0",
+    "eslint": "^5.16.0",
     "eslint-config-ash-nazg": "^1.0.2",
-    "eslint-config-standard": "12.0.0",
-    "eslint-plugin-compat": "3.1.0",
-    "eslint-plugin-import": "2.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-compat": "^3.1.0",
+    "eslint-plugin-eslint-comments": "^3.1.1",
+    "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsdoc": "^4.7.0",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-no-use-extend-native": "^0.4.0",
     "eslint-plugin-node": "8.0.1",
-    "eslint-plugin-promise": "4.1.1",
+    "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "4.0.0",
+    "eslint-plugin-testcafe": "^0.2.1",
     "eslint-plugin-unicorn": "^8.0.1",
     "fast-json-patch": "2.1.0",
     "json-metaschema": "1.2.0",
     "nodeunit": "0.11.3",
-    "remark-lint": "6.0.4"
+    "remark-lint": "6.0.4",
+    "testcafe": "^1.1.0"
   },
   "engines": {},
   "repository": {

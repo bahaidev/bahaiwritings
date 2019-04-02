@@ -1,11 +1,18 @@
 # bahaiwritings CHANGES
 
-## ?
+## 0.23.0
 
 - Fix: Make speech plugin independent of language
-- Linting: Add recommended extension to `.eslintrc` (.js); apply
+- Enhancement: Add languages page title per TB update
+- Enhancement: Cache actually used dialog-polyfill stylesheet
+- Refactoring: Avoid adding the dialog polyfill and stylesheet which
+    textbrowser now imports for us; point to new modular path
+- Linting (ESLint): Add recommended extension to `.eslintrc` (.js); apply
     ash-nazg rules
-- npm: Update devDeps, `json-refs`, `@babel/polyfill`
+- Linting (ESLint): Add testcafe plugin
+- Testing: Add accessibility and UI tests (testcafe); not currently
+    functioning properly
+- npm: Update devDeps, `json-refs`, `@babel/polyfill`, `textbrowser`
 
 ## 0.22.1
 

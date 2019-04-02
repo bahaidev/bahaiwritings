@@ -1,6 +1,8 @@
 import tippy from '../node_modules/tippy.js/dist/esm/tippy.js';
 import loadStylesheets from '../node_modules/load-stylesheets/dist/index-es.js';
 
+// Todo: Once latest deployed, get version with CSS auto-injected and remove
+//  the loadStylesheets dep. and this line
 loadStylesheets('../node_modules/tippy.js/dist/tippy.css');
 
 export const escapeColumn = false;
