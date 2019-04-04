@@ -15,7 +15,7 @@ importScripts('node_modules/simple-get-json/dist/index.js');
 importScripts('node_modules/textbrowser/dist/WorkInfo-umd.js');
 importScripts('node_modules/textbrowser/dist/activateCallback-umd.js');
 
-const CACHE_VERSION = '0.23.0';
+const CACHE_VERSION = '0.23.1';
 const CURRENT_CACHES = {
     prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };

@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.23.1
+
+- Fix: Actually update TB to 0.30.0
+
 ## 0.23.0
 
 - Fix: Make speech plugin independent of language
