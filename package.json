@@ -39,7 +39,7 @@
     "eslint-plugin-compat": "^3.1.0",
     "eslint-plugin-eslint-comments": "^3.1.1",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsdoc": "^4.7.0",
+    "eslint-plugin-jsdoc": "^4.8.0",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-no-use-extend-native": "^0.4.0",
     "eslint-plugin-node": "8.0.1",
@@ -51,7 +51,7 @@
     "json-metaschema": "1.2.0",
     "nodeunit": "0.11.3",
     "remark-lint": "6.0.4",
-    "testcafe": "^1.1.0"
+    "testcafe": "^1.1.1"
   },
   "engines": {},
   "repository": {
