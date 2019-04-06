@@ -1,5 +1,11 @@
 # bahaiwritings CHANGES
 
+## ?
+
+- Build: Add routine for bundling `tippy.js`, as its ESM bundle is
+    no longer self-sufficient (needs `popper.js`)
+- npm: Update `tippy.js`, devDeps
+
 ## 0.23.1
 
 - Fix: Actually update TB to 0.30.0

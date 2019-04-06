@@ -1,14 +1,9 @@
-import tippy from '../node_modules/tippy.js/dist/esm/tippy.js';
-import loadStylesheets from '../node_modules/load-stylesheets/dist/index-es.js';
-
-// Todo: Once latest deployed, get version with CSS auto-injected and remove
-//  the loadStylesheets dep. and this line
-loadStylesheets('../node_modules/tippy.js/dist/tippy.css');
+import tippy from '../external/tippy.js';
 
 export const escapeColumn = false;
 export const getCellData = function ({
     applicableFieldText, tr,
-    fieldLang, metaApplicableField, fieldInfo
+    metaApplicableField, fieldInfo /* , fieldLang */
 }) {
     const {targetField} = metaApplicableField;
     const targetFieldIdx = fieldInfo.findIndex(({field}) => {
