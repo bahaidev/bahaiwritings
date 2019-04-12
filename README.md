@@ -58,6 +58,15 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 1.  Break out plugins into separate repository(ies) for reusability
     with textbrowser (and publicize their presence on its wiki).
 
+    1. Make (modular) plugin schemas
+
+    1. Change wikilinks to be able to make post-load (CORS?) HEAD
+      detection of `Last-Modified` as with
+      [BADIPagesCreatedLinks](https://github.com/brettz9/BADIPagesCreatedLinks),
+      so can style uncreated links in orange and make own cache; or
+      to avoid multiple repeat requests, query a central cache (even
+      an API to `BADIPagesCreatedLinks`).
+
 1.  Apply <https://www.gnu.org/software/librejs/free-your-javascript.html>
     labels to provide machine-automated detection of (open source) licenses.
 
