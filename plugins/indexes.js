@@ -13,11 +13,11 @@ export const getCellData = ({
     });
     let output = '';
     if (indexJSON[applicableFieldText] && indexJSON[applicableFieldText].length) {
-      output += `<ul dir="${getLangDir(fieldInfo[targetFieldIdx].fieldLang)}">`;
-      indexJSON[applicableFieldText].forEach(([text]) => {
-          output += `<li>${escapeHTML(text)}</li>`;
-      });
-      output += '</ul>';
+        output += `<ul dir="${getLangDir(fieldInfo[targetFieldIdx].fieldLang)}">`;
+        indexJSON[applicableFieldText].forEach(([text]) => {
+            output += `<li>${escapeHTML(text)}</li>`;
+        });
+        output += '</ul>';
     }
-    return output;
+    return output || '<span></span>';
 };
