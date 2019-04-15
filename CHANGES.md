@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.25.2
+
+- Fix: Add no-op when output is null (to avoid auto-replacement)
+
 ## 0.25.1
 
 - Fix: Ensure indexes plugin does not fail when data is not present for
