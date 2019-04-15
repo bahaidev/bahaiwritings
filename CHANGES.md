@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## ?
+
+- npm: Update devDeps
+
 ## 0.25.2
 
 - Fix: Add no-op when output is null (to avoid auto-replacement)
