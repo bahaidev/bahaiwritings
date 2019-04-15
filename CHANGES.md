@@ -1,5 +1,11 @@
 # bahaiwritings CHANGES
 
+## 0.25.0
+
+- Enhancement: Add indexes plugin (and apply to Aqdas)
+- npm: Rename `copy`->`copy-tb` to avoid confusion if need to package
+    own files
+
 ## 0.24.0
 
 - Build: Add routine for bundling `tippy.js`, as its ESM bundle is

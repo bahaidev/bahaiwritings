@@ -27,6 +27,9 @@
                 }
             },
             "plugins": {
+                "indexes": {
+                    "fieldname": "Indexes ({targetLanguage})"
+                },
                 "synopsis": {
                     "fieldname": "Synopsis ({applicableField})"
                 },
@@ -101,6 +104,9 @@
                 }
             },
             "plugins": {
+                "indexes": {
+                    "fieldname": "Indexes ({targetLanguage})"
+                },
                 "synopsis": {
                     "fieldname": "Synopsis ({applicableField})"
                 },
@@ -175,6 +181,9 @@
                 }
             },
             "plugins": {
+                "indexes": {
+                    "fieldname": "Indexes ({targetLanguage})"
+                },
                 "synopsis": {
                     "fieldname": "Synopsis ({applicableField})"
                 },
@@ -249,6 +258,9 @@
                 }
             },
             "plugins": {
+                "indexes": {
+                    "fieldname": "Indexes ({targetLanguage})"
+                },
                 "synopsis": {
                     "fieldname": "Synopsis ({applicableField})"
                 },
@@ -298,6 +310,11 @@
         }
     },
     "plugins": {
+        "indexes": {
+            "path": "../../../plugins/indexes.js",
+            "lang": "en-US",
+            "onByDefault": false
+        },
         "synopsis": {
             "path": "../../../plugins/synopsis.js",
             "onByDefault": false
@@ -388,6 +405,16 @@
             "quran": {
             },
             "aqdas": {
+                "indexes": {
+                  "applicable-fields": {
+                      "Paragraph": {
+                          "targetLanguage": "en-US",
+                          "meta": {
+                              "targetField": "English"
+                          }
+                      }
+                  }
+                },
                 "tooltips": {
                     "applicable-fields": {
                         "English": {

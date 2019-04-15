@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.24.0",
+  "version": "0.25.0",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "tippy-rollup": "rollup -c",
@@ -14,13 +14,14 @@
     "browser-test": "npm run eslint && npm start",
     "start": "opn http://127.0.0.1:8082/test/ && npm run start-no-open",
     "start-no-open": "static -p 8082",
-    "copy": "cp -a ../textbrowser/dist/. node_modules/textbrowser/dist/ && cp -a ../textbrowser/locales/. node_modules/textbrowser/locales/ && cp -a ../textbrowser/server/. node_modules/textbrowser/server/ && chmod -R 755 node_modules/textbrowser/server/"
+    "copy-tb": "cp -a ../textbrowser/dist/. node_modules/textbrowser/dist/ && cp -a ../textbrowser/locales/. node_modules/textbrowser/locales/ && cp -a ../textbrowser/server/. node_modules/textbrowser/server/ && chmod -R 755 node_modules/textbrowser/server/"
   },
   "browserslist": [
     "cover 100%"
   ],
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
+    "bahai-indexes": "^0.2.0",
     "json-refs": "^3.0.13",
     "load-stylesheets": "^0.7.0",
     "node-static": "0.7.11",
