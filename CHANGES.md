@@ -1,5 +1,10 @@
 # bahaiwritings CHANGES
 
+## 0.25.1
+
+- Fix: Ensure indexes plugin does not fail when data is not present for
+    a given verse.
+
 ## 0.25.0
 
 - Enhancement: Add indexes plugin (and apply to Aqdas)

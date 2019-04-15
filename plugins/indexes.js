@@ -11,10 +11,13 @@ export const getCellData = ({
     const targetFieldIdx = fieldInfo.findIndex(({field}) => {
         return field === targetField;
     });
-    let output = `<ul dir="${getLangDir(fieldInfo[targetFieldIdx].fieldLang)}">`;
-    indexJSON[applicableFieldText].forEach(([text]) => {
-        output += `<li>${escapeHTML(text)}</li>`;
-    });
-    output += '</ul>';
+    let output = '';
+    if (indexJSON[applicableFieldText] && indexJSON[applicableFieldText].length) {
+      output += `<ul dir="${getLangDir(fieldInfo[targetFieldIdx].fieldLang)}">`;
+      indexJSON[applicableFieldText].forEach(([text]) => {
+          output += `<li>${escapeHTML(text)}</li>`;
+      });
+      output += '</ul>';
+    }
     return output;
 };
