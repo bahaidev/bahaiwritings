@@ -50,6 +50,10 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
         periodically) parse their texts into JSON here to ensure we
         have the most up-to-date and corrected translations
 
+1.  We might switch deps to `peerDependencies` to avoid need for separate
+    JSON-only branch, though it would require `install-peerdeps bahaiwritings`
+    or such.
+
 1.  Add more testcafe tests
 
 1.  Add a "Powered by TextBrowser" message on non-results pages with
