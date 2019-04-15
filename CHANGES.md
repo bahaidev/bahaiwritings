@@ -1,6 +1,6 @@
 # bahaiwritings CHANGES
 
-## ?
+## 0.24.0
 
 - Build: Add routine for bundling `tippy.js`, as its ESM bundle is
     no longer self-sufficient (needs `popper.js`)
