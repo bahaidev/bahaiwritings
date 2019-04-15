@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.25.1",
+  "version": "0.25.2",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "tippy-rollup": "rollup -c",
