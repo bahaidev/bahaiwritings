@@ -54,6 +54,9 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
     JSON-only branch, though it would require `install-peerdeps bahaiwritings`
     or such.
 
+1.  Upon update completion have service worker read from the (latest
+    section of) `CHANGES.md`
+
 1.  Add more testcafe tests
 
 1.  Add a "Powered by TextBrowser" message on non-results pages with
