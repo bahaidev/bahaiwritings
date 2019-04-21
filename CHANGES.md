@@ -1,8 +1,9 @@
 # bahaiwritings CHANGES
 
-## ?
+## 0.26.0
 
-- npm: Update devDeps
+- Update: Use new SW API for client and server
+- npm: Update devDeps, textbrowser dep.
 
 ## 0.25.2
 
