@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## ?
+
+- npm: Update devDeps, deps: @babel/polyfill, textbrowser, tippy.js
+
 ## 0.26.0
 
 - Update: Use new SW API for client and server

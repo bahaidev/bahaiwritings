@@ -20,23 +20,23 @@
     "cover 100%"
   ],
   "dependencies": {
-    "@babel/polyfill": "^7.4.3",
+    "@babel/polyfill": "^7.4.4",
     "bahai-indexes": "^0.2.0",
     "json-refs": "^3.0.13",
     "load-stylesheets": "^0.7.0",
     "node-static": "0.7.11",
     "opn-cli": "^4.1.0",
     "simple-get-json": "^4.1.0",
-    "textbrowser": "0.31.0",
-    "tippy.js": "^4.2.1"
+    "textbrowser": "0.32.0",
+    "tippy.js": "^4.3.0"
   },
   "devDependencies": {
-    "@mysticatea/eslint-plugin": "^9.0.1",
+    "@mysticatea/eslint-plugin": "^10.0.2",
     "ajv": "6.10.0",
     "axe-testcafe": "^1.1.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
-    "eslint-config-ash-nazg": "^2.0.0",
+    "eslint-config-ash-nazg": "^3.0.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-compat": "^3.1.1",
     "eslint-plugin-eslint-comments": "^3.1.1",
