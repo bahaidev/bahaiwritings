@@ -20,14 +20,15 @@
     "cover 100%"
   ],
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
     "bahai-indexes": "^0.2.0",
+    "core-js-bundle": "^3.0.1",
     "json-refs": "^3.0.13",
     "load-stylesheets": "^0.7.0",
     "node-static": "0.7.11",
     "opn-cli": "^4.1.0",
+    "regenerator-runtime": "^0.13.2",
     "simple-get-json": "^4.1.0",
-    "textbrowser": "0.32.0",
+    "textbrowser": "0.33.0",
     "tippy.js": "^4.3.0"
   },
   "devDependencies": {
@@ -55,7 +56,8 @@
     "remark-lint": "6.0.4",
     "rollup": "^1.10.1",
     "rollup-plugin-node-resolve": "^4.2.3",
-    "testcafe": "^1.1.3"
+    "testcafe": "^1.1.3",
+    "typescript": "^3.4.5"
   },
   "engines": {},
   "repository": {

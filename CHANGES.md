@@ -2,7 +2,8 @@
 
 ## ?
 
-- npm: Update devDeps, deps: @babel/polyfill, textbrowser, tippy.js
+- npm: Update devDeps, deps: textbrowser, tippy.js
+- npm: @babel/polyfill -> regenerator-runtime/core-js
 
 ## 0.26.0
 
