@@ -25,10 +25,10 @@ const minutes = 60 * 1000;
 
 /**
  *
- * @param {Object} args
+ * @param {object} args
  * @param {"log"|"error"|"beginInstall"|"finishedInstall"|"beginActivate"|"finishedActivate"} args.type
  * @param {string} [args.message=type}]
- * @returns {Promise} Resolves to `undefined`
+ * @returns {Promise<void>}
  */
 async function post ({type, message = type}) {
     const clients = await self.clients.matchAll({
@@ -49,7 +49,7 @@ async function post ({type, message = type}) {
 /**
  *
  * @param {string[]} messages
-* @returns {Promise} Resolves to `undefined`
+* @returns {Promise<void>}
  */
 function log (...messages) {
     const message = messages.join(' ');
@@ -70,12 +70,18 @@ function logError (error, ...messages) {
 }
 
 /**
+ * @callback DelayCallback
+ * @param {Float} time
+ * @returns {void}
+ */
+
+/**
  *
- * @param {Function} cb
+ * @param {DelayCallback} cb
  * @param {PositiveInteger} timeout
  * @param {string} errMessage
  * @param {PositiveInteger} [time=0]
- * @returns {Promise} Resolves to `undefined`
+ * @returns {Promise<void>}
  */
 async function tryAndRetry (cb, timeout, errMessage, time = 0) {
     time++;
@@ -95,8 +101,8 @@ async function tryAndRetry (cb, timeout, errMessage, time = 0) {
 
 /**
  *
- * @param {Object} args
- * @returns {Object}
+ * @param {PlainObject} args
+ * @returns {PlainObject}
  * @todo Since some of these reused, move to external file (or
  *         use `setServiceWorkerDefaults`?)
  */
@@ -165,7 +171,7 @@ console.log('sw stylesheets', stylesheets);
 /**
  *
  * @param {PositiveInteger} time
- * @returns {Promise} Resolves to `undefined`
+ * @returns {Promise<void>}
  */
 async function install (time) {
     post({type: 'beginInstall'});
@@ -249,7 +255,7 @@ async function install (time) {
 /**
  *
  * @param {PositiveInteger} time
- * @returns {Promise} Resolves to `undefined`
+ * @returns {Promise<void>}
  */
 async function activate (time) {
     post({type: 'beginActivate'});

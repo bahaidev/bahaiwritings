@@ -35,10 +35,10 @@ const schemaBase = textbrowserBase + 'general-schemas/';
 // const appdataBase = textbrowserBase + 'appdata/';
 
 /**
-* @param {Object} schema The schema object
-* @param {any} data The instance document to validate
-* @param {Array.<string[]>} extraSchemas
-* @param {Object} additionalOptions
+* @param {object} schema The schema object
+* @param {PlainObject} data The instance document to validate
+* @param {string[][]} extraSchemas
+* @param {object} additionalOptions
 * @returns {boolean} Whether valid or not
 */
 function validate (schema, data, extraSchemas = [], additionalOptions = {}) {

@@ -2,7 +2,8 @@
 
 ## ?
 
-- npm: Update devDeps, deps: textbrowser, tippy.js
+- Linting: Update per latest config (esp. jsdoc)
+- npm: Update devDeps, deps: textbrowser, core-js-bundle, tippy.js
 - npm: @babel/polyfill -> regenerator-runtime/core-js
 
 ## 0.26.0

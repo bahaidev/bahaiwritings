@@ -2601,7 +2601,7 @@ Popper.placements = placements;
 Popper.Defaults = Defaults;
 
 /**!
-* tippy.js v4.2.1
+* tippy.js v4.3.1
 * (c) 2017-2019 atomiks
 * MIT License
 */
@@ -2626,7 +2626,7 @@ function _extends$1() {
   return _extends$1.apply(this, arguments);
 }
 
-var version = "4.2.1";
+var version = "4.3.1";
 
 var isBrowser$1 = typeof window !== 'undefined' && typeof document !== 'undefined';
 var ua = isBrowser$1 ? navigator.userAgent : '';
@@ -2669,6 +2669,7 @@ var defaultProps = {
   onMount: function onMount() {},
   onShow: function onShow() {},
   onShown: function onShown() {},
+  onTrigger: function onTrigger() {},
   placement: 'top',
   popperOptions: {},
   role: 'tooltip',
@@ -2680,6 +2681,7 @@ var defaultProps = {
   touch: true,
   touchHold: false,
   trigger: 'mouseenter focus',
+  triggerTarget: null,
   updateDuration: 0,
   wait: null,
   zIndex: 9999
@@ -2704,19 +2706,10 @@ function arrayFrom(value) {
  * Ponyfill for Element.prototype.closest
  */
 
-function closest(element, parentSelector) {
-  return (elementProto.closest || function (selector) {
-    // @ts-ignore
-    var el = this;
-
-    while (el) {
-      if (matches.call(el, selector)) {
-        return el;
-      }
-
-      el = el.parentElement;
-    }
-  }).call(element, parentSelector);
+function closest(element, selector) {
+  return closestCallback(element, function (el) {
+    return matches.call(el, selector);
+  });
 }
 /**
  * Works like Element.prototype.closest, but uses a callback instead
@@ -2730,6 +2723,8 @@ function closestCallback(element, callback) {
 
     element = element.parentElement;
   }
+
+  return null;
 }
 
 // Passive event listener config
@@ -2743,15 +2738,69 @@ var PADDING = 4; // Popper attributes
 var PLACEMENT_ATTRIBUTE = 'x-placement';
 var OUT_OF_BOUNDARIES_ATTRIBUTE = 'x-out-of-boundaries'; // Classes
 
-var IOS_CLASS = 'tippy-iOS';
-var ACTIVE_CLASS = 'tippy-active'; // Selectors
+var IOS_CLASS = "tippy-iOS";
+var ACTIVE_CLASS = "tippy-active";
+var POPPER_CLASS = "tippy-popper";
+var TOOLTIP_CLASS = "tippy-tooltip";
+var CONTENT_CLASS = "tippy-content";
+var BACKDROP_CLASS = "tippy-backdrop";
+var ARROW_CLASS = "tippy-arrow";
+var ROUND_ARROW_CLASS = "tippy-roundarrow"; // Selectors
 
-var POPPER_SELECTOR = '.tippy-popper';
-var TOOLTIP_SELECTOR = '.tippy-tooltip';
-var CONTENT_SELECTOR = '.tippy-content';
-var BACKDROP_SELECTOR = '.tippy-backdrop';
-var ARROW_SELECTOR = '.tippy-arrow';
-var ROUND_ARROW_SELECTOR = '.tippy-roundarrow';
+var POPPER_SELECTOR = ".".concat(POPPER_CLASS);
+var TOOLTIP_SELECTOR = ".".concat(TOOLTIP_CLASS);
+var CONTENT_SELECTOR = ".".concat(CONTENT_CLASS);
+var BACKDROP_SELECTOR = ".".concat(BACKDROP_CLASS);
+var ARROW_SELECTOR = ".".concat(ARROW_CLASS);
+var ROUND_ARROW_SELECTOR = ".".concat(ROUND_ARROW_CLASS);
+
+var isUsingTouch = false;
+function onDocumentTouch() {
+  if (isUsingTouch) {
+    return;
+  }
+
+  isUsingTouch = true;
+
+  if (isIOS) {
+    document.body.classList.add(IOS_CLASS);
+  }
+
+  if (window.performance) {
+    document.addEventListener('mousemove', onDocumentMouseMove);
+  }
+}
+var lastMouseMoveTime = 0;
+function onDocumentMouseMove() {
+  var now = performance.now(); // Chrome 60+ is 1 mousemove per animation frame, use 20ms time difference
+
+  if (now - lastMouseMoveTime < 20) {
+    isUsingTouch = false;
+    document.removeEventListener('mousemove', onDocumentMouseMove);
+
+    if (!isIOS) {
+      document.body.classList.remove(IOS_CLASS);
+    }
+  }
+
+  lastMouseMoveTime = now;
+}
+function onWindowBlur() {
+  var _document = document,
+      activeElement = _document.activeElement;
+
+  if (activeElement && activeElement.blur && activeElement._tippy) {
+    activeElement.blur();
+  }
+}
+/**
+ * Adds the needed global event listeners
+ */
+
+function bindGlobalEventListeners() {
+  document.addEventListener('touchstart', onDocumentTouch, PASSIVE);
+  window.addEventListener('blur', onWindowBlur);
+}
 
 var keys = Object.keys(defaultProps);
 /**
@@ -2788,6 +2837,7 @@ function polyfillElementPrototypeProperties(virtualReference) {
   var polyfills = {
     isVirtual: true,
     attributes: virtualReference.attributes || {},
+    contains: function contains() {},
     setAttribute: function setAttribute(key, value) {
       virtualReference.attributes[key] = value;
     },
@@ -2830,6 +2880,13 @@ function polyfillElementPrototypeProperties(virtualReference) {
 
 function isBareVirtualElement(value) {
   return {}.toString.call(value) === '[object Object]' && !value.addEventListener;
+}
+/**
+ * Determines if the value is a reference element
+ */
+
+function isReferenceElement(value) {
+  return !!value._tippy && !matches.call(value, POPPER_SELECTOR);
 }
 /**
  * Safe .hasOwnProperty check, for prototype-less objects
@@ -2907,11 +2964,18 @@ function includes(a, b) {
   return a.indexOf(b) > -1;
 }
 /**
+ * Determines if the value is a real element
+ */
+
+function isRealElement(value) {
+  return value instanceof Element;
+}
+/**
  * Determines if the value is singular-like
  */
 
 function isSingular(value) {
-  return !!(value && hasOwnProperty(value, 'isVirtual')) || value instanceof Element;
+  return !!(value && hasOwnProperty(value, 'isVirtual')) || isRealElement(value);
 }
 /**
  * Firefox extensions don't allow setting .innerHTML directly, this will trick it
@@ -2924,7 +2988,7 @@ function innerHTML() {
  * Evaluates a function if one, or returns the value
  */
 
-function evaluateValue(value, args) {
+function invokeWithArgsOrReturn(value, args) {
   return typeof value === 'function' ? value.apply(null, args) : value;
 }
 /**
@@ -2942,7 +3006,7 @@ function setFlipModifierEnabled(modifiers, value) {
  */
 
 function canReceiveFocus(element) {
-  return element instanceof Element ? matches.call(element, 'a[href],area[href],button,details,input,textarea,select,iframe,[tabindex]') && !element.hasAttribute('disabled') : true;
+  return isRealElement(element) ? matches.call(element, 'a[href],area[href],button,details,input,textarea,select,iframe,[tabindex]') && !element.hasAttribute('disabled') : true;
 }
 /**
  * Returns a new `div` element
@@ -2980,7 +3044,7 @@ function setVisibilityState(els, state) {
 
 function evaluateProps(reference, props) {
   var out = _extends$1({}, props, {
-    content: evaluateValue(props.content, [reference])
+    content: invokeWithArgsOrReturn(props.content, [reference])
   }, props.ignoreAttributes ? {} : getDataAttributeOptions(reference));
 
   if (out.arrow || isUCBrowser) {
@@ -3006,14 +3070,14 @@ function validateOptions(options, defaultProps) {
  */
 
 function setInnerHTML(element, html) {
-  element[innerHTML()] = html instanceof Element ? html[innerHTML()] : html;
+  element[innerHTML()] = isRealElement(html) ? html[innerHTML()] : html;
 }
 /**
  * Sets the content of a tooltip
  */
 
 function setContent(contentEl, props) {
-  if (props.content instanceof Element) {
+  if (isRealElement(props.content)) {
     setInnerHTML(contentEl, '');
     contentEl.appendChild(props.content);
   } else if (typeof props.content !== 'function') {
@@ -3055,10 +3119,10 @@ function createArrowElement(arrowType) {
   var arrow = div();
 
   if (arrowType === 'round') {
-    arrow.className = 'tippy-roundarrow';
+    arrow.className = ROUND_ARROW_CLASS;
     setInnerHTML(arrow, '<svg viewBox="0 0 18 7" xmlns="http://www.w3.org/2000/svg"><path d="M0 7s2.021-.015 5.253-4.218C6.584 1.051 7.797.007 9 0c1.203-.007 2.416 1.035 3.761 2.782C16.012 7.005 18 7 18 7H0z"/></svg>');
   } else {
-    arrow.className = 'tippy-arrow';
+    arrow.className = ARROW_CLASS;
   }
 
   return arrow;
@@ -3069,7 +3133,7 @@ function createArrowElement(arrowType) {
 
 function createBackdropElement() {
   var backdrop = div();
-  backdrop.className = 'tippy-backdrop';
+  backdrop.className = BACKDROP_CLASS;
   backdrop.setAttribute('data-state', 'hidden');
   return backdrop;
 }
@@ -3129,7 +3193,7 @@ function updateTheme(tooltip, action, theme) {
 
 function createPopperElement(id, props) {
   var popper = div();
-  popper.className = 'tippy-popper';
+  popper.className = POPPER_CLASS;
   popper.id = "tippy-".concat(id);
   popper.style.zIndex = '' + props.zIndex;
 
@@ -3138,14 +3202,14 @@ function createPopperElement(id, props) {
   }
 
   var tooltip = div();
-  tooltip.className = 'tippy-tooltip';
+  tooltip.className = TOOLTIP_CLASS;
   tooltip.style.maxWidth = props.maxWidth + (typeof props.maxWidth === 'number' ? 'px' : '');
   tooltip.setAttribute('data-size', props.size);
   tooltip.setAttribute('data-animation', props.animation);
   tooltip.setAttribute('data-state', 'hidden');
   updateTheme(tooltip, 'add', props.theme);
   var content = div();
-  content.className = 'tippy-content';
+  content.className = CONTENT_CLASS;
   content.setAttribute('data-state', 'hidden');
 
   if (props.interactive) {
@@ -3238,44 +3302,27 @@ function updatePopperElement(popper, prevProps, nextProps) {
   }
 }
 /**
- * Runs the callback after the popper's position has been updated
- * update() is debounced with Promise.resolve() or setTimeout()
- * scheduleUpdate() is update() wrapped in requestAnimationFrame()
- */
-
-function afterPopperPositionUpdates(popperInstance, callback) {
-  var popper = popperInstance.popper,
-      options = popperInstance.options;
-  var onCreate = options.onCreate,
-      onUpdate = options.onUpdate;
-
-  options.onCreate = options.onUpdate = function (data) {
-    reflow(popper);
-    callback();
-
-    if (onUpdate) {
-      onUpdate(data);
-    }
-
-    options.onCreate = onCreate;
-    options.onUpdate = onUpdate;
-  };
-}
-/**
  * Hides all visible poppers on the document
  */
 
 function hideAll() {
   var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      checkHideOnClick = _ref.checkHideOnClick,
-      exclude = _ref.exclude,
+      excludedReferenceOrInstance = _ref.exclude,
       duration = _ref.duration;
 
   arrayFrom(document.querySelectorAll(POPPER_SELECTOR)).forEach(function (popper) {
     var instance = popper._tippy;
 
-    if (instance && (checkHideOnClick ? instance.props.hideOnClick === true : true) && (!exclude || popper !== exclude.popper)) {
-      instance.hide(duration);
+    if (instance) {
+      var isExcluded = false;
+
+      if (excludedReferenceOrInstance) {
+        isExcluded = isReferenceElement(excludedReferenceOrInstance) ? instance.reference === excludedReferenceOrInstance : popper === excludedReferenceOrInstance.popper;
+      }
+
+      if (!isExcluded) {
+        instance.hide(duration);
+      }
     }
   });
 }
@@ -3308,98 +3355,6 @@ function getOffsetDistanceInPx(distance) {
   return -(distance - 10) + 'px';
 }
 
-var isUsingTouch = false;
-function onDocumentTouch() {
-  if (isUsingTouch) {
-    return;
-  }
-
-  isUsingTouch = true;
-
-  if (isIOS) {
-    document.body.classList.add(IOS_CLASS);
-  }
-
-  if (window.performance) {
-    document.addEventListener('mousemove', onDocumentMouseMove);
-  }
-}
-var lastMouseMoveTime = 0;
-function onDocumentMouseMove() {
-  var now = performance.now(); // Chrome 60+ is 1 mousemove per animation frame, use 20ms time difference
-
-  if (now - lastMouseMoveTime < 20) {
-    isUsingTouch = false;
-    document.removeEventListener('mousemove', onDocumentMouseMove);
-
-    if (!isIOS) {
-      document.body.classList.remove(IOS_CLASS);
-    }
-  }
-
-  lastMouseMoveTime = now;
-}
-function onDocumentClick(event) {
-  // Simulated events dispatched on the document
-  if (!(event.target instanceof Element)) {
-    return hideAll();
-  } // Clicked on an interactive popper
-
-
-  var popper = closest(event.target, POPPER_SELECTOR);
-
-  if (popper && popper._tippy && popper._tippy.props.interactive) {
-    return;
-  } // Clicked on a reference
-
-
-  var reference = closestCallback(event.target, function (el) {
-    return el._tippy && el._tippy.reference === el;
-  });
-
-  if (reference) {
-    var instance = reference._tippy;
-
-    if (instance) {
-      var isClickTrigger = includes(instance.props.trigger || '', 'click');
-
-      if (isUsingTouch || isClickTrigger) {
-        return hideAll({
-          exclude: instance,
-          checkHideOnClick: true
-        });
-      }
-
-      if (instance.props.hideOnClick !== true || isClickTrigger) {
-        return;
-      }
-
-      instance.clearDelayTimeouts();
-    }
-  }
-
-  hideAll({
-    checkHideOnClick: true
-  });
-}
-function onWindowBlur() {
-  var _document = document,
-      activeElement = _document.activeElement;
-
-  if (activeElement && activeElement.blur && activeElement._tippy) {
-    activeElement.blur();
-  }
-}
-/**
- * Adds the needed global event listeners
- */
-
-function bindGlobalEventListeners() {
-  document.addEventListener('click', onDocumentClick, true);
-  document.addEventListener('touchstart', onDocumentTouch, PASSIVE);
-  window.addEventListener('blur', onWindowBlur);
-}
-
 var idCounter = 1;
 /**
  * Creates and returns a Tippy object. We're using a closure pattern instead of
@@ -3425,8 +3380,11 @@ function createTippy(reference, collectionProps) {
   var currentParentNode;
   var previousPlacement;
   var wasVisibleDuringPreviousUpdate = false;
+  var hasMountCallbackRun = false;
+  var currentMountCallback;
   var currentTransitionEndListener;
   var listeners = [];
+  var currentComputedPadding;
   var debouncedOnMouseMove = props.interactiveDebounce > 0 ? debounce$1(onMouseMove, props.interactiveDebounce) : onMouseMove;
   /* ======================= 🔑 Public members 🔑 ======================= */
 
@@ -3458,7 +3416,7 @@ function createTippy(reference, collectionProps) {
     // methods
     clearDelayTimeouts: clearDelayTimeouts,
     set: set,
-    setContent: setContent$$1,
+    setContent: setContent,
     show: show,
     hide: hide,
     enable: enable,
@@ -3473,23 +3431,24 @@ function createTippy(reference, collectionProps) {
 
   if (!props.lazy) {
     createPopperInstance();
-    instance.popperInstance.disableEventListeners();
   }
 
   if (props.showOnInit) {
     scheduleShow();
-  } // Ensure the reference element can receive focus (and is not a delegate)
+  } // Ensure the event listeners target can receive focus
 
 
-  if (props.a11y && !props.target && !canReceiveFocus(reference)) {
-    reference.setAttribute('tabindex', '0');
+  if (props.a11y && !props.target && !canReceiveFocus(getEventListenersTarget())) {
+    getEventListenersTarget().setAttribute('tabindex', '0');
   } // Prevent a tippy with a delay from hiding if the cursor left then returned
   // before it started hiding
 
 
   popper.addEventListener('mouseenter', function (event) {
     if (instance.props.interactive && instance.state.isVisible && lastTriggerEventType === 'mouseenter') {
-      scheduleShow(event);
+      // We don't want props.onTrigger() to be called here, since the `event`
+      // object is not related to the reference element
+      scheduleShow(event, true);
     }
   });
   popper.addEventListener('mouseleave', function () {
@@ -3517,6 +3476,30 @@ function createTippy(reference, collectionProps) {
     document.removeEventListener('mousemove', debouncedOnMouseMove);
   }
   /**
+   * Returns correct target used for event listeners
+   */
+
+
+  function getEventListenersTarget() {
+    return instance.props.triggerTarget || reference;
+  }
+  /**
+   * Adds the document click event listener for the instance
+   */
+
+
+  function addDocumentClickListener() {
+    document.addEventListener('click', onDocumentClick, true);
+  }
+  /**
+   * Removes the document click event listener for the instance
+   */
+
+
+  function removeDocumentClickListener() {
+    document.removeEventListener('click', onDocumentClick, true);
+  }
+  /**
    * Returns transitionable inner elements used in show/hide methods
    */
 
@@ -3538,17 +3521,15 @@ function createTippy(reference, collectionProps) {
 
 
   function makeSticky() {
-    setTransitionDuration([instance.popper], isIE$1 ? 0 : instance.props.updateDuration);
+    setTransitionDuration([popper], isIE$1 ? 0 : instance.props.updateDuration);
 
     function updatePosition() {
-      if (instance.popperInstance) {
-        instance.popperInstance.scheduleUpdate();
-      }
+      instance.popperInstance.scheduleUpdate();
 
       if (instance.state.isMounted) {
         requestAnimationFrame(updatePosition);
       } else {
-        setTransitionDuration([instance.popper], 0);
+        setTransitionDuration([popper], 0);
       }
     }
 
@@ -3561,7 +3542,7 @@ function createTippy(reference, collectionProps) {
 
   function onTransitionedOut(duration, callback) {
     onTransitionEnd(duration, function () {
-      if (!instance.state.isVisible && currentParentNode && currentParentNode.contains(instance.popper)) {
+      if (!instance.state.isVisible && currentParentNode && currentParentNode.contains(popper)) {
         callback();
       }
     });
@@ -3609,7 +3590,7 @@ function createTippy(reference, collectionProps) {
 
   function on(eventType, handler) {
     var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-    instance.reference.addEventListener(eventType, handler, options);
+    getEventListenersTarget().addEventListener(eventType, handler, options);
     listeners.push({
       eventType: eventType,
       handler: handler,
@@ -3675,9 +3656,17 @@ function createTippy(reference, collectionProps) {
       var eventType = _ref.eventType,
           handler = _ref.handler,
           options = _ref.options;
-      instance.reference.removeEventListener(eventType, handler, options);
+      getEventListenersTarget().removeEventListener(eventType, handler, options);
     });
     listeners = [];
+  }
+  /**
+   * Returns corrected preventOverflow padding if the instance has an arrow
+   */
+
+
+  function getCorrectedPadding(placement) {
+    return instance.props.arrow ? currentComputedPadding[placement] + (instance.props.arrowType === 'round' ? 18 : 16) : currentComputedPadding[placement];
   }
   /**
    * Positions the virtual reference near the cursor
@@ -3687,49 +3676,72 @@ function createTippy(reference, collectionProps) {
   function positionVirtualReferenceNearCursor(event) {
     var _lastMouseMoveEvent = lastMouseMoveEvent = event,
         clientX = _lastMouseMoveEvent.clientX,
-        clientY = _lastMouseMoveEvent.clientY;
+        clientY = _lastMouseMoveEvent.clientY; // Gets set once popperInstance `onCreate` has been called
 
-    if (!instance.popperInstance) {
+
+    if (!currentComputedPadding) {
       return;
-    } // Ensure virtual reference is padded to prevent tooltip from
-    // overflowing. Maybe Popper.js issue?
-
-
-    var placement = getBasicPlacement(instance.popper);
-    var padding = instance.props.arrow ? PADDING + (instance.props.arrowType === 'round' ? 18 : 16) : PADDING;
-    var isVerticalPlacement = includes(['top', 'bottom'], placement);
-    var isHorizontalPlacement = includes(['left', 'right'], placement); // Top / left boundary
-
-    var x = isVerticalPlacement ? Math.max(padding, clientX) : clientX;
-    var y = isHorizontalPlacement ? Math.max(padding, clientY) : clientY; // Bottom / right boundary
-
-    if (isVerticalPlacement && x > padding) {
-      x = Math.min(clientX, window.innerWidth - padding);
     }
 
-    if (isHorizontalPlacement && y > padding) {
-      y = Math.min(clientY, window.innerHeight - padding);
-    }
-
-    var rect = instance.reference.getBoundingClientRect();
+    var rect = reference.getBoundingClientRect();
     var followCursor = instance.props.followCursor;
     var isHorizontal = followCursor === 'horizontal';
-    var isVertical = followCursor === 'vertical';
-    instance.popperInstance.reference = _extends$1({}, instance.popperInstance.reference, {
-      getBoundingClientRect: function getBoundingClientRect() {
-        return {
-          width: 0,
-          height: 0,
-          top: isHorizontal ? rect.top : y,
-          bottom: isHorizontal ? rect.bottom : y,
-          left: isVertical ? rect.left : x,
-          right: isVertical ? rect.right : x
-        };
-      },
-      clientWidth: 0,
-      clientHeight: 0
+    var isVertical = followCursor === 'vertical'; // Ensure virtual reference is padded to prevent tooltip from overflowing.
+    // Seems to be a Popper.js issue
+
+    var placement = getBasicPlacement(popper);
+    var isVerticalPlacement = includes(['top', 'bottom'], placement);
+    var isHorizontalPlacement = includes(['left', 'right'], placement);
+
+    var padding = _extends$1({}, currentComputedPadding);
+
+    if (isVerticalPlacement) {
+      padding.left = getCorrectedPadding('left');
+      padding.right = getCorrectedPadding('right');
+    }
+
+    if (isHorizontalPlacement) {
+      padding.top = getCorrectedPadding('top');
+      padding.bottom = getCorrectedPadding('bottom');
+    } // TODO: Remove the following later if Popper.js changes/fixes the
+    // behavior
+    // Top / left boundary
+
+
+    var x = isVerticalPlacement ? Math.max(padding.left, clientX) : clientX;
+    var y = isHorizontalPlacement ? Math.max(padding.top, clientY) : clientY; // Bottom / right boundary
+
+    if (isVerticalPlacement && x > padding.right) {
+      x = Math.min(clientX, window.innerWidth - padding.right);
+    }
+
+    if (isHorizontalPlacement && y > padding.bottom) {
+      y = Math.min(clientY, window.innerHeight - padding.bottom);
+    } // If the instance is interactive, avoid updating the position unless it's
+    // over the reference element
+
+
+    var isCursorOverReference = closestCallback(event.target, function (el) {
+      return el === reference;
     });
-    instance.popperInstance.scheduleUpdate();
+
+    if (isCursorOverReference || !instance.props.interactive) {
+      instance.popperInstance.reference = _extends$1({}, instance.popperInstance.reference, {
+        getBoundingClientRect: function getBoundingClientRect() {
+          return {
+            width: 0,
+            height: 0,
+            top: isHorizontal ? rect.top : y,
+            bottom: isHorizontal ? rect.bottom : y,
+            left: isVertical ? rect.left : x,
+            right: isVertical ? rect.right : x
+          };
+        },
+        clientWidth: 0,
+        clientHeight: 0
+      });
+      instance.popperInstance.scheduleUpdate();
+    }
 
     if (followCursor === 'initial' && instance.state.isVisible) {
       removeFollowCursorListener();
@@ -3746,12 +3758,11 @@ function createTippy(reference, collectionProps) {
 
       if (targetEl && !targetEl._tippy) {
         createTippy(targetEl, _extends$1({}, instance.props, {
-          content: evaluateValue(collectionProps.content, [targetEl]),
+          content: invokeWithArgsOrReturn(collectionProps.content, [targetEl]),
           appendTo: collectionProps.appendTo,
           target: '',
           showOnInit: true
         }));
-        scheduleShow(event);
       }
     }
   }
@@ -3787,17 +3798,16 @@ function createTippy(reference, collectionProps) {
 
 
   function onMouseMove(event) {
-    var referenceTheCursorIsOver = closestCallback(event.target, function (el) {
-      return el._tippy;
+    var isCursorOverPopper = closest(event.target, POPPER_SELECTOR) === popper;
+    var isCursorOverReference = closestCallback(event.target, function (el) {
+      return el === reference;
     });
-    var isCursorOverPopper = closest(event.target, POPPER_SELECTOR) === instance.popper;
-    var isCursorOverReference = referenceTheCursorIsOver === instance.reference;
 
     if (isCursorOverPopper || isCursorOverReference) {
       return;
     }
 
-    if (isCursorOutsideInteractiveBorder(getBasicPlacement(instance.popper), instance.popper.getBoundingClientRect(), event, instance.props)) {
+    if (isCursorOutsideInteractiveBorder(getBasicPlacement(popper), popper.getBoundingClientRect(), event, instance.props)) {
       cleanupOldMouseListeners();
       scheduleHide();
     }
@@ -3826,11 +3836,11 @@ function createTippy(reference, collectionProps) {
 
 
   function onBlur(event) {
-    if (event.target !== instance.reference) {
+    if (event.target !== getEventListenersTarget()) {
       return;
     }
 
-    if (instance.props.interactive && event.relatedTarget && instance.popper.contains(event.relatedTarget)) {
+    if (instance.props.interactive && event.relatedTarget && popper.contains(event.relatedTarget)) {
       return;
     }
 
@@ -3867,6 +3877,18 @@ function createTippy(reference, collectionProps) {
     var isTouchEvent = includes(event.type, 'touch');
     var touchHold = instance.props.touchHold;
     return supportsTouch && isUsingTouch && touchHold && !isTouchEvent || isUsingTouch && !touchHold && isTouchEvent;
+  }
+  /**
+   * Runs the mount callback
+   */
+
+
+  function runMountCallback() {
+    if (!hasMountCallbackRun && currentMountCallback) {
+      hasMountCallbackRun = true;
+      reflow(popper);
+      currentMountCallback();
+    }
   }
   /**
    * Creates the popper instance for the instance
@@ -3910,7 +3932,7 @@ function createTippy(reference, collectionProps) {
 
       previousPlacement = data.placement;
       wasVisibleDuringPreviousUpdate = instance.state.isVisible;
-      var basicPlacement = getBasicPlacement(instance.popper);
+      var basicPlacement = getBasicPlacement(popper);
       var styles = tooltip.style; // Account for the `distance` offset
 
       styles.top = styles.bottom = styles.left = styles.right = '';
@@ -3929,9 +3951,11 @@ function createTippy(reference, collectionProps) {
       instance.popperInstance.modifiers.filter(function (m) {
         return m.name === 'preventOverflow';
       })[0].padding = computedPadding;
+      currentComputedPadding = computedPadding;
     }
 
     var config = _extends$1({
+      eventsEnabled: false,
       placement: instance.props.placement
     }, popperOptions, {
       modifiers: _extends$1({}, popperOptions ? popperOptions.modifiers : {}, {
@@ -3954,19 +3978,16 @@ function createTippy(reference, collectionProps) {
           offset: instance.props.offset
         }, getModifier(popperOptions, 'offset'))
       }),
-      // This gets invoked when calling `.set()` and updating a popper
-      // instance dependency, since a new popper instance gets created
       onCreate: function onCreate(data) {
+        runMountCallback();
         applyMutations(data);
 
         if (popperOptions && popperOptions.onCreate) {
           popperOptions.onCreate(data);
         }
       },
-      // This gets invoked on initial create and show()/scroll/resize update.
-      // This is due to `afterPopperPositionUpdates` overwriting onCreate()
-      // with onUpdate()
       onUpdate: function onUpdate(data) {
+        runMountCallback();
         applyMutations(data);
 
         if (popperOptions && popperOptions.onUpdate) {
@@ -3975,22 +3996,22 @@ function createTippy(reference, collectionProps) {
       }
     });
 
-    instance.popperInstance = new Popper(instance.reference, instance.popper, config);
+    instance.popperInstance = new Popper(reference, popper, config);
   }
   /**
-   * Mounts the tooltip to the DOM, callback to show tooltip is run **after**
-   * popper's position has updated
+   * Mounts the tooltip to the DOM
    */
 
 
-  function mount(callback) {
+  function mount() {
+    hasMountCallbackRun = false;
     var shouldEnableListeners = !hasFollowCursorBehavior() && !(instance.props.followCursor === 'initial' && isUsingTouch);
 
     if (!instance.popperInstance) {
       createPopperInstance();
 
-      if (!shouldEnableListeners) {
-        instance.popperInstance.disableEventListeners();
+      if (shouldEnableListeners) {
+        instance.popperInstance.enableEventListeners();
       }
     } else {
       if (!hasFollowCursorBehavior()) {
@@ -4007,7 +4028,7 @@ function createTippy(reference, collectionProps) {
     // Update the reference back to the real DOM element
 
 
-    instance.popperInstance.reference = instance.reference;
+    instance.popperInstance.reference = reference;
     var arrow = instance.popperChildren.arrow;
 
     if (hasFollowCursorBehavior()) {
@@ -4031,12 +4052,11 @@ function createTippy(reference, collectionProps) {
       }
     }
 
-    afterPopperPositionUpdates(instance.popperInstance, callback);
     var appendTo = instance.props.appendTo;
-    currentParentNode = appendTo === 'parent' ? instance.reference.parentNode : evaluateValue(appendTo, [instance.reference]);
+    currentParentNode = appendTo === 'parent' ? reference.parentNode : invokeWithArgsOrReturn(appendTo, [reference]);
 
-    if (!currentParentNode.contains(instance.popper)) {
-      currentParentNode.appendChild(instance.popper);
+    if (!currentParentNode.contains(popper)) {
+      currentParentNode.appendChild(popper);
       instance.props.onMount(instance);
       instance.state.isMounted = true;
     }
@@ -4046,7 +4066,7 @@ function createTippy(reference, collectionProps) {
    */
 
 
-  function scheduleShow(event) {
+  function scheduleShow(event, shouldAvoidCallingOnTrigger) {
     clearDelayTimeouts();
 
     if (instance.state.isVisible) {
@@ -4060,6 +4080,10 @@ function createTippy(reference, collectionProps) {
 
     isScheduledToShow = true;
 
+    if (event && !shouldAvoidCallingOnTrigger) {
+      instance.props.onTrigger(instance, event);
+    }
+
     if (instance.props.wait) {
       return instance.props.wait(instance, event);
     } // If the tooltip has a delay, we need to be listening to the mousemove as
@@ -4070,9 +4094,14 @@ function createTippy(reference, collectionProps) {
 
 
     if (hasFollowCursorBehavior() && !instance.state.isMounted) {
+      if (!instance.popperInstance) {
+        createPopperInstance();
+      }
+
       document.addEventListener('mousemove', positionVirtualReferenceNearCursor);
     }
 
+    addDocumentClickListener();
     var delay = getValue(instance.props.delay, 0, defaultProps.delay);
 
     if (delay) {
@@ -4112,6 +4141,34 @@ function createTippy(reference, collectionProps) {
       });
     }
   }
+  /**
+   * Listener to handle clicks on the document to determine if the
+   * instance should hide
+   */
+
+
+  function onDocumentClick(event) {
+    // Clicked on interactive popper
+    if (instance.props.interactive && popper.contains(event.target)) {
+      return;
+    } // Clicked on the event listeners target
+
+
+    if (getEventListenersTarget().contains(event.target)) {
+      if (isUsingTouch) {
+        return;
+      }
+
+      if (instance.state.isVisible && includes(instance.props.trigger, 'click')) {
+        return;
+      }
+    }
+
+    if (instance.props.hideOnClick === true) {
+      clearDelayTimeouts();
+      hide();
+    }
+  }
   /* ======================= 🔑 Public methods 🔑 ======================= */
 
   /**
@@ -4149,42 +4206,35 @@ function createTippy(reference, collectionProps) {
     // Backwards-compatible after TypeScript change
     options = options || {};
     validateOptions(options, defaultProps);
+    removeTriggersFromReference();
     var prevProps = instance.props;
-    var nextProps = evaluateProps(instance.reference, _extends$1({}, instance.props, options, {
+    var nextProps = evaluateProps(reference, _extends$1({}, instance.props, options, {
       ignoreAttributes: true
     }));
     nextProps.ignoreAttributes = hasOwnProperty(options, 'ignoreAttributes') ? options.ignoreAttributes || false : prevProps.ignoreAttributes;
     instance.props = nextProps;
-
-    if (hasOwnProperty(options, 'trigger') || hasOwnProperty(options, 'touchHold')) {
-      removeTriggersFromReference();
-      addTriggersToReference();
-    }
-
-    if (hasOwnProperty(options, 'interactiveDebounce')) {
-      cleanupOldMouseListeners();
-      debouncedOnMouseMove = debounce$1(onMouseMove, options.interactiveDebounce || 0);
-    }
-
-    updatePopperElement(instance.popper, prevProps, nextProps);
-    instance.popperChildren = getChildren(instance.popper);
+    addTriggersToReference();
+    cleanupOldMouseListeners();
+    debouncedOnMouseMove = debounce$1(onMouseMove, options.interactiveDebounce || 0);
+    updatePopperElement(popper, prevProps, nextProps);
+    instance.popperChildren = getChildren(popper);
 
     if (instance.popperInstance) {
-      instance.popperInstance.update();
-
       if (POPPER_INSTANCE_DEPENDENCIES.some(function (prop) {
         return hasOwnProperty(options, prop) && options[prop] !== prevProps[prop];
       })) {
         instance.popperInstance.destroy();
         createPopperInstance();
 
-        if (!instance.state.isVisible) {
-          instance.popperInstance.disableEventListeners();
+        if (instance.state.isVisible) {
+          instance.popperInstance.enableEventListeners();
         }
 
         if (instance.props.followCursor && lastMouseMoveEvent) {
           positionVirtualReferenceNearCursor(lastMouseMoveEvent);
         }
+      } else {
+        instance.popperInstance.update();
       }
     }
   }
@@ -4193,7 +4243,7 @@ function createTippy(reference, collectionProps) {
    */
 
 
-  function setContent$$1(content) {
+  function setContent(content) {
     set({
       content: content
     });
@@ -4213,7 +4263,7 @@ function createTippy(reference, collectionProps) {
     // Using a wrapper element (i.e. <span>) is recommended.
 
 
-    if (instance.reference.hasAttribute('disabled')) {
+    if (getEventListenersTarget().hasAttribute('disabled')) {
       return;
     }
 
@@ -4221,17 +4271,19 @@ function createTippy(reference, collectionProps) {
       return;
     }
 
-    instance.popper.style.visibility = 'visible';
+    addDocumentClickListener();
+    popper.style.visibility = 'visible';
     instance.state.isVisible = true;
 
     if (instance.props.interactive) {
-      instance.reference.classList.add(ACTIVE_CLASS);
-    }
+      getEventListenersTarget().classList.add(ACTIVE_CLASS);
+    } // Prevent a transition if the popper is at the opposite placement
 
-    var transitionableElements = getTransitionableElements(); // Prevent a transition if the popper is at the opposite placement
 
-    setTransitionDuration(transitionableElements.concat(instance.popper), 0);
-    mount(function () {
+    var transitionableElements = getTransitionableElements();
+    setTransitionDuration(transitionableElements.concat(popper), 0);
+
+    currentMountCallback = function currentMountCallback() {
       if (!instance.state.isVisible) {
         return;
       } // Double update will apply correct mutations
@@ -4249,18 +4301,20 @@ function createTippy(reference, collectionProps) {
         makeSticky();
       }
 
-      setTransitionDuration([instance.popper], props.updateDuration);
+      setTransitionDuration([popper], instance.props.updateDuration);
       setTransitionDuration(transitionableElements, duration);
       setVisibilityState(transitionableElements, 'visible');
       onTransitionedIn(duration, function () {
         if (instance.props.aria) {
-          instance.reference.setAttribute("aria-".concat(instance.props.aria), instance.popper.id);
+          getEventListenersTarget().setAttribute("aria-".concat(instance.props.aria), popper.id);
         }
 
         instance.props.onShown(instance);
         instance.state.isShown = true;
       });
-    });
+    };
+
+    mount();
   }
   /**
    * Hides the tooltip
@@ -4278,13 +4332,14 @@ function createTippy(reference, collectionProps) {
       return;
     }
 
-    instance.popper.style.visibility = 'hidden';
+    removeDocumentClickListener();
+    popper.style.visibility = 'hidden';
     instance.state.isVisible = false;
     instance.state.isShown = false;
     wasVisibleDuringPreviousUpdate = false;
 
     if (instance.props.interactive) {
-      instance.reference.classList.remove(ACTIVE_CLASS);
+      getEventListenersTarget().classList.remove(ACTIVE_CLASS);
     }
 
     var transitionableElements = getTransitionableElements();
@@ -4296,12 +4351,12 @@ function createTippy(reference, collectionProps) {
       }
 
       if (instance.props.aria) {
-        instance.reference.removeAttribute("aria-".concat(instance.props.aria));
+        getEventListenersTarget().removeAttribute("aria-".concat(instance.props.aria));
       }
 
       instance.popperInstance.disableEventListeners();
       instance.popperInstance.options.placement = instance.props.placement;
-      currentParentNode.removeChild(instance.popper);
+      currentParentNode.removeChild(popper);
       instance.props.onHidden(instance);
       instance.state.isMounted = false;
     });
@@ -4323,10 +4378,11 @@ function createTippy(reference, collectionProps) {
     }
 
     removeTriggersFromReference();
-    delete instance.reference._tippy;
+    delete reference._tippy;
+    var target = instance.props.target;
 
-    if (instance.props.target && destroyTargetInstances) {
-      arrayFrom(instance.reference.querySelectorAll(instance.props.target)).forEach(function (child) {
+    if (target && destroyTargetInstances && isRealElement(reference)) {
+      arrayFrom(reference.querySelectorAll(target)).forEach(function (child) {
         if (child._tippy) {
           child._tippy.destroy();
         }
@@ -4345,7 +4401,6 @@ function createTippy(reference, collectionProps) {
  * Groups an array of instances by taking control of their props during
  * certain lifecycles.
  */
-
 function group(instances) {
   var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
       _ref$delay = _ref.delay,
@@ -4353,17 +4408,13 @@ function group(instances) {
       _ref$duration = _ref.duration,
       duration = _ref$duration === void 0 ? 0 : _ref$duration;
 
-  // Already grouped. Cannot group instances more than once (yet) or stale lifecycle
-  // closures will be invoked, causing a stack overflow
-  if (instances.some(function (instance) {
-    return hasOwnProperty(instance, '_originalProps');
-  })) {
-    return;
-  }
-
   var isAnyTippyOpen = false;
   instances.forEach(function (instance) {
-    instance._originalProps = _extends$1({}, instance.props);
+    if (instance._originalProps) {
+      instance.set(instance._originalProps);
+    } else {
+      instance._originalProps = _extends$1({}, instance.props);
+    }
   });
 
   function setIsAnyTippyOpen(value) {
@@ -4378,7 +4429,10 @@ function group(instances) {
       instance.set({
         duration: duration
       });
-      instance.hide();
+
+      if (instance.state.isVisible) {
+        instance.hide();
+      }
     });
     setIsAnyTippyOpen(true);
   }
@@ -4493,6 +4547,7 @@ function injectCSS(css) {
     var style = document.createElement('style');
     style.type = 'text/css';
     style.textContent = css;
+    style.setAttribute('data-tippy-stylesheet', '');
     var head = document.head;
     var firstChild = head.firstChild;
 
