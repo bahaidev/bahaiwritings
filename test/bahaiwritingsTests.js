@@ -1,6 +1,6 @@
-/* globals Promise, module, exports, require */
+/* eslint-env node, mocha */
 'use strict';
-var JsonRefs, jsonpatch, Ajv, getJSON, __dirname, path; // eslint-disable-line no-var
+var JsonRefs, chai, jsonpatch, Ajv, assert, getJSON, __dirname, path; // eslint-disable-line no-var
 
 /**
  *
@@ -17,9 +17,11 @@ if (typeof exports !== 'undefined') {
     JsonRefs = require('json-refs');
     jsonpatch = require('fast-json-patch');
     getJSON = require('simple-get-json');
+    assert = require('assert');
     path = require('path');
     /* eslint-enable global-require */
 } else {
+    ({assert} = chai);
     path = {
         join: (...args) => args.join('')
     };
@@ -59,9 +61,9 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
     return valid;
 }
 
-const bahaiwritingsTests = {
-    async 'files.json test' (test) {
-        test.expect(9);
+describe('bahaiwritings Tests', function () {
+    it('files.json test', async function () {
+        this.timeout(20000);
         const extraSchemaFiles = [
             'array-of-arrays.jsonschema',
             'locale.jsonschema',
@@ -82,19 +84,19 @@ const bahaiwritingsTests = {
         ] = results;
         const extraSchemas = extraSchemaObjects.map((eso, i) => [extraSchemaFiles[i], eso]);
         const valid = validate(schema, data, extraSchemas);
-        test.strictEqual(valid, true);
+        assert.strictEqual(valid, true);
 
         const data2 = cloneJSON(data);
         const valid2 = validate(schema, data2, extraSchemas, {
             removeAdditional: 'all',
             validateSchema: false
         });
-        test.strictEqual(valid2, true);
+        assert.strictEqual(valid2, true);
         const diff = jsonpatch.compare(data, data2).filter((diff) => {
             // Apparently need to filter due to limitations per https://github.com/epoberezkin/ajv#filtering-data
             return !diff.path || (diff.op === 'remove' && !(/\/additionalItems$/u).test(diff.path));
         });
-        test.strictEqual(diff.length, 0);
+        assert.strictEqual(diff.length, 0);
 
         const schemas = results.slice(2);
         schemas.forEach((schema, i) => {
@@ -108,12 +110,11 @@ const bahaiwritingsTests = {
                 validateSchema: false
             });
             const diff = jsonpatch.compare(schema, schema2);
-            test.strictEqual(diff.length, 0);
+            assert.strictEqual(diff.length, 0);
         });
-
-        test.done();
-    },
-    async 'Specific data files' (test) {
+    });
+    it('Specific data files', async function () {
+        this.timeout(50000);
         const specificFiles = [
             'aqdas.json',
             'Bible.json',
@@ -133,7 +134,6 @@ const bahaiwritingsTests = {
         const tableFiles = [
             'table.jsonschema'
         ];
-        test.expect((specificFiles.length + otherSpecificFiles.length) * 3);
 
         // Todo: We could also check that the `table` and `fields`-pointed
         //   metadata exists and is valid
@@ -167,24 +167,23 @@ const bahaiwritingsTests = {
             dataFiles.forEach(({resolved: {data}}, i) => {
                 const schema = schemaFiles[i];
                 const valid = validate(schema, data, extraSchemas);
-                test.strictEqual(valid, true);
+                assert.strictEqual(valid, true);
 
                 const data2 = cloneJSON(data);
                 const valid2 = validate(schema, data2, extraSchemas, {
                     removeAdditional: 'all',
                     validateSchema: false
                 });
-                test.strictEqual(valid2, true);
+                assert.strictEqual(valid2, true);
                 const diff = jsonpatch.compare(data, data2);
-                test.strictEqual(diff.length, 0);
+                assert.strictEqual(diff.length, 0);
             });
         };
         testSchemaFiles(dataFiles, schemaFiles);
         testSchemaFiles(otherDataFiles, otherSchemaFiles);
-        test.done();
-    },
-    async 'site.json test' (test) {
-        test.expect(9);
+    });
+    it('site.json test', async function () {
+        this.timeout(20000);
         const results = await Promise.all([
             JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'site.json')),
             getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-07-schema.json')),
@@ -194,36 +193,30 @@ const bahaiwritingsTests = {
         const [{resolved: data}, jsonSchema, schema, localeSchema] = results;
         const extraSchemas = [['locale.jsonschema', localeSchema]];
         const valid = validate(schema, data, extraSchemas);
-        test.strictEqual(valid, true);
+        assert.strictEqual(valid, true);
 
         const data2 = cloneJSON(data);
         const valid2 = validate(schema, data2, extraSchemas, {
             removeAdditional: 'all',
             validateSchema: false
         });
-        test.strictEqual(valid2, true);
+        assert.strictEqual(valid2, true);
         const diff = jsonpatch.compare(data, data2);
-        test.strictEqual(diff.length, 0);
+        assert.strictEqual(diff.length, 0);
 
         const schemas = results.slice(2);
         schemas.forEach((schema, i) => {
             const valid = validate(jsonSchema, schema);
-            test.strictEqual(valid, true);
+            assert.strictEqual(valid, true);
 
             const schema2 = cloneJSON(schema);
             const valid2 = validate(jsonSchema, schema2, extraSchemas, {
                 removeAdditional: 'all',
                 validateSchema: false
             });
-            test.strictEqual(valid2, true);
+            assert.strictEqual(valid2, true);
             const diff = jsonpatch.compare(schema, schema2);
-            test.strictEqual(diff.length, 0);
+            assert.strictEqual(diff.length, 0);
         });
-
-        test.done();
-    }
-};
-
-if (typeof exports !== 'undefined') {
-    module.exports = bahaiwritingsTests;
-}
+    });
+});
