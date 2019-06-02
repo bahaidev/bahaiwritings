@@ -3,7 +3,10 @@
 ## ?
 
 - Linting: Update per latest config (esp. jsdoc)
+- Testing: Switch from end-of-lifed nodeunit to mocha+chai
+- Testing fix: Test polyfill paths
 - npm: Update devDeps, deps: textbrowser, core-js-bundle, tippy.js
+- npm: Update opn-cli -> open-cli
 - npm: @babel/polyfill -> regenerator-runtime/core-js
 
 ## 0.26.0
