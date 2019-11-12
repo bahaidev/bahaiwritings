@@ -4,20 +4,20 @@ import {escapeHTML} from '../node_modules/textbrowser/resources/utils/sanitize.j
 export const escapeColumn = false;
 
 export const getCellData = ({
-    applicableFieldText, fieldLang,
-    getLangDir, fieldInfo, metaApplicableField
+  applicableFieldText, fieldLang,
+  getLangDir, fieldInfo, metaApplicableField
 }) => {
-    const {targetField} = metaApplicableField;
-    const targetFieldIdx = fieldInfo.findIndex(({field}) => {
-        return field === targetField;
+  const {targetField} = metaApplicableField;
+  const targetFieldIdx = fieldInfo.findIndex(({field}) => {
+    return field === targetField;
+  });
+  let output = '';
+  if (indexJSON[applicableFieldText] && indexJSON[applicableFieldText].length) {
+    output += `<ul dir="${getLangDir(fieldInfo[targetFieldIdx].fieldLang)}">`;
+    indexJSON[applicableFieldText].forEach(([text]) => {
+      output += `<li>${escapeHTML(text)}</li>`;
     });
-    let output = '';
-    if (indexJSON[applicableFieldText] && indexJSON[applicableFieldText].length) {
-        output += `<ul dir="${getLangDir(fieldInfo[targetFieldIdx].fieldLang)}">`;
-        indexJSON[applicableFieldText].forEach(([text]) => {
-            output += `<li>${escapeHTML(text)}</li>`;
-        });
-        output += '</ul>';
-    }
-    return output || '<span></span>';
+    output += '</ul>';
+  }
+  return output || '<span></span>';
 };

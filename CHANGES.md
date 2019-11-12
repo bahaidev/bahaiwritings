@@ -2,7 +2,9 @@
 
 ## ?
 
-- Linting: Update per latest config (esp. jsdoc)
+- Linting (ESLint): Update per latest config (esp. jsdoc)
+- Linting (ESLint): Update and move to 2 sp.; apply to MD, HTML JS
+- Maintenance: Add `.editorconfig`
 - Testing: Switch from end-of-lifed nodeunit to mocha+chai
 - Testing fix: Test polyfill paths
 - npm: Update devDeps, deps: textbrowser, core-js-bundle, tippy.js

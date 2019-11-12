@@ -16,22 +16,22 @@ document.domain = params.get('domain') || document.domain; // Let this be iframe
 
 (async () => {
 const tb = new TextBrowser({
-    // languages: 'node_modules/textbrowser/appdata/languages.json', // Default
-    // serviceWorkerPath: 'sw.js', // Default
-    // site: 'site.json', // Default
-    // localizeParamNames: true, // Not well-tested
-    // hideFormattingSection: true,
-    // requestPersistentStorage: false,
-    // showEmptyInterlinear: false,
-    // showTitleOnSingleInterlinear: false,
-    files: 'files.json',
-    stylesheets: ['@builtin', 'resources/user.css'],
-    namespace: 'bahaiwritings',
-    allowPlugins: true,
-    // dynamicBasePath: '',
-    trustFormatHTML: true,
-    skipIndexedDB: false,
-    interlinearSeparator: '<hr />' // Defaults to `<br /><br />`
+  // languages: 'node_modules/textbrowser/appdata/languages.json', // Default
+  // serviceWorkerPath: 'sw.js', // Default
+  // site: 'site.json', // Default
+  // localizeParamNames: true, // Not well-tested
+  // hideFormattingSection: true,
+  // requestPersistentStorage: false,
+  // showEmptyInterlinear: false,
+  // showTitleOnSingleInterlinear: false,
+  files: 'files.json',
+  stylesheets: ['@builtin', 'resources/user.css'],
+  namespace: 'bahaiwritings',
+  allowPlugins: true,
+  // dynamicBasePath: '',
+  trustFormatHTML: true,
+  skipIndexedDB: false,
+  interlinearSeparator: '<hr />' // Defaults to `<br /><br />`
 });
 await tb.init();
 // Stylesheets have loaded and init process begun/completing

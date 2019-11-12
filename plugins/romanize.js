@@ -21,8 +21,8 @@ Hidden Words:
 
 */
 export const getCellData = function ({
-    applicableFieldText, tr,
-    fieldLang, meta
+  applicableFieldText, tr,
+  fieldLang, meta
 }) {
-    // console.log('plugin');
+  // console.log('plugin');
 };
