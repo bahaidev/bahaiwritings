@@ -1,6 +1,6 @@
 # bahaiwritings CHANGES
 
-## ?
+## 0.27.0
 
 - Linting (ESLint): Update per latest config (esp. jsdoc)
 - Linting (ESLint): Update and move to 2 sp.; apply to MD, HTML JS
