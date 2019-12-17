@@ -1,5 +1,10 @@
 # bahaiwritings CHANGES
 
+## ?
+
+- npm: Switch to non-deprecated `@rollup/plugin-node-resolve`
+- npm: Update `core-js` and `tippy` deps and devDeps (and `tippy` copy)
+
 ## 0.27.0
 
 - Linting (ESLint): Update per latest config (esp. jsdoc)
