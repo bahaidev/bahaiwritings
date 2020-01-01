@@ -2,6 +2,7 @@
 
 ## ?
 
+- Linting (ESLint): Latest as per ash-nazg
 - npm: Switch to non-deprecated `@rollup/plugin-node-resolve`
 - npm: Update `core-js` and `tippy` deps and devDeps (and `tippy` copy)
 

@@ -2614,7 +2614,7 @@ Popper.placements = placements;
 Popper.Defaults = Defaults;
 
 /**!
-* tippy.js v5.1.2
+* tippy.js v5.1.3
 * (c) 2017-2019 atomiks
 * MIT License
 */
@@ -2637,7 +2637,7 @@ function _extends$1() {
   return _extends$1.apply(this, arguments);
 }
 
-var version = "5.1.2";
+var version = "5.1.3";
 
 /**
  * Triggers reflow
@@ -2999,12 +2999,14 @@ function warnWhen(condition, message) {
   }
 }
 /**
- * Helpful wrapper around thrown errors
+ * Helpful wrapper around `console.error()`
  */
 
-function throwErrorWhen(condition, message) {
+function errorWhen(condition, message) {
   if (condition) {
-    throw new Error(clean(message));
+    var _console2;
+
+    (_console2 = console).error.apply(_console2, getFormattedMessage(message));
   }
 }
 /**
@@ -3014,13 +3016,18 @@ function throwErrorWhen(condition, message) {
 function validateTargets(targets) {
   var didPassFalsyValue = !targets;
   var didPassPlainObject = Object.prototype.toString.call(targets) === '[object Object]' && !targets.addEventListener;
-  throwErrorWhen(didPassFalsyValue, "tippy() was passed `" + targets + "` as its targets (first) argument.\n\n    Valid types are: String, Element, Element[], or NodeList.");
-  throwErrorWhen(didPassPlainObject, "tippy() was passed a plain object which is no longer supported as an\n    argument.\n    \n    See https://atomiks.github.io/tippyjs/misc/#custom-position");
+  errorWhen(didPassFalsyValue, ['tippy() was passed', '`' + String(targets) + '`', 'as its targets (first) argument. Valid types are: String, Element, Element[],', 'or NodeList.'].join(' '));
+  errorWhen(didPassPlainObject, ['tippy() was passed a plain object which is no longer supported as an argument.', 'See: https://atomiks.github.io/tippyjs/misc/#custom-position'].join(' '));
 }
 
-var defaultProps = {
-  allowHTML: true,
+var pluginProps = {
   animateFill: false,
+  followCursor: false,
+  inlinePositioning: false,
+  sticky: false
+};
+var defaultProps = _extends$1({
+  allowHTML: true,
   animation: 'fade',
   appendTo: function appendTo() {
     return document.body;
@@ -3035,10 +3042,8 @@ var defaultProps = {
   flip: true,
   flipBehavior: 'flip',
   flipOnUpdate: false,
-  followCursor: false,
   hideOnClick: true,
   ignoreAttributes: false,
-  inlinePositioning: false,
   inertia: false,
   interactive: false,
   interactiveBorder: 2,
@@ -3063,14 +3068,13 @@ var defaultProps = {
   popperOptions: {},
   role: 'tooltip',
   showOnCreate: false,
-  sticky: false,
   theme: '',
   touch: true,
   trigger: 'mouseenter focus',
   triggerTarget: null,
   updateDuration: 0,
   zIndex: 9999
-};
+}, pluginProps);
 var defaultKeys = Object.keys(defaultProps);
 /**
  * If the setProps() method encounters one of these, the popperInstance must be
@@ -3096,24 +3100,26 @@ var setDefaultProps = function setDefaultProps(partialProps) {
  * Returns an extended props object including plugin props
  */
 
-function getExtendedProps(props) {
-  return _extends$1({}, props, {}, props.plugins.reduce(function (acc, plugin) {
+function getExtendedPassedProps(passedProps) {
+  var plugins = passedProps.plugins || [];
+  var pluginProps = plugins.reduce(function (acc, plugin) {
     var name = plugin.name,
         defaultValue = plugin.defaultValue;
 
     if (name) {
-      acc[name] = props[name] !== undefined ? props[name] : defaultValue;
+      acc[name] = passedProps[name] !== undefined ? passedProps[name] : defaultValue;
     }
 
     return acc;
-  }, {}));
+  }, {});
+  return _extends$1({}, passedProps, {}, pluginProps);
 }
 /**
  * Returns an object of optional props from data-tippy-* attributes
  */
 
 function getDataAttributeProps(reference, plugins) {
-  var propKeys = plugins ? Object.keys(getExtendedProps(_extends$1({}, defaultProps, {
+  var propKeys = plugins ? Object.keys(getExtendedPassedProps(_extends$1({}, defaultProps, {
     plugins: plugins
   }))) : defaultKeys;
   var props = propKeys.reduce(function (acc, key) {
@@ -3181,15 +3187,15 @@ function validateProps(partialProps, plugins) {
       }).length === 0;
     }
 
-    warnWhen(prop === 'target', "The `target` prop was removed in v5 and replaced with the delegate()\n      addon in order to conserve bundle size.\n      \n      See: https://atomiks.github.io/tippyjs/addons/#event-delegation");
-    warnWhen(prop === 'a11y', "The `a11y` prop was removed in v5. Make sure the element you are giving\n      a tippy to is natively focusable, such as <button> or <input>, not <div>\n      or <span>.");
-    warnWhen(prop === 'showOnInit', "The `showOnInit` prop was renamed to `showOnCreate` in v5.");
-    warnWhen(prop === 'arrowType', "The `arrowType` prop was removed in v5 in favor of overloading the\n      `arrow` prop.\n\n      \"round\" string was replaced with importing the string from the package.\n\n      * import {roundArrow} from 'tippy.js'; (ESM version)\n      * const {roundArrow} = tippy; (IIFE CDN version)\n\n      Before: {arrow: true, arrowType: \"round\"}\n      After: {arrow: roundArrow}");
-    warnWhen(prop === 'touchHold', "The `touchHold` prop was removed in v5 in favor of overloading the\n      `touch` prop.\n      \n      Before: {touchHold: true}\n      After: {touch: \"hold\"}");
-    warnWhen(prop === 'size', "The `size` prop was removed in v5. Instead, use a theme that specifies\n      CSS padding and font-size properties.");
-    warnWhen(prop === 'theme' && value === 'google', "The included theme \"google\" was renamed to \"material\" in v5.");
-    warnWhen(didSpecifyPlacementInPopperOptions, "Specifying placement in `popperOptions` is not supported. Use the\n      base-level `placement` prop instead.\n      \n      Before: {popperOptions: {placement: \"bottom\"}}\n      After: {placement: \"bottom\"}");
-    warnWhen(didPassUnknownProp, "`" + prop + "` is not a valid prop. You may have spelled it incorrectly,\n      or if it's a plugin, forgot to pass it in an array as props.plugins.\n\n      In v5, the following props were turned into plugins:\n\n      * animateFill\n      * followCursor\n      * sticky\n\n      All props: https://atomiks.github.io/tippyjs/all-props/\n      Plugins: https://atomiks.github.io/tippyjs/plugins/");
+    warnWhen(prop === 'target', ['The `target` prop was removed in v5 and replaced with the delegate() addon', 'in order to conserve bundle size.', 'See: https://atomiks.github.io/tippyjs/addons/#event-delegation'].join(' '));
+    warnWhen(prop === 'a11y', ['The `a11y` prop was removed in v5. Make sure the element you are giving a', 'tippy to is natively focusable, such as <button> or <input>, not <div>', 'or <span>.'].join(' '));
+    warnWhen(prop === 'showOnInit', 'The `showOnInit` prop was renamed to `showOnCreate` in v5.');
+    warnWhen(prop === 'arrowType', ['The `arrowType` prop was removed in v5 in favor of overloading the `arrow`', 'prop.', '\n\n', '"round" string was replaced with importing the string from the package.', '\n\n', "* import {roundArrow} from 'tippy.js'; (ESM version)\n", '* const {roundArrow} = tippy; (IIFE CDN version)', '\n\n', 'Before: {arrow: true, arrowType: "round"}\n', 'After: {arrow: roundArrow}`'].join(' '));
+    warnWhen(prop === 'touchHold', ['The `touchHold` prop was removed in v5 in favor of overloading the `touch`', 'prop.', '\n\n', 'Before: {touchHold: true}\n', 'After: {touch: "hold"}'].join(' '));
+    warnWhen(prop === 'size', ['The `size` prop was removed in v5. Instead, use a theme that specifies', 'CSS padding and font-size properties.'].join(' '));
+    warnWhen(prop === 'theme' && value === 'google', 'The included theme "google" was renamed to "material" in v5.');
+    warnWhen(didSpecifyPlacementInPopperOptions, ['Specifying placement in `popperOptions` is not supported. Use the base-level', '`placement` prop instead.', '\n\n', 'Before: {popperOptions: {placement: "bottom"}}\n', 'After: {placement: "bottom"}'].join(' '));
+    warnWhen(didPassUnknownProp, ["`" + prop + "`", "is not a valid prop. You may have spelled it incorrectly, or if it's a", 'plugin, forgot to pass it in an array as props.plugins.', '\n\n', 'In v5, the following props were turned into plugins:', '\n\n', '* animateFill\n', '* followCursor\n', '* sticky', '\n\n', 'All props: https://atomiks.github.io/tippyjs/all-props/\n', 'Plugins: https://atomiks.github.io/tippyjs/plugins/'].join(' '));
   });
 }
 
@@ -3521,8 +3527,8 @@ var mountedInstances = [];
  * prefixed with `_`.
  */
 
-function createTippy(reference, collectionProps) {
-  var props = getExtendedProps(evaluateProps(reference, collectionProps)); // If the reference shouldn't have multiple tippys, return null early
+function createTippy(reference, passedProps) {
+  var props = evaluateProps(reference, _extends$1({}, defaultProps, {}, getExtendedPassedProps(passedProps))); // If the reference shouldn't have multiple tippys, return null early
 
   if (!props.multiple && reference._tippy) {
     return null;
@@ -3534,6 +3540,7 @@ function createTippy(reference, collectionProps) {
   var hideTimeout;
   var scheduleHideAnimationFrame;
   var isBeingDestroyed = false;
+  var isVisibleFromClick = false;
   var didHideDueToDocumentMouseDown = false;
   var popperUpdates = 0;
   var lastTriggerEvent;
@@ -3734,6 +3741,7 @@ function createTippy(reference, collectionProps) {
     }
 
     if (instance.props.hideOnClick === true) {
+      isVisibleFromClick = false;
       instance.clearDelayTimeouts();
       instance.hide(); // `mousedown` event is fired right before `focus` if pressing the
       // currentTarget. This lets a tippy with `focus` trigger know that it
@@ -3774,7 +3782,7 @@ function createTippy(reference, collectionProps) {
 
   function onTransitionEnd(duration, callback) {
     function listener(event) {
-      if (event.target === tooltip) {
+      if (event.target === tooltip && event.propertyName === 'visibility') {
         updateTransitionEndListener(tooltip, 'remove', listener);
         callback();
       }
@@ -3845,6 +3853,8 @@ function createTippy(reference, collectionProps) {
   }
 
   function onTrigger(event) {
+    var shouldScheduleClickHide = false;
+
     if (!instance.state.isEnabled || isEventListenerStopped(event) || didHideDueToDocumentMouseDown) {
       return;
     }
@@ -3864,8 +3874,8 @@ function createTippy(reference, collectionProps) {
     } // Toggle show/hide when clicking click-triggered tooltips
 
 
-    if (event.type === 'click' && instance.props.hideOnClick !== false && instance.state.isVisible) {
-      scheduleHide(event);
+    if (event.type === 'click' && (!includes(instance.props.trigger, 'mouseenter') || isVisibleFromClick) && instance.props.hideOnClick !== false && instance.state.isVisible) {
+      shouldScheduleClickHide = true;
     } else {
       var _getNormalizedTouchSe = getNormalizedTouchSettings(),
           value = _getNormalizedTouchSe[0],
@@ -3880,6 +3890,14 @@ function createTippy(reference, collectionProps) {
       } else {
         scheduleShow(event);
       }
+    }
+
+    if (event.type === 'click') {
+      isVisibleFromClick = !shouldScheduleClickHide;
+    }
+
+    if (shouldScheduleClickHide) {
+      scheduleHide(event);
     }
   }
 
@@ -3918,6 +3936,10 @@ function createTippy(reference, collectionProps) {
       doc.body.addEventListener('mouseleave', scheduleHide);
       doc.addEventListener('mousemove', debouncedOnMouseMove);
       pushIfUnique(mouseMoveListeners, debouncedOnMouseMove);
+      return;
+    }
+
+    if (includes(instance.props.trigger, 'click') && isVisibleFromClick) {
       return;
     }
 
@@ -4085,7 +4107,7 @@ function createTippy(reference, collectionProps) {
 
     if (process.env.NODE_ENV !== "production") {
       // Accessibility check
-      warnWhen(instance.props.interactive && appendTo === defaultProps.appendTo && node.nextElementSibling !== popper, "Interactive tippy element may not be accessible via keyboard\n        navigation because it is not directly after the reference element in\n        the DOM source order.\n\n        Using a wrapper <div> or <span> tag around the reference element solves\n        this by creating a new parentNode context.\n        \n        Specifying `appendTo: document.body` silences this warning, but it\n        assumes you are using a focus management solution to handle keyboard\n        navigation.\n        \n        See: https://atomiks.github.io/tippyjs/accessibility/#interactivity");
+      warnWhen(instance.props.interactive && appendTo === defaultProps.appendTo && node.nextElementSibling !== popper, ['Interactive tippy element may not be accessible via keyboard navigation', 'because it is not directly after the reference element in the DOM source', 'order.', '\n\n', 'Using a wrapper <div> or <span> tag around the reference element solves', 'this by creating a new parentNode context.', '\n\n', 'Specifying `appendTo: document.body` silences this warning, but it', 'assumes you are using a focus management solution to handle keyboard', 'navigation.', '\n\n', 'See: https://atomiks.github.io/tippyjs/accessibility/#interactivity'].join(' '));
     }
 
     setModifierValue(instance.popperInstance.modifiers, 'flip', 'enabled', instance.props.flip);
@@ -4400,20 +4422,20 @@ plugins) {
 
   bindGlobalEventListeners();
 
-  var props = _extends$1({}, defaultProps, {}, optionalProps, {
+  var passedProps = _extends$1({}, optionalProps, {
     plugins: plugins
   });
 
   var elements = getArrayOfElements(targets);
 
   if (process.env.NODE_ENV !== "production") {
-    var isSingleContentElement = isElement(props.content);
+    var isSingleContentElement = isElement(passedProps.content);
     var isMoreThanOneReferenceElement = elements.length > 1;
-    warnWhen(isSingleContentElement && isMoreThanOneReferenceElement, "tippy() was passed an Element as the `content` prop, but more than one\n      tippy instance was created by this invocation. This means the content\n      element will only be appended to the last tippy instance.\n      \n      Instead, pass the .innerHTML of the element, or use a function that\n      returns a cloned version of the element instead.\n      \n      1) content: () => element.cloneNode(true)\n      2) content: element.innerHTML");
+    warnWhen(isSingleContentElement && isMoreThanOneReferenceElement, ['tippy() was passed an Element as the `content` prop, but more than one tippy', 'instance was created by this invocation. This means the content element will', 'only be appended to the last tippy instance.', '\n\n', 'Instead, pass the .innerHTML of the element, or use a function that returns a', 'cloned version of the element instead.', '\n\n', '1) content: element.innerHTML\n', '2) content: () => element.cloneNode(true)'].join(' '));
   }
 
   var instances = elements.reduce(function (acc, reference) {
-    var instance = reference && createTippy(reference, props);
+    var instance = reference && createTippy(reference, passedProps);
 
     if (instance) {
       acc.push(instance);
@@ -4430,7 +4452,7 @@ tippy.setDefaultProps = setDefaultProps;
 tippy.currentInput = currentInput;
 
 /**!
-* tippy.js v5.1.2
+* tippy.js v5.1.3
 * (c) 2017-2019 atomiks
 * MIT License
 */

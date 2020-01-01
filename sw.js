@@ -100,9 +100,18 @@ async function tryAndRetry (cb, timeout, errMessage, time = 0) {
 }
 
 /**
+* @typedef {PlainObject} ConfigObject
+* @property {string} namespace
+* @property {string} basePath
+* @property {string} languages
+* @property {string} files
+* @property {string[]} userStaticFiles
+*/
+
+/**
  *
- * @param {PlainObject} args
- * @returns {PlainObject}
+ * @param {ConfigObject} args
+ * @returns {ConfigObject}
  * @todo Since some of these reused, move to external file (or
  *         use `setServiceWorkerDefaults`?)
  */
