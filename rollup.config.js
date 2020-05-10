@@ -11,7 +11,7 @@ export default [
     //   and import that instead, but if that ever ends
     //   up needing more build steps than this dist
     //   file, it could require more work than this.
-    input: 'node_modules/tippy.js/dist/tippy-bundle.esm.js',
+    input: 'node_modules/tippy.js/dist/tippy.esm.js',
     output: {
       banner: 'var process = {env: {NODE_ENV: "production"}}',
       format: 'esm',

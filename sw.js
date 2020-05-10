@@ -86,7 +86,7 @@ function logError (error, ...messages) {
 async function tryAndRetry (cb, timeout, errMessage, time = 0) {
   time++;
   try {
-    await cb(time); // eslint-disable-line promise/prefer-await-to-callbacks, callback-return
+    await cb(time); // eslint-disable-line promise/prefer-await-to-callbacks
     return undefined;
   } catch (err) {
     console.log('errrr', err);

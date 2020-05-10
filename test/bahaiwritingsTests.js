@@ -1,6 +1,9 @@
 /* eslint-env node, mocha */
 'use strict';
-var JsonRefs, chai, jsonpatch, Ajv, assert, getJSON, __dirname, path; // eslint-disable-line no-var
+// eslint-disable-next-line no-var
+var JsonRefs, chai, jsonpatch, Ajv, assert, getJSON,
+  // eslint-disable-next-line no-shadow
+  __dirname, path;
 
 /**
  *
@@ -11,15 +14,15 @@ function cloneJSON (obj) {
   return JSON.parse(JSON.stringify(obj));
 }
 let appBase = '../';
-if (typeof exports !== 'undefined') {
-  /* eslint-disable global-require */
+if (typeof module !== 'undefined') {
+  /* eslint-disable node/global-require */
   Ajv = require('ajv');
   JsonRefs = require('json-refs');
   jsonpatch = require('fast-json-patch');
   getJSON = require('simple-get-json');
   assert = require('assert');
   path = require('path');
-  /* eslint-enable global-require */
+  /* eslint-enable node/global-require */
 } else {
   ({assert} = chai);
   path = {
@@ -52,9 +55,11 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
     });
     valid = ajv.validate(schema, data);
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.log(e);
   } finally {
     if (!valid) {
+      // eslint-disable-next-line no-console
       console.log(JSON.stringify(ajv.errors, null, 2));
     }
   }
@@ -73,7 +78,10 @@ describe('bahaiwritings Tests', function () {
     ];
     const results = await Promise.all([
       JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'files.json')),
-      getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-07-schema.json')),
+      getJSON(path.join(
+        __dirname,
+        appBase + 'node_modules/json-metaschema/draft-07-schema.json'
+      )),
       ...[
         'files.jsonschema',
         ...extraSchemaFiles
@@ -82,7 +90,9 @@ describe('bahaiwritings Tests', function () {
     const [
       {resolved: data}, jsonSchema, schema, ...extraSchemaObjects
     ] = results;
-    const extraSchemas = extraSchemaObjects.map((eso, i) => [extraSchemaFiles[i], eso]);
+    const extraSchemas = extraSchemaObjects.map((eso, i) => [
+      extraSchemaFiles[i], eso
+    ]);
     const valid = validate(schema, data, extraSchemas);
     assert.strictEqual(valid, true);
 
@@ -92,25 +102,27 @@ describe('bahaiwritings Tests', function () {
       validateSchema: false
     });
     assert.strictEqual(valid2, true);
-    const diff = jsonpatch.compare(data, data2).filter((diff) => {
-      // Apparently need to filter due to limitations per https://github.com/epoberezkin/ajv#filtering-data
-      return !diff.path || (diff.op === 'remove' && !(/\/additionalItems$/u).test(diff.path));
+    const diff = jsonpatch.compare(data, data2).filter((dff) => {
+      // Apparently need to filter due to limitations per
+      //   https://github.com/epoberezkin/ajv#filtering-data
+      return !dff.path || (dff.op === 'remove' &&
+        !(/\/additionalItems$/u).test(dff.path));
     });
     assert.strictEqual(diff.length, 0);
 
     const schemas = results.slice(2);
-    schemas.forEach((schema, i) => {
-      validate(jsonSchema, schema, undefined, {
+    schemas.forEach((schma, i) => {
+      validate(jsonSchema, schma, undefined, {
         validateSchema: false
       });
 
-      const schema2 = cloneJSON(schema);
+      const schema2 = cloneJSON(schma);
       validate(jsonSchema, schema2, extraSchemas, {
         removeAdditional: 'all',
         validateSchema: false
       });
-      const diff = jsonpatch.compare(schema, schema2);
-      assert.strictEqual(diff.length, 0);
+      const dff = jsonpatch.compare(schma, schema2);
+      assert.strictEqual(dff.length, 0);
     });
   });
   it('Specific data files', async function () {
@@ -139,42 +151,57 @@ describe('bahaiwritings Tests', function () {
     //   metadata exists and is valid
     const results = await Promise.all([
       ...specificFiles.map((f) => {
-        return JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'data/writings/' + f));
+        return JsonRefs.resolveRefsAt(
+          path.join(__dirname, appBase, 'data/writings/' + f)
+        );
       }),
       ...specificFiles.map((f) => {
-        return getJSON(path.join(__dirname, appBase, 'data/writings/schemas/' + f + 'schema'));
+        return getJSON(
+          path.join(__dirname, appBase, 'data/writings/schemas/' + f + 'schema')
+        );
       }),
       ...otherSpecificFiles.map((f) => {
-        return JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'data/other-works/' + f));
+        return JsonRefs.resolveRefsAt(
+          path.join(__dirname, appBase, 'data/other-works/' + f)
+        );
       }),
       ...otherSpecificFiles.map((f) => {
-        return getJSON(path.join(__dirname, appBase, 'data/other-works/schemas/' + f + 'schema'));
+        return getJSON(path.join(
+          __dirname, appBase, 'data/other-works/schemas/' + f + 'schema'
+        ));
       }),
       ...tableFiles.map((f) => getJSON(path.join(__dirname, schemaBase, f)))
     ]);
 
     let cursor = 0;
-    const [dataFiles, schemaFiles, otherDataFiles, otherSchemaFiles, [table]] = [
-      specificFiles, specificFiles, otherSpecificFiles, otherSpecificFiles, tableFiles
+    const [
+      dataFiles, schemaFiles, otherDataFiles, otherSchemaFiles, [table]
+    ] = [
+      specificFiles, specificFiles, otherSpecificFiles,
+      otherSpecificFiles, tableFiles
     ].map((files) => {
-      return results.slice(cursor, cursor += files.length); // eslint-disable-line no-return-assign
+      // eslint-disable-next-line no-return-assign
+      return results.slice(cursor, cursor += files.length);
     });
 
     const extraSchemas = [
-      ['../../../node_modules/textbrowser/general-schemas/table.jsonschema', table]
+      [
+        '../../../node_modules/textbrowser/general-schemas/table.jsonschema',
+        table
+      ]
     ];
-    const testSchemaFiles = (dataFiles, schemaFiles) => {
-      dataFiles.forEach(({resolved: {data}}, i) => {
-        const schema = schemaFiles[i];
-        const valid = validate(schema, data, extraSchemas);
-        assert.strictEqual(valid, true);
+    const testSchemaFiles = (dtaFiles, schmaFiles) => {
+      dtaFiles.forEach(({resolved: {data}}, i) => {
+        const schema = schmaFiles[i];
+        const vald = validate(schema, data, extraSchemas);
+        assert.strictEqual(vald, true);
 
         const data2 = cloneJSON(data);
-        const valid2 = validate(schema, data2, extraSchemas, {
+        const vald2 = validate(schema, data2, extraSchemas, {
           removeAdditional: 'all',
           validateSchema: false
         });
-        assert.strictEqual(valid2, true);
+        assert.strictEqual(vald2, true);
         const diff = jsonpatch.compare(data, data2);
         assert.strictEqual(diff.length, 0);
       });
@@ -186,7 +213,10 @@ describe('bahaiwritings Tests', function () {
     this.timeout(20000);
     const results = await Promise.all([
       JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'site.json')),
-      getJSON(path.join(__dirname, appBase + 'node_modules/json-metaschema/draft-07-schema.json')),
+      getJSON(path.join(
+        __dirname,
+        appBase + 'node_modules/json-metaschema/draft-07-schema.json'
+      )),
       getJSON(path.join(__dirname, schemaBase, 'site.jsonschema')),
       getJSON(path.join(__dirname, schemaBase, 'locale.jsonschema'))
     ]);
@@ -205,18 +235,18 @@ describe('bahaiwritings Tests', function () {
     assert.strictEqual(diff.length, 0);
 
     const schemas = results.slice(2);
-    schemas.forEach((schema, i) => {
-      const valid = validate(jsonSchema, schema);
-      assert.strictEqual(valid, true);
+    schemas.forEach((schma, i) => {
+      const vlid = validate(jsonSchema, schma);
+      assert.strictEqual(vlid, true);
 
-      const schema2 = cloneJSON(schema);
-      const valid2 = validate(jsonSchema, schema2, extraSchemas, {
+      const schema2 = cloneJSON(schma);
+      const vlid2 = validate(jsonSchema, schema2, extraSchemas, {
         removeAdditional: 'all',
         validateSchema: false
       });
-      assert.strictEqual(valid2, true);
-      const diff = jsonpatch.compare(schema, schema2);
-      assert.strictEqual(diff.length, 0);
+      assert.strictEqual(vlid2, true);
+      const dff = jsonpatch.compare(schma, schema2);
+      assert.strictEqual(dff.length, 0);
     });
   });
 });
