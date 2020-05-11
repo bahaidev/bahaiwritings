@@ -25,6 +25,7 @@ module.exports = {
       'Request',
       'SpeechSynthesisUtterance',
       'URL',
+      'window',
       'window.getSelection'
     ]
   },

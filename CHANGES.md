@@ -1,10 +1,17 @@
 # bahaiwritings CHANGES
 
-## ?
+## 0.28.0
 
+- Update: Change Tippy entrance path as per change
+- Update: Change `simple-get-json` API
 - Linting (ESLint): Latest as per ash-nazg
+- npm: Change/Rename `start-no-open`/`start` to `start` and `open` and
+  change `open` and `open-test` for parallelization and avoiding a race
+  condition; also parallelize `test` and use `npm-run-all` with `test` and
+  `browser-test`
 - npm: Switch to non-deprecated `@rollup/plugin-node-resolve`
-- npm: Update `core-js` and `tippy` deps and devDeps (and `tippy` copy)
+- npm: Update `core-js-bundle`, `json-refs`, `open-cli`, `simple-get-json`,
+  `regnerator-runtime` and `tippy` deps and devDeps (and `tippy` copy)
 
 ## 0.27.0
 
