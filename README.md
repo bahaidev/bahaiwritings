@@ -52,6 +52,8 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 1.  **Tooltips broken?**
 
+1.  Apply Arabic speech to Hidden Words
+
 1.  We might switch deps to `peerDependencies` to avoid need for separate
     JSON-only branch, though it would require `install-peerdeps bahaiwritings`
     or such.
