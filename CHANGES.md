@@ -1,5 +1,10 @@
 # bahaiwritings CHANGES
 
+## ?
+
+- Linting (ESLint): Latest as per ash-nazg
+- npm: Update deps. (core-js-bundle, regenerator-runtime, tippy.js), devDeps
+
 ## 0.28.0
 
 - Update: Change Tippy entrance path as per change

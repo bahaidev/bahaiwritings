@@ -1,8 +1,7 @@
-/* eslint-env node, mocha */
 'use strict';
-// eslint-disable-next-line no-var
+// eslint-disable-next-line no-var -- Polyglot
 var JsonRefs, chai, jsonpatch, Ajv, assert, getJSON,
-  // eslint-disable-next-line no-shadow
+  // eslint-disable-next-line no-shadow -- Polyglot
   __dirname, path;
 
 /**
@@ -15,14 +14,14 @@ function cloneJSON (obj) {
 }
 let appBase = '../';
 if (typeof module !== 'undefined') {
-  /* eslint-disable node/global-require */
-  Ajv = require('ajv');
+  /* eslint-disable node/global-require -- Not bootstrapping */
+  Ajv = require('ajv').default;
   JsonRefs = require('json-refs');
   jsonpatch = require('fast-json-patch');
   ({getJSON} = require('simple-get-json'));
   assert = require('assert');
   path = require('path');
-  /* eslint-enable node/global-require */
+  /* eslint-enable node/global-require -- Not bootstrapping */
 } else {
   ({assert} = chai);
   path = {
@@ -36,6 +35,7 @@ const textbrowserBase = appBase + 'node_modules/textbrowser/';
 const schemaBase = textbrowserBase + 'general-schemas/';
 // const localesBase = textbrowserBase + 'locales/';
 // const appdataBase = textbrowserBase + 'appdata/';
+const jsonSchemaSpec = 'node_modules/json-metaschema/draft-07-schema.json';
 
 /**
 * @param {PlainObject} schema The schema object
@@ -45,7 +45,7 @@ const schemaBase = textbrowserBase + 'general-schemas/';
 * @returns {boolean} Whether valid or not
 */
 function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
-  const ajv = new Ajv({extendRefs: 'fail', ...additionalOptions});
+  const ajv = new Ajv({allowMatchingProperties: true, ...additionalOptions});
   let valid;
   try {
     ajv.addFormat('html', () => true);
@@ -55,11 +55,11 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
     });
     valid = ajv.validate(schema, data);
   } catch (e) {
-    // eslint-disable-next-line no-console
+    // eslint-disable-next-line no-console -- CLI
     console.log(e);
   } finally {
     if (!valid) {
-      // eslint-disable-next-line no-console
+      // eslint-disable-next-line no-console -- CLI
       console.log(JSON.stringify(ajv.errors, null, 2));
     }
   }
@@ -80,7 +80,7 @@ describe('bahaiwritings Tests', function () {
       JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'files.json')),
       getJSON(path.join(
         __dirname,
-        appBase + 'node_modules/json-metaschema/draft-07-schema.json'
+        appBase + jsonSchemaSpec
       )),
       ...[
         'files.jsonschema',
@@ -180,7 +180,7 @@ describe('bahaiwritings Tests', function () {
       specificFiles, specificFiles, otherSpecificFiles,
       otherSpecificFiles, tableFiles
     ].map((files) => {
-      // eslint-disable-next-line no-return-assign
+      // eslint-disable-next-line no-return-assign -- Convenient
       return results.slice(cursor, cursor += files.length);
     });
 
@@ -215,7 +215,7 @@ describe('bahaiwritings Tests', function () {
       JsonRefs.resolveRefsAt(path.join(__dirname, appBase, 'site.json')),
       getJSON(path.join(
         __dirname,
-        appBase + 'node_modules/json-metaschema/draft-07-schema.json'
+        appBase + jsonSchemaSpec
       )),
       getJSON(path.join(__dirname, schemaBase, 'site.jsonschema')),
       getJSON(path.join(__dirname, schemaBase, 'locale.jsonschema'))

@@ -27,7 +27,7 @@ const minutes = 60 * 1000;
  *
  * @param {PlainObject} args
  * @param {"log"|"error"|"beginInstall"|"finishedInstall"|"beginActivate"|"finishedActivate"} args.type
- * @param {string} [args.message=type}]
+ * @param {string} [args.message=type]
  * @returns {Promise<void>}
  */
 async function post ({type, message = type}) {
@@ -86,12 +86,12 @@ function logError (error, ...messages) {
 async function tryAndRetry (cb, timeout, errMessage, time = 0) {
   time++;
   try {
-    await cb(time); // eslint-disable-line promise/prefer-await-to-callbacks
+    await cb(time); // eslint-disable-line promise/prefer-await-to-callbacks -- Needed for retries
     return undefined;
   } catch (err) {
     console.log('errrr', err);
     logError(err, err.message || errMessage);
-    return new Promise((resolve, reject) => { // eslint-disable-line promise/avoid-new
+    return new Promise((resolve, reject) => { // eslint-disable-line promise/avoid-new -- Need timeout
       setTimeout(() => {
         resolve(tryAndRetry(cb, timeout, errMessage, time));
       }, timeout);
@@ -180,6 +180,7 @@ console.log('sw stylesheets', stylesheets);
 /**
  *
  * @param {PositiveInteger} time
+ * @throws {Error}
  * @returns {Promise<void>}
  */
 async function install (time) {

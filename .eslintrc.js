@@ -11,6 +11,7 @@ module.exports = {
       'console',
       'Date.now',
       'document.body',
+      'document.dir',
       'document.hasFocus',
       'document.querySelectorAll',
       'Error',
@@ -45,6 +46,10 @@ module.exports = {
     },
     {
       files: ['test/bahaiwritingsTests.js', '.eslintrc.js'],
+      env: {
+        mocha: true,
+        node: true
+      },
       extends: [
         'ash-nazg/sauron-node',
         'plugin:node/recommended-script'
@@ -61,6 +66,8 @@ module.exports = {
   rules: {
     'max-len': 0,
     'no-console': 0,
-    'no-shadow': 0
+    'no-shadow': 0,
+    // Reenable and add descriptions for `eslint-env`
+    'eslint-comments/require-description': 0
   }
 };

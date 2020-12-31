@@ -1,4 +1,4 @@
-/* eslint-disable no-alert */
+/* eslint-disable no-alert -- Simple errors */
 export const escapeColumn = false;
 const locales = {
   'en-US': {

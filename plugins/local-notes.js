@@ -1,4 +1,4 @@
-/* eslint-disable no-alert */
+/* eslint-disable no-alert -- Simple errors */
 const locales = {
   'en-US': {
     loading: 'Loading...',
