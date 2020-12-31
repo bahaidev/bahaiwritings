@@ -52,6 +52,11 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 1.  **Tooltips broken?**
 
+1.  Use Wikidata.org language data to transform Arabic (or Persian) to root
+    words for **dictionary** look-up (if not Wiktionary or
+    Wikidata->Wikipedia->language link mapping, then any other free dictionary
+    we might find)
+
 1.  Apply Arabic speech to Hidden Words
 
 1.  We might switch deps to `peerDependencies` to avoid need for separate
