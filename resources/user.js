@@ -25,7 +25,9 @@ const tb = new TextBrowser({
   // showEmptyInterlinear: false,
   // showTitleOnSingleInterlinear: false,
   files: 'files.json',
-  stylesheets: ['@builtin', 'resources/user.css'],
+  stylesheets: [
+    '@builtin', 'resources/user.css', 'node_modules/tippy.js/dist/tippy.css'
+  ],
   namespace: 'bahaiwritings',
   allowPlugins: true,
   // dynamicBasePath: '',
