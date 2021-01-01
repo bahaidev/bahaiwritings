@@ -474,6 +474,13 @@
             "pm": {
             },
             "hidden_words": {
+              "speech": {
+                  "applicable-fields": {
+                      "Arabic": {
+                      }
+                  },
+                  "placement": 3
+              }
             },
             "gleanings": {
                 "roman-numerals": {

@@ -1,4 +1,8 @@
 /* eslint-disable no-alert -- Simple errors */
+
+// Todo: When Google may support Persian voice, add `"targetLanguage": "fa"`
+//  to Hidden Words' `applicable-fields: {Persian: {}}` in `files.json`
+
 export const escapeColumn = false;
 const locales = {
   'en-US': {
@@ -29,7 +33,7 @@ export const getCellData = function ({
 };
 
 let run = false;
-export const done = function ({meta: {language}}) {
+export const done = function ({meta: {language}, applicableFields}) {
   if (run) {
     return;
   }
@@ -37,6 +41,9 @@ export const done = function ({meta: {language}}) {
   let voice, notify = false;
   speechSynthesis.addEventListener('voiceschanged', () => {
     console.log('voices changed');
+    // Todo: Save voice in map so `applicableFields-><field>->targetLanguage`
+    //  can override plugin default language and `click` listener below will
+    //  check this map
     const voices = speechSynthesis.getVoices().filter(({lang, name}) => {
       return lang === language || lang.startsWith(language + '-');
     });
