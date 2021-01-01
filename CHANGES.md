@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.29.2
+
+- Fix: Force service worker version update
+
 ## 0.29.1
 
 - npm: Update textbrowser
