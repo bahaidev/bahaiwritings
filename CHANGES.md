@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.29.1
+
+- npm: Update textbrowser
+
 ## 0.29.0
 
 - Linting (ESLint): Latest as per ash-nazg
