@@ -1,6 +1,8 @@
 /* eslint-disable no-alert -- Simple errors */
 
-// Todo: When Google may support Persian voice, add `"targetLanguage": "fa"`
+// Todo: When Google may support Persian voice (filed
+//  https://issuetracker.google.com/issues/171724064 ),
+//  add `"targetLanguage": "fa"`
 //  to Hidden Words' `applicable-fields: {Persian: {}}` in `files.json`
 
 export const escapeColumn = false;

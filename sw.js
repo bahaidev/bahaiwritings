@@ -5,7 +5,7 @@
 // Todo: Replace with ES6 modules (and remove Rollup routines) once browsers
 //    support:
 //    https://stackoverflow.com/a/45578811/271577
-//    https://bugs.chromium.org/p/chromium/issues/detail?id=680046
+//    https://bugs.chromium.org/p/chromium/issues/detail?id=824647
 // import getJSON from './node_modules/simple-get-json/dist/index-es.js';
 // import activateCallback from 'node_modules/textbrowser/resources/activateCallback.js';
 // import {getWorkFiles} from './WorkInfo.js';
@@ -15,7 +15,7 @@ importScripts('node_modules/simple-get-json/dist/index.js');
 importScripts('node_modules/textbrowser/dist/WorkInfo-umd.js');
 importScripts('node_modules/textbrowser/dist/activateCallback-umd.js');
 
-const CACHE_VERSION = '0.28.0';
+const CACHE_VERSION = '0.29.0';
 const CURRENT_CACHES = {
   prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };

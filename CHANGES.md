@@ -1,9 +1,10 @@
 # bahaiwritings CHANGES
 
-## ?
+## 0.29.0
 
 - Linting (ESLint): Latest as per ash-nazg
-- npm: Update deps. (core-js-bundle, regenerator-runtime, tippy.js), devDeps
+- npm: Update deps. (textbrowser, core-js-bundle, regenerator-runtime,
+    tippy.js), devDeps
 
 ## 0.28.0
 
