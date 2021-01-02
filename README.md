@@ -128,6 +128,9 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
         1.  Re-build based on formatted copies so as not to lose visual
             distinguishability, e.g., Sale's many superscripts, etc.
 
+        1.  Parse an Arabic Qur'án into Rodwell's verses and all of the
+            Rodwell/Sale and Bahá'í references into traditional versing
+
         1.  There is a good amount of invalid XHTML in the JSON databases
               for the Qur'an and Bible (links w/o quotes) that would ideally
               be replaced (Tidy script?) as well as the XHTML and link
