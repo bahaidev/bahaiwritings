@@ -1,5 +1,11 @@
 # bahaiwritings CHANGES
 
+## 0.30.0
+
+- Change: Drop core-js-bundle and regenerator-runtime dependencies
+- Linting (ESLint): As per latest ash-nazg
+- npm: Update textbrowser, simple-get-json and devDeps.
+
 ## 0.29.2
 
 - Fix: Force service worker version update
