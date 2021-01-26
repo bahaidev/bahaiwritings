@@ -51,12 +51,14 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
         have the most up-to-date and corrected translations
 
 1.  Add plugin using such as <https://github.com/recogito/recogito-js> for
-    inline, and more range-flexible annotations, based on standard Web
-    Annotations.
+    inline, and more range-flexible annotations, using [adapter](https://github.com/jankaszel/recogito-web-annotation-adapter)
+    that works with W3C-standard [Web Annotations](https://w3c.github.io/web-annotation/);
+    also is a [validator](https://www.npmjs.com/package/validate-web-annotation).
 
     1. Could create a corresponding server, including possibly as a Mediawiki
         extension which provided a CRUD adapter for Web Annotations to/from
-        MW API calls which allowed loading/updating content from within
+        MW API calls (including [login](https://www.mediawiki.org/wiki/API:Login))
+        which allowed loading/updating content from within
         a wiki (or say a User subpage or maybe Wikidata) as the basis for
         the annotations. As wikidata can be federated, could have a dedicated
         user wiki for user annotations separate from a more formal, offical
