@@ -50,6 +50,9 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
         periodically) parse their texts into JSON here to ensure we
         have the most up-to-date and corrected translations
 
+1.  Todo: Use <https://github.com/sapegin/shipit> against a hidden config file
+    to auto-deploy to <https://bahai-browser.org>
+
 1.  Add plugin using such as <https://github.com/recogito/recogito-js> for
     inline, and more range-flexible annotations, using [adapter](https://github.com/jankaszel/recogito-web-annotation-adapter)
     that works with W3C-standard [Web Annotations](https://w3c.github.io/web-annotation/);
