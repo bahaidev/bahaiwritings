@@ -1,5 +1,10 @@
 # bahaiwritings CHANGES
 
+## 0.31.0
+
+- Dev security: Use server (http-server) without vulnerabilities
+- npm: Update `simple-get-json`, `textbrowser`
+
 ## 0.30.0
 
 - Change: Drop core-js-bundle and regenerator-runtime dependencies

@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.30.0",
+  "version": "0.31.0",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "tippy-rollup": "rollup -c",
@@ -14,7 +14,7 @@
     "node": "npm run eslint && mocha test/bahaiwritingsTests.js",
     "testcafe": "testcafe --skip-js-errors chrome test/ui-tests/**/*.js",
     "test": "npm run eslint && run-p server testcafe",
-    "start": "static -p 8082",
+    "start": "http-server -p 8082",
     "open-only": "open-cli http://127.0.0.1:8082/test/",
     "open-only-delayed": "run-s delay open-only",
     "open": "run-p start open-only-delayed",
@@ -27,12 +27,12 @@
   ],
   "dependencies": {
     "bahai-indexes": "^0.2.0",
+    "http-server": "^0.12.3",
     "json-refs": "^3.0.15",
     "load-stylesheets": "^0.9.0",
-    "node-static": "0.7.11",
     "open-cli": "^6.0.1",
-    "simple-get-json": "^8.1.0",
-    "textbrowser": "^0.37.0",
+    "simple-get-json": "^8.1.1",
+    "textbrowser": "^0.38.2",
     "tippy.js": "^6.2.7"
   },
   "devDependencies": {
