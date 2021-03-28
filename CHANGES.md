@@ -1,5 +1,18 @@
 # bahaiwritings CHANGES
 
+## 0.32.0
+
+### User-facing
+
+- npm: Update `textbrowser`, `bahai-indexes`, `tippy.js`
+
+### Dev-facing
+
+- npm: Switch from deprecated `babel-eslint`
+- npm: Use maintained fork for testcafe and axe: `@testcafe-community/axe`
+- npm: Update devDeps. and change peerDeps. of `eslint-config-ash-nazg`
+- npm: Switch to pnpm
+
 ## 0.31.0
 
 - Dev security: Use server (http-server) without vulnerabilities

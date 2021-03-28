@@ -2,8 +2,9 @@
 
 module.exports = {
   extends: ['ash-nazg/sauron', 'plugin:testcafe/recommended'],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
+    requireConfigFile: false,
     sourceType: 'module'
   },
   settings: {

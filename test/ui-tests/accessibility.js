@@ -1,7 +1,7 @@
 // https://github.com/DevExpress/testcafe
 // https://devexpress.github.io/testcafe/documentation/test-api/
 // https://github.com/helen-dikareva/axe-testcafe
-import {axeCheck, createReport} from 'axe-testcafe';
+import {axeCheck, createReport} from '@testcafe-community/axe';
 
 /**
 * @external AxeResult
