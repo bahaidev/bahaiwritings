@@ -1,8 +1,6 @@
 'use strict';
 // eslint-disable-next-line no-var -- Polyglot
-var JsonRefs, chai, jsonpatch, Ajv, assert, getJSON,
-  // eslint-disable-next-line no-shadow -- Polyglot
-  __dirname, path;
+var JsonRefs, jsonpatch, Ajv, getJSON, path;
 
 /**
  *
@@ -19,16 +17,13 @@ if (typeof module !== 'undefined') {
   JsonRefs = require('json-refs');
   jsonpatch = require('fast-json-patch');
   ({getJSON} = require('simple-get-json'));
-  assert = require('assert');
   path = require('path');
   /* eslint-enable node/global-require -- Not bootstrapping */
 } else {
-  ({assert} = chai);
   path = {
     join: (...args) => args.join('')
   };
   appBase = location.protocol + '//' + location.host + '/';
-  __dirname = '';
 }
 
 const textbrowserBase = appBase + 'node_modules/textbrowser/';

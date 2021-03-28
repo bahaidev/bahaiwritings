@@ -11,7 +11,7 @@
     "open-test": "run-p server open-test-only-delayed",
     "server": "textbrowser --allowPlugins --namespace=bahaiwritings",
     "server-activate": "textbrowser --allowPlugins --nodeActivate  --namespace=bahaiwritings",
-    "node": "npm run eslint && mocha test/bahaiwritingsTests.js",
+    "node": "npm run eslint && mocha --require chai/register-assert test/bahaiwritingsTests.js",
     "testcafe": "testcafe --skip-js-errors chrome test/ui-tests/**/*.js",
     "test": "npm run eslint && run-p server testcafe",
     "start": "http-server -p 8082",
@@ -70,7 +70,9 @@
     "rollup": "^2.43.1",
     "testcafe": "^1.13.0"
   },
-  "engines": {},
+  "engines": {
+    "node": ">=10.11.0"
+  },
   "repository": {
     "type": "git",
     "url": "git@bitbucket.org:brettz9/bahaiwritings.git"

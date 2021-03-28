@@ -20,12 +20,14 @@
     <h1>bahaiwritings Test Suite</h1>
     <div id="mocha"></div>
     <script>
-    /* globals mocha */
+    /* globals mocha -- No ESM */
     mocha.setup('bdd');
+    window.assert = chai.assert;
+    window.__dirname = '';
     </script>
     <script src="bahaiwritingsTests.js"></script>
     <script>
-    /* globals mocha */
+    /* globals mocha -- No ESM */
     mocha.run();
     </script>
   </body>

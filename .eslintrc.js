@@ -1,11 +1,10 @@
 'use strict';
 
 module.exports = {
-  extends: ['ash-nazg/sauron', 'plugin:testcafe/recommended'],
+  extends: ['ash-nazg/sauron-overrides'],
   parser: '@babel/eslint-parser',
   parserOptions: {
-    requireConfigFile: false,
-    sourceType: 'module'
+    requireConfigFile: false
   },
   settings: {
     polyfills: [
@@ -39,25 +38,19 @@ module.exports = {
       }
     },
     {
-      files: ['sw.js', 'test/bahaiwritingsTests.js'],
+      files: ['sw.js'],
       rules: {
         'import/unambiguous': 0,
         strict: 0
       }
     },
     {
-      files: ['test/bahaiwritingsTests.js', '.eslintrc.js'],
-      env: {
-        mocha: true,
-        node: true
-      },
-      extends: [
-        'ash-nazg/sauron-node',
-        'plugin:node/recommended-script'
-      ],
-      rules: {
-        'import/no-commonjs': 0
-      }
+      files: 'test/**/*.js',
+      extends: ['ash-nazg/sauron-overrides', 'plugin:testcafe/recommended']
+    },
+    {
+      files: ['test/bahaiwritingsTests.js'],
+      extends: ['ash-nazg/sauron-node-script-overrides', 'plugin:testcafe/recommended']
     }
   ],
   env: {
