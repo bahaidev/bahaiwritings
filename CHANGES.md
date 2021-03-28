@@ -1,5 +1,12 @@
 # bahaiwritings CHANGES
 
+## 0.32.2
+
+### Dev-facing
+
+- npm: Update `bahai-indexes`
+- npm: Switch back to npm
+
 ## 0.32.1
 
 ### User-facing

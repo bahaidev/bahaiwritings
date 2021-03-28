@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.32.1",
+  "version": "0.32.2",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "scripts": {
     "tippy-rollup": "rollup -c",
@@ -26,7 +26,7 @@
     "cover 100%"
   ],
   "dependencies": {
-    "bahai-indexes": "^0.3.0",
+    "bahai-indexes": "^0.4.0",
     "json-refs": "^3.0.15",
     "load-stylesheets": "^0.10.0",
     "node-static": "^0.7.11",
