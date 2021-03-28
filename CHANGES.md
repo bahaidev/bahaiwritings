@@ -1,5 +1,16 @@
 # bahaiwritings CHANGES
 
+## 0.32.1
+
+### User-facing
+
+- npm: Update `load-stylesheets`
+- Fix: Revert to `node-static` for resolving server issue
+
+### Dev-facing
+
+- npm: Add missing `@babel/core` peerDep.
+
 ## 0.32.0
 
 ### User-facing
