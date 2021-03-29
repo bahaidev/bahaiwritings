@@ -1,5 +1,13 @@
 # bahaiwritings CHANGES
 
+## 0.32.3
+
+- Security fix: Switch to `@brettz9/node-static`, fixing vulnerabilities
+    and strict issue
+- npm: Update `textbrowser`
+- npm: Add missing peerDep. `@babel/core`
+- npm: Try pnpm again
+
 ## 0.32.2
 
 ### Dev-facing
