@@ -50,7 +50,13 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
         periodically) parse their texts into JSON here to ensure we
         have the most up-to-date and corrected translations
 
-1.  Todo: Use <https://github.com/sapegin/shipit> against a hidden config file
+1.  Integrate with Steven Phelps' [inventory](http://blog.loomofreality.org/)
+    of the Writings; could add a single link to the metadata for whole works,
+    but especially useful for the by-verse annotations (its links to musical
+    interpretation of individual Hidden Words; of course, Bahai9.com could
+    also link to them).
+
+1.  Use <https://github.com/sapegin/shipit> against a hidden config file
     to auto-deploy to <https://bahai-browser.org>
 
 1.  Add plugin using such as <https://github.com/recogito/recogito-js> for
