@@ -59,6 +59,11 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 1.  Use <https://github.com/sapegin/shipit> against a hidden config file
     to auto-deploy to <https://bahai-browser.org>
 
+1.  Customize which voices get used
+
+1.  Ability to bind plugin language dynamically at run-time rather than JSON,
+    so any field can be translated
+
 1.  Add plugin using such as <https://github.com/recogito/recogito-js> for
     inline, and more range-flexible annotations, using [adapter](https://github.com/jankaszel/recogito-web-annotation-adapter)
     that works with W3C-standard [Web Annotations](https://w3c.github.io/web-annotation/);
