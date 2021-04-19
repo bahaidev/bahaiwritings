@@ -92,7 +92,7 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 1.  Add more testcafe tests (switch to Cypress)
 
-1.  Add a "Powered by TextBrowser" message on non-results pages with
+1.  Add disableable "Powered by TextBrowser" message on non-results pages with
     link to that repo.
 
 1.  Break out plugins into separate repository(ies) for reusability
