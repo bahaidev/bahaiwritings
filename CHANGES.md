@@ -1,12 +1,27 @@
 # bahaiwritings CHANGES
 
+## 0.33.0
+
+### User-facing
+
+- npm: Update `textbrowser`
+
+### Dev-facing
+
+- npm: Add `lint` script
+- npm: Update devDeps.
+
 ## 0.32.3
+
+### User-facing
 
 - Security fix: Switch to `@brettz9/node-static`, fixing vulnerabilities
     and strict issue
 - npm: Update `textbrowser`
+
+### Dev-facing
+
 - npm: Add missing peerDep. `@babel/core`
-- npm: Try pnpm again
 
 ## 0.32.2
 
