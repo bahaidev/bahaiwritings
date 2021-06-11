@@ -1,5 +1,11 @@
 # bahaiwritings CHANGES
 
+## UNRELEASED
+
+### Dev-facing
+
+- npm/git: Ignore `download` directory
+
 ## 0.33.0
 
 ### User-facing
