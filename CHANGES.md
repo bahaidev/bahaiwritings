@@ -2,9 +2,15 @@
 
 ## UNRELEASED
 
+### User-facing
+
+- npm: Update `open-cli` (major), textbrowser (minor)
+
 ### Dev-facing
 
+- Update: Use ESM with service worker as per updated `textbrowser`
 - npm/git: Ignore `download` directory
+- npm: Update devDeps.
 
 ## 0.33.0
 

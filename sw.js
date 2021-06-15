@@ -1,21 +1,11 @@
-/* eslint-env browser, serviceworker */
-'use strict';
+/* eslint-env browser, serviceworker -- Service worker */
 
-/* globals getJSON, activateCallback, WorkInfo */
-// Todo: Replace with ES6 modules (and remove Rollup routines) once browsers
-//    support:
-//    https://stackoverflow.com/a/45578811/271577
-//    https://bugs.chromium.org/p/chromium/issues/detail?id=824647
-// import getJSON from './node_modules/simple-get-json/dist/index-es.js';
-// import activateCallback from 'node_modules/textbrowser/resources/activateCallback.js';
-// import {getWorkFiles} from './WorkInfo.js';
-importScripts('node_modules/simple-get-json/dist/index.js');
-importScripts('node_modules/textbrowser/dist/WorkInfo-umd.js');
-importScripts('node_modules/textbrowser/dist/activateCallback-umd.js');
+import {getJSON} from './node_modules/simple-get-json/dist/index-es.js';
+import activateCallback from './node_modules/textbrowser/dist/activateCallback-es.js';
+import {getWorkFiles} from './node_modules/textbrowser/dist/WorkInfo-es.js';
 
-const CACHE_VERSION = '0.32.3';
 const CURRENT_CACHES = {
-  prefetch: 'prefetch-cache-v' + CACHE_VERSION
+  prefetch: 'prefetch-cache-v'
 };
 const minutes = 60 * 1000;
 
@@ -190,14 +180,16 @@ async function install (time) {
     namespace, languages, files, userStaticFiles
   } = getConfigDefaults(json);
 
-  console.log('opening cache', namespace + CURRENT_CACHES.prefetch);
+  const {version} = await getJSON('./package.json');
+
+  console.log('opening cache', namespace + CURRENT_CACHES.prefetch + version);
   const [
     cache,
     userDataFiles,
     {languages: langs}
   ] = await Promise.all([
-    caches.open(namespace + CURRENT_CACHES.prefetch),
-    WorkInfo.getWorkFiles(files),
+    caches.open(namespace + CURRENT_CACHES.prefetch + version),
+    getWorkFiles(files),
     getJSON(languages)
   ]);
   log('Install: Retrieved dependency values');
@@ -271,8 +263,9 @@ async function activate (time) {
     caches.keys()
   ]);
   const {namespace, files, basePath} = getConfigDefaults(json);
+  const {version} = await getJSON('./package.json');
 
-  const expectedCacheNames = Object.values(CURRENT_CACHES).map((n) => namespace + n);
+  const expectedCacheNames = Object.values(CURRENT_CACHES).map((n) => namespace + n + version);
   cacheNames.map(async (cacheName) => {
     if (!expectedCacheNames.includes(cacheName)) {
       log('Activate: Deleting out of date cache:', cacheName);
