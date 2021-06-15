@@ -1,6 +1,6 @@
 # bahaiwritings CHANGES
 
-## UNRELEASED
+## 0.34.0
 
 ### User-facing
 
@@ -9,6 +9,8 @@
 ### Dev-facing
 
 - Update: Use ESM with service worker as per updated `textbrowser`
+- Refactoring: Rely on `package.json` version to auto-detect service-worker
+    version
 - npm/git: Ignore `download` directory
 - npm: Update devDeps.
 
