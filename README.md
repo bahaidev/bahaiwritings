@@ -188,6 +188,8 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
     1.  Add "By page" for the Aqdas (once parsed by page)
     1.  Further localization including column aliases, etc.
     1.  Baha'i Bot for [Discord](https://twentysix26.github.io/Red-Docs/red_guide_bot_accounts/)?
+    1.  Idea for plugin to add links to a Calendar/Task API (no web standard
+        yet apparently)
 
 ## Testing
 
