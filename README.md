@@ -150,6 +150,8 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
         given verse/paragraph!
 
 1.  Specific works
+    1.  Aqdas
+        1.  Passages translated/excerpted by Shoghi Effendi
 
     1.  Qur'an and Bible
 
