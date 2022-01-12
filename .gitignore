@@ -6,3 +6,4 @@ download
 core
 npm-debug.log
 pm2.json
+logs
