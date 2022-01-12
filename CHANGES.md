@@ -1,5 +1,15 @@
 # bahaiwritings CHANGES
 
+## 0.34.1
+
+### User-facing
+
+- chore: update deps.
+
+### Dev-facing
+
+- chore: update devDeps.; lint
+
 ## 0.34.0
 
 ### User-facing
