@@ -38,6 +38,7 @@ const tb = new TextBrowser({
     $, l, jml, paramsSetter, getDataForSerializingParamsAsURL, work,
     replaceHash, getFieldAliasOrNames
   }) => ['div', [
+    // Todo: i18nize (ideally with intl-dom)
     (window.chrome
       ? ['div', {id: 'generate-results', hidden: 'true'}, [
         ['div', {class: 'msg-error', hidden: 'true'}, [
@@ -50,7 +51,6 @@ const tb = new TextBrowser({
           'Loading...'
         ]],
         ['ol', {id: 'steps', hidden: 'true'}, [
-          // Todo: i18nize (ideally with intl-dom)
           ['li', [
             'Copy the following code (or ',
             ['button', {id: 'copy', $on: {
