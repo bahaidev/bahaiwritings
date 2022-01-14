@@ -1,5 +1,12 @@
 # bahaiwritings CHANGES
 
+## 0.35.0
+
+### User-facing
+
+- feat: migrate over and properly support Chrome for custom search engine
+    generation
+
 ## 0.34.1
 
 ### User-facing

@@ -8,6 +8,7 @@ module.exports = {
   },
   settings: {
     polyfills: [
+      'Blob',
       'console',
       'Date.now',
       'document.body',
@@ -20,6 +21,7 @@ module.exports = {
       'location.href',
       'location.host',
       'location.protocol',
+      'navigator.clipboard',
       'Object.entries',
       'Object.values',
       'Promise',
@@ -27,7 +29,8 @@ module.exports = {
       'SpeechSynthesisUtterance',
       'URL',
       'window',
-      'window.getSelection'
+      'window.getSelection',
+      'XMLSerializer'
     ]
   },
   overrides: [

@@ -5,3 +5,10 @@ td[data-col], td[data-col] > iframe {
     height: -webkit-fill-available;
     max-height: 500px;
 }
+
+.msg-error {
+  background-color: pink;
+}
+.msg-success {
+  background-color: lightgreen;
+}
