@@ -201,7 +201,8 @@ searchEngines.forEach(({ short_name, keyword, url }) => {
               //   just any whitespace)
               // We're not getting the keywords with Chrome,
               //   but at least usable for bookmarks (though
-              //   not the groups apparently)
+              //   not the groups apparently); update: actually, now we're
+              //   not using this in Chrome at all, but keeping in case expose
               /<dt>/gu,
               '\n<dt>'
             )
