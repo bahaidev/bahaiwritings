@@ -138,8 +138,9 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 1.  Add/Add back references for automated:
 
     1.  Synopsis, Roman numerals (pm, gwb), Chinese numbers, word-by-word
-        translation (Persian/Arabic/German/English), auto-romanized Persian
-        (Baha'i-style with help link to
+        translation (Persian/Arabic/German/English) with ruby-style
+        annotations above the word and/or tooltip option, auto-romanized
+        Persian (Baha'i-style with help link to
         <http://bahai9.com/wiki/Pronunciation>), Persian with English
         tooltips, English with Persian tooltips,
         text-to-(Google search, Google define, Wikipedia, bahai9.com
