@@ -125,6 +125,8 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
 1.  See TextBrowser to-dos
 
+1.  Fix tooltip when showing just 2 columns (Arabic goes too far to right)
+
 1.  Actually update `notextbrowser` branch and tag this version when stable
 
 1.  Add/change data files and meta-data files to use `$schema`?
