@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.35.2
+
+- npm: update textbrowser
+
 ## 0.35.1
 
 ### User-facing
