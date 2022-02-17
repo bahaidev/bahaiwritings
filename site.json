@@ -129,6 +129,9 @@
                 "Sitemap": "Site Map",
                 "Administrator Documentation": "Administrator Documentation"
             }
+        },
+        "ru": {
+            "browser-title": "Sacred Writings Browser"
         }
     }
 }

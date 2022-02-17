@@ -1,5 +1,17 @@
 # bahaiwritings CHANGES
 
+## 0.35.1
+
+### User-facing
+
+- fix: Russian display
+- npm: update textbrowser
+
+### Dev-facing
+
+- refactor: drop redundant locale file listings in service worker
+- npm: update devDeps.
+
 ## 0.35.0
 
 ### User-facing
