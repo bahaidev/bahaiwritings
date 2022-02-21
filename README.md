@@ -137,6 +137,11 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
     to absolute URLs so as to be independent of repository/branch (rather
     than their current assumption of being utilized within `TextBrowser`).
 
+1.  Look at backlinks for templates like `{{pup|}}` to find the pages which
+    reference a book, and then look for the heading above those quotes, so
+    as to insert summary headings next to paragraphs as we do for the
+    Kitáb-i-Aqdas indexes.
+
 1.  Add/Add back references for automated:
 
     1.  Synopsis, Roman numerals (pm, gwb), Chinese numbers, word-by-word
