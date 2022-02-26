@@ -159,6 +159,10 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
         given verse/paragraph!
 
 1.  Specific works
+
+    1.  Hidden Words
+        1. Wiki links to Bahai9.com
+
     1.  Aqdas
         1.  Passages translated/excerpted by Shoghi Effendi
 
