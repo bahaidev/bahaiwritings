@@ -1,5 +1,12 @@
 # bahaiwritings CHANGES
 
+## 0.36.0
+
+- chore: switch `json-refs` to devDep. (textbrowser will require on its own)
+- chore: bump `simple-get-json` (minor), `textbrowser` (minor), devDeps.
+- refactor: drop use of dialog polyfill
+- refactor: Switch to native Node ESM (not really a Node package)
+
 ## 0.35.2
 
 - npm: update textbrowser
