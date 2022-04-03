@@ -173,6 +173,7 @@ async function install (time) {
     namespace, languages, files, userStaticFiles
   } = getConfigDefaults(json);
 
+  // VERSION
   const {version} = await getJSON('./package.json');
 
   console.log('opening cache', namespace + CURRENT_CACHES.prefetch + version);
