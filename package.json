@@ -33,7 +33,7 @@
     "load-stylesheets": "^0.10.0",
     "open-cli": "^7.0.1",
     "simple-get-json": "^8.2.0",
-    "textbrowser": "^0.42.3",
+    "textbrowser": "^0.42.5",
     "tippy.js": "^6.3.7"
   },
   "devDependencies": {

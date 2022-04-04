@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## ?
+
+- chore: bump `textbrowser`
+
 ## 0.36.2
 
 - chore: bump `textbrowser`

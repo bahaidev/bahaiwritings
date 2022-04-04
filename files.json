@@ -311,79 +311,79 @@
     },
     "plugins": {
         "indexes": {
-            "path": "../../../plugins/indexes.js",
+            "path": "plugins/indexes.js",
             "lang": "en-US",
             "onByDefault": false
         },
         "synopsis": {
-            "path": "../../../plugins/synopsis.js",
+            "path": "plugins/synopsis.js",
             "onByDefault": false
         },
         "tooltips": {
-            "path": "../../../plugins/tooltips.js",
+            "path": "plugins/tooltips.js",
             "onByDefault": true
         },
         "wordbyword": {
-            "path": "../../../plugins/wordbyword.js",
+            "path": "plugins/wordbyword.js",
             "onByDefault": false
         },
         "wordbyword-tooltips": {
-            "path": "../../../plugins/wordbyword-tooltips.js",
+            "path": "plugins/wordbyword-tooltips.js",
             "onByDefault": true
         },
         "chinese-numbers": {
-            "path": "../../../plugins/chinese-numbers.js",
+            "path": "plugins/chinese-numbers.js",
             "lang": "zh-CN",
             "onByDefault": false
         },
         "field-alias": {
-            "path": "../../../plugins/field-alias.js",
+            "path": "plugins/field-alias.js",
             "onByDefault": true
         },
         "local-notes": {
-            "path": "../../../plugins/local-notes.js",
+            "path": "plugins/local-notes.js",
             "onByDefault": true
         },
         "reverse-roman": {
-            "path": "../../../plugins/reverse-roman.js",
+            "path": "plugins/reverse-roman.js",
             "onByDefault": true
         },
         "roman-numerals": {
-            "path": "../../../plugins/roman-numerals.js",
+            "path": "plugins/roman-numerals.js",
             "onByDefault": false
         },
         "romanize": {
-            "path": "../../../plugins/romanize.js",
+            "path": "plugins/romanize.js",
             "onByDefault": false
         },
         "websearch": {
-            "path": "../../../plugins/websearch.js",
+            "path": "plugins/websearch.js",
             "onByDefault": false,
             "meta": {
                 "search-engine-name": "Google"
             }
         },
         "define": {
-            "path": "../../../plugins/define.js",
+            "path": "plugins/define.js",
             "onByDefault": false,
             "meta": {
                 "search-engine-name": "Google"
             }
         },
         "wikify": {
-            "path": "../../../plugins/wikify.js",
+            "path": "plugins/wikify.js",
             "onByDefault": false
         },
         "wikilinks": {
-            "path": "../../../plugins/wikilinks.js",
+            "path": "plugins/wikilinks.js",
             "onByDefault": true
         },
         "isbn": {
-            "path": "../../../plugins/isbn.js",
+            "path": "plugins/isbn.js",
             "onByDefault": true
         },
         "speech": {
-            "path": "../../../plugins/speech.js",
+            "path": "plugins/speech.js",
             "meta": {
                 "language": "ar"
             }
