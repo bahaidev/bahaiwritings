@@ -1,5 +1,10 @@
 # bahaiwritings CHANGES
 
+## 0.37.0
+
+- chore: bump `textbrowser`
+- chore: fix `dev-server` script
+
 ## 0.36.4
 
 - chore: bump `textbrowser`

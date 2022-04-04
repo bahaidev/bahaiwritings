@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.36.4",
+  "version": "0.37.0",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "type": "module",
   "scripts": {
@@ -21,7 +21,7 @@
     "open-only-delayed": "run-s delay open-only",
     "open": "run-p start open-only-delayed",
     "browser-test": "run-s eslint open",
-    "dev-server": "node ../textbrowser/server/main-cjs.js --allowPlugins --namespace=bahaiwritings",
+    "dev-server": "node ../textbrowser/server/main.js --allowPlugins --namespace=bahaiwritings",
     "copy-tb": "cp -a ../textbrowser/dist/. node_modules/textbrowser/dist/ && cp -a ../textbrowser/locales/. node_modules/textbrowser/locales/ && cp -a ../textbrowser/server/. node_modules/textbrowser/server/ && chmod -R 755 node_modules/textbrowser/server/"
   },
   "browserslist": [
@@ -33,7 +33,7 @@
     "load-stylesheets": "^0.10.0",
     "open-cli": "^7.0.1",
     "simple-get-json": "^8.2.0",
-    "textbrowser": "^0.42.6",
+    "textbrowser": "^0.43.0",
     "tippy.js": "^6.3.7"
   },
   "devDependencies": {
