@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.38.2
+
+- fix: allow redirect for `indexes`
+
 ## 0.38.1
 
 - fix: ensure service worker is triggered
