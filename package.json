@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.36.2",
+  "version": "0.36.3",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "type": "module",
   "scripts": {
