@@ -30,7 +30,7 @@
   "dependencies": {
     "@brettz9/node-static": "^0.1.1",
     "bahai-date-api": "^1.0.0",
-    "bahai-indexes": "^0.6.0",
+    "bahai-indexes": "^0.6.1",
     "httpquery": "^0.8.2",
     "load-stylesheets": "^0.10.0",
     "open-cli": "^7.0.1",
