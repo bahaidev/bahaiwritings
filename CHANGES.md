@@ -1,5 +1,10 @@
 # bahaiwritings CHANGES
 
+## 0.38.0
+
+- feat: integrate `bahai-indexes` and `bahai-date-api`
+- chore: updates textbrowser
+
 ## 0.37.0
 
 - chore: bump `textbrowser`

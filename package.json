@@ -11,7 +11,7 @@
     "open-test-only": "open-cli \"http://localhost:8000/textbrowser?lang=en-US&work=aqdas&aqdas-start1-1=3&aqdas-end1-1=5&anchorfield1=Paragraph&field1=Paragraph&field2=English&field3=German&field4=Arabic&colorName=Black&color=%23&bgcolorName=White&bgcolor=%23&fontSeq=Times+New+Roman%2C+serif&fontstyle=normal&fontvariant=Normal&fontweight=normal&fontstretch=normal&letterspacing=normal&lineheight=normal&header=n&footer=0&caption=0&border=1&interlintitle=1&rand=No&=No&checked1=Yes&checked2=Yes&checked3=Yes&checked4=Yes&headerfooterfixed=No&result=Yes&outputmode=table&serverOutput=json\"",
     "open-test-only-delayed": "run-s delay open-test-only",
     "open-test": "run-p server open-test-only-delayed",
-    "server": "textbrowser --allowPlugins --namespace=bahaiwritings",
+    "server": "textbrowser --allowPlugins --namespace=bahaiwritings --httpServer=../../../indexServer.js --expressServer ../../bahai-date-api/createServer.js",
     "server-activate": "textbrowser --allowPlugins --nodeActivate  --namespace=bahaiwritings",
     "node": "npm run eslint && mocha --require chai/register-assert.js test/bahaiwritingsTests.js",
     "testcafe": "testcafe --skip-js-errors chrome test/ui-tests/**/*.js",
@@ -21,7 +21,7 @@
     "open-only-delayed": "run-s delay open-only",
     "open": "run-p start open-only-delayed",
     "browser-test": "run-s eslint open",
-    "dev-server": "node ../textbrowser/server/main.js --allowPlugins --namespace=bahaiwritings",
+    "dev-server": "node ../textbrowser/server/main.js --allowPlugins --namespace=bahaiwritings --httpServer=../indexServer.js",
     "copy-tb": "cp -a ../textbrowser/dist/. node_modules/textbrowser/dist/ && cp -a ../textbrowser/locales/. node_modules/textbrowser/locales/ && cp -a ../textbrowser/server/. node_modules/textbrowser/server/ && chmod -R 755 node_modules/textbrowser/server/"
   },
   "browserslist": [
@@ -29,11 +29,13 @@
   ],
   "dependencies": {
     "@brettz9/node-static": "^0.1.1",
-    "bahai-indexes": "^0.5.0",
+    "bahai-date-api": "^1.0.0",
+    "bahai-indexes": "^0.6.0",
+    "httpquery": "^0.8.2",
     "load-stylesheets": "^0.10.0",
     "open-cli": "^7.0.1",
     "simple-get-json": "^8.2.0",
-    "textbrowser": "^0.43.0",
+    "textbrowser": "^0.44.0",
     "tippy.js": "^6.3.7"
   },
   "devDependencies": {
