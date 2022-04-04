@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.36.3",
+  "version": "0.36.4",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "type": "module",
   "scripts": {
@@ -33,7 +33,7 @@
     "load-stylesheets": "^0.10.0",
     "open-cli": "^7.0.1",
     "simple-get-json": "^8.2.0",
-    "textbrowser": "^0.42.5",
+    "textbrowser": "^0.42.6",
     "tippy.js": "^6.3.7"
   },
   "devDependencies": {
