@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.39.0
+
+- feat: bump `bahai-indexes`
+
 ## 0.38.2
 
 - fix: allow redirect for `indexes`
