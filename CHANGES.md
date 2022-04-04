@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.38.1
+
+- fix: ensure service worker is triggered
+
 ## 0.38.0
 
 - feat: integrate `bahai-indexes` and `bahai-date-api`
