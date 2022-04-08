@@ -1,5 +1,11 @@
 # bahaiwritings CHANGES
 
+## 0.40.0
+
+- fix: properly add `bahai-reflib-data-server`
+- fix: express server path issue
+- chore: update `textbrowser`, `bahai-indexes`, devDeps.
+
 ## 0.39.0
 
 - feat: bump `bahai-indexes`
