@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.40.1
+
+- fix: server issue with indexes
+
 ## 0.40.0
 
 - fix: properly add `bahai-reflib-data-server`

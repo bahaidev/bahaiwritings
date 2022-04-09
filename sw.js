@@ -4,6 +4,8 @@ import {getJSON} from './node_modules/simple-get-json/dist/index-es.js';
 import activateCallback from './node_modules/textbrowser/dist/activateCallback-es.js';
 import {getWorkFiles} from './node_modules/textbrowser/dist/WorkInfo-es.js';
 
+// VERSION 0.40.1
+
 const CURRENT_CACHES = {
   prefetch: 'prefetch-cache-v'
 };
@@ -173,7 +175,6 @@ async function install (time) {
     namespace, languages, files, userStaticFiles
   } = getConfigDefaults(json);
 
-  // VERSION 0.38.1
   const {version} = await getJSON('./package.json');
 
   console.log('opening cache', namespace + CURRENT_CACHES.prefetch + version);

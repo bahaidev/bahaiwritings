@@ -20,6 +20,8 @@ const expressServer = () => {
     statik(req, res, next);
   });
 
+  app.use(express.static('.'));
+
   return reflibAndDateServer;
 };
 
