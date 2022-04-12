@@ -57,6 +57,9 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
     interpretation of individual Hidden Words; of course, Bahai9.com could
     also link to them).
 
+1.  Make ***iframes responsive***
+    <https://blog.theodo.com/2018/01/responsive-iframes-css-trick/>
+
 1.  Use <https://github.com/sapegin/shipit> against a hidden config file
     to auto-deploy to <https://bahai-browser.org>
 
