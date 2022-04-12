@@ -1,5 +1,10 @@
 # bahaiwritings CHANGES
 
+## 0.41.0
+
+- feat: update `bahai-reflib-data-server` (to support getting full info
+    about URL (showing sample template))
+
 ## 0.40.4
 
 - fix: update `bahai-indexes`
