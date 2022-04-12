@@ -7,3 +7,4 @@ core
 npm-debug.log
 pm2.json
 logs
+.sync-config.cson
