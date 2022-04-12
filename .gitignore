@@ -1,10 +1,10 @@
 node_modules
 *.sqlite
 download
+.sync-config.cson
 
 # On server
 core
 npm-debug.log
 pm2.json
 logs
-.sync-config.cson
