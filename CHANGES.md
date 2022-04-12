@@ -1,5 +1,10 @@
 # bahaiwritings CHANGES
 
+## 0.40.2
+
+- chore: update bahai-indexes, devDeps.
+- chore: ignore rsync config
+
 ## 0.40.1
 
 - fix: server issue with indexes
