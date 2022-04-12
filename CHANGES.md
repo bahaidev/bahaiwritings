@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## ?
+
+- chore: update `bahai-reflib-data-server` (only doc changes)
+
 ## 0.40.3
 
 - chore: update `bahai-reflib-data-server`
