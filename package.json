@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.40.3",
+  "version": "0.40.4",
   "description": "The Baha'i Writings in JSON format, along with an optional app to view them",
   "type": "module",
   "scripts": {
@@ -30,7 +30,7 @@
   "dependencies": {
     "@brettz9/node-static": "^0.1.1",
     "bahai-date-api": "^1.0.0",
-    "bahai-indexes": "^0.8.2",
+    "bahai-indexes": "^0.8.3",
     "bahai-reflib-data-server": "^0.4.2",
     "express": "^4.17.3",
     "httpquery": "^0.8.2",

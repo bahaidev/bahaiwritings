@@ -1,7 +1,8 @@
 # bahaiwritings CHANGES
 
-## ?
+## 0.40.4
 
+- fix: update `bahai-indexes`
 - chore: update `bahai-reflib-data-server` (only doc changes)
 
 ## 0.40.3
