@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.41.1
+
+- chore: update bahai-reflib-data-server and devDeps.
+
 ## 0.41.0
 
 - feat: update `bahai-reflib-data-server` (to support getting full info

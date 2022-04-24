@@ -12,13 +12,13 @@ function cloneJSON (obj) {
 }
 let appBase = '../';
 if (typeof module !== 'undefined') {
-  /* eslint-disable node/global-require -- Not bootstrapping */
+  /* eslint-disable n/global-require -- Not bootstrapping */
   Ajv = require('ajv').default;
   JsonRefs = require('json-refs');
   jsonpatch = require('fast-json-patch');
   ({getJSON} = require('simple-get-json'));
   path = require('path');
-  /* eslint-enable node/global-require -- Not bootstrapping */
+  /* eslint-enable n/global-require -- Not bootstrapping */
 } else {
   path = {
     join: (...args) => args.join('')
