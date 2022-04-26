@@ -1,12 +1,16 @@
 # bahaiwritings CHANGES
 
+## 0.41.3
+
+- chore: update `bahai-reflib-data-server`
+
 ## 0.41.2
 
-- chore: update bahai-reflib-data-server
+- chore: update `bahai-reflib-data-server`
 
 ## 0.41.1
 
-- chore: update bahai-reflib-data-server and devDeps.
+- chore: update `bahai-reflib-data-server` and devDeps.
 
 ## 0.41.0
 
