@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.41.5
+
+- chore: update `bahai-indexes`
+
 ## 0.41.4
 
 - chore: update `bahai-indexes`
