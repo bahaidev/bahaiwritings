@@ -2,3 +2,4 @@ test
 *.sqlite
 download
 .sync-config.cson
+pnpm-lock.yaml
