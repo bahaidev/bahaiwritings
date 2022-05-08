@@ -1,5 +1,10 @@
 # bahaiwritings CHANGES
 
+## 0.42.0
+
+- chore: update `bahai-indexes`, `bahai-reflib-data-server`, `express` and
+    devDeps.
+
 ## 0.41.5
 
 - chore: update `bahai-indexes`
