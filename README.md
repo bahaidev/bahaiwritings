@@ -144,7 +144,8 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 1.  Look at backlinks for templates like `{{pup|}}` to find the pages which
     reference a book, and then look for the heading above those quotes, so
     as to insert summary headings next to paragraphs as we do for the
-    Kitáb-i-Aqdas indexes.
+    Kitáb-i-Aqdas indexes. Could also just use WhatLinksHere backlinks to
+    include the title of the page on which it was cited.
 
 1.  Add/Add back references for automated:
 
