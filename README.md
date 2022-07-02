@@ -184,6 +184,9 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
               locations in the Iqan copy (would just be nice to be clean
               and polyglot-friendly for any XHTML5 uses)
 
+        1.  Integrate from
+            <https://bahai-library.com/lippitt_bible_bahai_index>.
+
     1.  Collins
 
         1.  Need to split Collins into own repo? (or describe terms)
