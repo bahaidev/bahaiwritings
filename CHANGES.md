@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.43.1
+
+- chore: update `textbrowser`
+
 ## 0.43.0
 
 - chore: update `textbrowser`, `express`, `open-cli`
