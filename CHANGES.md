@@ -1,7 +1,10 @@
 # bahaiwritings CHANGES
 
-## ?
+## 0.43.0
 
+- chore: update `textbrowser`, `express`, `open-cli`
+- chore: update `tippy.js` and devDeps.
+- chore: use Top-Level Await per latest linting
 - chore: update `bahai-reflib-data-server` and devDeps.
 
 ## 0.42.0

@@ -14,7 +14,6 @@ const params = new URLSearchParams(location.hash.slice(1));
 document.domain = params.get('domain') || document.domain; // Let this be iframe-embeddable
 */
 
-(async () => {
 const tb = new TextBrowser({
   // languages: 'node_modules/textbrowser/appdata/languages.json', // Default
   // serviceWorkerPath: 'sw.js', // Default
@@ -223,4 +222,3 @@ searchEngines.forEach(({ short_name, keyword, url }) => {
 });
 await tb.init();
 // Stylesheets have loaded and init process begun/completing
-})();

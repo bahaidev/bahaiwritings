@@ -4,7 +4,7 @@ import {getJSON} from './node_modules/simple-get-json/dist/index-es.js';
 import activateCallback from './node_modules/textbrowser/dist/activateCallback-es.js';
 import {getWorkFiles} from './node_modules/textbrowser/dist/WorkInfo-es.js';
 
-// VERSION 0.40.1
+// VERSION 0.43.0
 
 const CURRENT_CACHES = {
   prefetch: 'prefetch-cache-v'
