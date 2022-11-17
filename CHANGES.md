@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.43.3
+
+- chore: update `textbrowser`
+
 ## 0.43.2
 
 - chore: update `textbrowser`
