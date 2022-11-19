@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../node_modules/textbrowser/general-schemas/table.jsonschema",
+  "$schema": "../../../node_modules/textbrowser-data-schemas/schemas/table.jsonschema",
   "type": "array",
   "items": {
     "type": "array",
