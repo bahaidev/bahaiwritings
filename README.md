@@ -3,6 +3,10 @@
 *The Bahá'í Writings in JSON format with supporting JSON Schema
 and meta-data.*
 
+**Note that this repository used to host the web app now
+at [bahai-browser](https://github.com/bahaidev/bahai-browser); this
+repository has been reserved for the Bahá'í Writings and texts only.**
+
 See the [web app in action](https://bahai-browser.org/), see some videos
 [introducing the app](https://bahai-library.com/zamir_textbrowser_bahaiwritings_browser),
 or see the [repository for the web app](https://github.com/bahaidev/bahai-browser).
@@ -21,147 +25,14 @@ is under its own copyright as is the *Collins* bibliography.
 
 ## Installation
 
-If you wish the `TextBrowser` dependency, install with:
-
 ```shell
-npm install git@bitbucket.org:brettz9/bahaiwritings.git
+npm install bahaiwritings
 ```
-
-If you just wish the Bahá'í Writings JSON and do not wish
-the `TextBrowser` dependency, install with:
-
-```shell
-npm install git@bitbucket.org:brettz9/bahaiwritings.git#notextbrowser
-```
-
-The JSON data files should be the same. Note that in addition to certain
-HTML, JavaScript, and CSS-related files being removed in the latter,
-the `dependencies` property in its `package.json` is also not set. The
-file `site.json` is also not present as that is oriented for TextBrowser.
 
 Note that the schema files to which the included schema files belong are
-at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
+at <https://github.com/bahaidev/textbrowser-data-schemas/tree/main/schemas>.
 
 ## To-dos
-
-1.  Waiting: It is hoped that the addition of these tables (which are
-    Scriptures) can also be automatically generated from any possible
-    future authoritative API
-
-    1.  Suggest API to Baha'i World Centre to automatically (and
-        periodically) parse their texts into JSON here to ensure we
-        have the most up-to-date and corrected translations
-
-1.  Integrate with Steven Phelps' [inventory](http://blog.loomofreality.org/)
-    of the Writings; could add a single link to the metadata for whole works,
-    but especially useful for the by-verse annotations (its links to musical
-    interpretation of individual Hidden Words; of course, Bahai9.com could
-    also link to them).
-
-1.  Make ***iframes responsive***
-    <https://blog.theodo.com/2018/01/responsive-iframes-css-trick/>
-
-1.  Use <https://github.com/sapegin/shipit> against a hidden config file
-    to auto-deploy to <https://bahai-browser.org>
-
-1.  Customize which voices get used
-
-1.  Ability to bind plugin language dynamically at run-time rather than JSON,
-    so any field can be translated
-
-1.  Add plugin using such as <https://github.com/recogito/recogito-js> for
-    inline, and more range-flexible annotations, using [adapter](https://github.com/jankaszel/recogito-web-annotation-adapter)
-    that works with W3C-standard [Web Annotations](https://w3c.github.io/web-annotation/);
-    also is a [validator](https://www.npmjs.com/package/validate-web-annotation).
-
-    1. Could create a corresponding server, including possibly as a Mediawiki
-        extension which provided a CRUD adapter for Web Annotations to/from
-        MW API calls (including [login](https://www.mediawiki.org/wiki/API:Login))
-        which allowed loading/updating content from within
-        a wiki (or say a User subpage or maybe Wikidata) as the basis for
-        the annotations. As wikidata can be federated, could have a dedicated
-        user wiki for user annotations separate from a more formal, offical
-        one for more general purpose data.
-
-1.  Use Wikidata.org language data to transform Arabic (or Persian) to root
-    words for **dictionary** look-up (if not Wiktionary or
-    Wikidata->Wikipedia->language link mapping, then any other free dictionary
-    we might find)
-
-1.  We might switch deps to `peerDependencies` to avoid need for separate
-    JSON-only branch, though it would require `install-peerdeps bahaiwritings`
-    or such.
-
-1.  Upon update completion have service worker read from the (latest
-    section of) `CHANGES.md`
-
-1.  Add more testcafe tests (switch to Cypress)
-
-1.  Add disableable "Powered by TextBrowser" message on non-results pages with
-    link to that repo.
-
-1.  Break out plugins into separate repository(ies) for reusability
-    with textbrowser (and publicize their presence on its wiki).
-
-    1. Make (modular) plugin schemas
-
-    1. Change wikilinks to be able to make post-load (CORS?) HEAD
-      detection of `Last-Modified` as with
-      [BADIPagesCreatedLinks](https://github.com/brettz9/BADIPagesCreatedLinks),
-      so can style uncreated links in orange and make own cache; or
-      to avoid multiple repeat requests, query a central cache (even
-      an API to `BADIPagesCreatedLinks`).
-
-1.  Apply <https://www.gnu.org/software/librejs/free-your-javascript.html>
-    labels to provide machine-automated detection of (open source) licenses.
-
-1.  ONGOING:
-
-    1. Once stabilized, target `TextBrowser` dependency by tagged
-        version.
-
-    1.  Ensure `notextbrowser` branch is kept up to date with `master`
-        besides the `package.json` and absent HTML/JavaScript/CSS differences.
-
-    1.  Ensure still passing tests/validating
-
-    1.  Once `TextBrowser` version stabilizes, target "textbrowser"
-        dependency by tagged version instead of `master`.
-
-1.  See TextBrowser to-dos
-
-1.  Fix tooltip when showing just 2 columns (Arabic goes too far to right)
-
-1.  Actually update `notextbrowser` branch and tag this version when stable
-
-1.  Add/change data files and meta-data files to use `$schema`?
-
-1.  Fix TextBrowser so it can load with a port in `npm start`
-
-1.  Change schema references (in both `bahaiwritings` branches) to point
-    to absolute URLs so as to be independent of repository/branch (rather
-    than their current assumption of being utilized within `TextBrowser`).
-
-1.  Look at backlinks for templates like `{{pup|}}` to find the pages which
-    reference a book, and then look for the heading above those quotes, so
-    as to insert summary headings next to paragraphs as we do for the
-    Kitáb-i-Aqdas indexes. Could also just use WhatLinksHere backlinks to
-    include the title of the page on which it was cited.
-
-1.  Add/Add back references for automated:
-
-    1.  Synopsis, Roman numerals (pm, gwb), Chinese numbers, word-by-word
-        translation (Persian/Arabic/German/English) with ruby-style
-        annotations above the word and/or tooltip option, auto-romanized
-        Persian (Baha'i-style with help link to
-        <http://bahai9.com/wiki/Pronunciation>), Persian with English
-        tooltips, English with Persian tooltips,
-        text-to-(Google search, Google define, Wikipedia, bahai9.com
-        edit pages); add Word-by-word/phrase mapping
-
-    1.  Make a version for the [Browser API](https://developer.mozilla.org/en-US/docs/Web/API/Using_the_Browser_API)
-        to enable side-by-side views of (Bahai9.com) iframes dedicated to a
-        given verse/paragraph!
 
 1.  Specific works
 
@@ -205,15 +76,6 @@ at <https://github.com/brettz9/textbrowser/tree/master/general-schemas>.
 
         1.  Encode more Writings into *TextBrowser* JSON
 
-1.  Lower priority
-
-    1.  Add any other reasonable `browse_options`
-    1.  Add "By page" for the Aqdas (once parsed by page)
-    1.  Further localization including column aliases, etc.
-    1.  [Baha'i Bot](https://github.com/bahaidev/bahaibot) for Discord?
-    1.  Idea for plugin to add links to a Calendar/Task API (no web standard
-        yet apparently)
-
 ## Testing
 
 You will first need to run `npm install`.
@@ -226,24 +88,8 @@ process all of the files (including child files):
 npm test
 ```
 
-Note that the tests currently only perform schema validation. We do not
-yet have UI tests.
-
-If you merely wish to see the app running in a server, you can run:
-
-```shell
-npm start
-```
-
-If you do not wish to automatically open a tab each time the command is run,
-use:
-
-```shell
-npm run start-no-open
-```
-
-You can also use this latter option to run the browser tests
-(from <http://127.0.0.1:8083/test/>). Note, however, that
+You can also run the browser tests via `npm start`
+(from <http://127.0.0.1:8082/test/>). Note, however, that
 this may lock up the browser as there are many files to load.
 
 ## Background
