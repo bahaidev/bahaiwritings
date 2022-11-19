@@ -1,6 +1,6 @@
-'use strict';
-// eslint-disable-next-line no-var -- Polyglot
-var JsonRefs, jsonpatch, Ajv, getJSON, path;
+/* eslint-disable import/unambiguous -- Imports are boostrapped */
+/* globals path, appBase, JsonRefs, jsonpatch, Ajv,
+    getJSON, __dirname -- Polyglot */
 
 /**
  *
@@ -9,21 +9,6 @@ var JsonRefs, jsonpatch, Ajv, getJSON, path;
  */
 function cloneJSON (obj) {
   return JSON.parse(JSON.stringify(obj));
-}
-let appBase = '../';
-if (typeof module !== 'undefined') {
-  /* eslint-disable n/global-require -- Not bootstrapping */
-  Ajv = require('ajv').default;
-  JsonRefs = require('json-refs');
-  jsonpatch = require('fast-json-patch');
-  ({getJSON} = require('simple-get-json'));
-  path = require('path');
-  /* eslint-enable n/global-require -- Not bootstrapping */
-} else {
-  path = {
-    join: (...args) => args.join('')
-  };
-  appBase = location.protocol + '//' + location.host + '/';
 }
 
 const textbrowserBase = appBase + 'node_modules/textbrowser/';

@@ -19,14 +19,18 @@
   <body>
     <h1>bahaiwritings Test Suite</h1>
     <div id="mocha"></div>
-    <script>
+    <script type="module">
     /* globals mocha -- No ESM */
     mocha.setup('bdd');
     window.assert = chai.assert;
     window.__dirname = '';
+    window.path = {
+      join: (...args) => args.join('')
+    };
+    window.appBase = location.protocol + '//' + location.host + '/';
     </script>
-    <script src="bahaiwritingsTests.js"></script>
-    <script>
+    <script type="module" src="bahaiwritingsTests.js"></script>
+    <script type="module">
     /* globals mocha -- No ESM */
     mocha.run();
     </script>
