@@ -1,47 +1,47 @@
 {
-    "localization-strings": {
-        "en-US": {
-            "alias": "Epistle to the Son of the Wolf",
-            "heading": "Epistle to the Son of the Wolf",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "English": "English"
-            }
-        },
-        "ar": {
-            "alias": "لوح ابن الذئب",
-            "heading": "Epistle to the Son of the Wolf",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "English": "English"
-            }
-        },
-        "fa": {
-            "alias": "Epistle to the Son of the Wolf",
-            "heading": "Epistle to the Son of the Wolf",
-            "fieldnames": {
-                "Paragraph": "پاراگراف",
-                "English": "نوشتجات"
-            }
-        }
+  "localization-strings": {
+    "en-US": {
+      "alias": "Epistle to the Son of the Wolf",
+      "heading": "Epistle to the Son of the Wolf",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "English": "English"
+      }
     },
-    "table": {
-        "browse_fields": ["Paragraph"],
-        "default_view": {"Paragraph": 0}
+    "ar": {
+      "alias": "لوح ابن الذئب",
+      "heading": "Epistle to the Son of the Wolf",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "English": "English"
+      }
     },
-    "fields": {
-        "Paragraph": {
-            "name": {
-                "localeKey": "fieldnames/Paragraph"
-            }
-        },
-        "English": {
-            "primary_text_field": true,
-            "lang": "en",
-            "orig_langs": ["ar"],
-            "name": {
-                "localeKey": "fieldnames/English"
-            }
-        }
+    "fa": {
+      "alias": "Epistle to the Son of the Wolf",
+      "heading": "Epistle to the Son of the Wolf",
+      "fieldnames": {
+        "Paragraph": "پاراگراف",
+        "English": "نوشتجات"
+      }
     }
+  },
+  "table": {
+    "browse_fields": ["Paragraph"],
+    "default_view": {"Paragraph": 0}
+  },
+  "fields": {
+    "Paragraph": {
+      "name": {
+        "localeKey": "fieldnames/Paragraph"
+      }
+    },
+    "English": {
+      "primary_text_field": true,
+      "lang": "en",
+      "orig_langs": ["ar"],
+      "name": {
+        "localeKey": "fieldnames/English"
+      }
+    }
+  }
 }

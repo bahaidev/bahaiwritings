@@ -1,6 +1,4 @@
 node_modules
-*.sqlite
-download
 .sync-config.cson
 
 # On server

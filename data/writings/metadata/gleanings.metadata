@@ -1,55 +1,55 @@
 {
-    "localization-strings": {
-        "en-US": {
-            "alias": "Gleanings",
-            "heading": "Gleanings from the Writings of Bahá'u'lláh",
-            "fieldnames": {
-                "Section": "Section",
-                "English": "English"
-            }
-        },
-        "ar": {
-            "alias": "Gleanings",
-            "heading": "Gleanings from the Writings of Bahá'u'lláh",
-            "fieldnames": {
-                "Section": "Section",
-                "English": "English"
-            }
-        },
-        "fa": {
-            "alias": "Gleanings",
-            "heading": "Gleanings from the Writings of Bahá'u'lláh",
-            "fieldnames": {
-                "Section": "Section",
-                "English": "English"
-            }
-        },
-        "ru": {
-            "alias": "Gleanings",
-            "heading": "Gleanings from the Writings of Bahá'u'lláh",
-            "fieldnames": {
-                "Section": "Section",
-                "English": "English"
-            }
-        }
+  "localization-strings": {
+    "en-US": {
+      "alias": "Gleanings",
+      "heading": "Gleanings from the Writings of Bahá'u'lláh",
+      "fieldnames": {
+        "Section": "Section",
+        "English": "English"
+      }
     },
-    "table": {
-        "browse_fields": ["Section"],
-        "default_view": {"Section": 1}
+    "ar": {
+      "alias": "Gleanings",
+      "heading": "Gleanings from the Writings of Bahá'u'lláh",
+      "fieldnames": {
+        "Section": "Section",
+        "English": "English"
+      }
     },
-    "fields": {
-        "Section": {
-            "roman": true,
-            "name": {
-                "localeKey": "fieldnames/Section"
-            }
-        },
-        "English": {
-            "primary_text_field": true,
-            "lang": "en",
-            "name": {
-                "localeKey": "fieldnames/English"
-            }
-        }
+    "fa": {
+      "alias": "Gleanings",
+      "heading": "Gleanings from the Writings of Bahá'u'lláh",
+      "fieldnames": {
+        "Section": "Section",
+        "English": "English"
+      }
+    },
+    "ru": {
+      "alias": "Gleanings",
+      "heading": "Gleanings from the Writings of Bahá'u'lláh",
+      "fieldnames": {
+        "Section": "Section",
+        "English": "English"
+      }
     }
+  },
+  "table": {
+    "browse_fields": ["Section"],
+    "default_view": {"Section": 1}
+  },
+  "fields": {
+    "Section": {
+      "roman": true,
+      "name": {
+        "localeKey": "fieldnames/Section"
+      }
+    },
+    "English": {
+      "primary_text_field": true,
+      "lang": "en",
+      "name": {
+        "localeKey": "fieldnames/English"
+      }
+    }
+  }
 }

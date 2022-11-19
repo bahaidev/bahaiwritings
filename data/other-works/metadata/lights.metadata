@@ -1,52 +1,52 @@
 {
-    "localization-strings": {
-        "en-US": {
-            "alias": "Lights of Guidance",
-            "heading": "Lights of Guidance",
-            "fieldnames": {
-                "Number": "Number",
-                "English": "English"
-            }
-        },
-        "fa": {
-            "alias": "Lights of Guidance",
-            "heading": "Lights of Guidance",
-            "fieldnames": {
-                "Number": "Number",
-                "English": "English"
-            }
-        },
-        "ar": {
-            "alias": "Lights of Guidance",
-            "heading": "Lights of Guidance",
-            "fieldnames": {
-                "Number": "Number",
-                "English": "English"
-            }
-        },
-        "ru": {
-            "alias": "Lights of Guidance",
-            "heading": "Lights of Guidance",
-            "fieldnames": {
-                "Number": "Number",
-                "English": "English"
-            }
-        }
+  "localization-strings": {
+    "en-US": {
+      "alias": "Lights of Guidance",
+      "heading": "Lights of Guidance",
+      "fieldnames": {
+        "Number": "Number",
+        "English": "English"
+      }
     },
-    "table": {
-        "browse_fields": ["Number"]
+    "fa": {
+      "alias": "Lights of Guidance",
+      "heading": "Lights of Guidance",
+      "fieldnames": {
+        "Number": "Number",
+        "English": "English"
+      }
     },
-    "fields": {
-        "Number": {
-            "name": {
-                "localeKey": "fieldnames/Number"
-            }
-        },
-        "English": {
-            "lang": "en",
-            "name": {
-                "localeKey": "fieldnames/English"
-            }
-        }
+    "ar": {
+      "alias": "Lights of Guidance",
+      "heading": "Lights of Guidance",
+      "fieldnames": {
+        "Number": "Number",
+        "English": "English"
+      }
+    },
+    "ru": {
+      "alias": "Lights of Guidance",
+      "heading": "Lights of Guidance",
+      "fieldnames": {
+        "Number": "Number",
+        "English": "English"
+      }
     }
+  },
+  "table": {
+    "browse_fields": ["Number"]
+  },
+  "fields": {
+    "Number": {
+      "name": {
+        "localeKey": "fieldnames/Number"
+      }
+    },
+    "English": {
+      "lang": "en",
+      "name": {
+        "localeKey": "fieldnames/English"
+      }
+    }
+  }
 }

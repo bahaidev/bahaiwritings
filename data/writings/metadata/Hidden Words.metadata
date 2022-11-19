@@ -1,118 +1,118 @@
 {
-    "localization-strings": {
-        "en-US": {
-            "alias": "Hidden Words",
-            "heading": "The Hidden Words",
-            "groupbytoggle": "Group according to the above?",
-            "fieldnames": {
-                "Original Language": "Original Language",
-                "Number": "Number",
-                "Synopsis": "Synopsis",
-                "English": "English",
-                "Arabic": "Arabic",
-                "Persian": "Persian",
-                "Word by word Persian to English": "Word by word Persian to English"
-            },
-            "fieldvalue": {
-                "Original Language": {
-                    "Arabic": "Arabic",
-                    "Persian": "Persian"
-                }
-            }
-        },
-        "ar": {
-            "alias": "الكلمات المكنونة",
-            "heading": "الكلمات المكنونة",
-            "groupbytoggle": "Group according to the above?",
-            "fieldnames": {
-                "Original Language": "Original Language",
-                "Number": "Number",
-                "Synopsis": "Synopsis",
-                "English": "English",
-                "Arabic": "عربي",
-                "Persian": "Persian",
-                "Word by word Persian to English": "Word by word Persian to English"
-            },
-            "fieldvalue": {
-                "Original Language": {
-                    "Arabic": "عربي",
-                    "Persian": "Persian"
-                }
-            }
-        },
-        "fa": {
-            "alias": "كلمات مكنونه",
-            "heading": "کلمات مکنونه",
-            "groupbytoggle": "Group according to the above?",
-            "fieldnames": {
-                "Original Language": "زبان اصلی",
-                "Number": "شماره",
-                "Synopsis": "Synopsis",
-                "English": "نوشتجات",
-                "Arabic": "عربی",
-                "Persian": "فارسي",
-                "Word by word Persian to English": "Word by word Persian to English"
-            },
-            "fieldvalue": {
-                "Original Language": {
-                    "Arabic": "عربی",
-                    "Persian": "فارسي"
-                }
-            }
-        }
-    },
-    "table": {
-        "browse_fields": [{"set": ["Original Language", "Number"]}],
-        "default_view": {"Number": 0, "Original Language": "Arabic"}
-    },
-    "fields": {
-        "Number": {
-            "name": {
-                "localeKey": "fieldnames/Number"
-            }
-        },
+  "localization-strings": {
+    "en-US": {
+      "alias": "Hidden Words",
+      "heading": "The Hidden Words",
+      "groupbytoggle": "Group according to the above?",
+      "fieldnames": {
+        "Original Language": "Original Language",
+        "Number": "Number",
+        "Synopsis": "Synopsis",
+        "English": "English",
+        "Arabic": "Arabic",
+        "Persian": "Persian",
+        "Word by word Persian to English": "Word by word Persian to English"
+      },
+      "fieldvalue": {
         "Original Language": {
-            "name": {
-                "localeKey": "fieldnames/Original Language"
-            },
-            "prefer_alias": true,
-            "fieldvalue-aliases": {
-                "Arabic": [1],
-                "Persian": [2]
-            }
-        },
-        "Synopsis": {
-            "lang": "en",
-            "name": {
-                "localeKey": "fieldnames/Synopsis"
-            }
-        },
-        "English": {
-            "primary_text_field": true,
-            "lang": "en",
-            "name": {
-                "localeKey": "fieldnames/English"
-            }
-        },
-        "Arabic": {
-            "primary_text_field": true,
-            "lang": "ar",
-            "name": {
-                "localeKey": "fieldnames/Arabic"
-            }
-        },
-        "Persian": {
-            "primary_text_field": true,
-            "lang": "fa",
-            "name": {
-                "localeKey": "fieldnames/Persian"
-            }
-        },
-        "Word by word Persian to English": {
-            "lang": "en",
-            "name": {
-                "localeKey": "fieldnames/Word by word Persian to English"
-            }
+          "Arabic": "Arabic",
+          "Persian": "Persian"
         }
+      }
+    },
+    "ar": {
+      "alias": "الكلمات المكنونة",
+      "heading": "الكلمات المكنونة",
+      "groupbytoggle": "Group according to the above?",
+      "fieldnames": {
+        "Original Language": "Original Language",
+        "Number": "Number",
+        "Synopsis": "Synopsis",
+        "English": "English",
+        "Arabic": "عربي",
+        "Persian": "Persian",
+        "Word by word Persian to English": "Word by word Persian to English"
+      },
+      "fieldvalue": {
+        "Original Language": {
+          "Arabic": "عربي",
+          "Persian": "Persian"
+        }
+      }
+    },
+    "fa": {
+      "alias": "كلمات مكنونه",
+      "heading": "کلمات مکنونه",
+      "groupbytoggle": "Group according to the above?",
+      "fieldnames": {
+        "Original Language": "زبان اصلی",
+        "Number": "شماره",
+        "Synopsis": "Synopsis",
+        "English": "نوشتجات",
+        "Arabic": "عربی",
+        "Persian": "فارسي",
+        "Word by word Persian to English": "Word by word Persian to English"
+      },
+      "fieldvalue": {
+        "Original Language": {
+          "Arabic": "عربی",
+          "Persian": "فارسي"
+        }
+      }
     }
+  },
+  "table": {
+    "browse_fields": [{"set": ["Original Language", "Number"]}],
+    "default_view": {"Number": 0, "Original Language": "Arabic"}
+  },
+  "fields": {
+    "Number": {
+      "name": {
+        "localeKey": "fieldnames/Number"
+      }
+    },
+    "Original Language": {
+      "name": {
+        "localeKey": "fieldnames/Original Language"
+      },
+      "prefer_alias": true,
+      "fieldvalue-aliases": {
+        "Arabic": [1],
+        "Persian": [2]
+      }
+    },
+    "Synopsis": {
+      "lang": "en",
+      "name": {
+        "localeKey": "fieldnames/Synopsis"
+      }
+    },
+    "English": {
+      "primary_text_field": true,
+      "lang": "en",
+      "name": {
+        "localeKey": "fieldnames/English"
+      }
+    },
+    "Arabic": {
+      "primary_text_field": true,
+      "lang": "ar",
+      "name": {
+        "localeKey": "fieldnames/Arabic"
+      }
+    },
+    "Persian": {
+      "primary_text_field": true,
+      "lang": "fa",
+      "name": {
+        "localeKey": "fieldnames/Persian"
+      }
+    },
+    "Word by word Persian to English": {
+      "lang": "en",
+      "name": {
+        "localeKey": "fieldnames/Word by word Persian to English"
+      }
+    }
+  }
 }

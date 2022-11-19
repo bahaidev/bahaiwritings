@@ -1,44 +1,44 @@
 {
-    "$schema": "../../../node_modules/textbrowser/general-schemas/table.jsonschema",
+  "$schema": "../../../node_modules/textbrowser/general-schemas/table.jsonschema",
+  "type": "array",
+  "items": {
     "type": "array",
-    "items": {
-        "type": "array",
-        "additionalItems": false,
-        "items": [
-            {
-                "type": "string",
-                "enum": ["Persian", "Arabic"],
-                "title": "Original Language"
-            },
-            {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 83,
-                "title": "Number"
-            },
-            {
-                "type": "string",
-                "format": "html",
-                "title": "Synopsis"
-            },
-            {
-                "type": "string",
-                "format": "html",
-                "title": "English"
-            },
-            {
-                "type": "string",
-                "title": "Arabic",
-                "format": "html"
-            },
-            {
-                "type": "string",
-                "title": "Persian"
-            },
-            {
-                "type": "string",
-                "title": "Word by word Persian to English"
-            }
-        ]
-    }
+    "additionalItems": false,
+    "items": [
+      {
+        "type": "string",
+        "enum": ["Persian", "Arabic"],
+        "title": "Original Language"
+      },
+      {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 83,
+        "title": "Number"
+      },
+      {
+        "type": "string",
+        "format": "html",
+        "title": "Synopsis"
+      },
+      {
+        "type": "string",
+        "format": "html",
+        "title": "English"
+      },
+      {
+        "type": "string",
+        "title": "Arabic",
+        "format": "html"
+      },
+      {
+        "type": "string",
+        "title": "Persian"
+      },
+      {
+        "type": "string",
+        "title": "Word by word Persian to English"
+      }
+    ]
+  }
 }

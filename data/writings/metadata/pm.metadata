@@ -1,80 +1,80 @@
 {
-    "localization-strings": {
-        "en-US": {
-            "alias": "Prayers and Meditations",
-            "heading": "Prayers and Meditations",
-            "fieldnames": {
-                "Number": "Number",
-                "Roman Numeral": "Roman Numeral",
-                "Synopsis": "Synopsis",
-                "English": "English"
-            }
-        },
-        "fa": {
-            "en-US": {
-                "alias": "Prayers and Meditations",
-                "heading": "Prayers and Meditations",
-                "fieldnames": {
-                    "Number": "Number",
-                    "Roman Numeral": "Roman Numeral",
-                    "Synopsis": "Synopsis",
-                    "English": "English"
-                }
-            }
-        },
-        "ar": {
-            "en-US": {
-                "alias": "Prayers and Meditations",
-                "heading": "Prayers and Meditations",
-                "fieldnames": {
-                    "Number": "Number",
-                    "Roman Numeral": "Roman Numeral",
-                    "Synopsis": "Synopsis",
-                    "English": "English"
-                }
-            }
-        },
-        "ru": {
-            "en-US": {
-                "alias": "Prayers and Meditations",
-                "heading": "Prayers and Meditations",
-                "fieldnames": {
-                    "Number": "Number",
-                    "Roman Numeral": "Roman Numeral",
-                    "Synopsis": "Synopsis",
-                    "English": "English"
-                }
-            }
-        }
+  "localization-strings": {
+    "en-US": {
+      "alias": "Prayers and Meditations",
+      "heading": "Prayers and Meditations",
+      "fieldnames": {
+        "Number": "Number",
+        "Roman Numeral": "Roman Numeral",
+        "Synopsis": "Synopsis",
+        "English": "English"
+      }
     },
-    "table": {
-        "browse_fields": ["Number"],
-        "default_view": {"Number": 1}
-    },
-    "fields": {
-        "Number": {
-            "roman": true,
-            "name": {
-                "localeKey": "fieldnames/Number"
-            }
-        },
-        "Roman Numeral": {
-            "name": {
-                "localeKey": "fieldnames/Roman Numeral"
-            }
-        },
-        "Synopsis": {
-            "lang": "en",
-            "name": {
-                "localeKey": "fieldnames/Synopsis"
-            }
-        },
-        "English": {
-            "primary_text_field": true,
-            "lang": "en",
-            "name": {
-                "localeKey": "fieldnames/English"
-            }
+    "fa": {
+      "en-US": {
+        "alias": "Prayers and Meditations",
+        "heading": "Prayers and Meditations",
+        "fieldnames": {
+          "Number": "Number",
+          "Roman Numeral": "Roman Numeral",
+          "Synopsis": "Synopsis",
+          "English": "English"
         }
+      }
+    },
+    "ar": {
+      "en-US": {
+        "alias": "Prayers and Meditations",
+        "heading": "Prayers and Meditations",
+        "fieldnames": {
+          "Number": "Number",
+          "Roman Numeral": "Roman Numeral",
+          "Synopsis": "Synopsis",
+          "English": "English"
+        }
+      }
+    },
+    "ru": {
+      "en-US": {
+        "alias": "Prayers and Meditations",
+        "heading": "Prayers and Meditations",
+        "fieldnames": {
+          "Number": "Number",
+          "Roman Numeral": "Roman Numeral",
+          "Synopsis": "Synopsis",
+          "English": "English"
+        }
+      }
     }
+  },
+  "table": {
+    "browse_fields": ["Number"],
+    "default_view": {"Number": 1}
+  },
+  "fields": {
+    "Number": {
+      "roman": true,
+      "name": {
+        "localeKey": "fieldnames/Number"
+      }
+    },
+    "Roman Numeral": {
+      "name": {
+        "localeKey": "fieldnames/Roman Numeral"
+      }
+    },
+    "Synopsis": {
+      "lang": "en",
+      "name": {
+        "localeKey": "fieldnames/Synopsis"
+      }
+    },
+    "English": {
+      "primary_text_field": true,
+      "lang": "en",
+      "name": {
+        "localeKey": "fieldnames/English"
+      }
+    }
+  }
 }

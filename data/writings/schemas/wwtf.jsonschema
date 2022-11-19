@@ -1,27 +1,27 @@
 {
-    "$schema": "../../../node_modules/textbrowser/general-schemas/table.jsonschema",
+  "$schema": "../../../node_modules/textbrowser/general-schemas/table.jsonschema",
+  "type": "array",
+  "items": {
     "type": "array",
-    "items": {
-        "type": "array",
-        "additionalItems": false,
-        "items": [
-            {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 7,
-                "title": "Section"
-            },
-            {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 16,
-                "title": "Paragraph"
-            },
-            {
-                "type": "string",
-                "format": "html",
-                "title": "Chinese"
-            }
-        ]
-    }
+    "additionalItems": false,
+    "items": [
+      {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 7,
+        "title": "Section"
+      },
+      {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 16,
+        "title": "Paragraph"
+      },
+      {
+        "type": "string",
+        "format": "html",
+        "title": "Chinese"
+      }
+    ]
+  }
 }

@@ -1,411 +1,411 @@
 {
-    "localization-strings": {
-        "ar": {
-            "alias": "ببليوغرافية كولنز (Collins Bibliography)",
-            "heading": "ببليوغرافية كولنز",
-            "fieldnames": {
-                "Record ID": "رقم",
-                "Date of Publication": "سنة الاصدار",
-                "Size": "حجم",
-                "Series Editor": "محرر المسلسل",
-                "Series Editor Role": "مهمة محرر المسلسل",
-                "Series Title": "عنوان المسلسل",
-                "Document Type": "نوع الملف",
-                "Workform": "Workform",
-                "Author, Analytic": "Author, Analytic",
-                "Author Role": "Author Role",
-                "Author Affiliation": "Author Affiliation",
-                "Title, Analytic": "Title, Analytic",
-                "Medium Designator": "Medium Designator",
-                "Connective Phrase": "Connective Phrase",
-                "Author, Monographic": "Author, Monographic",
-                "Author Role (2)": "Author Role (2)",
-                "Title, Monographic": "Title, Monographic",
-                "Journal Title": "Journal Title",
-                "Title": "Title",
-                "Reprint Status": "Reprint Status",
-                "Place of Meeting": "Place of Meeting",
-                "Medium Designator (2)": "Medium Designator (2)",
-                "Edition": "Edition",
-                "Author, Subsidiary": "Author, Subsidiary",
-                "Author Role (3)": "Author Role (3)",
-                "Place of Publication": "Place of Publication",
-                "Publisher Name": "Publisher Name",
-                "Date of Copyright": "Date of Copyright",
-                "Volume ID": "Volume ID",
-                "Report ID": "Report ID",
-                "Issue ID": "Issue ID",
-                "Location in Work": "Location in Work",
-                "Extent of Work": "Extent of Work",
-                "Packaging Method": "Packaging Method",
-                "Reproduction Ration": "Reproduction Ration",
-                "Series Volume ID": "Series Volume ID",
-                "Series Issue ID": "Series Issue ID",
-                "Connective Phrase (2)": "Connective Phrase (2)",
-                "Availability": "Availability",
-                "Location/URL": "Location/URL",
-                "CODEN": "CODEN",
-                "ISSN": "ISSN",
-                "ISBN": "ISBN",
-                "Notes": "Notes",
-                "Abstract": "Abstract",
-                "Call Number": "Call Number",
-                "Keywords": "Keywords"
-            }
-        },
-        "fa": {
-            "alias": "کتابنامه Collins",
-            "heading": "کتابنامه Collins",
-            "fieldnames": {
-                "Record ID": "شماره",
-                "Date of Publication": "سال چاپ",
-                "Size": "Size",
-                "Series Editor": "Series Editor",
-                "Series Editor Role": "Series Editor Role",
-                "Series Title": "Series Title",
-                "Document Type": "Document Type",
-                "Workform": "Workform",
-                "Author, Analytic": "Author, Analytic",
-                "Author Role": "Author Role",
-                "Author Affiliation": "Author Affiliation",
-                "Title, Analytic": "Title, Analytic",
-                "Medium Designator": "Medium Designator",
-                "Connective Phrase": "Connective Phrase",
-                "Author, Monographic": "Author, Monographic",
-                "Author Role (2)": "Author Role (2)",
-                "Title, Monographic": "Title, Monographic",
-                "Journal Title": "Journal Title",
-                "Title": "Title",
-                "Reprint Status": "Reprint Status",
-                "Place of Meeting": "Place of Meeting",
-                "Medium Designator (2)": "Medium Designator (2)",
-                "Edition": "Edition",
-                "Author, Subsidiary": "Author, Subsidiary",
-                "Author Role (3)": "Author Role (3)",
-                "Place of Publication": "Place of Publication",
-                "Publisher Name": "Publisher Name",
-                "Date of Copyright": "Date of Copyright",
-                "Volume ID": "Volume ID",
-                "Report ID": "Report ID",
-                "Issue ID": "Issue ID",
-                "Location in Work": "Location in Work",
-                "Extent of Work": "Extent of Work",
-                "Packaging Method": "Packaging Method",
-                "Reproduction Ration": "Reproduction Ration",
-                "Series Volume ID": "Series Volume ID",
-                "Series Issue ID": "Series Issue ID",
-                "Connective Phrase (2)": "Connective Phrase (2)",
-                "Availability": "Availability",
-                "Location/URL": "Location/URL",
-                "CODEN": "CODEN",
-                "ISSN": "ISSN",
-                "ISBN": "ISBN",
-                "Notes": "Notes",
-                "Abstract": "Abstract",
-                "Call Number": "Call Number",
-                "Keywords": "Keywords"
-            }
-        },
-        "en-US": {
-            "alias": "Collins Bibliography",
-            "heading": "The Collins Bibliography",
-            "fieldnames": {
-                "Record ID": "Record ID",
-                "Date of Publication": "Date of Publication",
-                "Size": "Size",
-                "Series Editor": "Series Editor",
-                "Series Editor Role": "Series Editor Role",
-                "Series Title": "Series Title",
-                "Document Type": "Document Type",
-                "Workform": "Workform",
-                "Author, Analytic": "Author, Analytic",
-                "Author Role": "Author Role",
-                "Author Affiliation": "Author Affiliation",
-                "Title, Analytic": "Title, Analytic",
-                "Medium Designator": "Medium Designator",
-                "Connective Phrase": "Connective Phrase",
-                "Author, Monographic": "Author, Monographic",
-                "Author Role (2)": "Author Role (2)",
-                "Title, Monographic": "Title, Monographic",
-                "Journal Title": "Journal Title",
-                "Title": "Title",
-                "Reprint Status": "Reprint Status",
-                "Place of Meeting": "Place of Meeting",
-                "Medium Designator (2)": "Medium Designator (2)",
-                "Edition": "Edition",
-                "Author, Subsidiary": "Author, Subsidiary",
-                "Author Role (3)": "Author Role (3)",
-                "Place of Publication": "Place of Publication",
-                "Publisher Name": "Publisher Name",
-                "Date of Copyright": "Date of Copyright",
-                "Volume ID": "Volume ID",
-                "Report ID": "Report ID",
-                "Issue ID": "Issue ID",
-                "Location in Work": "Location in Work",
-                "Extent of Work": "Extent of Work",
-                "Packaging Method": "Packaging Method",
-                "Reproduction Ration": "Reproduction Ration",
-                "Series Volume ID": "Series Volume ID",
-                "Series Issue ID": "Series Issue ID",
-                "Connective Phrase (2)": "Connective Phrase (2)",
-                "Availability": "Availability",
-                "Location/URL": "Location/URL",
-                "CODEN": "CODEN",
-                "ISSN": "ISSN",
-                "ISBN": "ISBN",
-                "Notes": "Notes",
-                "Abstract": "Abstract",
-                "Call Number": "Call Number",
-                "Keywords": "Keywords"
-            }
-        }
+  "localization-strings": {
+    "ar": {
+      "alias": "ببليوغرافية كولنز (Collins Bibliography)",
+      "heading": "ببليوغرافية كولنز",
+      "fieldnames": {
+        "Record ID": "رقم",
+        "Date of Publication": "سنة الاصدار",
+        "Size": "حجم",
+        "Series Editor": "محرر المسلسل",
+        "Series Editor Role": "مهمة محرر المسلسل",
+        "Series Title": "عنوان المسلسل",
+        "Document Type": "نوع الملف",
+        "Workform": "Workform",
+        "Author, Analytic": "Author, Analytic",
+        "Author Role": "Author Role",
+        "Author Affiliation": "Author Affiliation",
+        "Title, Analytic": "Title, Analytic",
+        "Medium Designator": "Medium Designator",
+        "Connective Phrase": "Connective Phrase",
+        "Author, Monographic": "Author, Monographic",
+        "Author Role (2)": "Author Role (2)",
+        "Title, Monographic": "Title, Monographic",
+        "Journal Title": "Journal Title",
+        "Title": "Title",
+        "Reprint Status": "Reprint Status",
+        "Place of Meeting": "Place of Meeting",
+        "Medium Designator (2)": "Medium Designator (2)",
+        "Edition": "Edition",
+        "Author, Subsidiary": "Author, Subsidiary",
+        "Author Role (3)": "Author Role (3)",
+        "Place of Publication": "Place of Publication",
+        "Publisher Name": "Publisher Name",
+        "Date of Copyright": "Date of Copyright",
+        "Volume ID": "Volume ID",
+        "Report ID": "Report ID",
+        "Issue ID": "Issue ID",
+        "Location in Work": "Location in Work",
+        "Extent of Work": "Extent of Work",
+        "Packaging Method": "Packaging Method",
+        "Reproduction Ration": "Reproduction Ration",
+        "Series Volume ID": "Series Volume ID",
+        "Series Issue ID": "Series Issue ID",
+        "Connective Phrase (2)": "Connective Phrase (2)",
+        "Availability": "Availability",
+        "Location/URL": "Location/URL",
+        "CODEN": "CODEN",
+        "ISSN": "ISSN",
+        "ISBN": "ISBN",
+        "Notes": "Notes",
+        "Abstract": "Abstract",
+        "Call Number": "Call Number",
+        "Keywords": "Keywords"
+      }
     },
-    "table": {
-        "browse_fields": [
-            {"set": ["Record ID"], "presort": true},
-            {"set": ["Date of Publication"], "presort": true}
-        ],
-        "default_view": {"Record ID": 1}
+    "fa": {
+      "alias": "کتابنامه Collins",
+      "heading": "کتابنامه Collins",
+      "fieldnames": {
+        "Record ID": "شماره",
+        "Date of Publication": "سال چاپ",
+        "Size": "Size",
+        "Series Editor": "Series Editor",
+        "Series Editor Role": "Series Editor Role",
+        "Series Title": "Series Title",
+        "Document Type": "Document Type",
+        "Workform": "Workform",
+        "Author, Analytic": "Author, Analytic",
+        "Author Role": "Author Role",
+        "Author Affiliation": "Author Affiliation",
+        "Title, Analytic": "Title, Analytic",
+        "Medium Designator": "Medium Designator",
+        "Connective Phrase": "Connective Phrase",
+        "Author, Monographic": "Author, Monographic",
+        "Author Role (2)": "Author Role (2)",
+        "Title, Monographic": "Title, Monographic",
+        "Journal Title": "Journal Title",
+        "Title": "Title",
+        "Reprint Status": "Reprint Status",
+        "Place of Meeting": "Place of Meeting",
+        "Medium Designator (2)": "Medium Designator (2)",
+        "Edition": "Edition",
+        "Author, Subsidiary": "Author, Subsidiary",
+        "Author Role (3)": "Author Role (3)",
+        "Place of Publication": "Place of Publication",
+        "Publisher Name": "Publisher Name",
+        "Date of Copyright": "Date of Copyright",
+        "Volume ID": "Volume ID",
+        "Report ID": "Report ID",
+        "Issue ID": "Issue ID",
+        "Location in Work": "Location in Work",
+        "Extent of Work": "Extent of Work",
+        "Packaging Method": "Packaging Method",
+        "Reproduction Ration": "Reproduction Ration",
+        "Series Volume ID": "Series Volume ID",
+        "Series Issue ID": "Series Issue ID",
+        "Connective Phrase (2)": "Connective Phrase (2)",
+        "Availability": "Availability",
+        "Location/URL": "Location/URL",
+        "CODEN": "CODEN",
+        "ISSN": "ISSN",
+        "ISBN": "ISBN",
+        "Notes": "Notes",
+        "Abstract": "Abstract",
+        "Call Number": "Call Number",
+        "Keywords": "Keywords"
+      }
     },
-    "fields": {
-        "Abstract": {
-            "primary_text_field": true,
-            "lang": "en",
-            "name": {
-                "localeKey": "fieldnames/Abstract"
-            }
-        },
-        "Record ID": {
-            "alias": "Number",
-            "name": {
-                "localeKey": "fieldnames/Record ID"
-            }
-        },
-        "Date of Publication": {
-            "alias": "Year Published",
-            "name": {
-                "localeKey": "fieldnames/Date of Publication"
-            }
-        },
-        "Size": {
-            "name": {
-                "localeKey": "fieldnames/Size"
-            }
-        },
-        "Series Editor": {
-            "name": {
-                "localeKey": "fieldnames/Series Editor"
-            }
-        },
-        "Series Editor Role": {
-            "name": {
-                "localeKey": "fieldnames/Series Editor Role"
-            }
-        },
-        "Series Title": {
-            "name": {
-                "localeKey": "fieldnames/Series Title"
-            }
-        },
-        "Document Type": {
-            "name": {
-                "localeKey": "fieldnames/Document Type"
-            }
-        },
-        "Workform": {
-            "name": {
-                "localeKey": "fieldnames/Workform"
-            }
-        },
-        "Author, Analytic": {
-            "name": {
-                "localeKey": "fieldnames/Author, Analytic"
-            }
-        },
-        "Author Role": {
-            "name": {
-                "localeKey": "fieldnames/Author Role"
-            }
-        },
-        "Author Affiliation": {
-            "name": {
-                "localeKey": "fieldnames/Author Affiliation"
-            }
-        },
-        "Title, Analytic": {
-            "name": {
-                "localeKey": "fieldnames/Title, Analytic"
-            }
-        },
-        "Medium Designator": {
-            "name": {
-                "localeKey": "fieldnames/Medium Designator"
-            }
-        },
-        "Connective Phrase": {
-            "name": {
-                "localeKey": "fieldnames/Connective Phrase"
-            }
-        },
-        "Author, Monographic": {
-            "name": {
-                "localeKey": "fieldnames/Author, Monographic"
-            }
-        },
-        "Author Role (2)": {
-            "name": {
-                "localeKey": "fieldnames/Author Role (2)"
-            }
-        },
-        "Title, Monographic": {
-            "name": {
-                "localeKey": "fieldnames/Title, Monographic"
-            }
-        },
-        "Journal Title": {
-            "name": {
-                "localeKey": "fieldnames/Journal Title"
-            }
-        },
-        "Title": {
-            "name": {
-                "localeKey": "fieldnames/Title"
-            }
-        },
-        "Reprint Status": {
-            "name": {
-                "localeKey": "fieldnames/Reprint Status"
-            }
-        },
-        "Place of Meeting": {
-            "name": {
-                "localeKey": "fieldnames/Place of Meeting"
-            }
-        },
-        "Medium Designator (2)": {
-            "name": {
-                "localeKey": "fieldnames/Medium Designator (2)"
-            }
-        },
-        "Edition": {
-            "name": {
-                "localeKey": "fieldnames/Edition"
-            }
-        },
-        "Author, Subsidiary": {
-            "name": {
-                "localeKey": "fieldnames/Author, Subsidiary"
-            }
-        },
-        "Author Role (3)": {
-            "name": {
-                "localeKey": "fieldnames/Author Role (3)"
-            }
-        },
-        "Place of Publication": {
-            "name": {
-                "localeKey": "fieldnames/Place of Publication"
-            }
-        },
-        "Publisher Name": {
-            "name": {
-                "localeKey": "fieldnames/Publisher Name"
-            }
-        },
-        "Date of Copyright": {
-            "name": {
-                "localeKey": "fieldnames/Date of Copyright"
-            }
-        },
-        "Volume ID": {
-            "name": {
-                "localeKey": "fieldnames/Volume ID"
-            }
-        },
-        "Report ID": {
-            "name": {
-                "localeKey": "fieldnames/Report ID"
-            }
-        },
-        "Issue ID": {
-            "name": {
-                "localeKey": "fieldnames/Issue ID"
-            }
-        },
-        "Location in Work": {
-            "name": {
-                "localeKey": "fieldnames/Location in Work"
-            }
-        },
-        "Extent of Work": {
-            "name": {
-                "localeKey": "fieldnames/Extent of Work"
-            }
-        },
-        "Packaging Method": {
-            "name": {
-                "localeKey": "fieldnames/Packaging Method"
-            }
-        },
-        "Reproduction Ration": {
-            "name": {
-                "localeKey": "fieldnames/Reproduction Ration"
-            }
-        },
-        "Series Volume ID": {
-            "name": {
-                "localeKey": "fieldnames/Series Volume ID"
-            }
-        },
-        "Series Issue ID": {
-            "name": {
-                "localeKey": "fieldnames/Series Issue ID"
-            }
-        },
-        "Connective Phrase (2)": {
-            "name": {
-                "localeKey": "fieldnames/Connective Phrase (2)"
-            }
-        },
-        "Availability": {
-            "name": {
-                "localeKey": "fieldnames/Availability"
-            }
-        },
-        "Location/URL": {
-            "name": {
-                "localeKey": "fieldnames/Location/URL"
-            }
-        },
-        "CODEN": {
-            "name": {
-                "localeKey": "fieldnames/CODEN"
-            }
-        },
-        "ISSN": {
-            "name": {
-                "localeKey": "fieldnames/ISSN"
-            }
-        },
-        "ISBN": {
-            "name": {
-                "localeKey": "fieldnames/ISBN"
-            }
-        },
-        "Notes": {
-            "name": {
-                "localeKey": "fieldnames/Notes"
-            }
-        },
-        "Call Number": {
-            "name": {
-                "localeKey": "fieldnames/Call Number"
-            }
-        },
-        "Keywords": {
-            "name": {
-                "localeKey": "fieldnames/Keywords"
-            }
-        }
+    "en-US": {
+      "alias": "Collins Bibliography",
+      "heading": "The Collins Bibliography",
+      "fieldnames": {
+        "Record ID": "Record ID",
+        "Date of Publication": "Date of Publication",
+        "Size": "Size",
+        "Series Editor": "Series Editor",
+        "Series Editor Role": "Series Editor Role",
+        "Series Title": "Series Title",
+        "Document Type": "Document Type",
+        "Workform": "Workform",
+        "Author, Analytic": "Author, Analytic",
+        "Author Role": "Author Role",
+        "Author Affiliation": "Author Affiliation",
+        "Title, Analytic": "Title, Analytic",
+        "Medium Designator": "Medium Designator",
+        "Connective Phrase": "Connective Phrase",
+        "Author, Monographic": "Author, Monographic",
+        "Author Role (2)": "Author Role (2)",
+        "Title, Monographic": "Title, Monographic",
+        "Journal Title": "Journal Title",
+        "Title": "Title",
+        "Reprint Status": "Reprint Status",
+        "Place of Meeting": "Place of Meeting",
+        "Medium Designator (2)": "Medium Designator (2)",
+        "Edition": "Edition",
+        "Author, Subsidiary": "Author, Subsidiary",
+        "Author Role (3)": "Author Role (3)",
+        "Place of Publication": "Place of Publication",
+        "Publisher Name": "Publisher Name",
+        "Date of Copyright": "Date of Copyright",
+        "Volume ID": "Volume ID",
+        "Report ID": "Report ID",
+        "Issue ID": "Issue ID",
+        "Location in Work": "Location in Work",
+        "Extent of Work": "Extent of Work",
+        "Packaging Method": "Packaging Method",
+        "Reproduction Ration": "Reproduction Ration",
+        "Series Volume ID": "Series Volume ID",
+        "Series Issue ID": "Series Issue ID",
+        "Connective Phrase (2)": "Connective Phrase (2)",
+        "Availability": "Availability",
+        "Location/URL": "Location/URL",
+        "CODEN": "CODEN",
+        "ISSN": "ISSN",
+        "ISBN": "ISBN",
+        "Notes": "Notes",
+        "Abstract": "Abstract",
+        "Call Number": "Call Number",
+        "Keywords": "Keywords"
+      }
     }
+  },
+  "table": {
+    "browse_fields": [
+      {"set": ["Record ID"], "presort": true},
+      {"set": ["Date of Publication"], "presort": true}
+    ],
+    "default_view": {"Record ID": 1}
+  },
+  "fields": {
+    "Abstract": {
+      "primary_text_field": true,
+      "lang": "en",
+      "name": {
+        "localeKey": "fieldnames/Abstract"
+      }
+    },
+    "Record ID": {
+      "alias": "Number",
+      "name": {
+        "localeKey": "fieldnames/Record ID"
+      }
+    },
+    "Date of Publication": {
+      "alias": "Year Published",
+      "name": {
+        "localeKey": "fieldnames/Date of Publication"
+      }
+    },
+    "Size": {
+      "name": {
+        "localeKey": "fieldnames/Size"
+      }
+    },
+    "Series Editor": {
+      "name": {
+        "localeKey": "fieldnames/Series Editor"
+      }
+    },
+    "Series Editor Role": {
+      "name": {
+        "localeKey": "fieldnames/Series Editor Role"
+      }
+    },
+    "Series Title": {
+      "name": {
+        "localeKey": "fieldnames/Series Title"
+      }
+    },
+    "Document Type": {
+      "name": {
+        "localeKey": "fieldnames/Document Type"
+      }
+    },
+    "Workform": {
+      "name": {
+        "localeKey": "fieldnames/Workform"
+      }
+    },
+    "Author, Analytic": {
+      "name": {
+        "localeKey": "fieldnames/Author, Analytic"
+      }
+    },
+    "Author Role": {
+      "name": {
+        "localeKey": "fieldnames/Author Role"
+      }
+    },
+    "Author Affiliation": {
+      "name": {
+        "localeKey": "fieldnames/Author Affiliation"
+      }
+    },
+    "Title, Analytic": {
+      "name": {
+        "localeKey": "fieldnames/Title, Analytic"
+      }
+    },
+    "Medium Designator": {
+      "name": {
+        "localeKey": "fieldnames/Medium Designator"
+      }
+    },
+    "Connective Phrase": {
+      "name": {
+        "localeKey": "fieldnames/Connective Phrase"
+      }
+    },
+    "Author, Monographic": {
+      "name": {
+        "localeKey": "fieldnames/Author, Monographic"
+      }
+    },
+    "Author Role (2)": {
+      "name": {
+        "localeKey": "fieldnames/Author Role (2)"
+      }
+    },
+    "Title, Monographic": {
+      "name": {
+        "localeKey": "fieldnames/Title, Monographic"
+      }
+    },
+    "Journal Title": {
+      "name": {
+        "localeKey": "fieldnames/Journal Title"
+      }
+    },
+    "Title": {
+      "name": {
+        "localeKey": "fieldnames/Title"
+      }
+    },
+    "Reprint Status": {
+      "name": {
+        "localeKey": "fieldnames/Reprint Status"
+      }
+    },
+    "Place of Meeting": {
+      "name": {
+        "localeKey": "fieldnames/Place of Meeting"
+      }
+    },
+    "Medium Designator (2)": {
+      "name": {
+        "localeKey": "fieldnames/Medium Designator (2)"
+      }
+    },
+    "Edition": {
+      "name": {
+        "localeKey": "fieldnames/Edition"
+      }
+    },
+    "Author, Subsidiary": {
+      "name": {
+        "localeKey": "fieldnames/Author, Subsidiary"
+      }
+    },
+    "Author Role (3)": {
+      "name": {
+        "localeKey": "fieldnames/Author Role (3)"
+      }
+    },
+    "Place of Publication": {
+      "name": {
+        "localeKey": "fieldnames/Place of Publication"
+      }
+    },
+    "Publisher Name": {
+      "name": {
+        "localeKey": "fieldnames/Publisher Name"
+      }
+    },
+    "Date of Copyright": {
+      "name": {
+        "localeKey": "fieldnames/Date of Copyright"
+      }
+    },
+    "Volume ID": {
+      "name": {
+        "localeKey": "fieldnames/Volume ID"
+      }
+    },
+    "Report ID": {
+      "name": {
+        "localeKey": "fieldnames/Report ID"
+      }
+    },
+    "Issue ID": {
+      "name": {
+        "localeKey": "fieldnames/Issue ID"
+      }
+    },
+    "Location in Work": {
+      "name": {
+        "localeKey": "fieldnames/Location in Work"
+      }
+    },
+    "Extent of Work": {
+      "name": {
+        "localeKey": "fieldnames/Extent of Work"
+      }
+    },
+    "Packaging Method": {
+      "name": {
+        "localeKey": "fieldnames/Packaging Method"
+      }
+    },
+    "Reproduction Ration": {
+      "name": {
+        "localeKey": "fieldnames/Reproduction Ration"
+      }
+    },
+    "Series Volume ID": {
+      "name": {
+        "localeKey": "fieldnames/Series Volume ID"
+      }
+    },
+    "Series Issue ID": {
+      "name": {
+        "localeKey": "fieldnames/Series Issue ID"
+      }
+    },
+    "Connective Phrase (2)": {
+      "name": {
+        "localeKey": "fieldnames/Connective Phrase (2)"
+      }
+    },
+    "Availability": {
+      "name": {
+        "localeKey": "fieldnames/Availability"
+      }
+    },
+    "Location/URL": {
+      "name": {
+        "localeKey": "fieldnames/Location/URL"
+      }
+    },
+    "CODEN": {
+      "name": {
+        "localeKey": "fieldnames/CODEN"
+      }
+    },
+    "ISSN": {
+      "name": {
+        "localeKey": "fieldnames/ISSN"
+      }
+    },
+    "ISBN": {
+      "name": {
+        "localeKey": "fieldnames/ISBN"
+      }
+    },
+    "Notes": {
+      "name": {
+        "localeKey": "fieldnames/Notes"
+      }
+    },
+    "Call Number": {
+      "name": {
+        "localeKey": "fieldnames/Call Number"
+      }
+    },
+    "Keywords": {
+      "name": {
+        "localeKey": "fieldnames/Keywords"
+      }
+    }
+  }
 }

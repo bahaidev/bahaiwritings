@@ -1,63 +1,63 @@
 {
-    "localization-strings": {
-        "en-US": {
-            "alias": "Who's Writing the Future?",
-            "heading": "Who's Writing the Future?",
-            "fieldnames": {
-                "Section": "Section",
-                "Paragraph": "Paragraph",
-                "Chinese": "Chinese"
-            }
-        },
-        "ar": {
-            "alias": "Who's Writing the Future?",
-            "heading": "Who's Writing the Future?",
-            "fieldnames": {
-                "Section": "Section",
-                "Paragraph": "Paragraph",
-                "Chinese": "Chinese"
-            }
-        },
-        "fa": {
-            "alias": "Who's Writing the Future?",
-            "heading": "Who's Writing the Future?",
-            "fieldnames": {
-                "Section": "Section",
-                "Paragraph": "Paragraph",
-                "Chinese": "Chinese"
-            }
-        },
-        "ru": {
-            "alias": "Who's Writing the Future?",
-            "heading": "Who's Writing the Future?",
-            "fieldnames": {
-                "Section": "Section",
-                "Paragraph": "Paragraph",
-                "Chinese": "Chinese"
-            }
-        }
+  "localization-strings": {
+    "en-US": {
+      "alias": "Who's Writing the Future?",
+      "heading": "Who's Writing the Future?",
+      "fieldnames": {
+        "Section": "Section",
+        "Paragraph": "Paragraph",
+        "Chinese": "Chinese"
+      }
     },
-    "table": {
-        "browse_fields": [{"set": ["Section","Paragraph"]}],
-        "default_view": {"Section": 0}
+    "ar": {
+      "alias": "Who's Writing the Future?",
+      "heading": "Who's Writing the Future?",
+      "fieldnames": {
+        "Section": "Section",
+        "Paragraph": "Paragraph",
+        "Chinese": "Chinese"
+      }
     },
-    "fields": {
-        "Section": {
-            "name": {
-                "localeKey": "fieldnames/Section"
-            }
-        },
-        "Paragraph": {
-            "name": {
-                "localeKey": "fieldnames/Paragraph"
-            }
-        },
-        "Chinese": {
-            "lang": "zh-CN",
-            "orig_langs": ["en"],
-            "name": {
-                "localeKey": "fieldnames/Chinese"
-            }
-        }
+    "fa": {
+      "alias": "Who's Writing the Future?",
+      "heading": "Who's Writing the Future?",
+      "fieldnames": {
+        "Section": "Section",
+        "Paragraph": "Paragraph",
+        "Chinese": "Chinese"
+      }
+    },
+    "ru": {
+      "alias": "Who's Writing the Future?",
+      "heading": "Who's Writing the Future?",
+      "fieldnames": {
+        "Section": "Section",
+        "Paragraph": "Paragraph",
+        "Chinese": "Chinese"
+      }
     }
+  },
+  "table": {
+    "browse_fields": [{"set": ["Section","Paragraph"]}],
+    "default_view": {"Section": 0}
+  },
+  "fields": {
+    "Section": {
+      "name": {
+        "localeKey": "fieldnames/Section"
+      }
+    },
+    "Paragraph": {
+      "name": {
+        "localeKey": "fieldnames/Paragraph"
+      }
+    },
+    "Chinese": {
+      "lang": "zh-CN",
+      "orig_langs": ["en"],
+      "name": {
+        "localeKey": "fieldnames/Chinese"
+      }
+    }
+  }
 }

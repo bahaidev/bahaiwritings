@@ -1,55 +1,55 @@
 {
-    "localization-strings": {
-        "en-US": {
-            "alias": "Gems of Divine Mysteries",
-            "heading": "Gems of Divine Mysteries",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "English": "English"
-            }
-        },
-        "ar": {
-            "alias": "Gems of Divine Mysteries",
-            "heading": "Gems of Divine Mysteries",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "English": "English"
-            }
-        },
-        "fa": {
-            "alias": "Gems of Divine Mysteries",
-            "heading": "Gems of Divine Mysteries",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "English": "English"
-            }
-        },
-        "ru": {
-            "alias": "Gems of Divine Mysteries",
-            "heading": "Gems of Divine Mysteries",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "English": "English"
-            }
-        }
+  "localization-strings": {
+    "en-US": {
+      "alias": "Gems of Divine Mysteries",
+      "heading": "Gems of Divine Mysteries",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "English": "English"
+      }
     },
-    "table": {
-        "browse_fields": ["Paragraph"],
-        "default_view": {"Paragraph": 0}
+    "ar": {
+      "alias": "Gems of Divine Mysteries",
+      "heading": "Gems of Divine Mysteries",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "English": "English"
+      }
     },
-    "fields": {
-        "Paragraph": {
-            "name": {
-                "localeKey": "fieldnames/Paragraph"
-            }
-        },
-        "English": {
-            "primary_text_field": true,
-            "lang": "en",
-            "orig_langs": ["ar"],
-            "name": {
-                "localeKey": "fieldnames/English"
-            }
-        }
+    "fa": {
+      "alias": "Gems of Divine Mysteries",
+      "heading": "Gems of Divine Mysteries",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "English": "English"
+      }
+    },
+    "ru": {
+      "alias": "Gems of Divine Mysteries",
+      "heading": "Gems of Divine Mysteries",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "English": "English"
+      }
     }
+  },
+  "table": {
+    "browse_fields": ["Paragraph"],
+    "default_view": {"Paragraph": 0}
+  },
+  "fields": {
+    "Paragraph": {
+      "name": {
+        "localeKey": "fieldnames/Paragraph"
+      }
+    },
+    "English": {
+      "primary_text_field": true,
+      "lang": "en",
+      "orig_langs": ["ar"],
+      "name": {
+        "localeKey": "fieldnames/English"
+      }
+    }
+  }
 }

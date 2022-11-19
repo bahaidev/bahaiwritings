@@ -1,21 +1,21 @@
 {
-    "$schema": "../../../node_modules/textbrowser/general-schemas/table.jsonschema",
+  "$schema": "../../../node_modules/textbrowser/general-schemas/table.jsonschema",
+  "type": "array",
+  "items": {
     "type": "array",
-    "items": {
-        "type": "array",
-        "additionalItems": false,
-        "items": [
-            {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 166,
-                "title": "Section"
-            },
-            {
-                "type": "string",
-                "format": "html",
-                "title": "English"
-            }
-        ]
-    }
+    "additionalItems": false,
+    "items": [
+      {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 166,
+        "title": "Section"
+      },
+      {
+        "type": "string",
+        "format": "html",
+        "title": "English"
+      }
+    ]
+  }
 }

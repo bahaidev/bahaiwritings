@@ -1,77 +1,77 @@
 {
-    "localization-strings": {
-        "en-US": {
-            "alias": "Kitáb-i-Aqdas",
-            "heading": "The Kitáb-i-Aqdas",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "English": "English",
-                "Arabic": "Arabic",
-                "German": "German"
-            }
-        },
-        "fa": {
-            "alias": "كتاب اقدس",
-            "heading": "کتاب اقدس",
-            "fieldnames": {
-                "Paragraph": "پاراگراف",
-                "English": "نوشتجات",
-                "Arabic": "عربی",
-                "German": "المانی"
-            }
-        },
-        "ar": {
-            "alias": "الكتاب الأقدس",
-            "heading": "الكتاب الأقدس",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "English": "English",
-                "Arabic": "عربي",
-                "German": "German"
-            }
-        },
-        "ru": {
-            "alias": "Китаб-и-Агдас",
-            "heading": "The Kitáb-i-Aqdas",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "English": "English",
-                "Arabic": "Arabic",
-                "German": "German"
-            }
-        }
+  "localization-strings": {
+    "en-US": {
+      "alias": "Kitáb-i-Aqdas",
+      "heading": "The Kitáb-i-Aqdas",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "English": "English",
+        "Arabic": "Arabic",
+        "German": "German"
+      }
     },
-    "table": {
-        "browse_fields": ["Paragraph"],
-        "default_view": {"Paragraph": 0}
+    "fa": {
+      "alias": "كتاب اقدس",
+      "heading": "کتاب اقدس",
+      "fieldnames": {
+        "Paragraph": "پاراگراف",
+        "English": "نوشتجات",
+        "Arabic": "عربی",
+        "German": "المانی"
+      }
     },
-    "fields": {
-        "Paragraph": {
-            "name": {
-                "localeKey": "fieldnames/Paragraph"
-            }
-        },
-        "English": {
-            "primary_text_field": true,
-            "lang": "en",
-            "name": {
-                "localeKey": "fieldnames/English"
-            }
-        },
-        "German": {
-            "primary_text_field": true,
-            "lang": "de",
-            "name": {
-                "localeKey": "fieldnames/German"
-            }
-        },
-        "Arabic": {
-            "primary_text_field": true,
-            "orig_lang_field": true,
-            "lang": "ar",
-            "name": {
-                "localeKey": "fieldnames/Arabic"
-            }
-        }
+    "ar": {
+      "alias": "الكتاب الأقدس",
+      "heading": "الكتاب الأقدس",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "English": "English",
+        "Arabic": "عربي",
+        "German": "German"
+      }
+    },
+    "ru": {
+      "alias": "Китаб-и-Агдас",
+      "heading": "The Kitáb-i-Aqdas",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "English": "English",
+        "Arabic": "Arabic",
+        "German": "German"
+      }
     }
+  },
+  "table": {
+    "browse_fields": ["Paragraph"],
+    "default_view": {"Paragraph": 0}
+  },
+  "fields": {
+    "Paragraph": {
+      "name": {
+        "localeKey": "fieldnames/Paragraph"
+      }
+    },
+    "English": {
+      "primary_text_field": true,
+      "lang": "en",
+      "name": {
+        "localeKey": "fieldnames/English"
+      }
+    },
+    "German": {
+      "primary_text_field": true,
+      "lang": "de",
+      "name": {
+        "localeKey": "fieldnames/German"
+      }
+    },
+    "Arabic": {
+      "primary_text_field": true,
+      "orig_lang_field": true,
+      "lang": "ar",
+      "name": {
+        "localeKey": "fieldnames/Arabic"
+      }
+    }
+  }
 }

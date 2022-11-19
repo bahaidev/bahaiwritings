@@ -3,8 +3,9 @@
 *The Bahá'í Writings in JSON format with supporting JSON Schema
 and meta-data.*
 
-See the [web app in action](https://bahai-browser.org/) or see some videos
-[introducing the app](https://bahai-library.com/zamir_textbrowser_bahaiwritings_browser).
+See the [web app in action](https://bahai-browser.org/), see some videos
+[introducing the app](https://bahai-library.com/zamir_textbrowser_bahaiwritings_browser),
+or see the [repository for the web app](https://github.com/bahaidev/bahai-browser).
 
 Although the [TextBrowser](https://github.com/brettz9/textbrowser)
 project for which this repository includes content is open sourced under

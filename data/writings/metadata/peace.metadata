@@ -1,84 +1,84 @@
 {
-    "localization-strings": {
-        "ar": {
-            "alias": "السلام العالمي وعد حق",
-            "heading": "وعد السلام العالمي",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "Chinese Section Number": "Chinese Section Number",
-                "Chinese": "Chinese",
-                "Section Number": "Section Number",
-                "English": "English"
-            }
-        },
-        "fa": {
-            "alias": "وعده صلح جهانى",
-            "heading": "وعده صلح جهانی",
-            "fieldnames": {
-                "Paragraph": "پاراگراف",
-                "Chinese Section Number": "Chinese Section Number",
-                "Chinese": "چینی",
-                "Section Number": "قسمت",
-                "English": "انگلیسی"
-            }
-        },
-        "ru": {
-            "alias": "Обещания мира во всем мире",
-            "heading": "The Promise of World Peace",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "Chinese Section Number": "Chinese Section Number",
-                "Chinese": "Chinese",
-                "Section Number": "Section Number",
-                "English": "English"
-            }
-        },
-        "en-US": {
-            "alias": "Promise of World Peace",
-            "heading": "The Promise of World Peace",
-            "fieldnames": {
-                "Paragraph": "Paragraph",
-                "Chinese Section Number": "Chinese Section Number",
-                "Chinese": "Chinese",
-                "Section Number": "Section Number",
-                "English": "English"
-            }
-        }
+  "localization-strings": {
+    "ar": {
+      "alias": "السلام العالمي وعد حق",
+      "heading": "وعد السلام العالمي",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "Chinese Section Number": "Chinese Section Number",
+        "Chinese": "Chinese",
+        "Section Number": "Section Number",
+        "English": "English"
+      }
     },
-    "table": {
-        "browse_fields": ["Paragraph", "Section Number"],
-        "default_view": {"Paragraph": 0}
+    "fa": {
+      "alias": "وعده صلح جهانى",
+      "heading": "وعده صلح جهانی",
+      "fieldnames": {
+        "Paragraph": "پاراگراف",
+        "Chinese Section Number": "Chinese Section Number",
+        "Chinese": "چینی",
+        "Section Number": "قسمت",
+        "English": "انگلیسی"
+      }
     },
-    "fields": {
-        "Paragraph": {
-            "name": {
-                "localeKey": "fieldnames/Paragraph"
-            }
-        },
-        "Chinese Section Number": {
-            "name": {
-                "localeKey": "fieldnames/Chinese Section Number"
-            }
-        },
-        "Chinese": {
-            "primary_text_field": true,
-            "lang": "zh-CN",
-            "name": {
-                "localeKey": "fieldnames/Chinese"
-            }
-        },
-        "Section Number": {
-            "name": {
-                "localeKey": "fieldnames/Section Number"
-            }
-        },
-        "English": {
-            "primary_text_field": true,
-            "orig_lang_field": true,
-            "lang": "en",
-            "name": {
-                "localeKey": "fieldnames/English"
-            }
-        }
+    "ru": {
+      "alias": "Обещания мира во всем мире",
+      "heading": "The Promise of World Peace",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "Chinese Section Number": "Chinese Section Number",
+        "Chinese": "Chinese",
+        "Section Number": "Section Number",
+        "English": "English"
+      }
+    },
+    "en-US": {
+      "alias": "Promise of World Peace",
+      "heading": "The Promise of World Peace",
+      "fieldnames": {
+        "Paragraph": "Paragraph",
+        "Chinese Section Number": "Chinese Section Number",
+        "Chinese": "Chinese",
+        "Section Number": "Section Number",
+        "English": "English"
+      }
     }
+  },
+  "table": {
+    "browse_fields": ["Paragraph", "Section Number"],
+    "default_view": {"Paragraph": 0}
+  },
+  "fields": {
+    "Paragraph": {
+      "name": {
+        "localeKey": "fieldnames/Paragraph"
+      }
+    },
+    "Chinese Section Number": {
+      "name": {
+        "localeKey": "fieldnames/Chinese Section Number"
+      }
+    },
+    "Chinese": {
+      "primary_text_field": true,
+      "lang": "zh-CN",
+      "name": {
+        "localeKey": "fieldnames/Chinese"
+      }
+    },
+    "Section Number": {
+      "name": {
+        "localeKey": "fieldnames/Section Number"
+      }
+    },
+    "English": {
+      "primary_text_field": true,
+      "orig_lang_field": true,
+      "lang": "en",
+      "name": {
+        "localeKey": "fieldnames/English"
+      }
+    }
+  }
 }
