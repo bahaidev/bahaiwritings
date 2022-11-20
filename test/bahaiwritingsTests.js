@@ -11,11 +11,6 @@ function cloneJSON (obj) {
   return JSON.parse(JSON.stringify(obj));
 }
 
-const textbrowserDataSchemas = appBase +
-  'node_modules/textbrowser-data-schemas/schemas/';
-// const localesBase = textbrowserBase + 'locales/';
-// const appdataBase = textbrowserBase + 'appdata/';
-
 /**
 * @param {PlainObject} schema The schema object
 * @param {PlainObject} data The instance document to validate
@@ -24,7 +19,10 @@ const textbrowserDataSchemas = appBase +
 * @returns {boolean} Whether valid or not
 */
 function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
-  const ajv = new Ajv({allowMatchingProperties: true, ...additionalOptions});
+  const ajv = new Ajv({
+    // allowMatchingProperties: true,
+    ...additionalOptions
+  });
   let valid;
   try {
     ajv.addFormat('html', () => true);
@@ -46,7 +44,7 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
 }
 
 describe('bahaiwritings Tests', function () {
-  it('Specific data files', async function () {
+  before(async function () {
     this.timeout(50000);
     const specificFiles = [
       'aqdas.json',
@@ -92,7 +90,8 @@ describe('bahaiwritings Tests', function () {
         ));
       }),
       ...tableFiles.map(
-        (f) => getJSON(path.join(__dirname, textbrowserDataSchemas, f))
+        (f) => getJSON(path.join(__dirname, appBase,
+          'node_modules/textbrowser-data-schemas/schemas/', f))
       )
     ]);
 
@@ -107,21 +106,28 @@ describe('bahaiwritings Tests', function () {
       return results.slice(cursor, cursor += files.length);
     });
 
-    const extraSchemas = [
+    const tableSchema = [
       [
         '../../../node_modules/' +
           'textbrowser-data-schemas/schemas/table.jsonschema',
         table
       ]
     ];
-    const testSchemaFiles = (dtaFiles, schmaFiles) => {
+
+    this.dataFiles = dataFiles;
+    this.schemaFiles = schemaFiles;
+    this.otherDataFiles = otherDataFiles;
+    this.otherSchemaFiles = otherSchemaFiles;
+    this.table = table;
+
+    this.testSchemaFiles = (dtaFiles, schmaFiles) => {
       dtaFiles.forEach(({resolved: {data}}, i) => {
         const schema = schmaFiles[i];
-        const vald = validate(schema, data, extraSchemas);
+        const vald = validate(schema, data, tableSchema);
         assert.strictEqual(vald, true);
 
         const data2 = cloneJSON(data);
-        const vald2 = validate(schema, data2, extraSchemas, {
+        const vald2 = validate(schema, data2, tableSchema, {
           removeAdditional: 'all',
           validateSchema: false
         });
@@ -130,7 +136,12 @@ describe('bahaiwritings Tests', function () {
         assert.strictEqual(diff.length, 0);
       });
     };
-    testSchemaFiles(dataFiles, schemaFiles);
-    testSchemaFiles(otherDataFiles, otherSchemaFiles);
+  });
+
+  it('main files', function () {
+    this.testSchemaFiles(this.dataFiles, this.schemaFiles);
+  });
+  it('Other works', function () {
+    this.testSchemaFiles(this.otherDataFiles, this.otherSchemaFiles);
   });
 });
