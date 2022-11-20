@@ -50,7 +50,7 @@ module.exports = {
     {
       files: ['test/bahaiwritingsTests.js', 'test/bootstrap/*.js'],
       parserOptions: {
-        ecmaVersion: 2021
+        ecmaVersion: 2022
       },
       extends: ['ash-nazg/sauron-node-overrides', 'plugin:testcafe/recommended']
     }

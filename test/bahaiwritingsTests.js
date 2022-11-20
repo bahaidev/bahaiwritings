@@ -1,15 +1,6 @@
 /* eslint-disable import/unambiguous -- Imports are boostrapped */
-/* globals path, appBase, JsonRefs, jsonpatch, Ajv,
+/* globals path, appBase, JsonRefs, Ajv,
     getJSON, __dirname -- Polyglot */
-
-/**
- *
- * @param {external:JSON} obj
- * @returns {external:JSON}
- */
-function cloneJSON (obj) {
-  return JSON.parse(JSON.stringify(obj));
-}
 
 /**
 * @param {PlainObject} schema The schema object
@@ -43,105 +34,123 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
   return valid;
 }
 
-describe('bahaiwritings Tests', function () {
-  before(async function () {
-    this.timeout(50000);
-    const specificFiles = [
-      'aqdas.json',
-      'Bible.json',
-      'Epistle to the Son of the Wolf.json',
-      'Gems of Divine Mysteries.json',
-      'gleanings.json',
-      'Hidden Words.json',
-      'peace.json',
-      'pm.json',
-      'quran.json',
-      'wwtf.json'
-    ];
-    const otherSpecificFiles = [
-      'lights.json',
-      'Collins.json'
-    ];
-    const tableFiles = [
-      'table.jsonschema'
-    ];
+/**
+ * @returns {Promise<void>}
+ */
+async function asyncSetup () {
+  const specificFiles = [
+    'aqdas.json',
+    'Bible.json',
+    'Epistle to the Son of the Wolf.json',
+    'Gems of Divine Mysteries.json',
+    'gleanings.json',
+    'Hidden Words.json',
+    'peace.json',
+    'pm.json',
+    'quran.json',
+    'wwtf.json'
+  ];
+  const otherSpecificFiles = [
+    'lights.json',
+    'Collins.json'
+  ];
+  const tableFiles = [
+    'table.jsonschema'
+  ];
 
-    // Todo: We could also check that the `table` and `fields`-pointed
-    //   metadata exists and is valid
-    const results = await Promise.all([
-      ...specificFiles.map((f) => {
-        return JsonRefs.resolveRefsAt(
-          path.join(__dirname, appBase, 'data/writings/' + f)
-        );
-      }),
-      ...specificFiles.map((f) => {
-        return getJSON(
-          path.join(__dirname, appBase, 'data/writings/schemas/' + f + 'schema')
-        );
-      }),
-      ...otherSpecificFiles.map((f) => {
-        return JsonRefs.resolveRefsAt(
-          path.join(__dirname, appBase, 'data/other-works/' + f)
-        );
-      }),
-      ...otherSpecificFiles.map((f) => {
-        return getJSON(path.join(
-          __dirname, appBase, 'data/other-works/schemas/' + f + 'schema'
-        ));
-      }),
-      ...tableFiles.map(
-        (f) => getJSON(path.join(__dirname, appBase,
-          'node_modules/textbrowser-data-schemas/schemas/', f))
-      )
-    ]);
+  // Todo: We could also check that the `table` and `fields`-pointed
+  //   metadata exists and is valid
+  const results = await Promise.all([
+    ...specificFiles.map((f) => {
+      return JsonRefs.resolveRefsAt(
+        path.join(__dirname, appBase, 'data/writings/' + f)
+      );
+    }),
+    ...specificFiles.map((f) => {
+      return getJSON(
+        path.join(__dirname, appBase, 'data/writings/schemas/' + f + 'schema')
+      );
+    }),
+    ...otherSpecificFiles.map((f) => {
+      return JsonRefs.resolveRefsAt(
+        path.join(__dirname, appBase, 'data/other-works/' + f)
+      );
+    }),
+    ...otherSpecificFiles.map((f) => {
+      return getJSON(path.join(
+        __dirname, appBase, 'data/other-works/schemas/' + f + 'schema'
+      ));
+    }),
+    ...tableFiles.map(
+      (f) => getJSON(path.join(__dirname, appBase,
+        'node_modules/textbrowser-data-schemas/schemas/', f))
+    )
+  ]);
 
-    let cursor = 0;
-    const [
-      dataFiles, schemaFiles, otherDataFiles, otherSchemaFiles, [table]
-    ] = [
-      specificFiles, specificFiles, otherSpecificFiles,
-      otherSpecificFiles, tableFiles
-    ].map((files) => {
-      // eslint-disable-next-line no-return-assign -- Convenient
-      return results.slice(cursor, cursor += files.length);
-    });
+  let cursor = 0;
+  const [
+    dataFiles, schemaFiles, otherDataFiles, otherSchemaFiles, [table]
+  ] = [
+    specificFiles, specificFiles, otherSpecificFiles,
+    otherSpecificFiles, tableFiles
+  ].map((files) => {
+    // eslint-disable-next-line no-return-assign -- Convenient
+    return results.slice(cursor, cursor += files.length);
+  });
 
-    const tableSchema = [
-      [
-        '../../../node_modules/' +
-          'textbrowser-data-schemas/schemas/table.jsonschema',
-        table
-      ]
-    ];
+  const tableSchema = [
+    [
+      '../../../node_modules/' +
+        'textbrowser-data-schemas/schemas/table.jsonschema',
+      table
+    ]
+  ];
 
-    this.dataFiles = dataFiles;
-    this.schemaFiles = schemaFiles;
-    this.otherDataFiles = otherDataFiles;
-    this.otherSchemaFiles = otherSchemaFiles;
-    this.table = table;
+  return {
+    dataFiles,
+    schemaFiles,
+    otherDataFiles,
+    otherSchemaFiles,
+    table,
+    testSchemaFiles (desc, dtaFiles, schmaFiles) {
+      describe(desc, function () {
+        dtaFiles.forEach(({resolved: {data}}, i) => {
+          const schema = schmaFiles[i];
+          const schemaName = (
+            desc === 'Main files' ? specificFiles : otherSpecificFiles
+          )[i];
+          it('validates schema ' + schemaName, function () {
+            const vald = validate(schema, data, tableSchema);
+            assert.strictEqual(vald, true);
+          });
 
-    this.testSchemaFiles = (dtaFiles, schmaFiles) => {
-      dtaFiles.forEach(({resolved: {data}}, i) => {
-        const schema = schmaFiles[i];
-        const vald = validate(schema, data, tableSchema);
-        assert.strictEqual(vald, true);
-
-        const data2 = cloneJSON(data);
-        const vald2 = validate(schema, data2, tableSchema, {
-          removeAdditional: 'all',
-          validateSchema: false
+          // This doesn't do what I had hoped: https://github.com/ajv-validator/ajv/issues/2170
+          // it('has no extra properties', function () {
+          //   const data2 = cloneJSON(data);
+          //   const vald2 = validate(schema, data2, tableSchema, {
+          //     removeAdditional: 'all',
+          //     validateSchema: false
+          //   });
+          //   assert.strictEqual(vald2, true);
+          //   const diff = jsonpatch.compare(data, data2);
+          //   assert.strictEqual(diff.length, 0);
+          // });
         });
-        assert.strictEqual(vald2, true);
-        const diff = jsonpatch.compare(data, data2);
-        assert.strictEqual(diff.length, 0);
       });
-    };
-  });
+    }
+  };
+}
 
-  it('main files', function () {
-    this.testSchemaFiles(this.dataFiles, this.schemaFiles);
-  });
-  it('Other works', function () {
-    this.testSchemaFiles(this.otherDataFiles, this.otherSchemaFiles);
-  });
+const {
+  dataFiles, otherDataFiles,
+  schemaFiles,
+  testSchemaFiles,
+  otherSchemaFiles
+} = await asyncSetup();
+
+describe('bahaiwritings Tests', function () {
+  this.timeout(50000);
+
+  testSchemaFiles('Main files', dataFiles, schemaFiles);
+  testSchemaFiles('Other works', otherDataFiles, otherSchemaFiles);
 });
