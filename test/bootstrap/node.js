@@ -11,7 +11,7 @@ globalThis.Ajv = Ajv;
 globalThis.JsonRefs = JsonRefs;
 globalThis.jsonpatch = jsonpatch;
 globalThis.getJSON = getJSON;
-globalThis.appBase = '../';
+globalThis.appBase = '../../';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 globalThis.__dirname = __dirname;
