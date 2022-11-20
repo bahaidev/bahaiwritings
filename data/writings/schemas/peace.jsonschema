@@ -4,6 +4,7 @@
   "items": {
     "type": "array",
     "additionalItems": false,
+    "minItems": 5,
     "items": [
       {
         "type": "integer",
