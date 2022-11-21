@@ -199,4 +199,7 @@ describe('bahaiwritings Tests', function () {
   testSchemaFiles(
     'Other works', otherDataFiles, otherSchemaFiles
   );
+  if (typeof mocha !== 'undefined') {
+    mocha.run();
+  }
 });
