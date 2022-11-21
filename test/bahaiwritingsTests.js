@@ -166,8 +166,8 @@ async function asyncSetup () {
           });
 
           // This doesn't remove all as hoped as don't have
-          //   `additionalProperties: false` set
-          // https://github.com/ajv-validator/ajv/issues/2170
+          //   `additionalProperties: false` set; see
+          //   https://github.com/ajv-validator/ajv/issues/2170
           // it('has no extra properties', function () {
           //   const data2 = cloneJSON(data);
           //   const vald2 = validate(schema, data2, tableSchema, {
