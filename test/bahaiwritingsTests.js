@@ -26,7 +26,7 @@ function validate (schema, data, extraSchemas = [], additionalOptions = {}) {
     // eslint-disable-next-line no-console -- CLI
     console.log(e);
   } finally {
-    if (!valid) {
+    if (!valid && ajv.errors.length) {
       // eslint-disable-next-line no-console -- CLI
       console.log(JSON.stringify(ajv.errors, null, 2));
     }
