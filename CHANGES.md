@@ -2,7 +2,9 @@
 
 ## 0.44.0
 
-- BREAKING CHANGE: first version as containing Bahá'í Writings and texts only; entire web app that used to be included is now with [bahai-browser](https://github.com/bahaidev/bahai-browser)
+- BREAKING CHANGE: first version as containing Bahá'í Writings and texts only;
+    entire web app that used to be included is now with
+    [bahai-browser](https://github.com/bahaidev/bahai-browser)
 
 ## 0.43.3
 
