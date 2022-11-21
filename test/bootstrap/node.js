@@ -3,7 +3,6 @@ import {fileURLToPath} from 'url';
 
 import Ajv from 'ajv';
 import JsonRefs from 'json-refs';
-import jsonpatch from 'fast-json-patch';
 import {getJSON} from 'simple-get-json';
 
 globalThis.path = path;
