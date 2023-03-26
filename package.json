@@ -29,7 +29,7 @@
   ],
   "dependencies": {
     "@brettz9/node-static": "^0.1.1",
-    "bahai-date-api": "^1.0.0",
+    "bahai-date-api": "https://github.com/dragfyre/bahai-date-api#master",
     "bahai-indexes": "^0.10.0",
     "bahai-reflib-data-server": "^0.8.2",
     "express": "^4.18.2",
