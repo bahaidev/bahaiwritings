@@ -42,6 +42,8 @@ at <https://github.com/bahaidev/textbrowser-data-schemas/tree/main/schemas>.
     1.  Aqdas
         1.  Passages translated/excerpted by Shoghi Effendi
 
+        1.  For index, add links to other entries, serving as cross-reference
+
     1.  Qur'an and Bible
 
         1.  Re-build based on formatted copies so as not to lose visual
