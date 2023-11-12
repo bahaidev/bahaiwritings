@@ -1,6 +1,6 @@
 {
   "name": "bahaiwritings",
-  "version": "0.44.1",
+  "version": "0.44.2",
   "description": "The Baha'i Writings in JSON format",
   "type": "module",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:brettz9/bahaiwritings.git"
+    "url": "git@github.com:bahaidev/bahaiwritings.git"
   },
   "author": "Brett Zamir",
   "contributors": [],
@@ -30,9 +30,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://bitbucket.org/brettz9/bahaiwritings/issues?status=new&status=open"
+    "url": "https://github.com/bahaidev/bahaiwritings/issues"
   },
-  "homepage": "https://bitbucket.org/brettz9/bahaiwritings",
+  "homepage": "https://github.com/bahaidev/bahaiwritings",
   "devDependencies": {
     "@brettz9/eslint-plugin": "^1.0.4",
     "@brettz9/node-static": "^0.1.1",

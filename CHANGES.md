@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.44.2
+
+- chore: point to latest repo location
+
 ## 0.44.1
 
 - chore: update devDeps.
