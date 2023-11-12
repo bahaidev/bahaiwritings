@@ -1,5 +1,9 @@
 # bahaiwritings CHANGES
 
+## 0.44.1
+
+- chore: update devDeps.
+
 ## 0.44.0
 
 - BREAKING CHANGE: first version as containing Bahá'í Writings and texts only;
