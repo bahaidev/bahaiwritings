@@ -8,7 +8,7 @@ import {getJSON} from 'simple-get-json';
 globalThis.path = path;
 globalThis.Ajv = Ajv;
 globalThis.JsonRefs = JsonRefs;
-globalThis.jsonpatch = jsonpatch;
+// globalThis.jsonpatch = jsonpatch;
 globalThis.getJSON = getJSON;
 globalThis.appBase = '../../';
 
